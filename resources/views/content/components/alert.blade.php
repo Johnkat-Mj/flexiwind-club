@@ -1,0 +1,112 @@
+<x-layouts.doc-page-wrapper :current="$current" :prev-slug="$prevSlug" :next-slug="$nextSlug">
+    <x-md.h2>When to Use</x-md.h2>
+    <x-md.ul>
+        <x-md.li>Use alerts for status and feedback messages users should notice immediately.</x-md.li>
+        <x-md.li>Choose intent and variant based on message importance and urgency.</x-md.li>
+        <x-md.li>Keep alert copy concise and action-oriented.</x-md.li>
+    </x-md.ul>
+
+    <x-md.h2>Demo</x-md.h2>
+    <livewire:base.component-tab-preview-code component="components.examples.alert.default" />
+
+    <x-md.h2>Installation</x-md.h2>
+    <livewire:base.terminal code="php artisan flexi:add alert" />
+
+
+    <x-md.h2>Examples</x-md.h2>
+
+    <x-md.h3>With Title</x-md.h3>
+    <livewire:base.component-tab-preview-code component="components.examples.alert.with-title" />
+
+    <x-md.h3>Variants</x-md.h3>
+    <livewire:base.component-tab-preview-code component="components.examples.alert.variants" />
+
+    <x-md.h2>References</x-md.h2>
+    <x-md.h3>Props</x-md.h3>
+    <x-md.paragraph>
+        The alert component accepts the following props. All props are optional.
+    </x-md.paragraph>
+    <x-docs.table :columns="[
+        ['label' => 'Prop', 'class' => 'w-1/5'],
+        ['label' => 'Type', 'class' => 'w-1/5'],
+        ['label' => 'Default', 'class' => 'w-1/5'],
+        ['label' => 'Description', 'class' => 'w-2/5'],
+    ]">
+        <x-ui.table.row>
+            <x-ui.table.cell class="font-medium"><x-docs.inline-code no-wrap text="variant" /></x-ui.table.cell>
+            <x-ui.table.cell>string</x-ui.table.cell>
+            <x-ui.table.cell>'solid'</x-ui.table.cell>
+            <x-ui.table.cell>
+                <x-docs.table-description>
+                    The visual style variant of the alert. Can be 'solid', 'soft', 'outline', 'subtle', or
+                    'link'
+                </x-docs.table-description>
+            </x-ui.table.cell>
+        </x-ui.table.row>
+        <x-ui.table.row>
+            <x-ui.table.cell class="font-medium"><x-docs.inline-code no-wrap text="intent" /></x-ui.table.cell>
+            <x-ui.table.cell>string</x-ui.table.cell>
+            <x-ui.table.cell>'gray'</x-ui.table.cell>
+            <x-ui.table.cell>
+                <x-docs.table-description>
+                    The color intent of the alert. Common intents include 'primary', 'success', 'warning', 'danger', and
+                    'info'
+                </x-docs.table-description>
+            </x-ui.table.cell>
+        </x-ui.table.row>
+        <x-ui.table.row>
+            <x-ui.table.cell class="font-medium"><x-docs.inline-code no-wrap text="size" /></x-ui.table.cell>
+            <x-ui.table.cell>string</x-ui.table.cell>
+            <x-ui.table.cell>'default'</x-ui.table.cell>
+            <x-ui.table.cell>
+                <x-docs.table-description>
+                    Size of the alert. Can be 'xs', 'sm', 'default', or 'lg'
+                </x-docs.table-description>
+            </x-ui.table.cell>
+        </x-ui.table.row>
+        <x-ui.table.row>
+            <x-ui.table.cell class="font-medium"><x-docs.inline-code no-wrap text="radius" /></x-ui.table.cell>
+            <x-ui.table.cell>string</x-ui.table.cell>
+            <x-ui.table.cell>'md'</x-ui.table.cell>
+            <x-ui.table.cell>
+                <x-docs.table-description>
+                    Border radius of the alert. Common values include 'none', 'sm', 'md', 'lg', 'full'
+                </x-docs.table-description>
+            </x-ui.table.cell>
+        </x-ui.table.row>
+        <x-ui.table.row>
+            <x-ui.table.cell class="font-medium"><x-docs.inline-code no-wrap text="class" /></x-ui.table.cell>
+            <x-ui.table.cell>string</x-ui.table.cell>
+            <x-ui.table.cell>''</x-ui.table.cell>
+            <x-ui.table.cell>
+                <x-docs.table-description>
+                    Additional CSS classes to apply to the alert
+                </x-docs.table-description>
+            </x-ui.table.cell>
+        </x-ui.table.row>
+    </x-docs.table>
+
+    <x-md.h2>API</x-md.h2>
+    <x-md.paragraph>
+        The full prop API is listed in the <strong>References</strong> table above.
+    </x-md.paragraph>
+
+    <x-md.h2>Accessibility</x-md.h2>
+    <x-md.ul>
+        <x-md.li>Use meaningful text and avoid color-only status communication.</x-md.li>
+        <x-md.li>Keep alerts readable with strong contrast and clear hierarchy.</x-md.li>
+        <x-md.li>For dynamic updates, ensure message context is understandable when announced.</x-md.li>
+    </x-md.ul>
+
+    <x-md.h2>Integration Tips</x-md.h2>
+    <x-md.ul>
+        <x-md.li>Map common backend status states to consistent intents across the app.</x-md.li>
+        <x-md.li>Place alerts near affected UI sections for immediate clarity.</x-md.li>
+    </x-md.ul>
+
+    <x-md.h2>Alternatives</x-md.h2>
+    <x-md.ul>
+        <x-md.li>Use callout for inline educational messaging within content sections.</x-md.li>
+        <x-md.li>Use toast/notification systems for transient background events.</x-md.li>
+    </x-md.ul>
+</x-layouts.doc-page-wrapper>

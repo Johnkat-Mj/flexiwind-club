@@ -1,0 +1,1 @@
+- npm install @flexilla/accordion @flexilla/auto-resize-area  @flexilla/collapse @flexilla/dismissible @flexilla/dropdown @flexilla/modal @flexilla/offcanvas @flexilla/pin-input @flexilla/popover @flexilla/custom-range @flexilla/tabs @flexilla/tooltip

@@ -1,0 +1,54 @@
+@props([
+    'type' => 'text',
+    'size' => 'md',
+    'disabled' => false,
+    'readonly' => false,
+    'label' => null,
+    'noBorder' => false,
+    'inlinedLabel' => false,
+    'labelClass' => '',
+    'unStyled' => false,
+    'bgNone' => false,
+    'radiusNone' => false,
+    'groupWrapperClass' => null,
+    'invalid' => false,
+])
+
+@php
+    $sizes = [
+        'none' => '',
+        'sm' => 'ui-form-input-sm',
+        'md' => 'ui-form-input-md',
+        'lg' => 'ui-form-input-lg',
+    ];
+
+    $bg_class = $bgNone ? '' : 'bg-bg';
+    $radius = $radiusNone ? '' : 'rounded-ui';
+
+    $border_class = $noBorder ? 'border-transparent' : 'border border-border-input';
+    $baseClasses = $unStyled ? '' : "ui-form-base ui-form-input {$radius} {$bg_class} {$border_class} text-fg";
+    $sizeClasses = $unStyled ? '' : $sizes[$size] ?? $sizes['md'];
+
+    $id = $attributes->get('id') ?? $attributes->get('name', uniqid('input-'));
+
+    $attributes = $attributes->class([$baseClasses, $sizeClasses])->merge([
+        'type' => $type,
+        'disabled' => $disabled,
+        'readonly' => $readonly,
+        'id' => $id,
+    ]);
+
+    $containerClass = $groupWrapperClass ? '' : '';
+    $group_wrapper = $inlinedLabel
+        ? "flex items-center gap-2 {$containerClass}"
+        : "flex flex-col space-y-2 {$containerClass}";
+@endphp
+
+@if ($label)
+    <div class="{{ $group_wrapper }}">
+        <x-ui.label for="{{ $id }}" :text="$label" class="{{ $labelClass }}" />
+        <input @if ($invalid) data-invalid @endif {{ $attributes }}>
+    </div>
+@else
+    <input @if ($invalid) data-invalid @endif {{ $attributes }}>
+@endif

@@ -1,0 +1,46 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "table",
+    "type": "registry:component",
+    "title": "Table",
+    "description": "A reusable table component for Laravel Blade/Livewire.",
+    "files": [
+        {
+            "path": "resources/views/components/ui/table.blade.php",
+            "type": "registry:component",
+            "target": "resources/views/components/ui/table.blade.php",
+            "content": "@props(['wrapper' => '', 'class' => '','noDivider'=>false])\n\n@php\n    $wrapper_class = \"relative overflow-x-auto w-full {$wrapper}\";\n    $className = \"w-full {$class} [--gutter-x:--spacing(5)] [--gutter-y:--spacing(2.5)] \";\n    $className .= $noDivider ? '' : 'divide-y divide-border-strong';\n@endphp\n<div class=\"{{ $wrapper_class }}\">\n    <table {{ $attributes->merge(['class' => $className]) }}>\n        {{ $slot }}\n    </table>\n</div>"
+        },
+        {
+            "path": "resources/views/components/ui/table/cell.blade.php",
+            "type": "registry:component",
+            "target": "resources/views/components/ui/table/cell.blade.php",
+            "content": "@props(['align' => 'left', 'whiteSpace' => 'nowrap', 'class' => ''])\n\n<td\n    {{ $attributes->class([\n        'px-(--gutter-x) py-(--gutter-y)',\n        'text-left' => $align == 'left',\n        'text-center' => $align == 'center',\n        'text-right' => $align == 'right',\n        'whitespace-nowrap'=>$whiteSpace=='nowrap',\n        $class,\n    ]) }}>\n    {{ $slot }}\n</td>\n"
+        },
+        {
+            "path": "resources/views/components/ui/table/column.blade.php",
+            "type": "registry:component",
+            "target": "resources/views/components/ui/table/column.blade.php",
+            "content": "@props(['align' => 'left', 'whiteSpace' => 'nowrap', 'class' => ''])\n\n<th\n    {{ $attributes->class([\n        'px-(--gutter-x) py-(--gutter-y) font-medium',\n        'text-left' => $align == 'left',\n        'text-center' => $align == 'center',\n        'text-right' => $align == 'right',\n        'whitespace-nowrap' => $whiteSpace === 'nowrap',\n        $class,\n    ]) }}>\n    {{ $slot }}\n</th>\n"
+        },
+        {
+            "path": "resources/views/components/ui/table/columns.blade.php",
+            "type": "registry:component",
+            "target": "resources/views/components/ui/table/columns.blade.php",
+            "content": "@props(['wrapper' => '', 'headerBgStyle' => 'none', 'columnDivider' => false])\n\n<thead class=\"{{ $wrapper }}\">\n    <tr\n        {{ $attributes->class([\n            'capitalize text-sm font-medium text-fg-title',\n            'bg-bg-muted/80' => $headerBgStyle === 'gray',\n            'divide-x divide-border-strong' => $columnDivider,\n        ]) }}>\n        {{ $slot }}\n    </tr>\n</thead>\n"
+        },
+        {
+            "path": "resources/views/components/ui/table/row.blade.php",
+            "type": "registry:component",
+            "target": "resources/views/components/ui/table/row.blade.php",
+            "content": "@props(['class' => '', 'noDivider' => true, 'hoverable' => false, 'striped' => false])\n\n\n<tr\n    {{ $attributes->class([\n        'text-sm',\n        'hover:bg-bg-muted/60 transition-colors ease-linear' => $hoverable,\n        'odd:bg-bg even:bg-bg-muted/60' => $striped,\n        'divide-y divide-border-strong/60' => !$noDivider,\n        $class\n    ]) }}>\n    {{ $slot }}\n</tr>\n"
+        },
+        {
+            "path": "resources/views/components/ui/table/rows.blade.php",
+            "type": "registry:component",
+            "target": "resources/views/components/ui/table/rows.blade.php",
+            "content": "@props(['noDivider' => false, 'striped' => false, 'class' => ''])\n\n\n\n<tbody\n    {{ $attributes->class([\n        'text-sm',\n        'divide-y divide-border-strong/60' => !$noDivider,\n        '*:odd:bg-bg *:even:bg-bg-muted/70' => $striped,\n        $class,\n    ]) }}>\n    {{ $slot }}\n</tbody>\n"
+        }
+    ]
+}

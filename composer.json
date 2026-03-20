@@ -1,11 +1,14 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "unoforge/flexiwind",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Flexiwind docs and component playground for Laravel + Livewire UI components.",
     "keywords": [
+        "flexiwind",
         "laravel",
-        "framework"
+        "livewire",
+        "ui-components",
+        "tailwindcss"
     ],
     "license": "MIT",
     "require": {

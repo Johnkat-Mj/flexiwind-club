@@ -10,8 +10,9 @@ new class extends Component {
     public string $preview = '';
 
     public array $code = [];
+    public bool $isFullScreen = false;
 
-    public function mount(string $keyUi, string $preview, string $title, array $code)
+    public function mount(string $keyUi, string $preview, string $title, array $code, bool $isFullScreen)
     {
         $this->key_ui = $keyUi;
         $this->title = $title;
@@ -65,7 +66,8 @@ new class extends Component {
                     class="btn btn-ghost btn-ghost-gray rounded-ui px-2 py-1 h-7 flex text-sm ease-linear duration-200">
                     <span aria-hidden="true" class="flex iconify ph--arrows-out text-sm"></span>
                 </x-ui.link>
-                <button data-refresh-iframe class="btn btn-ghost btn-ghost-gray rounded-ui px-2 py-1 h-7 flex text-sm ease-linear duration-200">
+                <button data-refresh-iframe
+                    class="btn btn-ghost btn-ghost-gray rounded-ui px-2 py-1 h-7 flex text-sm ease-linear duration-200">
                     <span aria-hidden="true" class="flex iconify ph--arrows-clockwise text-sm"></span>
                 </button>
             </div>
@@ -84,11 +86,11 @@ new class extends Component {
             </div>
         </x-ui.tabs.list-wrapper>
         <x-ui.tabs.panel-wrapper data-ui-previewbox
-            class="bg-bg ui-preview-height overflow-hidden flex items-center justify-center ring ring-border-card rounded-ui w-full relative group flex-1">
-            <x-ui.tabs.panel id="preview" show-as-grid active class="size-full">
-                <livewire:v-ui.preview-block url="{{ $preview }}" />
+            class="bg-bg h-max overflow-hidden flex items-center justify-center ring ring-border-card rounded-ui w-full relative group flex-1">
+            <x-ui.tabs.panel id="preview" show-as-grid active class="size-full max-h-180">
+                <livewire:v-ui.preview-block :is-full-screen="$isFullScreen" url="{{ $preview }}" />
             </x-ui.tabs.panel>
-            <x-ui.tabs.panel id="code" show-as-grid class="size-full">
+            <x-ui.tabs.panel id="code" show-as-grid class="size-full max-h-280">
                 {{-- <livewire:v-ui.preview-block url="{{ $preview }}" /> --}}
             </x-ui.tabs.panel>
         </x-ui.tabs.panel-wrapper>

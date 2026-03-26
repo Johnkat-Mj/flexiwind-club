@@ -4,12 +4,8 @@ import { copyToClipboard } from "./utils";
 document.addEventListener("alpine:init", () => {
     Alpine.directive("ui-block", (el, {}, { cleanup }) => {
         const previewBox = $("[data-ui-previewbox]", el);
-        
 
-        
-        cleanup(() => {
-            
-        });
+        cleanup(() => {});
     });
 
     Alpine.directive("copy-command", (el, {}, { cleanup }) => {
@@ -29,7 +25,7 @@ document.addEventListener("alpine:init", () => {
                         () =>
                             (el.innerHTML = `<span aria-hidden="true" class="flex iconify ph--terminal"></span>
                         <span class="text-fg-muted ml-1">${command}</span>`),
-                        1800
+                        1800,
                     );
                 },
             });
@@ -44,7 +40,8 @@ document.addEventListener("alpine:init", () => {
         // Function to sync theme with iframe
         const syncThemeToIframe = (isDark) => {
             try {
-                const iframeDoc = el.contentDocument || el.contentWindow?.document;
+                const iframeDoc =
+                    el.contentDocument || el.contentWindow?.document;
                 if (iframeDoc && iframeDoc.documentElement) {
                     iframeDoc.documentElement.classList.toggle("dark", isDark);
                 }
@@ -57,14 +54,38 @@ document.addEventListener("alpine:init", () => {
         // Initialize theme on iframe load
         const handleIframeLoad = () => {
             const currentTheme = localStorage.getItem("theme");
-            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            const isDark = currentTheme ? currentTheme === "dark" : systemPrefersDark;
+            const systemPrefersDark = window.matchMedia(
+                "(prefers-color-scheme: dark)",
+            ).matches;
+            const isDark = currentTheme
+                ? currentTheme === "dark"
+                : systemPrefersDark;
             syncThemeToIframe(isDark);
+
+            // Sync iframe height with content document height
+            try {
+                const iframeDoc =
+                    el.contentDocument || el.contentWindow?.document;
+                if (iframeDoc && iframeDoc.documentElement) {
+                    const contentHeight =
+                        iframeDoc.documentElement.scrollHeight;
+                    el.style.setProperty(
+                        "--frame-height",
+                        `${contentHeight}px`,
+                    );
+                }
+            } catch (error) {
+                console.warn(
+                    "Cannot access iframe document for height calculation:",
+                    error,
+                );
+            }
         };
 
         // Listen for theme changes
         const handleThemeChange = (event) => {
-            const isDark = event.detail?.isDark ?? event.detail?.theme === "dark";
+            const isDark =
+                event.detail?.isDark ?? event.detail?.theme === "dark";
             syncThemeToIframe(isDark);
         };
 
@@ -79,4 +100,3 @@ document.addEventListener("alpine:init", () => {
         });
     });
 });
-

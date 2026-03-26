@@ -14,22 +14,27 @@ return [
                 'login01' => [
                     'name' => 'login01',
                     'preview' => '/preview-ui/auth/login01',
+                    'is-full-screen'=>true
                 ],
                 'login02' => [
                     'name' => 'login02',
                     'preview' => '/preview-ui/auth/login02',
+                    'is-full-screen'=>true
                 ],
                 'login03' => [
                     'name' => 'login03',
                     'preview' => '/preview-ui/auth/login03',
+                    'is-full-screen'=>true
                 ],
                 'login04' => [
                     'name' => 'login04',
                     'preview' => '/preview-ui/auth/login04',
+                    'is-full-screen'=>true
                 ],
                 'login05' => [
                     'name' => 'login05',
                     'preview' => '/preview-ui/auth/login05',
+                    'is-full-screen'=>true
                 ],
             ],
         ],
@@ -45,18 +50,22 @@ return [
                 'sidebar01' => [
                     'name' => 'sidebar01',
                     'preview' => '/preview-ui/sidebar/01',
+                    'is-full-screen'=>true
                 ],
                 'sidebar02' => [
                     'name' => 'sidebar02',
                     'preview' => '/preview-ui/sidebar/02',
+                    'is-full-screen'=>true
                 ],
                 'sidebar03' => [
                     'name' => 'sidebar03',
                     'preview' => '/preview-ui/sidebar/03',
+                    'is-full-screen'=>true
                 ],
                 'sidebar04' => [
                     'name' => 'sidebar04',
                     'preview' => '/preview-ui/sidebar/04',
+                    'is-full-screen'=>true
                 ],
             ],
         ],
@@ -72,6 +81,7 @@ return [
                 'shell01' => [
                     'name' => 'shell01',
                     'preview' => '/preview-ui/app-shell/01',
+                    'is-full-screen'=>true
                 ]
             ],
         ],
@@ -102,14 +112,17 @@ return [
                 'header01' => [
                     'name' => 'header01',
                     'preview' => '/preview-ui/header/01',
+                    'is-full-screen'=>true
                 ],
                 'header02' => [
                     'name' => 'header02',
                     'preview' => '/preview-ui/header/02',
+                    'is-full-screen'=>true
                 ],
                 'header03' => [
                     'name' => 'header03',
                     'preview' => '/preview-ui/header/03',
+                    'is-full-screen'=>true
                 ]
             ],
         ],
@@ -163,18 +176,22 @@ return [
                 'signup01' => [
                     'name' => 'signup01',
                     'preview' => '/preview-ui/auth/signup01',
+                    'is-full-screen'=>true
                 ],
                 'signup02' => [
                     'name' => 'signup02',
                     'preview' => '/preview-ui/auth/signup02',
+                    'is-full-screen'=>true
                 ],
                 'signup03' => [
                     'name' => 'signup03',
                     'preview' => '/preview-ui/auth/signup03',
+                    'is-full-screen'=>true
                 ],
                 'signup04' => [
                     'name' => 'signup04',
                     'preview' => '/preview-ui/auth/signup04',
+                    'is-full-screen'=>true
                 ],
             ],
         ],
@@ -214,6 +231,7 @@ return [
                 'otp01' => [
                     'name' => 'otp01',
                     'preview' => '/preview-ui/auth/otp01',
+                    'is-full-screen'=>true
                 ]
             ],
         ],

@@ -279,9 +279,7 @@
 }
 
 
-@utility ui-preview-height {
-    @apply h-[calc(100vh-6rem)] lg:max-h-[70rem]
-}
+
 
 
 

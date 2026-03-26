@@ -39,7 +39,9 @@ class extends Component {
         <section class="mt-10 space-y-12 pb-16 w-full overflow-hidden">
             @foreach ($blockGroup['blocks'] as $codeKey => $block)
                 <livewire:v-ui.single-block wire:key="block-{{ $blockName }}-{{ $codeKey }}-{{ $loop->index }}"
-                    :key-ui="$blockName . '-' . $codeKey . '-' . $loop->index" :title="$block['name'] ?? ucfirst($codeKey)" :preview="$block['preview'] ?? '#'" :code="$block" />
+                    :key-ui="$blockName . '-' . $codeKey . '-' . $loop->index" :title="$block['name'] ?? ucfirst($codeKey)"
+                    :is-full-screen="$block['is-full-screen'] ?? false"
+                    :preview="$block['preview'] ?? '#'" :code="$block" />
             @endforeach
         </section>
     @else

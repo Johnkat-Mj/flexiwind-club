@@ -283,27 +283,8 @@
     @apply h-[calc(100vh-6rem)] lg:max-h-[70rem]
 }
 
-@utility ui-preview-frame-box {
-    @media (width >=64rem) {
-        &[data-size="tablet"] {
-            @apply py-4;
-        }
 
-        &[data-size="mobile"] {
-            @apply py-8;
-        }
-    }
-}
 
-@utility ui-preview-frame {
-    @media (width >=64rem) {
-
-        &:is(:where(.group)[data-size="tablet"] *),
-        &:is(:where(.group)[data-size="mobile"] *) {
-            @apply border border-border-strong shadow rounded-ui overflow-hidden;
-        }
-    }
-}
 
 @utility linear-gradient-pattern {
     background-image: repeating-linear-gradient(-315deg, var(--pattern-fg) 0, var(--pattern-fg) 1px, transparent 0, transparent 50%);

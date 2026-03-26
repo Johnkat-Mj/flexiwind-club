@@ -1,31 +1,21 @@
-@props(['fileName'])
+@props([])
 
 @php
 
     $repositoryUrl = config('base.githubRepoUrl');
-    $startDiscussion = config('base.discussionBaseUrl');
-    $repoContentLocation =config('base.editContentBaseUrl');
     $contribLinks = [
         [
-            'href' => $repoContentLocation . '',
-            'text' => 'Contributing',
+            'href' => '/report-issue',
+            'text' => 'Report an issue',
             'icon' => 'iconify ph--chats-circle',
-        ],
-        [
-            'href' => $repoContentLocation . $fileName.'.blade.php',
-            'text' => 'Edit this page',
-            'icon' => 'iconify ph--pencil-simple-line',
-        ],
-        [
-            'href' => $repositoryUrl,
-            'text' => 'Star On github',
-            'icon' => 'iconify ph--star',
-        ],
+        ]
     ];
 @endphp
 
 <div class="mb-2 pt-3 border-t border-border-strong border-dashed">
-    <h2 class="text-sm font-semibold hidden lg:flex text-fg-subtitle">Community</h2>
+    <h2 class="text-sm font-semibold hidden lg:flex text-fg-subtitle">
+        Club Resources
+    </h2>
 
     <nav aria-label="Contribute Links" class="mt-3 flex flex-col">
         <ol class="flex flex-col space-y-2 text-fg-muted text-sm">
@@ -44,10 +34,5 @@
             @endforeach
         </ol>
 
-        <a href="{{ $discussionLink ?? $startDiscussion }}" aria-label="Start a discussion" target="_blank"
-            rel="noopener noreferrer"
-            class="mt-3 w-max flex items-center justify-center btn btn-sm rounded-lg btn-flexi btn-flexi-white text-fg-title">
-            Start a discussion
-        </a>
     </nav>
 </div>

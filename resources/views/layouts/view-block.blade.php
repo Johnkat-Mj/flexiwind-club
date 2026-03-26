@@ -38,7 +38,7 @@
     <x-organisms.navbar />
     <div class="relative w-full -mt-20 h-20">
         <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
-            <div class="flex justify-between size-full max-w-300 mx-auto relative">
+            <div class="flex justify-between size-full lg:max-w-336 xl:max-w-352 mx-auto relative">
                 <div aria-hidden="true"
                     class="absolute inset-x-0 bottom-8 top-14 flex noise-subtle opacity-60 dark:opacity-50"></div>
                 <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>

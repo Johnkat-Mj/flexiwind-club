@@ -1,5 +1,5 @@
-<section class="">
-    <div class="mx-auto w-full lg:max-w-300 border-x border-border-strong/70 pt-20 border-dashed border-t relative">
+<section class=" px-2 sm:px-4 xl:px-8">
+    <div class="mx-auto w-full lg:max-w-336 xl:max-w-352 border-x border-border-strong/70 pt-20 border-dashed border-t relative">
         <div aria-hidden="true" class="pointer-events-none absolute inset-0 flex noise-subtle opacity-60 dark:opacity-50">
         </div>
 

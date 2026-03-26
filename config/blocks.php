@@ -13,30 +13,23 @@ return [
             'blocks' => [
                 'login01' => [
                     'name' => 'login01',
-                    'preview' => '/preview-ui/auth/login01'
+                    'preview' => '/preview-ui/auth/login01',
                 ],
                 'login02' => [
                     'name' => 'login02',
-                    'preview' => '/preview-ui/auth/login02'
+                    'preview' => '/preview-ui/auth/login02',
                 ],
                 'login03' => [
                     'name' => 'login03',
-                    'preview' => '/preview-ui/auth/login03'
-                ]
-            ],
-        ],
-        'signup-form' => [
-            'key' => 'signup-form',
-            'title' => 'Signup',
-            'description' => 'User registration and signup form components',
-            'illustrations' => [
-                'light' => "/illustrations/signup-light.webp",
-                'dark' => '/illustrations/signup-dark.webp'
-            ],
-            'blocks' => [
-                'signup01' => [
-                    'name' => 'signup01',
-                    'preview' => '/preview-ui/auth/signup01',
+                    'preview' => '/preview-ui/auth/login03',
+                ],
+                'login04' => [
+                    'name' => 'login04',
+                    'preview' => '/preview-ui/auth/login04',
+                ],
+                'login05' => [
+                    'name' => 'login05',
+                    'preview' => '/preview-ui/auth/login05',
                 ],
             ],
         ],
@@ -56,22 +49,44 @@ return [
                 'sidebar02' => [
                     'name' => 'sidebar02',
                     'preview' => '/preview-ui/sidebar/02',
+                ],
+                'sidebar03' => [
+                    'name' => 'sidebar03',
+                    'preview' => '/preview-ui/sidebar/03',
+                ],
+                'sidebar04' => [
+                    'name' => 'sidebar04',
+                    'preview' => '/preview-ui/sidebar/04',
+                ],
+            ],
+        ],
+        'app-shell' => [
+            'key' => 'application-shell',
+            'title' => 'Application shell',
+            'description' => 'Application shells...',
+            'illustrations' => [
+                'light' => "/illustrations/shell-light.webp",
+                'dark' => '/illustrations/shell-dark.webp'
+            ],
+            'blocks' => [
+                'shell01' => [
+                    'name' => 'shell01',
+                    'preview' => '/preview-ui/app-shell/01',
                 ]
             ],
         ],
-        'auth-form' => [
-            'key' => 'auth-form',
-
-            'title' => 'Auth',
-            'description' => 'Authentication components including password reset, confirmation, and OTP forms',
+        'app-table' => [
+            'key' => 'application-table',
+            'title' => 'Table',
+            'description' => 'Application Table...',
             'illustrations' => [
-                'light' => "/illustrations/otp-light.webp",
-                'dark' => '/illustrations/otp-dark.webp'
+                'light' => "/illustrations/table-light.webp",
+                'dark' => '/illustrations/table-dark.webp'
             ],
             'blocks' => [
-                'otp01' => [
-                    'name' => 'otp01',
-                    'preview' => '/preview-ui/auth/otp01',
+                'table01' => [
+                    'name' => 'table01',
+                    'preview' => '/preview-ui/table/01',
                 ]
             ],
         ],
@@ -98,36 +113,6 @@ return [
                 ]
             ],
         ],
-        'app-table' => [
-            'key' => 'application-table',
-            'title' => 'Table',
-            'description' => 'Application Table...',
-            'illustrations' => [
-                'light' => "/illustrations/table-light.webp",
-                'dark' => '/illustrations/table-dark.webp'
-            ],
-            'blocks' => [
-                'table01' => [
-                    'name' => 'table01',
-                    'preview' => '/preview-ui/table/01',
-                ]
-            ],
-        ],
-        'app-shell' => [
-            'key' => 'application-shell',
-            'title' => 'Application shell',
-            'description' => 'Application shells...',
-            'illustrations' => [
-                'light' => "/illustrations/shell-light.webp",
-                'dark' => '/illustrations/shell-dark.webp'
-            ],
-            'blocks' => [
-                'shell01' => [
-                    'name' => 'shell01',
-                    'preview' => '/preview-ui/app-shell/01',
-                ]
-            ],
-        ],
         'dash-card-kpi' => [
             'key' => 'dash-card-kpi',
             'title' => 'Dash KPI',
@@ -140,7 +125,15 @@ return [
                 'kpi01' => [
                     'name' => 'kpi01',
                     'preview' => '/preview-ui/dash-card/kpi01',
-                ]
+                ],
+                'kpi02' => [
+                    'name' => 'kpi02',
+                    'preview' => '/preview-ui/dash-card/kpi02',
+                ],
+                'kpi03' => [
+                    'name' => 'kpi03',
+                    'preview' => '/preview-ui/dash-card/kpi03',
+                ],
             ],
         ],
         'empty-states' => [
@@ -158,6 +151,33 @@ return [
                 ]
             ],
         ],
+        'signup-form' => [
+            'key' => 'signup-form',
+            'title' => 'Signup',
+            'description' => 'User registration and signup form components',
+            'illustrations' => [
+                'light' => "/illustrations/signup-light.webp",
+                'dark' => '/illustrations/signup-dark.webp'
+            ],
+            'blocks' => [
+                'signup01' => [
+                    'name' => 'signup01',
+                    'preview' => '/preview-ui/auth/signup01',
+                ],
+                'signup02' => [
+                    'name' => 'signup02',
+                    'preview' => '/preview-ui/auth/signup02',
+                ],
+                'signup03' => [
+                    'name' => 'signup03',
+                    'preview' => '/preview-ui/auth/signup03',
+                ],
+                'signup04' => [
+                    'name' => 'signup04',
+                    'preview' => '/preview-ui/auth/signup04',
+                ],
+            ],
+        ],
         'dash-activities' => [
             'key' => 'dash-activities',
             'title' => 'Activities',
@@ -170,7 +190,51 @@ return [
                 'activity01' => [
                     'name' => 'activity01',
                     'preview' => '/preview-ui/dash-card/activity01',
+                ],
+                'activity02' => [
+                    'name' => 'activity02',
+                    'preview' => '/preview-ui/dash-card/activity02',
+                ],
+                'activity03' => [
+                    'name' => 'activity03',
+                    'preview' => '/preview-ui/dash-card/activity03',
+                ],
+            ],
+        ],
+        'auth-form' => [
+            'key' => 'auth-form',
+
+            'title' => 'Auth',
+            'description' => 'Authentication components including password reset, confirmation, and OTP forms',
+            'illustrations' => [
+                'light' => "/illustrations/otp-light.webp",
+                'dark' => '/illustrations/otp-dark.webp'
+            ],
+            'blocks' => [
+                'otp01' => [
+                    'name' => 'otp01',
+                    'preview' => '/preview-ui/auth/otp01',
                 ]
+            ],
+        ],
+        'forms' => [
+            'key' => 'forms',
+            'category' => 'application',
+            'title' => 'Forms',
+            'description' => 'Navigation sidebar components with different layouts and styles',
+            'illustrations' => [
+                'light' => "/illustrations/activities-light.webp",
+                'dark' => '/illustrations/activities-dark.webp'
+            ],
+            'blocks' => [
+                'contact-form01' => [
+                    'name' => 'contact-form01',
+                    'preview' => '/preview-ui/forms/contact-form01',
+                ],
+                'profile-form01' => [
+                    'name' => 'profile-form01',
+                    'preview' => '/preview-ui/forms/profile-form01',
+                ],
             ],
         ],
     ],

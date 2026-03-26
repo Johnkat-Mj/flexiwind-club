@@ -35,7 +35,7 @@
         'id' => $id,
     ]);
 
-    $containerClass = $groupWrapperClass ? '' : '';
+    $containerClass = $groupWrapperClass ?? '';
     $group_wrapper = $inlinedLabel
         ? "flex items-center gap-2 {$containerClass}"
         : "flex flex-col space-y-2 {$containerClass}";

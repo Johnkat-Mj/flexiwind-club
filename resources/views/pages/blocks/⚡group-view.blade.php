@@ -53,8 +53,8 @@ class extends Component {
                     We're working on this, we'll release it soon
                 </p>
                 <div class="mt-8">
-                    <x-ui.button href="https://github.com/unoforge/flexiwind" class="w-max">
-                        Bring my contributing
+                    <x-ui.button href="/club-support/request-block" class="w-max">
+                        Request it now
                     </x-ui.button>
                 </div>
             </div>

@@ -1,42 +1,60 @@
-    <main class="flex min-h-screen justify-center items-center px-5 sm:px-10 lg:px-0 py-5">
-        <div class="flex flex-col gap-6 w-full max-w-sm">
-            <div class="flex flex-col items-center gap-2 text-center">
-                <div
-                    class="size-12 bg-primary text-white text-xl rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span class="iconify ph--speedometer"></span>
-                </div>
-                <h1 class="text-xl font-bold text-fg-title">
-                    Welcome to Acme Inc.
-                </h1>
-                <p class="text-sm text-fg-muted">
-                    Don't have an account?
-                    <x-ui.link href="#" underlined class="text-primary">
-                        Sign up
-                    </x-ui.link>
-                </p>
+<main class="flex min-h-screen justify-center items-center px-4 sm:px-10 lg:px-0">
+    <div class="bg-bg border border-border shadow rounded-ui p-6 sm:p-8 flex flex-col w-full max-w-md">
+        <!-- Logo -->
+        <div class="text-center mb-8">
+            <div class="size-12 bg-primary text-white text-xl rounded-ui flex items-center justify-center mx-auto mb-4">
+                <span class="iconify ph--speedometer"></span>
             </div>
-            <form class="flex flex-col gap-4">
-                <x-ui.input type="email" label="Email" placeholder="johnkatmj@gmail.com" />
-                <x-ui.button class="w-full justify-center">
-                    Login
-                </x-ui.button>
-                <x-ui.divider label="Or continue" class="before:bg-bg-muted" label-placement="middle"
-                    label-class="px-3 bg-bg text-fg-muted text-sm relative" />
-                <div class="grid gap-4 sm:grid-cols-2">
-                    <x-ui.button variant="outline" intent="gray" class="justify-center gap-1.5">
-                        <span aria-hidden="true" class="iconify ph--apple-logo"></span>
-                        <span class="hidden sm:flex text-sm">With Apple</span>
-                    </x-ui.button>
-                    <x-ui.button variant="outline" intent="gray" class="justify-center gap-1.5">
-                        <span aria-hidden="true" class="iconify ph--google-logo"></span>
-                        <span class="hidden sm:flex text-sm">With Google</span>
-                    </x-ui.button>
-                </div>
-            </form>
-            <p class="px-6 text-center text-fg-muted mx-auto max-w-md text-sm mt-3">
-                By clicking continue, you agree to our 
-                <x-ui.link href="#" underlined class="text-primary">Terms of Service</x-ui.link>
-                and <x-ui.link href="#" underlined class="text-primary">Privacy Policy</x-ui.link>.
+            <h2 class="text-2xl font-semibold text-fg-title">Welcome back</h2>
+            <p class="text-fg-muted mt-1">Sign in to your account</p>
+        </div>
+
+
+        <form class="space-y-4" id="login-form">
+            <x-ui.input type="email" id="email" label="Email" placeholder="you@company.com" />
+            <div class="space-y-2">
+                <x-ui.label for="login-password" class="block">Password</x-ui.label>
+                <x-ui.input.group>
+                    <x-ui.input id="login-password" un-styled type="email" placeholder="Your email here" class="pe-11 px-3" />
+                    <x-ui.input.trailing absolute class="text-fg" clickable>
+                        <button type="button" class="flex items-center cursor-pointer">
+                            <span class="iconify ph--eye text-fg-muted/80"></span>
+                        </button>
+                    </x-ui.input.trailing>
+                </x-ui.input.group>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <x-ui.checkbox id="remember_me" label="Remember me" />
+                <x-ui.link href="#" class="text-sm text-primary">Forgot password?</x-ui.link>
+            </div>
+
+            <x-ui.button type="submit" class="w-full justify-center">
+                Sign in
+            </x-ui.button>
+        </form>
+
+        <x-ui.divider label-placement="middle" label="Or continue with" class="before:bg-bg-muted my-6"
+            label-class="pr-3 bg-bg text-fg relative" />
+
+        <!-- Social Login -->
+        <div class="grid grid-cols-2 gap-3">
+            <x-ui.button variant="outline" intent="gray" class="justify-center">
+                <span class="iconify ph--google-logo mr-2"></span>
+                <span>Google</span>
+            </x-ui.button>
+            <x-ui.button variant="outline" intent="gray" class="justify-center">
+                <span class="iconify ph--github-logo mr-2"></span>
+                <span>GitHub</span>
+            </x-ui.button>
+        </div>
+
+        <!-- Sign Up Link -->
+        <div class="text-center mt-6">
+            <p class="text-sm text-fg-muted">
+                Don't have an account?
+                <x-ui.link href="#" class="font-medium text-primary ml-1">Sign up</x-ui.link>
             </p>
         </div>
-    </main>
+    </div>
+</main>

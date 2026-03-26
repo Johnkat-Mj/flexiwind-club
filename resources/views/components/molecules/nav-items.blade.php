@@ -11,7 +11,7 @@
         ],
         [
             'text' => 'Components',
-            'href' => '/components/button',
+            'href' => '/components',
         ],
         [
             'text' => 'Blocks',
@@ -22,19 +22,19 @@
             'href' => '/templates',
         ],
         [
-            'text' => 'About',
-            'href' => 'https://unoforge.vercel.app',
+            'text' => 'Examples',
+            'href' => '/components/examples/stacked-modal',
         ],
     ];
 
 @endphp
 
 <ul
-    class="w-full flex flex-col lg:flex-row lg:items-center gap-0.5 text-fg-muted bg-bg lg:bg-transparent rounded-ui p-2 lg:p-0 border border-border dark:border-border-strong lg:border-none">
+    class="w-full flex flex-col gap-3 lg:flex-row lg:items-center  text-fg-muted bg-bg lg:bg-transparent rounded-ui p-2 lg:p-0 border border-border dark:border-border-strong lg:border-none">
     @foreach ($items as $item)
         <li class="relative group {{ isset($item['onlyMobile']) && $item['onlyMobile'] ? 'md:hidden' : '' }}">
             <x-atoms.ui-link href="{{ $item['href'] }}"
-                class="flex items-center text-sm hover:text-fg-title ease-linear duration-200 py-1.5 px-2.5 rounded-ui hover:bg-bg-muted/50">
+                class="flex items-center text-sm hover:text-fg-title ease-linear duration-200 rounded-ui">
                 {{ $item['text'] }}
             </x-atoms.ui-link>
         </li>

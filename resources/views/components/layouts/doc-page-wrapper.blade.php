@@ -24,44 +24,15 @@
         <div class="w-full xl:max-w-2xl mx-auto relative mb-13">
             <x-molecules.doc-page-header :title="$current['title']" :sub-title="$current['description']" :links="$links" :breadcrumbs-main="$breadcrumbsMain"
                 :breadcrumbs-words="$words">
-                <div class="flex items-center divide-x divide-border border border-border-input rounded-ui">
-                    <x-ui.button size="sm" variant="none" class="rounded-r-none" data-copy-markdown>
+                <div class="flex items-center border border-border-input rounded-ui">
+                    <x-ui.button size="sm" variant="none" data-copy-markdown>
                         <span aria-hidden="true" class="flex iconify ph--copy text-sm mr-1.5"></span>
                         <span>Copy as Markdown</span>
                     </x-ui.button>
-                    <x-ui.dropdown.trigger size="sm" iconOnly variant="none" dropdown-id="ui-more-options" class="rounded-l-none">
-                        <span class="iconify ph--caret-down text-xs"></span>
-                    </x-ui.dropdown.trigger>
-                    <x-ui.dropdown placement="bottom-end" id="ui-more-options">
-                        <x-ui.dropdown.item>
-                            <x-ui.dropdown.icon>
-                                <span aria-hidden="true" class="flex iconify ph--open-ai-logo"></span>
-                            </x-ui.dropdown.icon>
-                            <x-ui.dropdown.label>
-                                Open with Chat Gpt
-                            </x-ui.dropdown.label>
-                        </x-ui.dropdown.item>
-                        <x-ui.dropdown.item>
-                            <x-ui.dropdown.icon>
-                                <span aria-hidden="true" class="flex iconify ph--chat"></span>
-                            </x-ui.dropdown.icon>
-                            <x-ui.dropdown.label>
-                                Open with Claude
-                            </x-ui.dropdown.label>
-                        </x-ui.dropdown.item>
-                    </x-ui.dropdown>
                 </div>
             </x-molecules.doc-page-header>
             <div data-doc-content class="py-10 w-full grid">
                 {{ $slot }}
-            </div>
-            <div>
-                <x-atoms.ui-link href="{{ $repoContentLocation }}{{ $contentLocation }}.blade.php"
-                    aria-label="edit this page on github"
-                    class="w-max flex items-center gap-x-2 underline underline-dashed underline-offset-3 hover:text-fg-title">
-                    <span aria-hidden="true" class="flex iconify ph--pencil-simple-line"></span>
-                    Edit this page
-                </x-atoms.ui-link>
             </div>
             <div class="flex w-full hpx my-8 border-b border-border"></div>
             <x-molecules.doc-pagination :prev-slug="$prevSlug" :next-slug="$nextSlug" />

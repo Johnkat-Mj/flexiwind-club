@@ -55,7 +55,7 @@
                     Start Building
                 </x-ui.button>
 
-                <x-ui.button href="/components/button" variant="outline" size="sm" class="sm:btn-md">
+                <x-ui.button href="/components/" variant="outline" size="sm" class="sm:btn-md">
                     <span aria-hidden="true" class="iconify ph--diamonds-four-duotone mr-2 size-3.5"></span>
                     Components
                 </x-ui.button>

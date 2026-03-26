@@ -15,8 +15,8 @@ new class extends Component
 ?>
 
 <div class="w-full h-full bg-bg duration-300 ease-linear  ui-preview-frame
-    flex items-center justify-center relative lg:group-data-[size=mobile]:rounded-ui lg:group-data-[size=tablet]:rounded-ui
-     lg:group-data-[size=tablet]:w-194.5 lg:group-data-[size=mobile]:w-96 overflow-hidden"
+    flex items-center justify-center relative 
+      overflow-hidden"
     x-data="{ frameIsLoading: true }">
     <div x-show="frameIsLoading" class="absolute inset-0 flex items-center justify-center">
         <x-ui.skeleton radius-none class="size-full rounded-ui" />

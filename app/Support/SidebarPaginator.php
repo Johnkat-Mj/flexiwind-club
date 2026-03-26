@@ -9,7 +9,7 @@ class SidebarPaginator
         return collect(config('sidebar'))
             ->flatMap(function ($group) {
                 return collect($group['items'])
-                    ->filter(fn($item) => empty($item['hideInSidebar']))
+                    // ->filter(fn($item) => empty($item['hideInSidebar']))
                     ->map(fn($item) => [
                         'title' => $item['title'],
                         'slug' => $item['path'],

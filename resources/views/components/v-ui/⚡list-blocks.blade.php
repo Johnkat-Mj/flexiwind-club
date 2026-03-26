@@ -85,8 +85,8 @@ new class extends Component {
 };
 ?>
 
-<section class="relative">
-    <div class="mx-auto w-full lg:max-w-300 border-x border-border-strong/70 border-dashed">
+<section class="relative px-2 sm:px-4 xl:px-8">
+    <div class="mx-auto w-full lg:max-w-336 xl:max-w-352 border-x border-border-strong/70 border-dashed">
         <div
             class="-mt-4.5 px-3.5 sm:px-8 md:px-16 lg:px-8 xl:px-0 mx-auto w-full max-w-3xl lg:max-w-5xl overflow-auto flex items-center gap-2">
             <div
@@ -106,7 +106,7 @@ new class extends Component {
                 <span class="size-2 rounded-ui bg-bg border border-border-strong/70"></span>
             </div>
         </div>
-        <ul class="pb-10 px-4 sm:px-6 lg:px-8 mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-3.5 gap-y-6">
+        <ul class="pb-10 px-4 sm:px-6 lg:px-8 xl:px-20 mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-3.5 gap-y-6">
             @forelse ($this->categories as $category)
                 <li class="flex h-full">
                     <x-blocks.block-card :group="$category['group']" :key="$category['id']" :title="$category['name']" :illustrations="$category['illustrations']" />

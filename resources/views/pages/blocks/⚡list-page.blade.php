@@ -7,12 +7,12 @@ new class extends Component {
 <main class="">
     <section class="relative">
         <span aria-hidden="true" class="absolute bottom-0 h-px inset-x-0 flex pointer-events-none">
-            <div class="xl:max-w-380 flex flex-col justify-between h-px w-full mx-auto">
+            <div class="lg:max-w-336 xl:max-w-352 px-2 sm:px-4 xl:px-8 flex flex-col justify-between h-px w-full mx-auto">
                 <span class="h-px bg-linear-to-l from-border-strong to-border/70"></span>
             </div>
         </span>
-        <div aria-hidden="true" class="absolute inset-0 -top-20 pointer-events-none">
-            <div class="flex justify-between size-full max-w-300 mx-auto relative">
+        <div aria-hidden="true" class="absolute inset-0 -top-20 pointer-events-none px-2 sm:px-4 xl:px-8">
+            <div class="flex justify-between size-full lg:max-w-336 xl:max-w-352 mx-auto relative">
                 <div aria-hidden="true"
                     class="absolute inset-x-0 bottom-0 top-14 flex noise-subtle opacity-60 dark:opacity-50"></div>
                 <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
@@ -34,7 +34,7 @@ new class extends Component {
             </div>
         </div>
         <div
-            class="pt-14 pb-20 md:pb-28 px-3.5 sm:px-8 md:px-16 lg:px-8 xl:px-0 mx-auto w-full max-w-3xl lg:max-w-5xl flex flex-col relative">
+            class="pt-14 pb-20 md:pb-28 px-3.5 sm:px-8 md:px-16 lg:px-8 xl:px-24 mx-auto w-full lg:max-w-336 xl:max-w-352 flex flex-col relative">
             <span class="w-max px-2 text-sm rounded-ui ui-subtle ui-subtle-gray">
                 Blocks
             </span>

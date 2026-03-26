@@ -1,15 +1,9 @@
 <div data-nav-overlay data-navbar-id="mainNavbar"
     class="fixed bg-gray-800/40 inset-0 z-30 hidden fx-open:flex lg:hidden lg:fx-open:invisible lg:pointer-events-none">
 </div>
-<span aria-hidden="true" class="absolute top-8 h-4 inset-x-0 flex pointer-events-none">
-    <div class="xl:max-w-380 flex flex-col justify-between h-4 w-full mx-auto">
-        <span class="h-px bg-linear-to-l from-bg-muted/80 to-pattern-fg"></span>
-        <span class="h-px bg-linear-to-r from-bg-muted/80 to-pattern-fg"></span>
-    </div>
-</span>
-<header class="px-1.5 max-[350px]:px-2.5 sm:px-4 pt-2 w-full z-45 relative">
+<header class="h-15 flex items-center w-full z-45 relative bg-bg border-b border-border-strong/70 border-dashed">
     <nav
-        class="sm:max-w-4xl bg-bg shadow-sm border border-border/60 dark:border-border-strong shadow-gray-50 dark:shadow-transparent sm:mx-auto w-full flex justify-between ui-card [--card-padding:calc(var(--spacing)*4)] [--card-radius:var(--radius-ui)]">
+        class="sm:mx-auto w-full flex justify-between lg:max-w-336 xl:max-w-352 px-2 sm:px-4 xl:px-8">
         <div class="flex items-center gap-2 pr-3">
             <div class="flex lg:hidden pr-2 border-r border-border-strong/70">
                 <button data-nav-trigger data-toggle-nav="mainNavbar"
@@ -27,7 +21,7 @@
             </a>
         </div>
         <div x-data x-navbar id="mainNavbar"
-            class="flex lg:flex-1 lg:px-4
+            class="flex lg:flex-1 lg:px-4 lg:border-x lg:border-border-strong/60 border-dashed
         fixed w-full lg:w-auto left-0 top-16 lg:top-0 px-1 sm:px-2
         invisible fx-open:visible opacity-0 fx-open:opacity-100 lg:opacity-100 lg:visible scale-90 fx-open:scale-100 lg:scale-100 lg:relative ease-linear duration-200 transition-all lg:transition-none origin-top
         ">

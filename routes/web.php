@@ -12,7 +12,6 @@ Route::livewire('/the-club', 'pages::the-club')->name('pages.the-club');
 Route::livewire('/templates','pages::templates')->name('pages.templates');
 
 Route::redirect('/docs', '/docs/introduction');
-Route::redirect('/components', '/components/button');
 Route::livewire('/docs/{main?}/{children?}', DocsPage::class)->name('documentation');
 Route::livewire('/components/{main?}/{children?}', ComponentPage::class)->name('components');
 

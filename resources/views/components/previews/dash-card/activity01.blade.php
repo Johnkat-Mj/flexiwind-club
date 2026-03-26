@@ -1,12 +1,12 @@
-<x-ui.card size="none" class="rounded-ui">
+<x-ui.card size="none" class="max-w-sm mx-auto rounded-ui">
     <div class="flex items-center justify-between p-4 pb-4">
-        <h4 class="text-lg font-semibold">Recent Activity</h4>
-        <button class="btn btn-icon-sm btn-ghost btn-ghost-gray rounded-md">
+        <h4 class="text-lg font-semibold text-fg-title">Recent Activity</h4>
+        <x-ui.button size="sm" icon-only variant="ghost">
             <span aria-hidden="true" class="iconify ph--dots-three-vertical"></span>
-        </button>
+        </x-ui.button>
     </div>
-    <div class="px-6 pb-6 space-y-4">
-        <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-bg-bg-subtle/50 transition-colors">
+    <div class="px-4 pb-4 space-y-4">
+        <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-bg-subtle/50 transition-colors">
             <div class="size-8 rounded-full overflow-hidden">
                 <img src="/defaultavatar.webp" alt="Sarah Chen" class="w-full h-full object-cover" />
             </div>

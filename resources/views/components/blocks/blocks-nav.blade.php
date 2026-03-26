@@ -24,13 +24,13 @@
     </ul>
     <div class="absolute left-0 inset-y-0 flex items-center">
         <button data-scroll-to-left aria-label="scroll to left"
-            class="flex items-center p-1.5 bg-gradient-to-r from-bg-surface fx-visible:hover:bg-bg-surface cursor-not-allowed fx-visible:cursor-pointer text-fg rounded-md opacity-40 fx-visible:opacity-100 ease-linear backdrop-blur-sm">
+            class="flex items-center p-1.5 bg-linear-to-r from-bg-surface fx-visible:hover:bg-bg-surface cursor-not-allowed fx-visible:cursor-pointer text-fg rounded-md opacity-40 fx-visible:opacity-100 ease-linear backdrop-blur-sm">
             <span aria-hidden="true" class="i-ph-caret-left text-xl"></span>
         </button>
     </div>
     <div class="absolute right-0 inset-y-0 flex items-center">
         <button data-scroll-to-right aria-label="scroll to right"
-            class="flex items-center p-1.5 bg-gradient-to-r from-bg-surface fx-visible:hover:bg-bg-surface cursor-not-allowed fx-visible:cursor-pointer text-fg rounded-md opacity-40 fx-visible:opacity-100 ease-linear backdrop-blur-sm">
+            class="flex items-center p-1.5 bg-linear-to-r from-bg-surface fx-visible:hover:bg-bg-surface cursor-not-allowed fx-visible:cursor-pointer text-fg rounded-md opacity-40 fx-visible:opacity-100 ease-linear backdrop-blur-sm">
             <span aria-hidden="true" class="i-ph-caret-right text-xl"></span>
         </button>
     </div>

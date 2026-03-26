@@ -65,22 +65,8 @@
 @endphp
 
 
-<footer class="mt-auto">
-    <div class="mx-auto w-full lg:max-w-300 relative pt-20 border-dashed">
-        <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
-            <div class="flex justify-between size-full max-w-300 mx-auto relative">
-                <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
-                <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
-                <span
-                    class="absolute -top-4.5 -left-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-                <span
-                    class="absolute -top-1 left-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-                <span
-                    class="absolute -top-4.5 right-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-                <span
-                    class="absolute -top-1 -right-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            </div>
-        </div>
+<footer class="mt-auto px-2 sm:px-4 xl:px-8">
+    <div class="mx-auto w-full lg:max-w-336 xl:max-w-352 relative pt-20 border-dashed border-x border-border-strong/70">
         <div
             class="pb-10 px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 lg:gap-x-10 gap-y-8">
             <div class="col-span-2 md:col-span-1 lg:col-span-2">

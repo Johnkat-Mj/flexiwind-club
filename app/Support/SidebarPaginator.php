@@ -4,13 +4,26 @@ namespace App\Support;
 
 class SidebarPaginator
 {
+    /**
+     * @var array<int, array<string, mixed>>|null
+     */
+    private static ?array $flattened = null;
+
+    /**
+     * @var array<string, int>|null
+     */
+    private static ?array $indexesBySlug = null;
+
     public static function getFlattened(): array
     {
-        return collect(config('sidebar'))
+        if (self::$flattened !== null) {
+            return self::$flattened;
+        }
+
+        self::$flattened = collect(config('sidebar'))
             ->flatMap(function ($group) {
                 return collect($group['items'])
-                    // ->filter(fn($item) => empty($item['hideInSidebar']))
-                    ->map(fn($item) => [
+                    ->map(fn ($item) => [
                         'title' => $item['title'],
                         'slug' => $item['path'],
                         'description' => $item['description'],
@@ -24,21 +37,28 @@ class SidebarPaginator
             })
             ->values()
             ->all();
+
+        self::$indexesBySlug = collect(self::$flattened)
+            ->pluck('slug')
+            ->flip()
+            ->map(static fn (mixed $index): int => (int) $index)
+            ->all();
+
+        return self::$flattened;
     }
 
     public static function getCurrent(string $slug): ?array
     {
         $items = self::getFlattened();
-        $index = collect($items)->search(fn($item) => $item['slug'] === $slug);
+        $index = self::getIndex($slug);
 
         return $index !== false ? $items[$index] : null;
     }
 
-
     public static function getPagger(string $slug): array
     {
         $items = self::getFlattened();
-        $index = collect($items)->search(fn($item) => $item['slug'] === $slug);
+        $index = self::getIndex($slug);
 
         if ($index === false) {
             return [
@@ -53,5 +73,12 @@ class SidebarPaginator
             'current' => $items[$index],
             'next' => $index < count($items) - 1 ? $items[$index + 1] : null,
         ];
+    }
+
+    private static function getIndex(string $slug): int|false
+    {
+        self::getFlattened();
+
+        return self::$indexesBySlug[$slug] ?? false;
     }
 }

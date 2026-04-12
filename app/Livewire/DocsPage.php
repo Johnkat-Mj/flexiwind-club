@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Support\DocsLayoutData;
 use App\Support\SidebarPaginator;
 use Illuminate\Support\Facades\View;
 use Livewire\Attributes\Layout;
@@ -25,7 +26,9 @@ class DocsPage extends Component
 
     public string $path = '';
 
-    public function mount(?string $main = null, ?string $children = null)
+    public array $seo = [];
+
+    public function mount(?string $main = null, ?string $children = null): void
     {
         if ($main) {
             $this->view .= ".{$main}";
@@ -39,13 +42,8 @@ class DocsPage extends Component
             array_shift($segments);
         }
 
-        // str_replace('/content', '', $this->path
         $this->path = str_replace('/content', '', '/'.implode('/', $segments));
-    }
 
-    #[Layout('layouts::docs')]
-    public function render()
-    {
         if (! View::exists($this->view)) {
             abort(404);
         }
@@ -58,8 +56,17 @@ class DocsPage extends Component
         $this->title = $this->current['title'] ?? '';
         $this->description = $this->current['seoDescription'] ?? '';
         $this->keywords = $this->current['keywords'] ?? '';
+        $this->seo = DocsLayoutData::build($this->current);
 
+        View::share('docsLayoutData', [
+            'path' => $this->path,
+            'seo' => $this->seo,
+        ]);
+    }
 
+    #[Layout('layouts::docs')]
+    public function render()
+    {
         return view($this->view);
     }
 }

@@ -1,20 +1,7 @@
-<?php
-
-use Livewire\Component;
-
-new class extends Component
-{
-    public string $url = '';
-
-    public bool $isFullScreen = false;
-
-    public function mount(string $url, bool $isFullScreen)
-    {
-        $this->url = $url;
-        $this->isFullScreen = $isFullScreen;
-    }
-};
-?>
+@props([
+    'url' => '',
+    'isFullScreen' => false,
+])
 
 <div data-preview-box style="--frame-height:200px;" class="w-full bg-bg duration-300 ease-linear 
     grid relative 

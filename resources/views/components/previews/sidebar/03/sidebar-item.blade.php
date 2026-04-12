@@ -6,7 +6,7 @@
         relative hover:before:bg-bg-muted/60 before:absolute before:rounded-ui before:inset-0 active:before:scale-y-[.95] active:before:scale-x-[.98] before:transition-transform before:transform before:ease-linear fx-active:before:bg-primary fx-current:before:bg-primary
         ">
         <span class="min-w-max inline-flex relative">
-            <span aria-hidden="true" class="iconify {{ $icon }} size-4 opacity-80"></span>
+            <x-ui.icon name="{{ $icon }}" class="opacity-80"/>
         </span>
         <span class="line-clamp-1 flex-1 relative">
             {{ $text }}

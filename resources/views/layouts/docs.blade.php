@@ -1,18 +1,8 @@
 @php
     use App\Support\SidebarPaginator;
 
-    $path = '/' . ltrim(request()->path() ?: '', '/');
-    $current = SidebarPaginator::getCurrent($path);
-
-    $seo = [
-        'ogImage' => [
-            'src' => $current['ogImage']['src'] ?? config('base.default_og_image'),
-            'alt' => $current['ogImage']['alt'] ?? config('base.default_og_alt'),
-        ],
-        'keywords' => trim(config('base.keywords_def') . ($current['keywords'] ? ', ' . $current['keywords'] : '')),
-        'title' => 'Flexiwind | ' . $current['title'],
-        'description' => $current['seoDescription'] ?? 'Easily add interactive Components to your App.',
-    ];
+    $path = $docsLayoutData['path'] ?? '/' . ltrim(request()->path() ?: '', '/');
+    $seo = $docsLayoutData['seo'] ?? \App\Support\DocsLayoutData::build(SidebarPaginator::getCurrent($path));
 @endphp
 
 <x-layouts.base body-class="bg-bg lg:bg-gray-50/50 dark:lg:bg-bg " :seo="$seo">

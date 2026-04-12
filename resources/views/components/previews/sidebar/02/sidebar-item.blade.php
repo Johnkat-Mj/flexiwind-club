@@ -9,7 +9,7 @@
                 hover:bg-bg-surface h-9 gap-3.5 pl-3 pr-4
       ">
 
-        <span aria-hidden="true" class="iconify {{ $icon }} size-4"></span>
+        <x-ui.icon name="{{ $icon }}"/>
         <span class="text-sm">
             {{ $text }}
         </span>

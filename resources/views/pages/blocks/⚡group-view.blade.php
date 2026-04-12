@@ -38,7 +38,7 @@ class extends Component {
         <x-blocks.block-page-header :title="$blockGroup['title'] ?? 'Block Group'" :description="$blockGroup['description'] ?? 'Block Group Description'" />
         <section class="mt-10 space-y-12 pb-16 w-full overflow-hidden">
             @foreach ($blockGroup['blocks'] as $codeKey => $block)
-                <livewire:v-ui.single-block wire:key="block-{{ $blockName }}-{{ $codeKey }}-{{ $loop->index }}"
+                <x-v-ui.single-block
                     :key-ui="$blockName . '-' . $codeKey . '-' . $loop->index" :title="$block['name'] ?? ucfirst($codeKey)"
                     :is-full-screen="$block['is-full-screen'] ?? false"
                     :preview="$block['preview'] ?? '#'" :code="$block" />

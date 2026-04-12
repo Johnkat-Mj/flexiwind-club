@@ -1,42 +1,26 @@
-<?php
+@props([
+    'component' => '',
+    'noInTabs' => false,
+])
 
-use Livewire\Component;
+@php
+    $filePath = '';
+    $isLivewire = false;
+    $componentPreview = '';
 
-new class extends Component {
-    public string $filePath = '';
-    public string $component = '';
-    public string $pathShow = '';
+    if ($component !== '') {
+        $componentPath = str_replace('.', '/', $component);
+        $filePath = resource_path("views/{$componentPath}.blade.php");
 
-    public bool $isLivewire = false;
-    public string $componentPreview = '';
-    public bool $noInTabs = false;
+        $previewComponentPath = str_replace('/', '.', $component);
 
-    public function mount(string $component = '', $noInTabs = false)
-    {
-        $this->component = $component;
-        $this->loadComponentCode();
-        $this->noInTabs = $noInTabs;
-    }
-
-    protected function loadComponentCode()
-    {
-        if (empty($this->component)) {
-            return;
+        if (str_starts_with($previewComponentPath, 'livewire.')) {
+            $isLivewire = true;
         }
 
-        $componentPath = str_replace('.', '/', $this->component);
-        $this->filePath = resource_path("views/{$componentPath}.blade.php");
-
-        $previewcomponentPath = str_replace('/', '.', $this->component);
-        if (str_starts_with($previewcomponentPath, 'livewire.')) {
-            $this->isLivewire = true;
-        }
-
-        $this->componentPreview = substr($previewcomponentPath, 11);
+        $componentPreview = substr($previewComponentPath, 11);
     }
-};
-?>
-
+@endphp
 
 @if ($noInTabs)
     <div
@@ -51,7 +35,7 @@ new class extends Component {
                 <x-dynamic-component :component="$componentPreview" />
             @endif
         </div>
-        <livewire:base.view-component-code :file-path="$filePath" />
+        <x-base.view-component-code :file-path="$filePath" />
     </div>
 @else
     <x-docs.docs-tab :values="[
@@ -76,7 +60,7 @@ new class extends Component {
         </x-docs.tab-panel>
         <x-docs.tab-panel value="Code" show-with-grid
             class="overflow-hidden bg-(--astro-code-color-background) rounded-ui">
-            <livewire:base.view-component-code :file-path="$filePath" />
+            <x-base.view-component-code :file-path="$filePath" />
         </x-docs.tab-panel>
     </x-docs.docs-tab>
 @endif

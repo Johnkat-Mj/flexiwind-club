@@ -1,26 +1,10 @@
-<?php
-
-use Livewire\Component;
-
-new class extends Component {
-    public string $key_ui = '';
-
-    public string $title = '';
-
-    public string $preview = '';
-
-    public array $code = [];
-    public bool $isFullScreen = false;
-
-    public function mount(string $keyUi, string $preview, string $title, array $code, bool $isFullScreen)
-    {
-        $this->key_ui = $keyUi;
-        $this->title = $title;
-        $this->preview = $preview;
-        $this->code = $code;
-    }
-};
-?>
+@props([
+    'keyUi' => '',
+    'title' => '',
+    'preview' => '',
+    'code' => [],
+    'isFullScreen' => false,
+])
 
 @php
     $sizeTriggers = [
@@ -42,7 +26,7 @@ new class extends Component {
     ];
 @endphp
 
-<article x-data x-ui-block wire:key="card-wrapper-{{ $key_ui }}" class="relative w-full">
+<article x-data x-ui-block class="relative w-full">
 
     <x-ui.tabs class="relative lg:max-w-336 xl:max-w-352 lg:mx-auto px-2 sm:px-4 xl:px-8 w-full">
         <x-ui.tabs.list-wrapper class="w-full flex justify-between items-center gap-2 h-12 px-3.5 relative">
@@ -75,9 +59,9 @@ new class extends Component {
                 <div class="hidden sm:flex">
                     @php
                         $command = "php artisan flexi:add {$title}";
-                        $command_install = "php artisan flexi:add @club/{$title}";
+                        $commandInstall = "php artisan flexi:add @club/{$title}";
                     @endphp
-                    <x-ui.button x-copy-command size="none" variant="none" data-command="{{ $command_install }}"
+                    <x-ui.button x-copy-command size="none" variant="none" data-command="{{ $commandInstall }}"
                         class="bg-bg shadow h-8 pl-2 pr-3 text-xs border border-border/50 rounded-md flex justify-center items-center cursor-pointer hover:bg-bg-surface">
                         <span aria-hidden="true" class="flex iconify ph--terminal"></span>
                         <span class="text-fg-muted ml-1">{{ $command }}</span>
@@ -88,10 +72,10 @@ new class extends Component {
         <x-ui.tabs.panel-wrapper data-ui-previewbox
             class="bg-bg h-max overflow-hidden flex items-center justify-center ring ring-border-card rounded-ui w-full relative group flex-1">
             <x-ui.tabs.panel id="preview" show-as-grid active class="w-full h-auto">
-                <livewire:v-ui.preview-block :is-full-screen="$isFullScreen" url="{{ $preview }}" />
+                <x-v-ui.preview-block :is-full-screen="$isFullScreen" :url="$preview" />
             </x-ui.tabs.panel>
             <x-ui.tabs.panel id="code" show-as-grid class="size-full max-h-280">
-                <livewire:base.load-code-b :name="$title" />
+                <x-base.load-code-b :name="$title" />
             </x-ui.tabs.panel>
         </x-ui.tabs.panel-wrapper>
     </x-ui.tabs>

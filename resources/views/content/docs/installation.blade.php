@@ -20,7 +20,7 @@
             <x-md.h3>Add the Flexiwind Club registry</x-md.h3>
             <x-md.paragraph>Add the following configuration to your <x-docs.inline-code text="flexiwind.yaml" /> file:</x-md.paragraph>
             
-            <livewire:base.load-code name="club-pro-config" />
+            <x-base.load-code name="club-pro-config" />
         </x-docs.step>
 
         <x-docs.step>
@@ -34,8 +34,8 @@
         <x-docs.step>
             <x-md.h3>Use the CLI to add components</x-md.h3>
             <x-md.paragraph>Now you can add Flexiwind Club components using the CLI:</x-md.paragraph>
-            <livewire:base.terminal code="php artisan flexi:add @club/select" />
-            <livewire:base.terminal code="php artisan flexi:add @club/sidebar05" />
+            <x-base.terminal code="php artisan flexi:add @club/select" />
+            <x-base.terminal code="php artisan flexi:add @club/sidebar05" />
         </x-docs.step>
     </x-docs.steps>
 

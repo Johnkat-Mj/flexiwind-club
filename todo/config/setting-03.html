@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashblock 01</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <main class="py-20">
+      <div class="max-w-2xl w-full px-4 mx-auto">
+        <div
+          class="bg-bg-surface border border-border-strong/40 ring-2 ring-border rounded-lg"
+        >
+          <div class="p-6 border-b border-border-strong">
+            <h4 class="text-lg font-semibold text-fg-title">
+              Account Settings
+            </h4>
+            <p class="text-sm text-fg">
+              Manage your account information and preferences
+            </p>
+          </div>
+          <div class="p-6 grid md:grid-cols-2 gap-y-6 gap-x-4">
+            <div class="flex flex-col space-y-2">
+              <label class="text-sm font-medium text-fg"
+                >First Name</label
+              >
+              <input
+                type="text"
+                class="btn-sw-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                value="Sarah"
+                placeholder="Enter first name"
+              />
+            </div>
+            <div class="flex flex-col space-y-2">
+              <label class="text-sm font-medium text-fg"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                class="btn-sw-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                value="Chen"
+                placeholder="Enter last name"
+              />
+            </div>
+            <div class="flex flex-col space-y-2 col-span-full">
+              <label class="text-sm font-medium text-fg"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="btn-sw-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                value="sarah.chen@company.com"
+                placeholder="Enter email address"
+              />
+            </div>
+            <div class="flex flex-col space-y-2 col-span-full">
+              <label class="text-sm font-medium text-fg"
+                >Job Title</label
+              >
+              <input
+                type="text"
+                class="btn-sw-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                value="Senior Product Designer"
+                placeholder="Enter job title"
+              />
+            </div>
+            <div class="flex flex-col space-y-2 col-span-full">
+              <label class="text-sm font-medium text-fg"
+                >Time Zone</label
+              >
+              <select class="ui-form-base ui-form-input ui-form-select bg-bg border border-border-strong/90 ui-form-input-md rounded-lg text-fg">
+                <option>Pacific Standard Time (PST)</option>
+                <option>Mountain Standard Time (MST)</option>
+                <option>Central Standard Time (CST)</option>
+                <option>Eastern Standard Time (EST)</option>
+              </select>
+            </div>
+            <div
+              class="flex justify-end space-x-3 pt-4 border-t border-border col-span-full"
+            >
+              <button
+                class="btn btn-sm btn-flexi btn-flexi-white text-fg-subtitle rounded-md"
+              >
+                Cancel
+              </button>
+              <button
+                class="btn btn-sm btn-solid btn-solid-primary text-white rounded-md"
+              >
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

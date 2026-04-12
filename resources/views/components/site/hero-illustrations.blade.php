@@ -129,7 +129,7 @@
                 <div class="relative z-11 p-4 flex items-center justify-between">
                     <div class="flex">
                         <x-ui.input.group size="sm">
-                            <x-ui.input unStyled placeholder="Start typing" class="ps-7 px-3" />
+                            <x-ui.input variant="unstyled" placeholder="Start typing" class="ps-7 px-3" />
                             <x-ui.input.leading absolute class="text-fg text-sm [--left-space:8px]">
                                 <span class="flex iconify ph--magnifying-glass size-3.5"></span>
                             </x-ui.input.leading>

@@ -26,7 +26,7 @@
         <x-docs.step>
             <x-md.h3>Add your authentication token</x-md.h3>
             <x-md.paragraph>
-                Replace <x-docs.inline-code text="YOUR_FLEXIWIND_CLUB_TOKEN" /> with your actual Flexiwind Club access token.
+                We recommand to add your token in .env, the token is required only when you want to add a component/block from flexiwind club. Create an env variable <x-docs.inline-code text="YOUR_FLEXIWIND_CLUB_TOKEN" /> (or name it as you want but make sure to match the one in your flexiwind.yaml) with your actual Flexiwind Club access token.
                 You can find your token in your account dashboard after subscribing.
             </x-md.paragraph>
         </x-docs.step>

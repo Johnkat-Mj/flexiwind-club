@@ -24,9 +24,9 @@ function build() {
     const marketing = readJsonSync(marketingBlocksPath)
 
     const finalRegistry = {
-        name: "flexiwind-ui",
-        title: "Flexiwind UI",
-        description: "Flexiwind UI components and blocks for Laravel Blade and Livewire.",
+        name: "flexiwind-club",
+        title: "Flexiwind Club",
+        description: "Flexiwind Club components and blocks for Laravel Blade and Livewire.",
         homepage: "https://flexiwind.laravel.com",
         author: "Johnkat MJ <johnkatembue4@gmail.com>",
         components: [

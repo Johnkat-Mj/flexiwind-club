@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "profile-form01",
+    "type": "registry:component",
+    "title": "Profile Form 01",
+    "description": "User profile edit form.",
+    "registryDependencies": [
+        "button",
+        "label",
+        "input",
+        "card"
+    ],
+    "files": [
+        {
+            "path": "resources/views/components/previews/forms/profile-form01.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/forms/profile-form.blade.php",
+            "content": "<div class=\"max-w-xl w-full px-4 mx-auto\">\n    <x-ui.card size=\"none\" class=\"p-6 rounded-ui\">\n        <h3 class=\"text-lg font-semibold text-fg-title mb-6\">\n            User Profile Form\n        </h3>\n        <form class=\"grid grid-cols-2 gap-y-6 gap-x-4\" id=\"profile-form\">\n            <div class=\"flex items-center space-x-6 col-span-full\">\n                <img src=\"https://avatars.githubusercontent.com/u/34010260?v=4\" alt=\"Profile picture\" width=\"200\"\n                    height=\"200\" class=\"size-20 rounded-full border-4 border-border-strong\" />\n                <div>\n                    <input type=\"file\" name=\"profile_pic\" id=\"profile_pic\" class=\"sr-only\" />\n                    <label for=\"profile_pic\" class=\"btn btn-sm btn-soft btn-soft-primary rounded-ui w-max\">\n                        Change Photo\n                    </label>\n                    <p class=\"text-xs text-gray-500 mt-1\">\n                        JPG, GIF or PNG. 1MB max.\n                    </p>\n                </div>\n            </div>\n            <x-ui.input id=\"first-name\" label=\"First Name\" placeholder=\"John\" />\n            <x-ui.input id=\"last-name\" label=\"Last Name\" placeholder=\"Doe\" />\n\n            <x-ui.input id=\"email\" type=\"email\" label=\"Email Address\" placeholder=\"johndoe@gmail.com\"\n                group-wrapper-class=\"col-span-full\" />\n\n\n            <x-ui.select id=\"role\" group-wrapper-class=\"col-span-full\" label=\"Role\">\n                <option value=\"Administrator\" selected>Administrator</option>\n                <option value=\"Manager\">Manager</option>\n                <option value=\"Employee\">Employee</option>\n            </x-ui.select>\n\n\n            <x-ui.textarea id=\"bio\" label=\"Bio\" rows=\"3\" placeholder=\"Tell us about yourself...\"\n                class=\"h-24 pt-3 resize-none\" group-wrapper-class=\"col-span-full\" />\n\n            <div class=\"flex items-center justify-end space-x-3 pt-4 border-t border-border col-span-full\">\n                <x-ui.button type=\"button\" size=\"sm\" class=\"\" variant=\"outline\" intent=\"gray\">\n                    Cancel\n                </x-ui.button>\n                <x-ui.button type=\"submit\" size=\"sm\">\n                    Save Changes\n                </x-ui.button>\n            </div>\n        </form>\n    </x-ui.card>\n</div>\n"
+        }
+    ]
+}

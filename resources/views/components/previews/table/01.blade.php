@@ -1,158 +1,203 @@
 @php
-    $organizations = [
+    $statusIntents = [
+        'Actif' => 'success',
+        'Inactif' => 'danger',
+        'Pending' => 'warning',
+    ];
+
+    $leads = [
         [
-            'id' => 1,
-            'name' => 'TechCorp Solutions',
-            'industry' => 'Technology',
-            'contact' => 'John Smith',
-            'email' => 'john@techcorp.com',
-            'phone' => '+1 (555) 123-4567',
-            'status' => 'active',
-            'revenue' => '$2.5M',
-            'employees' => 150,
+            'id' => 'lead_1',
+            'name' => 'John Smith',
+            'phone' => '+243 81 234 5678',
+            'email' => 'johndow@gmail.com',
+            'status' => 'Actif',
+            'source' => ['icon' => 'ph--link', 'label' => 'Website'],
+            'assignees' => 3,
         ],
         [
-            'id' => 2,
-            'name' => 'Global Marketing Inc',
-            'industry' => 'Marketing',
-            'contact' => 'Sarah Johnson',
-            'email' => 'sarah@globalmarketing.com',
-            'phone' => '+1 (555) 234-5678',
-            'status' => 'prospect',
-            'revenue' => '$1.2M',
-            'employees' => 45,
+            'id' => 'lead_2',
+            'name' => 'Michael Brown',
+            'phone' => '+243 80 345 6789',
+            'email' => 'michael.brown@example.com',
+            'status' => 'Inactif',
+            'source' => ['icon' => 'ph--link', 'label' => 'LinkedIn'],
+            'assignees' => 1,
         ],
         [
-            'id' => 3,
-            'name' => 'FinanceHub LLC',
-            'industry' => 'Finance',
-            'contact' => 'Michael Chen',
-            'email' => 'michael@financehub.com',
-            'phone' => '+1 (555) 345-6789',
-            'status' => 'active',
-            'revenue' => '$5.8M',
-            'employees' => 200,
+            'id' => 'lead_3',
+            'name' => 'Amina Diallo',
+            'phone' => '+243 84 321 7654',
+            'email' => 'amina.d@example.com',
+            'status' => 'Actif',
+            'source' => ['icon' => 'ph--link', 'label' => 'GitHub'],
+            'assignees' => 2,
         ],
         [
-            'id' => 4,
-            'name' => 'Healthcare Plus',
-            'industry' => 'Healthcare',
-            'contact' => 'Emily Davis',
-            'email' => 'emily@healthcareplus.com',
-            'phone' => '+1 (555) 456-7890',
-            'status' => 'churned',
-            'revenue' => '$800K',
-            'employees' => 25,
+            'id' => 'lead_4',
+            'name' => 'Carlos Méndez',
+            'phone' => '+243 82 222 3333',
+            'email' => 'carlos.mendez@example.com',
+            'status' => 'Pending',
+            'source' => ['icon' => 'ph--link', 'label' => 'Resume'],
+            'assignees' => 1,
         ],
         [
-            'id' => 5,
-            'name' => 'Retail Dynamics',
-            'industry' => 'Retail',
-            'contact' => 'Robert Wilson',
-            'email' => 'robert@retaildynamics.com',
-            'phone' => '+1 (555) 567-8901',
-            'status' => 'active',
-            'revenue' => '$3.2M',
-            'employees' => 85,
+            'id' => 'lead_5',
+            'name' => 'Fatima Ibrahim',
+            'phone' => '+243 88 555 1234',
+            'email' => 'fatima.ibrahim@example.com',
+            'status' => 'Actif',
+            'source' => ['icon' => 'ph--link', 'label' => 'Portfolio'],
+            'assignees' => 2,
+        ],
+        [
+            'id' => 'lead_6',
+            'name' => 'Samuel Lee',
+            'phone' => '+243 89 444 6789',
+            'email' => 'sam.lee@example.com',
+            'status' => 'Inactif',
+            'source' => ['icon' => 'ph--linkedin-logo', 'label' => 'LinkedIn'],
+            'assignees' => 1,
+        ],
+        [
+            'id' => 'lead_7',
+            'name' => 'Nina Kamanzi',
+            'phone' => '+243 85 666 4321',
+            'email' => 'nina.kamanzi@example.com',
+            'status' => 'Actif',
+            'source' => ['icon' => 'ph--link', 'label' => 'Blog'],
+            'assignees' => 2,
+        ],
+        [
+            'id' => 'lead_8',
+            'name' => 'Alex Kimani',
+            'phone' => '+243 87 111 2345',
+            'email' => 'alex.kimani@example.com',
+            'status' => 'Pending',
+            'source' => ['icon' => 'ph--link', 'label' => 'Website'],
+            'assignees' => 1,
+        ],
+        [
+            'id' => 'lead_9',
+            'name' => 'Grace Chen',
+            'phone' => '+243 83 999 8888',
+            'email' => 'grace.chen@example.com',
+            'status' => 'Actif',
+            'source' => ['icon' => 'ph--link', 'label' => 'Profile'],
+            'assignees' => 2,
         ],
     ];
+
+    $perPageOptions = [5, 10, 15, 20, 25];
 @endphp
 
-<div class="rounded-ui border border-border">
-    <div class="p-4 border-b border-border-input/60">
-        <h2 class="text-xl font-semibold text-fg-title mb-1">Organizations</h2>
-        <p class="text-fg-muted text-sm">Manage your customer relationships and track organization details.</p>
-    </div>
-    
-    <x-ui.table class="text-left">
-        <x-ui.table.columns
-            wrapper="bg-bg-surface border-y border-border-input/60 [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider w-8">
-                <x-ui.checkbox />
-            </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Organization
-            </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Industry
-            </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Contact Person
-            </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Status
-            </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Revenue
-            </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Employees
-            </x-ui.table.column>
-            <x-ui.table.column class="w-10"></x-ui.table.column>
-        </x-ui.table.columns>
-        <x-ui.table.rows class="divide-y divide-border [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
-            @foreach ($organizations as $organization)
-                <x-ui.table.row hoverable class="group">
-                    <x-ui.table.cell>
-                        <x-ui.checkbox />
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <div>
-                            <div class="text-sm font-medium text-fg-title">{{ $organization['name'] }}</div>
-                            <div class="text-xs text-fg-muted">{{ $organization['email'] }}</div>
-                        </div>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <span class="text-sm text-fg">{{ $organization['industry'] }}</span>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <div>
-                            <div class="text-sm text-fg-title">{{ $organization['contact'] }}</div>
-                            <div class="text-xs text-fg-muted">{{ $organization['phone'] }}</div>
-                        </div>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        @php
-                            $statusColors = [
-                                'active' => 'success',
-                                'prospect' => 'warning',
-                                'churned' => 'danger'
-                            ];
-                            $statusIntent = $statusColors[$organization['status']] ?? 'neutral';
-                        @endphp
-                        <x-ui.badge variant="soft" intent="{{ $statusIntent }}" size="sm">
-                            {{ ucfirst($organization['status']) }}
-                        </x-ui.badge>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <span class="text-sm font-medium text-fg-title">{{ $organization['revenue'] }}</span>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <span class="text-sm text-fg">{{ $organization['employees'] }}</span>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell class="text-right">
-                        <x-ui.button size="sm" icon-only variant="ghost">
-                            <span aria-hidden="true" class="iconify ph--dots-three"></span>
-                        </x-ui.button>
-                    </x-ui.table.cell>
-                </x-ui.table.row>
-            @endforeach
-        </x-ui.table.rows>
-    </x-ui.table>
-    
-    <div class="p-4 flex items-center justify-between border-t border-border">
-        <div class="text-sm text-fg-muted">
-            Showing <span class="font-medium text-fg-title">{{ count($organizations) }}</span> organizations
+<div class="max-w-7xl px-4 mx-auto">
+    <div class="flex items-center md:justify-between gap-4 pb-2 border-b border-dashed border-border-strong/80">
+        <div class="flex items-center gap-3">
+            <div class="size-12 rounded-ui d-flex-place-center ui-subtle ui-subtle-gray">
+                <span aria-hidden="true" class="iconify ph--users"></span>
+            </div>
+            <div class="flex flex-col">
+                <h3 class="font-semibold text-fg-title">Leads</h3>
+                <p class="text-fg-muted text-sm">Summary of leads</p>
+            </div>
         </div>
         <div class="flex items-center gap-2">
-            <x-ui.button size="sm" variant="ghost" class="border border-border pl-2" disabled>
-                <span aria-hidden="true" class="iconify size-3.5 mr-1 ph--caret-left"></span>
-                Previous
+            <x-ui.button href="./nouveau.html" variant="solid" intent="primary" size="sm">
+                <span aria-hidden="true" class="iconify ph--plus mr-2"></span>
+                New lead
             </x-ui.button>
-            <x-ui.button size="sm" variant="ghost" class="border border-border pr-2">
-                Next
-                <span aria-hidden="true" class="iconify size-3.5 ml-1 ph--caret-right"></span>
-            </x-ui.button>
+        </div>
+    </div>
+    <div class="mt-6 grid overflow-hidden w-full rounded-lg border border-border-strong/60">
+        <div class="flex items-center justify-between p-4">
+            <x-ui.input.group class="max-w-xs flex-1">
+                <x-ui.input variant="unstyled" placeholder="Search" class="ps-9 pe-10" />
+                <x-ui.input.leading absolute>
+                    <span aria-hidden="true" class="iconify ph--magnifying-glass text-fg-muted opacity-80"></span>
+                </x-ui.input.leading>
+            </x-ui.input.group>
+            <label class="flex items-center gap-2">
+                <x-ui.select name="per-page">
+                    @foreach ($perPageOptions as $option)
+                        <x-ui.select.option :value="$option" :label="$option" :selected="$option === 10" />
+                    @endforeach
+                </x-ui.select>
+                <span class="hidden md:inline text-nowrap text-sm text-fg-muted">entries per page</span>
+            </label>
+        </div>
+
+        <x-ui.table wrapper="border-t border-border-strong/60">
+            <x-ui.table.columns class="bg-bg-surface border-b border-border-input/60">
+                <x-ui.table.column class="w-5" whiteSpace="normal">
+                    <x-ui.checkbox name="select_all" id="select_all" />
+                </x-ui.table.column>
+                <x-ui.table.column>Name</x-ui.table.column>
+                <x-ui.table.column>Contact</x-ui.table.column>
+                <x-ui.table.column>Status</x-ui.table.column>
+                <x-ui.table.column>Source</x-ui.table.column>
+                <x-ui.table.column>Assign to</x-ui.table.column>
+                <x-ui.table.column class="w-8"></x-ui.table.column>
+            </x-ui.table.columns>
+            <x-ui.table.rows>
+                @foreach ($leads as $lead)
+                    <x-ui.table.row :hoverable="true">
+                        <x-ui.table.cell class="w-5" whiteSpace="normal">
+                            <x-ui.checkbox :name="$lead['id']" :id="$lead['id']" />
+                        </x-ui.table.cell>
+                        <x-ui.table.cell>
+                            <span class="text-fg-title">
+                                {{ $lead['name'] }}
+                            </span>
+                        </x-ui.table.cell>
+                        <x-ui.table.cell whiteSpace="normal">
+                            <div class="flex flex-col">
+                                <span class="text-sm text-fg-title">{{ $lead['phone'] }}</span>
+                                <span class="text-sm text-fg-muted">{{ $lead['email'] }}</span>
+                            </div>
+                        </x-ui.table.cell>
+                        <x-ui.table.cell>
+                            <x-ui.badge variant="subtle" :intent="$statusIntents[$lead['status']]" size="sm">
+                                {{ $lead['status'] }}
+                            </x-ui.badge>
+                        </x-ui.table.cell>
+                        <x-ui.table.cell>
+                            <span class="flex items-center text-sm gap-2">
+                                <span aria-hidden="true" class="iconify {{ $lead['source']['icon'] }}"></span>
+                                {{ $lead['source']['label'] }}
+                            </span>
+                        </x-ui.table.cell>
+                        <x-ui.table.cell>
+                            <div class="flex items-center -space-x-3">
+                                @for ($i = 0; $i < $lead['assignees']; $i++)
+                                    <x-ui.avatar src="/defaultavatar.webp" alt="Avatar user" size="sm" />
+                                @endfor
+                            </div>
+                        </x-ui.table.cell>
+                        <x-ui.table.cell class="w-8">
+                            <x-ui.button variant="ghost" intent="gray" :icon-only="true" size="sm">
+                                <span aria-hidden="true" class="iconify ph--dots-three-vertical"></span>
+                            </x-ui.button>
+                        </x-ui.table.cell>
+                    </x-ui.table.row>
+                @endforeach
+            </x-ui.table.rows>
+        </x-ui.table>
+        <div class="p-4 border-t border-border-strong/60 flex items-center justify-between">
+            <span class="text-fg-muted text-xs sm:text-sm">
+                Showing 1 to {{ count($leads) }} entries
+            </span>
+            <div class="flex items-center gap-2">
+                <x-ui.button variant="outline" intent="gray" size="sm">
+                    <span aria-hidden="true" class="iconify ph--caret-left mr-2"></span>
+                    Prev
+                </x-ui.button>
+                <x-ui.button variant="outline" intent="gray" size="sm">
+                    Next
+                    <span aria-hidden="true" class="iconify ph--caret-right ml-2"></span>
+                </x-ui.button>
+            </div>
         </div>
     </div>
 </div>

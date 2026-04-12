@@ -1,9 +1,17 @@
-@props(['icon', 'text', 'href', 'isActive' => false])
-
 <li>
-    <a href="{{ $href }}" data-state="{{ $isActive ? 'active' : 'inactive' }}"
-        class="flex items-center gap-3 px-2 py-1.5 rounded-ui text-sm transition-colors text-fg-muted/80 hover:bg-bg-surface fx-current:bg-bg-muted/60 fx-active:bg-bg-muted/60 fx-active:text-fg-title fx-current:text-fg-title font-medium">
-        <span aria-hidden="true" class="iconify size-4 opacity-80 {{ $icon }}"></span>
-        <span>{{ $text }}</span>
+    <a href="{{ $href }}"
+    data-state="{{ $isActive ? 'active':'inactive' }}"
+        class="group flex items-center rounded-ui
+                hover:brightness-[0.98] active:brightness-100
+                text-fg-muted fx-active:text-fg-title fx-current:text-fg-title
+                fx-active:bg-white dark:fx-active:bg-gray-800/40
+                ring ring-transparent fx-active:ring-border-input/50
+                hover:bg-bg-surface h-9 gap-3.5 pl-3 pr-4
+      ">
+
+        <span aria-hidden="true" class="iconify {{ $icon }} size-4"></span>
+        <span class="text-sm">
+            {{ $text }}
+        </span>
     </a>
 </li>

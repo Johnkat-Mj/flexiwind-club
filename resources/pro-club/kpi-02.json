@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "kpi-02",
+    "type": "registry:component",
+    "title": "KPI 02",
+    "description": "Simple KPI stat cards.",
+    "registryDependencies": [
+        "card"
+    ],
+    "files": [
+        {
+            "path": "resources/views/components/previews/dash-card/kpi-02.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/dash-card/kpi-02.blade.php",
+            "content": "<div class=\"max-w-7xl px-4 mx-auto\">\n    <x-ui.card class=\"block w-full\">\n        <h2 class=\"block text-fg-title text-lg font-medium\">Overview</h2>\n        <p class=\"text-fg-muted mt-1 text-sm\">Visualize your main activities data</p>\n        <div class=\"mt-6 grid gap-6 divide-y sm:grid-cols-2 divide-border-card sm:divide-x lg:divide-y-0 lg:grid-cols-4\">\n            <div class=\"sm:pr-6\">\n                <span class=\"text-fg-muted text-sm\">\n                    New Orders\n                </span>\n                <div class=\"mt-2 flex items-center justify-between gap-3\">\n                    <span class=\"block text-fg-title text-xl font-semibold\">639400</span>\n                    <div class=\"flex items-center text-success\">\n                        <span class=\"size-4 iconify ph--trend-up mr-1.5\"></span>\n                        <p class=\"text-sm\">32%</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"max-lg:border-r-0 pt-6 sm:pl-6 lg:pr-6 sm:pt-0\">\n                <span class=\"text-gray-500 text-sm\">\n                    New Customers\n                </span>\n                <div class=\"mt-2 flex items-center justify-between gap-3\">\n                    <span class=\"block text-fg-title text-xl font-semibold\">478000</span>\n                    <div class=\"flex items-center text-danger\">\n                        <span class=\"size-4 iconify ph--trend-down mr-1.5\"></span>\n                        <p class=\"text-sm\">15%</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"max-lg:border-l-0 pt-6 sm:pr-6 lg:pl-6 sm:pt-0\">\n                <span class=\"text-gray-500 text-sm\">\n                    New Customers\n                </span>\n                <div class=\"mt-2 flex items-center justify-between gap-3\">\n                    <span class=\"block text-fg-title text-xl font-semibold\">478000</span>\n                    <div class=\"flex items-center text-danger\">\n                        <span class=\"size-4 iconify ph--trend-down mr-1.5\"></span>\n                        <p class=\"text-sm\">15%</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"pt-6 max-lg:border-l-0 sm:pt-0\">\n                <span class=\"text-gray-500 text-sm\">\n                    New Customers\n                </span>\n                <div class=\"mt-2 flex items-center justify-between gap-3\">\n                    <span class=\"block text-fg-title text-xl font-semibold\">478000</span>\n                    <div class=\"flex items-center text-danger\">\n                        <span class=\"size-4 iconify ph--trend-down mr-1.5\"></span>\n                        <p class=\"text-sm\">15%</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </x-ui.card>\n</div>\n"
+        }
+    ]
+}

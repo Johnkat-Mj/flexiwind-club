@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table view 03</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <main class="py-20">
+      <div class="max-w-7xl px-4 mx-auto">
+        <div
+          class="grid overflow-hidden w-full p-5 rounded-lg border border-border-strong/60"
+        >
+          <div class="flex pb-4 items-center justify-between">
+            <div class="flex flex-col">
+              <h3 class="font-semibold text-fg-title">Leads</h3>
+              <p class="text-fg-muted text-sm">Summary of leads</p>
+            </div>
+            <div class="">
+              <div class="flex items-center gap-2 relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="ps-10 flex-1 ui-form-base ui-form-input ui-form-input-md border border-border-strong/90 bg-bg text-fg rounded-md"
+                />
+                <button
+                  class="btn btn-icon-md btn-outline btn-outline-gray rounded-md size-9"
+                >
+                  <span class="flex text-sm iconify ph--funnel"></span>
+                </button>
+                <span
+                  class="flex text-sm iconify ph--magnifying-glass text-fg-muted absolute left-3 top-1/2 -translate-y-1/2"
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-x-auto w-full">
+            <table class="w-full text-fg text-left">
+              <thead class="capitalize text-sm text-fg-muted py-2">
+                <tr
+                  class="*:bg-bg-muted/70 *:first:rounded-l-md *:last:rounded-r-md"
+                >
+                  <th class="px-5 py-2.5 w-5">
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <th class="px-5 py-2.5 font-medium bg-red-500">Name</th>
+                  <th class="px-5 py-2.5 font-medium">Contact</th>
+                  <th class="px-5 py-2.5 font-medium">Status</th>
+                  <th class="px-5 py-2.5 font-medium">Source</th>
+                  <th class="px-5 py-2.5 font-medium">Assign to</th>
+                  <th class="px-5 py-2.5 font-medium w-8"></th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y divide-border-strong/60">
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">John Smith</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 81 234 5678</div>
+                      <div class="text-sm text-fg-muted">johndow@gmail.com</div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-success rounded-lg">
+                      Actif
+                    </span>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm">
+                      <span class="iconify ph--link mr-2"></span>
+                      Website
+                    </span>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        width="80"
+                        height="80"
+                        class="size-8 rounded-full object-cover"
+                      />
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        width="80"
+                        height="80"
+                        class="size-8 rounded-full object-cover"
+                      />
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        width="80"
+                        height="80"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check2"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Michael Brown</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 80 345 6789</div>
+                      <div class="text-sm text-fg-muted">
+                        michael.brown@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-danger rounded-lg"
+                      >Inactif</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--linkedin-logo mr-2"></span>
+                      LinkedIn</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check3"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Amina Diallo</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 84 321 7654</div>
+                      <div class="text-sm text-fg-muted">
+                        amina.d@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-success rounded-lg"
+                      >Actif</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--github-logo mr-2"></span>
+                      GitHub</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check4"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Carlos Méndez</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 82 222 3333</div>
+                      <div class="text-sm text-fg-muted">
+                        carlos.mendez@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-warning rounded-lg"
+                      >Pending</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--link mr-2"></span> Resume</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+                <!-- Row 5 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check5"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Fatima Ibrahim</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 88 555 1234</div>
+                      <div class="text-sm text-fg-muted">
+                        fatima.ibrahim@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-success rounded-lg"
+                      >Actif</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--link mr-2"></span>
+                      Portfolio</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check6"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Samuel Lee</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 89 444 6789</div>
+                      <div class="text-sm text-fg-muted">
+                        sam.lee@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-danger rounded-lg"
+                      >Inactif</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--linkedin-logo mr-2"></span>
+                      LinkedIn</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 7 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check7"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Nina Kamanzi</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 85 666 4321</div>
+                      <div class="text-sm text-fg-muted">
+                        nina.kamanzi@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-success rounded-lg"
+                      >Actif</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--link mr-2"></span> Blog</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 8 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check8"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Alex Kimani</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 87 111 2345</div>
+                      <div class="text-sm text-fg-muted">
+                        alex.kimani@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-warning rounded-lg"
+                      >Pending</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--link mr-2"></span> Website</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 9 -->
+                <tr>
+                  <th
+                    scope="row"
+                    class="px-5 py-2.5 w-5 font-medium text-fg-title whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      name="def_check"
+                      id="def_check9"
+                      class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-strong/70 shadow size-4 rounded bg-bg"
+                    />
+                  </th>
+                  <td class="px-5 py-2.5">Grace Chen</td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex flex-col">
+                      <div class="text-sm text-fg-title">+243 83 999 8888</div>
+                      <div class="text-sm text-fg-muted">
+                        grace.chen@example.com
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="badge-md ui-soft ui-soft-success rounded-lg"
+                      >Actif</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <span class="flex items-center text-sm"
+                      ><span class="iconify ph--link mr-2"></span> Profile</span
+                    >
+                  </td>
+                  <td class="px-5 py-2.5">
+                    <div class="flex items-center -space-x-3">
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                      <img
+                        src="/defaultavatar.webp"
+                        alt="Avatar user"
+                        class="size-8 rounded-full object-cover"
+                      />
+                    </div>
+                  </td>
+                  <td class="px-5 py-2.5 w-8">
+                    <button class="btn btn-icon-sm btn-ghost btn-ghost-gray">
+                      <span
+                        aria-hidden="true"
+                        class="iconify ph--dots-three-vertical"
+                      ></span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="pt-4 border-t border-border-strong/60 flex items-center justify-between"
+          >
+            <span class="text-fg-muted text-xs sm:text-sm">
+              Showing 1 to 10 of 100 entries
+            </span>
+            <nav>
+              <ul class="flex items-center gap-0.5 text-fg">
+                <li>
+                  <a
+                    aria-label="Prev page"
+                    aria-disabled="true"
+                    href="#"
+                    class="btn btn-sm btn-ghost btn-ghost-gray min-w-[36px] justify-center rounded-md aria-disabled:cursor-not-allowed aria-disabled:opacity-60 aria-disabled:hover:!bg-transparent"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="flex iconify ph--caret-left text-lg"
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="bg-bg-muted btn btn-sm btn-ghost btn-ghost-gray min-w-[36px] justify-center rounded-md"
+                  >
+                    1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-ghost btn-ghost-gray min-w-[36px] justify-center rounded-md"
+                  >
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-ghost btn-ghost-gray min-w-[36px] justify-center rounded-md"
+                  >
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    aria-label="Next page"
+                    href="#"
+                    class="btn btn-sm btn-ghost btn-ghost-gray min-w-[36px] justify-center rounded-md aria-disabled:cursor-not-allowed aria-disabled:opacity-60 aria-disabled:hover:!bg-transparent"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="flex iconify ph--caret-right text-lg"
+                    ></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

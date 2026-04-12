@@ -1,4 +1,4 @@
-<main class="flex min-h-screen justify-center items-center px-4 sm:px-10 lg:px-0">
+<main class="flex min-h-screen justify-center items-center px-4 sm:px-10 lg:px-0 py-4">
     <div
         class="max-w-lg w-full bg-bg-surface border border-border ui-card [--card-radius:var(--radius-lg)] [--card-padding:--spacing(1)]">
         <div class="bg-bg shadow p-6 sm:p-8 flex flex-col inner-radius">

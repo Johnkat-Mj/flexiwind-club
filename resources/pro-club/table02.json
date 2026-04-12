@@ -1,0 +1,16 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "table02",
+    "type": "registry:component",
+    "title": "Table 02",
+    "description": "Minimal data table.",
+    "files": [
+        {
+            "path": "resources/views/components/previews/table/02.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/table.blade.php",
+            "content": "<div>\n    \n</div>"
+        }
+    ]
+}

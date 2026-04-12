@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashblock 01</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <main class="py-20">
+      <div class="max-w-xl w-full px-4 mx-auto">
+        <div class="bg-bg rounded-lg shadow border border-border-strong/70 p-6">
+          <h3 class="text-lg font-semibold text-fg-title mb-6">
+            Project Settings
+          </h3>
+          <form class="space-y-6">
+            <div class="flex flex-col space-y-2">
+              <label for="project-name" class="text-sm text-fg"
+                >Project Name</label
+              >
+              <input
+                type="text"
+                id="project-name"
+                placeholder="Enter project name"
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+              />
+            </div>
+
+            <!-- Description -->
+            <div class="flex flex-col space-y-2">
+              <label for="description" class="text-sm text-fg"
+                >Description</label
+              >
+              <textarea
+                id="description"
+                rows="3"
+                placeholder="Describe your project..."
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg resize-none h-24"
+              ></textarea>
+            </div>
+
+            <!-- Date Range -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex flex-col space-y-2">
+                <label for="start-date" class="text-sm text-fg"
+                  >Start Date</label
+                >
+                <input
+                  type="date"
+                  id="start-date"
+                  class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                />
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label for="end-date" class="text-sm text-fg">End Date</label>
+                <input
+                  type="date"
+                  id="end-date"
+                  class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg bg-bg"
+                />
+              </div>
+            </div>
+
+            <!-- Priority -->
+            <div>
+              <label class="block text-sm font-medium text-fg mb-3"
+                >Priority Level</label
+              >
+              <div class="grid grid-cols-3 gap-3">
+                <label
+                  class="btn btn-md cursor-pointer [--btn-focus-outline-color:var(--color-primary)] rounded-md ui-subtle ui-subtle-gray has-checked:ui-subtle-primary justify-center text-center"
+                >
+                  <input
+                    type="radio"
+                    name="priority"
+                    value="low"
+                    class="sr-only"
+                  />
+                  <span class="text-sm font-medium capitalize">Low</span>
+                </label>
+                <label
+                  class="btn btn-md cursor-pointer [--btn-focus-outline-color:var(--color-primary)] rounded-md ui-subtle ui-subtle-gray has-checked:ui-subtle-primary justify-center text-center"
+                  data-priority="medium"
+                >
+                  <input
+                    type="radio"
+                    name="priority"
+                    value="medium"
+                    class="sr-only"
+                    checked
+                  />
+                  <span class="text-sm font-medium capitalize">Medium</span>
+                </label>
+                <label
+                  class="btn btn-md cursor-pointer [--btn-focus-outline-color:var(--color-primary)] rounded-md ui-subtle ui-subtle-gray has-checked:ui-subtle-primary justify-center text-center"
+                  data-priority="medium"
+                >
+                  <input
+                    type="radio"
+                    name="priority"
+                    value="high"
+                    class="sr-only"
+                    checked
+                  />
+                  <span class="text-sm font-medium capitalize">High</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Toggles -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <label
+                    for="is_public"
+                    class="text-sm font-medium text-fg"
+                    >Public Project</label
+                  >
+                  <p class="text-sm text-gray-500">
+                    Allow others to view this project
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  name="is_public"
+                  id="is_public"
+                  class="switch switch-sm bg-bg-muted text-primary [--knob-bg:var(--color-white)]"
+                />
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <label
+                    for="email_notif"
+                    class="text-sm font-medium text-fg"
+                    >Email Notifications</label
+                  >
+                  <p class="text-sm text-gray-500">
+                    Receive updates about this project
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  name="email_notif"
+                  id="email_notif"
+                  class="switch switch-sm bg-bg-muted text-primary [--knob-bg:var(--color-white)]"
+                />
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div
+              class="flex items-center justify-end space-x-3 pt-4 border-t border-border"
+            >
+              <button
+                type="button"
+                class="btn btn-sm btn-outline btn-outline-gray rounded-md"
+              >
+                Reset
+              </button>
+              <button
+                type="submit"
+                class="btn btn-sm btn-solid btn-solid-primary text-white rounded-md"
+              >
+                Create Project
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

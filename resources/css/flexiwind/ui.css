@@ -188,3 +188,16 @@
 @utility divider-custom-8 {
   @apply before:h-[8px];
 }
+
+
+
+@utility disclosure-indicator-plus { 
+  @apply before:absolute before:left-0 before:w-2.5 before:top-1/2 
+  before:-translate-y-1/2 before:h-[0.15rem] before:bg-current 
+  after:absolute after:left-0 after:w-2.5 after:top-1/2 
+  after:-translate-y-1/2 after:h-[0.15rem] after:bg-current ;
+}
+
+@utility disclosure-indicator-to-minus {
+  @apply after:-rotate-90 after:origin-center group-aria-expanded:after:rotate-0 in-aria-expanded:after:rotate-0 after:ease-linear after:transform after:duration-300;
+}

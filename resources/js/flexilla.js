@@ -10,8 +10,10 @@ import { TooltipPlugin } from "./plugins/tooltip";
 import { PinInputPlugin } from "./plugins/pin-input";
 import { NavbarPlugin } from "./plugins/nav-bar";
 import "./sidebar-plugin";
+import { CollapsePlugin } from "./plugins/collapse";
 
 Alpine.plugin(AccordionPlugin);
+Alpine.plugin(CollapsePlugin)
 Alpine.plugin(ModalPlugin);
 Alpine.plugin(DropdownPlugin);
 Alpine.plugin(TabsPlugin);

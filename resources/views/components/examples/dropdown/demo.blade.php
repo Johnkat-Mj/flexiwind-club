@@ -12,7 +12,7 @@
      <x-ui.dropdown.item>
          Archive lead
      </x-ui.dropdown.item>
-     <x-ui.dropdown.item danger>
+     <x-ui.dropdown.item intent="danger">
          Delete
      </x-ui.dropdown.item>
  </x-ui.dropdown>

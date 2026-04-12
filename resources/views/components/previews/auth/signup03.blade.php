@@ -1,4 +1,4 @@
-<main class="flex min-h-screen justify-center items-center px-5 sm:px-10 lg:px-0">
+<main class="flex min-h-screen justify-center items-center px-5 sm:px-10 lg:px-0 py-8">
     <form action=""
         class="border border-border-strong/40 w-full max-w-lg p-1 shadow-md shadow-gray-200/40 dark:shadow-transparent bg-bg rounded-ui">
         <div class="p-5 sm:p-8">

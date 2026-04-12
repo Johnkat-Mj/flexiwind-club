@@ -69,7 +69,8 @@ document.addEventListener("alpine:init", () => {
                 if (iframeDoc && iframeDoc.documentElement) {
                     const contentHeight =
                         iframeDoc.documentElement.scrollHeight;
-                    el.style.setProperty(
+                    const previewBox = el.closest("[data-preview-box]") ?? el.parentElement;
+                    (previewBox ?? el).style.setProperty(
                         "--frame-height",
                         `${contentHeight}px`,
                     );

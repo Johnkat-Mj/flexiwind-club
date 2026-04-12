@@ -1,4 +1,4 @@
-@props(['class' => ''])
+@props(['class' => '', 'noClass' => false])
 
 <!doctype html>
 <html lang="en" class="bg-bg" data-palette="default">
@@ -37,7 +37,11 @@
     {{ $head ?? '' }}
 </head>
 
-<body x-data class="min-h-screen font-sans {{ $class }}">
+@php
+    $className = $noClass ? 'h-screen font-sans overflow-hidden' : 'min-h-screen font-sans ' . $class;
+@endphp
+
+<body x-data class="{{ $className }}">
     {{ $slot }}
     @livewireScripts
     @vite(['resources/js/app.js', 'resources/js/flexilla.js', 'resources/js/sidebar-plugin.js'])

@@ -1,0 +1,797 @@
+{
+  "name": "flexiwind-club",
+  "title": "Flexiwind Club",
+  "description": "Flexiwind Club components and blocks for Laravel Blade and Livewire.",
+  "homepage": "https://flexiwind.laravel.com",
+  "author": "Johnkat MJ <johnkatembue4@gmail.com>",
+  "components": [
+    {
+      "version": "1.0.0",
+      "name": "select-pro",
+      "title": "Select Pro",
+      "description": "Advanced select dropdown component with search and grouping support.",
+      "files": [
+        {
+          "path": "resources/views/components/club/select.blade.php",
+          "type": "registry:club",
+          "target": "resources/views/components/club/select.blade.php"
+        }
+      ],
+      "dependencies": {
+        "composer": [],
+        "node": [
+          "@flexilla/select"
+        ]
+      }
+    },
+    {
+      "version": "1.0.0",
+      "name": "login01",
+      "title": "Login 01",
+      "description": "A full auth login page with card layout.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/login01.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/login.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "checkbox",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "login02",
+      "title": "Login 02",
+      "description": "A full auth login page with split layout.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/login02.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/login.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "checkbox",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "login03",
+      "title": "Login 03",
+      "description": "A minimal auth login page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/login03.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/login.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "checkbox",
+        "link",
+        "input"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "login04",
+      "title": "Login 04",
+      "description": "A centered auth login page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/login04.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/login.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "login05",
+      "title": "Login 05",
+      "description": "A compact auth login page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/login05.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/login.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "signup01",
+      "title": "Signup 01",
+      "description": "A full auth signup page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/signup01.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/signup.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "checkbox",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "signup02",
+      "title": "Signup 02",
+      "description": "A full auth signup page with image.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/signup02.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/signup.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "checkbox",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "signup03",
+      "title": "Signup 03",
+      "description": "A minimal auth signup page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/signup03.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/signup.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "checkbox",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "signup04",
+      "title": "Signup 04",
+      "description": "A compact auth signup page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/signup04.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/signup.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "link",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "otp01",
+      "title": "OTP 01",
+      "description": "A full auth OTP verification page.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/auth/otp01.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/auth/otp.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "link",
+        "input"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "sidebar-wrapper",
+      "title": "Sidebar Wrapper",
+      "description": "A full sidebar wrapper layout with JavaScript plugin.",
+      "files": [
+        {
+          "path": "resources/views/components/ui/sidebar-wrapper.blade.php",
+          "type": "registry:component",
+          "target": "resources/views/components/ui/sidebar-wrapper.blade.php"
+        },
+        {
+          "path": "resources/js/sidebar-plugin.js",
+          "type": "registry:ui",
+          "target": "resources/js/sidebar-plugin.js"
+        }
+      ],
+      "dependencies": {
+        "node": [
+          "@flexilla/utilities"
+        ]
+      }
+    },
+    {
+      "version": "1.0.0",
+      "name": "sidebar01",
+      "title": "Sidebar 01",
+      "description": "A full sidebar layout with simple items.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/sidebar/01/sidebar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/sidebar.blade.php",
+          "replace": {
+            "x-previews.sidebar.01.sidebar-items-group": "x-atoms.sidebar-items-group",
+            "x-previews.sidebar.01.sidebar-item": "x-atoms.sidebar-item"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/01/body-wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/01/sidebar-items-group.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-items-group.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/01/sidebar-item.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-item.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/01/wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/app-page-content.blade.php"
+        },
+        {
+          "path": "resources/views/pages-preview/sidebar/01.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/page-sidebar01.blade.php",
+          "replace": {
+            "<x-layouts.prev-ui no-class>": "",
+            "</x-layouts.prev-ui>": "",
+            "x-previews.sidebar.01.sidebar": "x-layouts.sidebar",
+            "x-previews.sidebar.01.body-wrapper": "x-layouts.app-body-wrapper",
+            "x-previews.sidebar.01.wrapper": "x-atoms.app-page-content"
+          }
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "sidebar-wrapper",
+        "kbd",
+        "input",
+        "dropdown"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "sidebar02",
+      "title": "Sidebar 02",
+      "description": "A full sidebar layout with nav groups.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/sidebar/02/sidebar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/sidebar.blade.php",
+          "replace": {
+            "x-previews.sidebar.02.sidebar-item": "x-atoms.sidebar-item"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/02/body-wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/02/sidebar-item.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-item.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/02/wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/app-page-content.blade.php"
+        },
+        {
+          "path": "resources/views/pages-preview/sidebar/02.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/page-sidebar02.blade.php",
+          "replace": {
+            "<x-layouts.prev-ui no-class>": "",
+            "</x-layouts.prev-ui>": "",
+            "x-previews.sidebar.02.sidebar": "x-layouts.sidebar",
+            "x-previews.sidebar.02.body-wrapper": "x-layouts.app-body-wrapper",
+            "x-previews.sidebar.02.wrapper": "x-atoms.app-page-content"
+          }
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "sidebar-wrapper",
+        "dropdown"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "sidebar03",
+      "title": "Sidebar 03",
+      "description": "A full sidebar layout with nav groups.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/sidebar/03/sidebar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/sidebar.blade.php",
+          "replace": {
+            "x-previews.sidebar.03.sidebar-item": "x-atoms.sidebar-item"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/03/body-wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/03/header.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/app-header.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/03/sidebar-item.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-item.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/03/wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/app-page-content.blade.php",
+          "replace": {
+            "x-previews.sidebar.03.header": "x-layouts.app-header"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/03/content.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/app-container.blade.php"
+        },
+        {
+          "path": "resources/views/pages-preview/sidebar/03.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/page-sidebar03.blade.php",
+          "replace": {
+            "<x-layouts.prev-ui no-class>": "",
+            "</x-layouts.prev-ui>": "",
+            "x-previews.sidebar.03.sidebar": "x-layouts.sidebar",
+            "x-previews.sidebar.03.body-wrapper": "x-layouts.app-body-wrapper",
+            "x-previews.sidebar.03.wrapper": "x-atoms.app-page-content",
+            "x-previews.sidebar.03.content": "x-atoms.app-container"
+          }
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "sidebar-wrapper",
+        "dropdown"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "sidebar04",
+      "title": "Sidebar 04",
+      "description": "A full sidebar layout with simple items.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/sidebar/04/sidebar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/sidebar.blade.php",
+          "replace": {
+            "x-previews.sidebar.04.sidebar-items-group": "x-atoms.sidebar-items-group",
+            "x-previews.sidebar.04.sidebar-item": "x-atoms.sidebar-item"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/04/body-wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/04/sidebar-items-group.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-items-group.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/04/sidebar-item.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-item.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/04/wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/app-page-content.blade.php"
+        },
+        {
+          "path": "resources/views/pages-preview/sidebar/04.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/page-sidebar04.blade.php",
+          "replace": {
+            "<x-layouts.prev-ui no-class>": "",
+            "</x-layouts.prev-ui>": "",
+            "x-previews.sidebar.04.sidebar": "x-layouts.sidebar",
+            "x-previews.sidebar.04.body-wrapper": "x-layouts.app-body-wrapper",
+            "x-previews.sidebar.04.wrapper": "x-atoms.app-page-content"
+          }
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "sidebar-wrapper",
+        "kbd",
+        "input",
+        "dropdown"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "header01",
+      "title": "Header 01",
+      "description": "Header navbar for dashboard layout with search.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/header/01/header.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/nav-header.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "header02",
+      "title": "Header 02",
+      "description": "Minimal header navbar for dashboard layout.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/header/02/header.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/nav-header.blade.php"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "header03",
+      "title": "Header 03",
+      "description": "Header navbar with notifications and profile.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/header/03/header.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/nav-header.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "kpi-01",
+      "title": "KPI 01",
+      "description": "KPI dashboard cards with stats.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/kpi-01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/kpi-01.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "kpi-02",
+      "title": "KPI 02",
+      "description": "Simple KPI stat cards.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/kpi-02.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/kpi-02.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "kpi-03",
+      "title": "KPI 03",
+      "description": "KPI cards with trend indicators.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/kpi-03.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/kpi-03.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "kpi-04",
+      "title": "KPI 04",
+      "description": "Grid layout KPI dashboard cards.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/kpi-04.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/kpi-04.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "activity01",
+      "title": "Activity 01",
+      "description": "Activity feed with timeline.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/activity01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/activity01.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "activity02",
+      "title": "Activity 02",
+      "description": "Activity feed with avatars.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/activity02.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/activity02.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "activity03",
+      "title": "Activity 03",
+      "description": "Compact activity list.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/activity03.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/activity03.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "empty-state01",
+      "title": "Empty State 01",
+      "description": "Empty state with icon and action button.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/empty-state/01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/empty-state.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "app-shell01",
+      "title": "App Shell 01",
+      "description": "Full application shell layout with sidebar and header.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/app-shell/shell-01.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/layouts/app-shell.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "sidebar-wrapper"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "contact-form01",
+      "title": "Contact Form 01",
+      "description": "Contact form with name, email and message fields.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/forms/contact-form01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/forms/contact-form.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "input",
+        "textarea"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "profile-form01",
+      "title": "Profile Form 01",
+      "description": "User profile edit form.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/forms/profile-form01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/forms/profile-form.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "label",
+        "input",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "table01",
+      "title": "Table 01",
+      "description": "Data table with headers and pagination.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/table/01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/table.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "table02",
+      "title": "Table 02",
+      "description": "Minimal data table.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/table/02.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/table.blade.php"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "table03",
+      "title": "Table 03",
+      "description": "Data table with actions and status badges.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/table/03.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/table.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "badge"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "features01",
+      "title": "Features 01",
+      "description": "Feature sections.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/features/01/features.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/features.blade.php",
+          "replace": {
+            "x-previews.features.01.feature-card": "x-blocks.feature-card"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/features/01/feature-card.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/feature-card.blade.php"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "hero01",
+      "title": "HeroSection 01",
+      "description": "Hero section.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/hero-sections/01/hero.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/hero.blade.php",
+          "replace": {
+            "x-previews.hero-sections.01.navbar": "x-blocks.navbar"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/hero-sections/01/navbar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/navbar.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    }
+  ]
+}

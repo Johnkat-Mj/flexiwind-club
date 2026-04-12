@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "select-pro",
+    "type": "registry:component",
+    "title": "Select Pro",
+    "description": "Advanced select dropdown component with search and grouping support.",
+    "dependencies": {
+        "composer": [],
+        "node": [
+            "@flexilla/select"
+        ]
+    },
+    "files": [
+        {
+            "path": "resources/views/components/club/select.blade.php",
+            "type": "registry:club",
+            "target": "resources/views/components/club/select.blade.php",
+            "content": ""
+        }
+    ]
+}

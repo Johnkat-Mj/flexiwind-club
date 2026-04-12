@@ -1,0 +1,57 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "sidebar03",
+    "type": "registry:component",
+    "title": "Sidebar 03",
+    "description": "A full sidebar layout with nav groups.",
+    "registryDependencies": [
+        "button",
+        "sidebar-wrapper",
+        "dropdown"
+    ],
+    "files": [
+        {
+            "path": "resources/views/components/previews/sidebar/03/sidebar.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/layouts/sidebar.blade.php",
+            "content": "@php\n    $items = [\n        [\n            'href' => \"#\",\n            'icon' => 'ph--stack',\n            'text' => 'Dashboard',\n            'isActive'=>true\n        ],\n        [\n            'href' => '#',\n            'icon' => 'ph--folder',\n            'text' => 'Contacts',\n        ],\n        [\n            'href' => '#',\n            'icon' => 'ph--tray',\n            'text' => 'Transactions',\n        ],\n        [\n            'href' => '#',\n            'icon' => 'ph--chart-bar',\n            'text' => 'Analytics',\n        ],\n        [\n            'href' => '#',\n            'icon' => 'ph--lifebuoy',\n            'text' => 'Support',\n        ],\n        [\n            'href' => '#',\n            'icon' => 'ph--gear',\n            'text' => 'Settings',\n        ],\n    ];\n@endphp\n\n<x-ui.sidebar-wrapper\n    class=\"fixed h-dvh py-3 z-40 overflow-hidden w-11/12 max-w-64 md:w-64 lg:w-70 lg:max-w-none transition-all -translate-x-full fx-open:translate-x-0 md:translate-x-0 bg-bg shadow-lg shadow-gray-200/40 dark:shadow-gray-800/60 flex flex-col px-4 md:transition-none ease-linear\">\n    <div class=\"min-h-max py-4\">\n        <a href=\"#\" class=\"flex items-center gap-x-1.5 font-semibold text-fg-subtitle\">\n            <span class=\"bg-linear-to-tr from-primary to-primary/60 text-white size-8 d-flex-place-center rounded-ui\">\n                <span class=\"iconify ph--briefcase size-5\"></span>\n            </span>\n            Flexify\n        </a>\n    </div>\n    <nav class=\"flex flex-1 pt-7 pb-3 w-full\">\n        <ul class=\"text-fg-muted space-y-2.5 w-full flex flex-col text-sm\">\n            @foreach ($items as $item)\n                <x-atoms.sidebar-item :is-active=\"$item['isActive']??false\" :href=\"$item['href']\" :icon=\"$item['icon']\" :text=\"$item['text']\" />\n            @endforeach\n        </ul>\n    </nav>\n\n    <div class=\"mt-6 p-2 rounded-ui bg-bg border border-border-strong/40 \">\n        <div class=\"p-2 mb-2\">\n            <h2 class=\"font-medium text-fg-muted text-sm\">\n                Upgrade to Pro to get better experience\n            </h2>\n        </div>\n        <x-ui.button size=\"sm\" href=\"#\" class=\"w-full justify-center\">\n            Go to pro\n        </x-ui.button>\n    </div>\n</x-ui.sidebar-wrapper>\n"
+        },
+        {
+            "path": "resources/views/components/previews/sidebar/03/body-wrapper.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/layouts/app-body-wrapper.blade.php",
+            "content": "<div class=\"bg-bg min-h-svh antialiased w-full h-screen overflow-hidden\">\n    {{ $slot }}\n</div>"
+        },
+        {
+            "path": "resources/views/components/previews/sidebar/03/header.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/layouts/app-header.blade.php",
+            "content": " <header class=\"h-13 border-b border-border-strong/70 flex items-center\">\n     <div class=\"mx-auto w-full max-w-7xl px-3.5 sm:px-4 flex justify-between items-center gap-4\">\n         <div class=\"flex md:hidden pr-3 border-r border-border\">\n             <x-ui.button data-toggle-sidebar icon-only aria-label=\"Open sidebar\" variant=\"ghost\" size=\"sm\"\n                 class=\"\">\n                 <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"size-4\" width=\"32\" height=\"32\" fill=\"currentcolor\"\n                     viewBox=\"0 0 256 256\">\n                     <path\n                         d=\"M232,216H208V40a16,16,0,0,0-16-16H64A16,16,0,0,0,48,40V216H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16Zm-40,0H176V40h16ZM64,40h96V216H64Zm80,92a12,12,0,1,1-12-12A12,12,0,0,1,144,132Z\">\n                     </path>\n                 </svg>\n             </x-ui.button>\n         </div>\n         <div class=\"flex items-center max-w-sm max-md:flex-1\">\n             <x-ui.input.group>\n                 <x-ui.input unStyled type=\"email\" placeholder=\"Start typing to search...\" class=\"ps-9 px-3\" />\n                 <x-ui.input.leading absolute class=\"text-fg text-sm\">\n                     <span class=\"flex size-4 iconify ph--magnifying-glass text-fg-muted/70\"></span>\n                 </x-ui.input.leading>\n             </x-ui.input.group>\n         </div>\n         <div class=\"flex items-center\">\n             <x-ui.dropdown.trigger class=\"rounded-ui size-max bg-bg-muted\" dropdownId=\"userProfile\">\n                 <x-ui.avatar size=\"sm\" radius=\"ui\" src=\"/avatar1.webp\" height=\"200\" width=\"200\" alt=\"User avatar\" />\n             </x-ui.dropdown.trigger>\n             <x-ui.dropdown placement=\"bottom-end\" class=\"w-54\" id=\"userProfile\">\n                 <x-ui.dropdown.header class=\"flex items-center gap-x-3 px-2 pt-2 pb-1\">\n                     <x-ui.avatar-placeholder variant=\"subtle\" size=\"lg\" radius=\"ui\">\n                         <span class=\"flex iconify ph--user\"></span>\n                     </x-ui.avatar-placeholder>\n\n                     <div class=\"flex items-start flex-col\">\n                         <h4 class=\"font-semibold text-fg-title text-sm\">Tresor Kasenda</h4>\n                         <span class=\"text-xs text-fg-muted\">Web Developer</span>\n                     </div>\n                 </x-ui.dropdown.header>\n                 <x-ui.dropdown.separator class=\"border-border\" />\n                 <x-ui.dropdown.item href=\"#\">\n                     <x-ui.dropdown.icon>\n                         <span class=\"iconify ph--pencil\"></span>\n                     </x-ui.dropdown.icon>\n                     <x-ui.dropdown.label>\n                         Edit Profile\n                     </x-ui.dropdown.label>\n                 </x-ui.dropdown.item>\n                 <x-ui.dropdown.item href=\"#\">\n                     <x-ui.dropdown.icon>\n                         <span class=\"iconify ph--password\"></span>\n                     </x-ui.dropdown.icon>\n                     <x-ui.dropdown.label>\n                         Password\n                     </x-ui.dropdown.label>\n                 </x-ui.dropdown.item>\n                 <x-ui.dropdown.item>\n                     <x-ui.dropdown.icon>\n                         <span class=\"iconify ph--wallet\"></span>\n                     </x-ui.dropdown.icon>\n                     <x-ui.dropdown.label>\n                         Billing\n                     </x-ui.dropdown.label>\n                 </x-ui.dropdown.item>\n                 <x-ui.dropdown.item danger>\n                     <x-ui.dropdown.icon>\n                         <span class=\"iconify ph--sign-out\"></span>\n                     </x-ui.dropdown.icon>\n                     <x-ui.dropdown.label>\n                         Logout\n                     </x-ui.dropdown.label>\n                 </x-ui.dropdown.item>\n             </x-ui.dropdown>\n\n         </div>\n     </div>\n </header>"
+        },
+        {
+            "path": "resources/views/components/previews/sidebar/03/sidebar-item.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/atoms/sidebar-item.blade.php",
+            "content": "@props(['href' => '#', 'icon' => 'home', 'text' => 'Home', 'isActive' => null])\n\n<li class=\"flex w-full\">\n    <a href=\"{{ $href }}\" aria-label=\"Link to {{ $text }}\" data-state=\"{{ $isActive ? 'active' : 'inactive' }}\"\n        class=\"w-full flex items-center gap-x-2.5 px-3 h-9 rounded-ui fx-current:text-white fx-active:text-white\n        relative hover:before:bg-bg-muted/60 before:absolute before:rounded-ui before:inset-0 active:before:scale-y-[.95] active:before:scale-x-[.98] before:transition-transform before:transform before:ease-linear fx-active:before:bg-primary fx-current:before:bg-primary\n        \">\n        <span class=\"min-w-max inline-flex relative\">\n            <span aria-hidden=\"true\" class=\"iconify {{ $icon }} size-4 opacity-80\"></span>\n        </span>\n        <span class=\"line-clamp-1 flex-1 relative\">\n            {{ $text }}\n        </span>\n    </a>\n</li>\n"
+        },
+        {
+            "path": "resources/views/components/previews/sidebar/03/wrapper.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/atoms/app-page-content.blade.php",
+            "content": "<div class=\"md:ml-64 lg:ml-70 h-dvh pt-1 px-1 md:pl-0\">\n    <div class=\"border border-b-0 border-border rounded-t-ui h-full overflow-hidden grid grid-rows-[auto_1fr]\">\n       <x-layouts.app-header/>\n\n        {{ $slot }}\n    </div>\n</div>\n"
+        },
+        {
+            "path": "resources/views/components/previews/sidebar/03/content.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/atoms/app-container.blade.php",
+            "content": "<main {{ $attributes->class(['w-full overflow-hidden overflow-y-auto pt-6 px-3.5 sm:px-4']) }}>\n    {{ $slot }}\n</main>\n"
+        },
+        {
+            "path": "resources/views/pages-preview/sidebar/03.blade.php",
+            "type": "registry:page",
+            "target": "resources/views/page-sidebar03.blade.php",
+            "content": "\n    <x-layouts.app-body-wrapper>\n        <x-layouts.sidebar />\n        <x-atoms.app-page-content>\n            <x-atoms.app-container>\n                <div>\n                    \n                </div>\n            </x-atoms.app-container>\n        </x-atoms.app-page-content>\n    </x-layouts.app-body-wrapper>\n\n"
+        }
+    ]
+}

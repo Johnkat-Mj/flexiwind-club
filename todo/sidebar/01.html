@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="dafrk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar 02</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <div
+      data-sidebar-overlay
+      aria-hidden="true"
+      class="fixed inset-0 z-70 bg-gray-800/40 backdrop-blur-sm hidden fx-open:flex lg:hidden"
+    ></div>
+    <aside
+      data-app-sidebar
+      class="fixed h-dvh py-3 overflow-hidden w-11/12 max-w-72 md:w-72 transition-all -translate-x-full fx-open:translate-x-0 lg:-translate-x-0 bg-bg-surface border-r border-bg-muted/70 flex flex-col justify-between px-4 lg:transition-none ease-linear z-80"
+    >
+      <div class="min-h-max py-2 border-b border-border">
+        <a
+          href="#"
+          class="flex items-center gap-x-3 font-semibold text-fg-subtitle"
+        >
+          <span class="size-9 rounded-md bg-bg-muted d-flex-place-center">
+            <span aria-hidden="true" class="iconify ph--scroll"></span>
+          </span>
+          MyPlan
+        </a>
+      </div>
+      <nav class="flex-1 pt-6 flex flex-col">
+        <span class="mb-2 text-sm text-fg-muted uppercase">Navigation</span>
+        <ul class="text-fg-muted space-y-2">
+          <li
+            class="relative before:absolute before:-left-1 before:w-1 before:inset-y-3 before:rounded-l-md before:bg-transparent has-fx-active:before:bg-fg-title"
+          >
+            <a
+              href="#"
+              data-state="active"
+              aria-label="Link to Dashboard"
+              class="flex items-center px-3 py-2 gap-x-2.5 fx-active:bg-bg fx-active:text-fg-title border border-transparent fx-active:border-bg-muted/70 fx-active:shadow-xs rounded-md"
+            >
+              <span class="flex iconify ph--house"></span>
+              Dashboard
+            </a>
+          </li>
+          <li
+            class="relative before:absolute before:-left-1 before:w-1 before:inset-y-3 before:rounded-l-md before:bg-transparent has-fx-active:before:bg-fg-title"
+          >
+            <a
+              href="#"
+              aria-label="Link to Dashboard"
+              class="flex items-center px-3 py-2 gap-x-2.5 fx-active:bg-bg fx-active:text-fg-title border border-transparent fx-active:border-bg-muted/70 fx-active:shadow-xs rounded-md"
+            >
+              <span class="flex iconify ph--note"></span>
+              Notes
+            </a>
+          </li>
+          <li
+            class="relative before:absolute before:-left-1 before:w-1 before:inset-y-3 before:rounded-l-md before:bg-transparent has-fx-active:before:bg-fg-title"
+          >
+            <a
+              href="#"
+              aria-label="Link to Calendar page"
+              class="flex items-center px-3 py-2 gap-x-2.5 fx-active:bg-bg fx-active:text-fg-title border border-transparent fx-active:border-bg-muted/70 fx-active:shadow-xs rounded-md"
+            >
+              <span class="flex iconify ph--calendar-dots"></span>
+              Calendar
+            </a>
+          </li>
+          <li
+            class="relative before:absolute before:-left-1 before:w-1 before:inset-y-3 before:rounded-l-md before:bg-transparent has-fx-active:before:bg-fg-title"
+          >
+            <a
+              href="#"
+              aria-label="Link to Dashboard"
+              class="flex items-center px-3 py-2 gap-x-2.5 fx-active:bg-bg fx-active:text-fg-title border border-transparent fx-active:border-bg-muted/70 fx-active:shadow-xs rounded-md"
+            >
+              <span class="flex iconify ph--kanban"></span>
+              Tasks
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <ul class="flex flex-col gap-y-2 text-gray-700 dark:text-gray-300">
+          <li
+            class="relative before:absolute before:-left-1 before:w-1 before:inset-y-3 before:rounded-l-md before:bg-transparent has-fx-active:before:bg-fg-title"
+          >
+            <a
+              href="#"
+              aria-label="Link to Dashboard"
+              class="flex items-center px-3 py-2 gap-x-2.5 fx-active:bg-bg fx-active:text-fg-title border border-transparent fx-active:border-bg-muted/70 fx-active:shadow-xs rounded-md"
+            >
+              <span class="flex iconify ph--gear"></span>
+              Settings
+            </a>
+          </li>
+          <li class="w-full">
+            <button
+              aria-label="Show Profile dropdown"
+              class="flex items-center gap-3 w-full p-2 rounded-lg border border-border-strong/40 bg-bg"
+            >
+              <div class="size-10 min-w-10 rounded-full overflow-hidden">
+                <img
+                  class="size-full rounded-full object-cover"
+                  src="https://avatars.githubusercontent.com/u/34010260?v=4"
+                  width="200"
+                  height="200"
+                  alt="Tresor kasenda"
+                />
+              </div>
+              <div
+                class="flex flex-1 justify-between items-center overflow-hidden"
+              >
+                <div
+                  class="flex flex-col -space-y-0.5 text-left flex-1 line-clamp"
+                >
+                  <span
+                    class="font-semibold text-sm text-fg-title line-clamp-1"
+                  >
+                    Tresor Kasenda
+                  </span>
+                  <span class="text-xs text-fg-muted line-clamp-1">
+                    kasenda@flexilla.info
+                  </span>
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="p-1 rounded bg-bg shadow-lg shadow-gray-200/20 dark:shadow-none border border-border flex w-max min-w-max"
+                >
+                  <span class="iconify ph--caret-up-down"></span>
+                </span>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="lg:pl-72">
+      <header class="w-full flex h-16 bg-bg sticky top-0 z-40">
+        <div
+          class="flex items-center justify-between w-full h-full px-4 sm:px-8"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="flex lg:hidden pr-2 relative before:absolute before:inset-y-2 before:right-0 before:w-0.5 before:bg-border"
+            >
+              <button
+                data-toggle-sidebar
+                class="outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
+              >
+                <span
+                  class="w-6 h-0.5 rounded-full bg-fg-muted transition-transform duration-300 ease-linear in-[[aria-expanded=true]]:translate-y-1.5 in-[[aria-expanded=true]]:rotate-40"
+                ></span>
+                <span
+                  class="w-6 origin-center mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-[[aria-expanded=true]]:opacity-0 in-[[aria-expanded=true]]:scale-x-0"
+                ></span>
+                <span
+                  class="w-6 mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-[[aria-expanded=true]]:-translate-y-1.5 in-[[aria-expanded=true]]:-rotate-40"
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="outline-none">
+              <img
+                src="https://avatars.githubusercontent.com/u/34010260?v=4"
+                alt="user profil avatar"
+                width="240"
+                height="240"
+                class="size-10 rounded-full object-cover"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="flex lg:hidden fixed right-2 top-2 p-4"></div>
+    </main>
+    <script type="module">
+      import { actionToggler } from "@flexilla/utilities";
+
+      actionToggler({
+        trigger: "[data-toggle-sidebar]",
+        targets: [
+          {
+            element: "[data-app-sidebar]",
+            attributes: {
+              initial: { "data-state": "close" },
+              to: { "data-state": "open" },
+            },
+          },
+          {
+            element: "[data-sidebar-overlay]",
+            attributes: {
+              initial: { "aria-hidden": "true", "data-state": "close" },
+              to: { "aria-hidden": "false", "data-state": "open" },
+            },
+          },
+        ],
+        onToggle: ({ isExpanded }) => {
+          document.body.classList[!isExpanded ? "add" : "remove"](
+            "overflow-y-auto"
+          );
+        },
+      });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

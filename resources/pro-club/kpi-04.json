@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "version": "1.0.0",
+    "name": "kpi-04",
+    "type": "registry:component",
+    "title": "KPI 04",
+    "description": "Grid layout KPI dashboard cards.",
+    "registryDependencies": [
+        "card"
+    ],
+    "files": [
+        {
+            "path": "resources/views/components/previews/dash-card/kpi-04.blade.php",
+            "type": "registry:block",
+            "target": "resources/views/components/dash-card/kpi-04.blade.php",
+            "content": "<div class=\"max-w-7xl px-4 mx-auto\">\n    <div class=\"grid gap-4 md:grid-cols-3\">\n        <x-ui.card class=\"sm:[--card-padding:--spacing(6)] flex flex-col gap-4\">\n            <div class=\"flex items-center justify-between\">\n                <h3 class=\"text-sm font-medium text-fg-muted\">\n                    Monthly Recurring Revenue\n                </h3>\n                <x-ui.badge variant=\"subtle\" intent=\"success\" size=\"sm\">+8.2%</x-ui.badge>\n            </div>\n            <div class=\"space-y-2\">\n                <div class=\"text-2xl font-semibold text-fg-title\">$12,426</div>\n                <div class=\"text-xs text-fg-muted\">Target: $15,000</div>\n            </div>\n            <div>\n                <div class=\"flex justify-between text-xs\">\n                    <span class=\"text-fg-muted\">Progress</span>\n                    <span class=\"font-medium text-fg-title\">83%</span>\n                </div>\n                <x-ui.progress size=\"xs\" max=\"100\" value=\"83\" class=\"text-primary\" />\n            </div>\n        </x-ui.card>\n\n        <x-ui.card class=\"sm:[--card-padding:--spacing(6)] flex flex-col gap-4\">\n            <div class=\"flex items-center justify-between\">\n                <h3 class=\"text-sm font-medium text-fg-muted\">\n                    Customer Acquisition Cost\n                </h3>\n                <x-ui.badge variant=\"subtle\" intent=\"danger\" size=\"sm\">+$12</x-ui.badge>\n            </div>\n            <div class=\"space-y-2\">\n                <div class=\"text-2xl font-semibold text-fg-title\">$89</div>\n                <div class=\"text-xs text-fg-muted\">Target: $75</div>\n            </div>\n            <div>\n                <div class=\"flex justify-between text-xs\">\n                    <span class=\"text-fg-muted\">Progress</span>\n                    <span class=\"font-medium text-fg-title\">119%</span>\n                </div>\n                <x-ui.progress size=\"xs\" max=\"100\" value=\"100\" class=\"text-success\" />\n            </div>\n        </x-ui.card>\n\n        <x-ui.card class=\"sm:[--card-padding:--spacing(6)] flex flex-col gap-4\">\n            <div class=\"flex items-center justify-between\">\n                <h3 class=\"text-sm font-medium text-fg-muted\">\n                    Customer Lifetime Value\n                </h3>\n                <x-ui.badge variant=\"subtle\" intent=\"success\" size=\"sm\">+$47</x-ui.badge>\n            </div>\n            <div class=\"space-y-2\">\n                <div class=\"text-2xl font-semibold text-fg-title\">$1,247</div>\n                <div class=\"text-xs text-fg-muted\">Target: $1,200</div>\n            </div>\n            <div>\n                <div class=\"flex justify-between text-xs\">\n                    <span class=\"text-fg-muted\">Progress</span>\n                    <span class=\"font-medium text-fg-title\">104%</span>\n                </div>\n                <x-ui.progress size=\"xs\" max=\"100\" value=\"100\" class=\"text-success\" />\n            </div>\n        </x-ui.card>\n    </div>\n</div>\n"
+        }
+    ]
+}

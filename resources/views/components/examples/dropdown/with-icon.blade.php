@@ -20,7 +20,7 @@
              Archive lead
          </x-ui.dropdown.label>
      </x-ui.dropdown.item>
-     <x-ui.dropdown.item danger>
+     <x-ui.dropdown.item intent="danger">
          <x-ui.dropdown.icon>
              <span class="iconify ph--trash"></span>
          </x-ui.dropdown.icon>

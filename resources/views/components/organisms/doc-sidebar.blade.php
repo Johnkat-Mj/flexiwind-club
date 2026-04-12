@@ -53,7 +53,7 @@
 
     <x-atoms.doc-sidebar-wrapper>
         <nav class="w-full space-y-6 relative px-5 lg:pl-0 lg:pr-4 h-full">
-            <ul class="space-y-3 text-fg">
+            <ul class="space-y-3 text-fg font-mono text-sm">
                 @foreach ($groups as $group)
                     <x-molecules.group-item wire:key="group-{{ $group['name'] }}" :name="$group['name']" :title="$group['title']" :path="$group['path']"
                         :icon="$group['icon']" :is-hidden="$group['hidden']??false" :no-wire="$group['noWire']"/>

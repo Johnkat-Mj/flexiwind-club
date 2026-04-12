@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="darsk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashblock 01</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <main class="py-20">
+      <div class="max-w-xl w-full px-4 mx-auto">
+        <div class="bg-bg rounded-lg shadow border border-border-strong/70 p-6">
+          <h3
+            class="text-lg font-semibold text-fg-title mb-6"
+            data-testid="profile-form-title"
+          >
+            User Profile Form
+          </h3>
+          <form class="grid grid-cols-2 gap-y-6 gap-x-4" id="profile-form">
+            <div class="flex items-center space-x-6 col-span-full">
+              <img
+                src="https://avatars.githubusercontent.com/u/34010260?v=4"
+                alt="Profile picture"
+                width="200"
+                height="200"
+                class="size-20 rounded-full border-4 border-border-strong"
+              />
+              <div>
+                <input
+                  type="file"
+                  name="profile_pic"
+                  id="profile_pic"
+                  class="sr-only"
+                />
+                <label
+                  for="profile_pic"
+                  class="btn btn-sm btn-soft btn-soft-primary rounded-md w-max"
+                >
+                  Change Photo
+                </label>
+                <p class="text-xs text-gray-500 mt-1">
+                  JPG, GIF or PNG. 1MB max.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col space-y-2">
+              <label for="first-name" class="block text-sm font-medium text-fg"
+                >First Name</label
+              >
+              <input
+                type="text"
+                id="first-name"
+                value="John"
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                data-testid="input-first-name"
+              />
+            </div>
+            <div class="flex flex-col space-y-2">
+              <label for="last-name" class="block text-sm font-medium text-fg"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                id="last-name"
+                value="Doe"
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                data-testid="input-last-name"
+              />
+            </div>
+
+            <div class="flex flex-col space-y-2 col-span-full">
+              <label for="email" class="block text-sm font-medium text-fg"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                value="john.doe@company.com"
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                data-testid="input-email"
+              />
+            </div>
+
+            <div class="flex flex-col space-y-2 col-span-full">
+              <label for="role" class="block text-sm font-medium text-fg"
+                >Role</label
+              >
+              <select
+                id="role"
+                class="ui-form-base ui-form-input ui-form-select bg-bg border border-border-strong/90 ui-form-input-md rounded-lg text-fg"
+                data-testid="select-role"
+              >
+                <option value="Administrator" selected>Administrator</option>
+                <option value="Manager">Manager</option>
+                <option value="Employee">Employee</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col space-y-2 col-span-full">
+              <label for="bio" class="block text-sm font-medium text-fg"
+                >Bio</label
+              >
+              <textarea
+                id="bio"
+                rows="3"
+                placeholder="Tell us about yourself..."
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg h-24 pt-3 resize-none"
+                data-testid="textarea-bio"
+              ></textarea>
+            </div>
+
+            <div
+              class="flex items-center justify-end space-x-3 pt-4 border-t border-border col-span-full"
+            >
+              <button
+                type="button"
+                class="btn btn-sm btn-flexi btn-flexi-white rounded-md"
+                data-testid="button-cancel-profile"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="btn btn-sm btn-solid btn-solid-primary text-white rounded-md"
+                data-testid="button-save-profile"
+              >
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="dafrk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar 02</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <div
+      data-sidebar-overlay
+      aria-hidden="true"
+      class="fixed inset-0 z-70 bg-gray-800/40 backdrop-blur-sm hidden fx-open:flex lg:hidden"
+    ></div>
+    <aside
+      data-app-sidebar
+      class="fixed h-dvh overflow-hidden w-11/12 max-w-72 lg:w-72 transition-[transform,opacity,visibility] -translate-x-full fx-open:translate-x-0 opacity-0 fx-open:opacity-100 lg:opacity-100 lg:-translate-x-0 invisible fx-open:visible lg:visible scale-[.96] fx-open:scale-100 origin-left lg:scale-100 rounded-r-2xl bg-bg shadow-lg shadow-gray-200/40 dark:shadow-transparent flex flex-col justify-between px-4 lg:transition-[width] ease-linear border-r border-border-strong/70 z-80 lg:fx-resized:w-20"
+    >
+      <div class="min-h-max py-4 border-b border-border-strong/70">
+        <a
+          href="#"
+          class="w-max flex items-center gap-x-3 text-lg font-semibold text-gray-800 dark:text-gray-200"
+        >
+          <span
+            class="size-9 rounded-md bg-primary text-white d-flex-place-center"
+          >
+            <span aria-hidden="true" class="iconify ph--scroll"></span>
+          </span>
+        </a>
+      </div>
+      <nav class="h-full pt-10">
+        <ul class="space-y-1.5 text-fg-muted">
+          <li>
+            <a
+              href="#"
+              data-state="active"
+              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-bg-surface fx-active:bg-bg-muted/70 fx-active:text-fg-title rounded-md"
+            >
+              <div class="min-w-max flex">
+                <span class="flex iconify ph--stack"></span>
+              </div>
+              <span
+                class="flex flex-1 ease-linear transition-colors line-clamp-1 duration-300 lg:in-fx-resized:opacity-0"
+              >
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-state="inactive"
+              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-bg-surface fx-active:bg-bg-muted/70 fx-active:text-fg-title rounded-md"
+            >
+              <div class="min-w-max flex">
+                <span class="flex iconify ph--sticker"></span>
+              </div>
+              <span
+                class="flex flex-1 ease-linear transition-colors line-clamp-1 duration-300 lg:in-fx-resized:opacity-0"
+              >
+                Notes
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-state="inactive"
+              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-bg-surface fx-active:bg-bg-muted/70 fx-active:text-fg-title rounded-md"
+            >
+              <div class="min-w-max flex">
+                <span class="flex iconify ph--calendar-dots"></span>
+              </div>
+              <span
+                class="flex flex-1 ease-linear transition-colors line-clamp-1 duration-300 lg:in-fx-resized:opacity-0"
+              >
+                Calendar
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="min-h-max py-2 hidden lg:flex justify-end bg-transparent">
+        <button
+          data-toggle-sidebar-size
+          class="btn btn-outline btn-outline-gray btn-icon-sm rounded-md"
+        >
+          <span aria-hidden="true" class="iconify ph--caret-left in-fx-resized:rotate-180"></span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="lg:pl-72">
+      <header class="w-full flex h-16 bg-bg sticky top-0 z-40">
+        <div
+          class="flex items-center justify-between w-full h-full px-4 sm:px-8"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="flex lg:hidden pr-2 relative before:absolute before:inset-y-2 before:right-0 before:w-0.5 before:bg-border"
+            >
+              <button
+                data-toggle-sidebar
+                class="outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
+              >
+                <span
+                  class="w-6 h-0.5 rounded-full bg-fg-muted transition-transform duration-300 ease-linear in-[[aria-expanded=true]]:translate-y-1.5 in-[[aria-expanded=true]]:rotate-40"
+                ></span>
+                <span
+                  class="w-6 origin-center mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-[[aria-expanded=true]]:opacity-0 in-[[aria-expanded=true]]:scale-x-0"
+                ></span>
+                <span
+                  class="w-6 mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-[[aria-expanded=true]]:-translate-y-1.5 in-[[aria-expanded=true]]:-rotate-40"
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="outline-none">
+              <img
+                src="https://avatars.githubusercontent.com/u/34010260?v=4"
+                alt="user profil avatar"
+                width="240"
+                height="240"
+                class="size-10 rounded-full object-cover"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+    </main>
+    <script type="module">
+      import { actionToggler } from "@flexilla/utilities";
+
+      actionToggler({
+        trigger: "[data-toggle-sidebar]",
+        targets: [
+          {
+            element: "[data-app-sidebar]",
+            attributes: {
+              initial: { "data-state": "close" },
+              to: { "data-state": "open" },
+            },
+          },
+          {
+            element: "[data-sidebar-overlay]",
+            attributes: {
+              initial: { "aria-hidden": "true", "data-state": "close" },
+              to: { "aria-hidden": "false", "data-state": "open" },
+            },
+          },
+        ],
+        onToggle: ({ isExpanded }) => {
+          document.body.classList[!isExpanded ? "add" : "remove"](
+            "overflow-y-auto"
+          );
+        },
+      });
+
+      actionToggler({
+        trigger: "[ data-toggle-sidebar-size]",
+        targets: [
+          {
+            element: "[data-app-sidebar]",
+            attributes: {
+              initial: { "data-resized": "false" },
+              to: { "data-resized": "true" },
+            },
+          },
+        ],
+      });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

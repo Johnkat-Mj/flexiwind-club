@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="" class="darsk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashblock 01</title>
+  </head>
+
+  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+    <main class="py-20">
+      <div class="max-w-3xl w-full px-4 mx-auto">
+        <div class="bg-bg rounded-lg shadow border border-border-strong/70 p-5 sm:p-8 lg:p-10">
+          <div class="mb-6">
+            <h2 class="text-xl font-semibold text-fg-title">Account Settings</h2>
+            <p class="text-fg-muted text-sm mt-1">
+              Manage your account preferences and notification settings.
+            </p>
+          </div>
+          <form class="space-y-8">
+            <div class="space-y-4">
+              <h3
+                class="font-medium text-fg-title border-b border-border pb-2"
+              >
+                Profile Information
+              </h3>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="flex flex-col space-y-2">
+                  <label class="text-sm text-fg"
+                    >Display Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                    value="John Doe"
+                  />
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <label class="text-sm text-fg"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-sm text-fg"
+                    value="johndoe"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label class="text-sm text-fg">Bio</label>
+                <textarea
+                  class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md text-fg h-20 resize-none"
+                  placeholder="Tell us about yourself..."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="space-y-4">
+              <h3
+                class="font-medium text-fg-title border-b border-border pb-2"
+              >
+                Notification Preferences
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <label for="email_notif" class="text-sm text-fg"
+                      >Email Notifications</label
+                    >
+                    <p class="text-xs text-fg-muted">
+                      Receive email updates about your account
+                    </p>
+                  </div>
+                  <label for="email_notif" class="flex items-center">
+                    <input type="checkbox" name="email_notif" id="email_notif" class="switch switch-sm bg-bg-muted text-primary [--knob-bg:var(--color-white)]" />
+                </label>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <label for="push_notification" class="text-sm text-fg"
+                      >Push Notifications</label
+                    >
+                    <p class="text-xs text-fg-muted">
+                      Receive push notifications on your device
+                    </p>
+                  </div>
+                  <label for="switch_sm" class="flex items-center">
+                    <input type="checkbox" name="push_notification" id="push_notification" class="switch switch-sm bg-bg-muted text-primary [--knob-bg:var(--color-white)]" />
+                </label>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <label for="marketing_email" class="text-sm text-fg"
+                      >Marketing Emails</label
+                    >
+                    <p class="text-xs text-fg-muted">
+                      Receive promotional emails and updates
+                    </p>
+                  </div>
+                  <label for="switch_sm" class="flex items-center">
+                    <input type="checkbox" name="marketing_email" id="marketing_email" class="switch switch-sm bg-bg-muted text-primary [--knob-bg:var(--color-white)]" />
+                </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="space-y-4">
+              <h3
+                class="font-medium text-fg-title border-b border-border pb-2"
+              >
+                Privacy Settings
+              </h3>
+              <div class="space-y-4">
+                <div class="flex flex-col space-y-2">
+                  <label class="text-sm text-fg"
+                    >Profile Visibility</label
+                  >
+                  <select class="ui-form-base ui-form-input ui-form-select bg-bg border border-border-strong/90 ui-form-input-md rounded-lg text-fg max-w-xs">
+                    <option>Public</option>
+                    <option>Friends Only</option>
+                    <option>Private</option>
+                  </select>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="allow_search" class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-input shadow size-4 rounded mr-3" checked />
+                  <label for="allow_search" class="text-sm text-fg"
+                    >Allow search engines to index my profile</label
+                  >
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="show_presence" class="ui-checkbox-radio-base ui-form-checkbox text-primary border border-border-input shadow size-4 rounded mr-3" />
+                  <label for="show_presence" class="text-sm text-fg"
+                    >Show my online status to other users</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end gap-2.5 pt-6 border-t border-border">
+              <button type="button" class="btn btn-sm btn-outline btn-outline-gray rounded-md">Cancel</button>
+              <button type="submit" class="btn btn-sm btn-solid btn-solid-primary text-white rounded-md">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

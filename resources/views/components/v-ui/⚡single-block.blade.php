@@ -48,13 +48,13 @@ new class extends Component {
         <x-ui.tabs.list-wrapper class="w-full flex justify-between items-center gap-2 h-12 px-3.5 relative">
             <x-ui.tabs.list unStyled class="flex items-center gap-0.5 text-sm text-fg-muted">
                 <x-ui.tabs.trigger unStyled wrapper-class="flex"
-                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-(--global-main-radius) fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-(--radius-ui) fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
                     id="preview">
                     <span class="iconify size-3 ph--eye opacity-80"></span>
                     <span class="hidden sm:flex">Preview</span>
                 </x-ui.tabs.trigger>
                 <x-ui.tabs.trigger unStyled wrapper-class="flex"
-                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-(--global-main-radius) fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-(--radius-ui) fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
                     id="code">
                     <span class="iconify size-3 ph--code opacity-80"></span>
                     <span class="hidden sm:flex">Code</span>
@@ -87,11 +87,11 @@ new class extends Component {
         </x-ui.tabs.list-wrapper>
         <x-ui.tabs.panel-wrapper data-ui-previewbox
             class="bg-bg h-max overflow-hidden flex items-center justify-center ring ring-border-card rounded-ui w-full relative group flex-1">
-            <x-ui.tabs.panel id="preview" show-as-grid active class="size-full max-h-180">
+            <x-ui.tabs.panel id="preview" show-as-grid active class="w-full h-auto">
                 <livewire:v-ui.preview-block :is-full-screen="$isFullScreen" url="{{ $preview }}" />
             </x-ui.tabs.panel>
             <x-ui.tabs.panel id="code" show-as-grid class="size-full max-h-280">
-                {{-- <livewire:v-ui.preview-block url="{{ $preview }}" /> --}}
+                <livewire:base.load-code-b :name="$title" />
             </x-ui.tabs.panel>
         </x-ui.tabs.panel-wrapper>
     </x-ui.tabs>

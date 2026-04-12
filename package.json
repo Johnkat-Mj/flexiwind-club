@@ -5,7 +5,8 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "build:registry": "node script/build-registries.js"
+        "build:registry": "node script/build-registries.js",
+        "generate:registry": "node script/generate-registry.js"
     },
     "devDependencies": {
         "@iconify-json/ph": "^1.2.2",
@@ -32,6 +33,7 @@
         "@flexilla/tabs": "^2.2.3",
         "@flexilla/tooltip": "^2.4.4",
         "@fontsource/geist-sans": "^5.2.5",
+        "@fontsource/ibm-plex-mono": "^5.2.7",
         "shiki": "^4.0.2"
     }
 }

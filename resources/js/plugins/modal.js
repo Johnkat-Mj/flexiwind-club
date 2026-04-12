@@ -1,7 +1,7 @@
 import { Modal as FlexillaModal } from "@flexilla/modal";
 
 export function ModalPlugin(Alpine) {
-    Alpine.directive("modal", (el, {}, { cleanup }) => {
+    Alpine.directive("f-modal", (el, {}, { cleanup }) => {
         const modalId = el.getAttribute("data-modal-id");
 
         if (!modalId) {
@@ -13,7 +13,7 @@ export function ModalPlugin(Alpine) {
         }
         if(!(el instanceof HTMLDialogElement)) {
             console.error(
-                "❌ x-modal must be used only on an HTMLDialogElement:",
+                "❌ x-f-modal must be used only on an HTMLDialogElement:",
                 el
             );
             return;

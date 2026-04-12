@@ -32,7 +32,7 @@ new class extends Component {
         </div>
         <div class="relative py-20 md:py-28 max-w-6xl flex flex-col items-center text-center px-4">
             <a href=""
-                class="ring ring-border-strong/80 bg-bg text-fg pl-(--annonce-padding) pr-2 py-(--annonce-padding) rounded-(--annonce-radius) [--annonce-padding:--spacing(0.5)] [--annonce-radius:var(--global-main-radius)] text-sm flex items-center gap-1">
+                class="ring ring-border-strong/80 bg-bg text-fg pl-(--annonce-padding) pr-2 py-(--annonce-padding) rounded-(--annonce-radius) [--annonce-padding:--spacing(0.5)] [--annonce-radius:var(--radius-ui)] text-sm flex items-center gap-1">
                 <span
                     class="bg-bg-muted text-fg-title rounded-[calc(var(--annonce-radius)-var(--annonce-padding))] px-2 py-0.5">
                     Soon

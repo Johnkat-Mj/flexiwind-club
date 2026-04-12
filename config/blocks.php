@@ -66,7 +66,7 @@ return [
                     'name' => 'sidebar04',
                     'preview' => '/preview-ui/sidebar/04',
                     'is-full-screen'=>true
-                ],
+                ]
             ],
         ],
         'app-shell' => [
@@ -78,8 +78,8 @@ return [
                 'dark' => '/illustrations/shell-dark.webp'
             ],
             'blocks' => [
-                'shell01' => [
-                    'name' => 'shell01',
+                'app-shell01' => [
+                    'name' => 'app-shell01',
                     'preview' => '/preview-ui/app-shell/01',
                     'is-full-screen'=>true
                 ]
@@ -135,16 +135,16 @@ return [
                 'dark' => '/illustrations/kpi-dark.webp'
             ],
             'blocks' => [
-                'kpi01' => [
-                    'name' => 'kpi01',
+                'kpi-01' => [
+                    'name' => 'kpi-01',
                     'preview' => '/preview-ui/dash-card/kpi01',
                 ],
-                'kpi02' => [
-                    'name' => 'kpi02',
+                'kpi-02' => [
+                    'name' => 'kpi-02',
                     'preview' => '/preview-ui/dash-card/kpi02',
                 ],
-                'kpi03' => [
-                    'name' => 'kpi03',
+                'kpi-03' => [
+                    'name' => 'kpi-03',
                     'preview' => '/preview-ui/dash-card/kpi03',
                 ],
             ],
@@ -231,6 +231,11 @@ return [
                 'otp01' => [
                     'name' => 'otp01',
                     'preview' => '/preview-ui/auth/otp01',
+                    'is-full-screen'=>true
+                ],
+                 'otp02' => [
+                    'name' => 'otp02',
+                    'preview' => '/preview-ui/auth/otp02',
                     'is-full-screen'=>true
                 ]
             ],

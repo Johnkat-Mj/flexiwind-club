@@ -1,1 +1,8 @@
-- npm install @flexilla/accordion @flexilla/auto-resize-area  @flexilla/collapse @flexilla/dismissible @flexilla/dropdown @flexilla/modal @flexilla/offcanvas @flexilla/pin-input @flexilla/popover @flexilla/custom-range @flexilla/tabs @flexilla/tooltip
+- 
+
+
+
+
+
+- Autocomplet -> combobox
+- Use Select : add few things ->. input autocomplete -> when focus start typing in the input then show the select and autocomplete -> trigger still there for purpose when user want to open by clicking on a trigger button

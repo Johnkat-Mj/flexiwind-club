@@ -2,6 +2,22 @@ import { $ } from "@flexilla/utilities";
 import { copyToClipboard } from "./utils";
 
 document.addEventListener("alpine:init", () => {
+    Alpine.directive("ui-lg-filter", (el, {}, { cleanup }) => {
+        const trigger = document.querySelector("[data-trigger-lg-filter]");
+        const filterZone = el;
+        const toggle = () => {
+            const isOpened = filterZone.getAttribute("data-state") === "open";
+            filterZone.setAttribute("data-state", isOpened ? "closed" : "open");
+            trigger.setAttribute("aria-expanded", isOpened ? null : true);
+        };
+        if (trigger && filterZone) {
+            trigger.addEventListener("click", toggle);
+        }
+        cleanup(() => {
+            if (trigger && filterZone)
+                trigger.removeEventListener("click", toggle);
+        });
+    });
     Alpine.directive("ui-block", (el, {}, { cleanup }) => {
         const previewBox = $("[data-ui-previewbox]", el);
 
@@ -69,7 +85,8 @@ document.addEventListener("alpine:init", () => {
                 if (iframeDoc && iframeDoc.documentElement) {
                     const contentHeight =
                         iframeDoc.documentElement.scrollHeight;
-                    const previewBox = el.closest("[data-preview-box]") ?? el.parentElement;
+                    const previewBox =
+                        el.closest("[data-preview-box]") ?? el.parentElement;
                     (previewBox ?? el).style.setProperty(
                         "--frame-height",
                         `${contentHeight}px`,

@@ -1,0 +1,28 @@
+@utility ui-input-select-trigger-base {
+  /* focus:enabled:hover:border-primary/80 enabled:hover:border-fg-muted/30 */
+  @apply relative focus:hover:border-primary/80 hover:border-fg-muted/30 flex w-full min-w-0 items-center;
+}
+
+@utility ui-form-select-trigger {
+  @apply relative;
+}
+
+@utility ui-form-select-trigger-invalid {
+  @apply group-open/select:border-primary/70 group-open/select:ring-3 group-open/select:ring-primary/20;
+}
+
+@utility ui-form-select-triger-invalid-base {
+  @apply group-focus/select:group-invalid/select:border-(--select-trigger-danger-border) group-focus/select:group-invalid/select:enabled:hover:border-(--select-trigger-danger-border-hover);
+}
+
+@utility ui-form-select-trigger-invalid-outline {
+  @apply group-open/select:invalid:border-(--select-trigger-danger-border) group-open/select:invalid:ring-3 group-open/select:invalid:ring-(--select-trigger-danger-ring) group-invalid/select:border-(--select-trigger-danger-border) group-invalid/select:ring-(--select-trigger-danger-ring) group-invalid/select:enabled:hover:border-(--select-trigger-danger-border);
+}
+
+@utility ui-form-select-trigger-access {
+  @apply in-disabled:bg-bg-muted in-disabled:opacity-50 forced-colors:in-disabled:border-[GrayText] forced-colors:in-disabled:text-[GrayText];
+}
+
+@utility ui-form-select-trigger-ring {
+  @apply focus:outline-offset-0 focus:border-transparent focus:outline-(--ui-input-focus-outline) focus:ring-(--focus-ring)
+}

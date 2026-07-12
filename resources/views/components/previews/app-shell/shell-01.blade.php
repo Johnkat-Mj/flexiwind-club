@@ -1,5 +1,5 @@
-<x-previews.sidebar.02.body-wrapper>
-    <x-previews.sidebar.02.sidebar />
+<x-previews.sidebar.03.body-wrapper>
+    <x-previews.sidebar.03.sidebar />
     <x-previews.app-shell.wrapper>
         <!-- Dynamic Content Area -->
         <div class="flex-1 overflow-y-auto p-8">
@@ -34,4 +34,4 @@
         </div>
     </x-previews.app-shell.wrapper>
 
-</x-previews.sidebar.02.body-wrapper>
+</x-previews.sidebar.03.body-wrapper>

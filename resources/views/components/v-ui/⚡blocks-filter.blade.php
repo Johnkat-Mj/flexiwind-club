@@ -1,11 +1,14 @@
 <?php
 
 use Livewire\Component;
+use Livewire\Attributes\Url;
 use Illuminate\Support\Facades\Config;
 
 new class extends Component {
     public $selectedGroup = 'all';
-    public $selectedCategories = [];
+
+    #[Url(as: 'q', history: false)]
+    public $search = '';
 
     public $groups = [
         [
@@ -31,7 +34,6 @@ new class extends Component {
         $categories = [];
 
         if ($this->selectedGroup === 'all') {
-            // Get all categories from all groups
             foreach ($blocksConfig as $groupKey => $groupData) {
                 if (is_array($groupData)) {
                     foreach ($groupData as $categoryKey => $categoryData) {
@@ -39,6 +41,7 @@ new class extends Component {
                         $categories[] = [
                             'id' => $categoryKey,
                             'name' => $categoryData['title'] ?? ucfirst($categoryKey),
+                            'illustrations' => $categoryData['illustrations'] ?? [],
                             'count' => $blockCount,
                             'group' => $groupKey,
                         ];
@@ -52,11 +55,18 @@ new class extends Component {
                     $categories[] = [
                         'id' => $categoryKey,
                         'name' => $categoryData['title'] ?? ucfirst($categoryKey),
+                        'illustrations' => $categoryData['illustrations'] ?? [],
                         'count' => $blockCount,
                         'group' => $this->selectedGroup,
                     ];
                 }
             }
+        }
+
+        if ($this->search) {
+            $categories = array_filter($categories, function ($cat) {
+                return str_contains(strtolower($cat['name']), strtolower($this->search));
+            });
         }
 
         return $categories;
@@ -65,74 +75,111 @@ new class extends Component {
     public function selectGroup($groupId)
     {
         $this->selectedGroup = $groupId;
-        $this->selectedCategories = []; // Reset categories when group changes
-    }
-
-    public function toggleCategory($categoryId)
-    {
-        if (in_array($categoryId, $this->selectedCategories)) {
-            $this->selectedCategories = array_diff($this->selectedCategories, [$categoryId]);
-        } else {
-            $this->selectedCategories[] = $categoryId;
-        }
-    }
-
-    public function clearCategories()
-    {
-        $this->selectedCategories = [];
     }
 };
 ?>
+<x-ui.slideover.content class="border-r">
+    <x-ui.slideover.header class="border-b border-border flex-col">
+        <x-ui.slideover.title>Filter blocks</x-ui.slideover.title>
+        <x-ui.input.group>
+            <x-ui.input.leading absolute>
+                <x-ui.icon name="ph--magnifying-glass" />
+            </x-ui.input.leading>
+            <x-ui.input variant="unstyled" placeholder="Start typing..." class="px-4 ps-9"
+                x-data="{ localSearch: $wire.search }"
+                x-model="localSearch"
+                x-on:input.debounce.500ms="$wire.set('search', localSearch)" />
+            <x-ui.input.trailing clickable>
+                <x-ui.button variant="ghost" size="sm" icon-only
+                    x-on:click="localSearch = ''; $wire.set('search', '')"
+                    x-show="localSearch"
+                    class="cursor-pointer">
+                    <x-ui.icon name="ph--x" />
+                </x-ui.button>
+            </x-ui.input.trailing>
+        </x-ui.input.group>
+    </x-ui.slideover.header>
 
-<x-ui.slideover.body class="pt-10">
-    <!-- Groups Section -->
-    <div class="mb-8">
-        <span class="text-fg-title font-medium text-sm mb-3 block">
-            Groups
-        </span>
-        <div class="flex flex-wrap gap-2">
-            @foreach ($groups as $group)
-                <button wire:click="selectGroup('{{ $group['id'] }}')"
-                    wire:key="group-{{ $group['id'] }}-{{ $selectedGroup }}"
-                    data-state="{{ $selectedGroup === $group['id'] ? 'active' : 'inactive' }}"
-                    class="h-7 text-sm px-2 flex items-center rounded-ui transition-colors duration-200 ring ring-border-strong/60
+    <x-ui.slideover.body>
+        <div class="mb-4">
+            <span class="text-fg-title font-medium text-sm mb-3 block">
+                Groups
+            </span>
+            <div class="flex flex-wrap gap-2">
+                @foreach ($groups as $group)
+                    <button wire:click="selectGroup('{{ $group['id'] }}')"
+                        wire:key="group-{{ $group['id'] }}-{{ $selectedGroup }}-{{ $search }}"
+                        data-state="{{ $selectedGroup === $group['id'] ? 'active' : 'inactive' }}"
+                        class="h-7 text-sm px-2 flex items-center rounded-ui transition-colors duration-200 ring ring-border-strong/60
                     fx-active:bg-bg-muted/50 fx-active:border-border-strong/70 fx-active:text-fg-title fx-active:shadow-md fx-active:shadow-black/5
                     text-fg-muted hover:bg-bg-muted/70 hover:text-fg-subtitle
                     ">
-                    <span class="iconify size-3 {{ $group['icon'] }} mr-1.5"></span>
-                    <span class="text-sm font-medium">{{ $group['text'] }}</span>
-                </button>
-            @endforeach
+                        <span class="iconify size-3 {{ $group['icon'] }} mr-1.5"></span>
+                        <span class="text-sm font-medium">{{ $group['text'] }}</span>
+                    </button>
+                @endforeach
+            </div>
         </div>
-    </div>
 
-    <!-- Categories Section -->
-    <div>
-        <div class="flex items-center justify-between mb-3">
-            <span class="text-fg-title font-medium text-sm">
-                Categories
-            </span>
-            @if (count($selectedCategories) > 0)
-                <button wire:click="clearCategories"
-                    class="text-sm text-fg-muted hover:text-fg transition-colors duration-200">
-                    Clear
-                </button>
-            @endif
-        </div>
-        <div class="flex flex-wrap gap-2">
-            @forelse ($this->categories as $category)
-                <a href="{{ route('blocks.show', [$category['group'], $category['id']]) }}" wire:navigate
-                    wire:key="category-{{ $category['id'] }}-{{ $selectedGroup }}"
-                    class="h-7 text-sm px-2 flex items-center rounded-ui transition-colors duration-200 ring ring-border-strong/60
-                    fx-current:bg-bg-muted/50 fx-current:border-border-strong/70 fx-current:text-fg-title fx-current:shadow-md fx-current:shadow-black/5
-                    text-fg-muted hover:bg-bg-muted/70 hover:text-fg-subtitle">
-                    {{ $category['name'] }}
-                    <span
-                        class="ml-1 pl-1.5 opacity-70 border-l border-border-strong/90">{{ $category['count'] }}</span>
-                </a>
+        @php
+            $groupNames = collect($groups)->keyBy('id')->map(fn($g) => $g['text']);
+            $groupedCategories = [];
+            foreach ($this->categories as $category) {
+                $groupedCategories[$category['group']][] = $category;
+            }
+        @endphp
+
+        <div class="flex flex-col gap-5">
+            @forelse ($groupedCategories as $groupKey => $categoriesList)
+                @php
+                    $groupId = $selectedGroup === 'all' ? $groupKey : $selectedGroup;
+                    $configGroup = Config::get("blocks.{$groupKey}");
+                    $totalBlocks = collect($configGroup)->sum(fn($cat) => count($cat['blocks'] ?? []));
+                @endphp
+                <div class="flex flex-col">
+                    <x-ui.collapse.trigger :target="$groupKey" class="flex items-center gap-2 justify-between text-fg-title">
+                        <span class="font-medium text-sm flex-1 text-left">
+                            {{ $groupNames[$groupKey] ?? ucfirst($groupKey) }}
+                        </span>
+                        <span class="text-xs text-fg bg-bg-surface ring ring-border px-2.5 py-px rounded">
+                            {{ $totalBlocks }}
+                        </span>
+                    </x-ui.collapse.trigger>
+                    <x-ui.collapse data-state="open" :id="$groupKey" class="mt-3 grid grid-cols-2 gap-x-2.5 gap-y-4">
+                        @foreach ($categoriesList as $category)
+                            <a href="{{ route('blocks.show', [$category['group'], $category['id']]) }}" wire:navigate
+                                aria-label="Link to blocks : {{ $category['name'] }}"
+                                class="hover:bg-bg-surface p-px rounded-ui group ease-linear duration-200">
+                                <div
+                                    class="aspect-standard-tv bg-bg-muted/30 rounded-ui pointer-events-none relative overflow-hidden">
+                                    @if (isset($category['illustrations']['light']))
+                                        <img src="{{ $category['illustrations']['light'] }}"
+                                            alt="Illustration light {{ $category['name'] }}" width="1455"
+                                            height="1091" class="size-full object-cover dark:hidden">
+                                    @endif
+                                    @if (isset($category['illustrations']['dark']))
+                                        <img src="{{ $category['illustrations']['dark'] }}"
+                                            alt="Illustration dark {{ $category['name'] }}" width="1455"
+                                            height="1091" class="size-full object-cover not-dark:hidden">
+                                    @endif
+                                    <span
+                                        class="text-xs absolute top-2 right-1.5 px-2 py-0.5 rounded bg-bg-muted/50 text-fg backdrop-blur-sm ring ring-border">
+                                        {{ $category['count'] }} blocks
+                                    </span>
+                                </div>
+                                <div class="mt-0.5 pb-2 px-1">
+                                    <h3 class="font-medium text-fg-title text-sm">
+                                        {{ $category['name'] }}
+                                    </h3>
+                                </div>
+                            </a>
+                        @endforeach
+                    </x-ui.collapse>
+                </div>
             @empty
-                <p class="text-fg-muted text-sm">No categories available for this group.</p>
+                <p class="text-fg-muted text-sm px-3">No categories available.</p>
             @endforelse
         </div>
-    </div>
-</x-ui.slideover.body>
+    </x-ui.slideover.body>
+
+</x-ui.slideover.content>

@@ -1,5 +1,5 @@
 <main
-    class="overflow-hidden overflow-y-auto h-dvh lg:h-[calc(100dvh---spacing(1))] lg:w-[calc(100vw---spacing(70))] lg:mr-1 lg:mt-1 bg-white dark:bg-gray-900/30 lg:rounded-t-xl lg:border lg:border-b-0 border-border-strong/30 lg:shadow-md lg:shadow-gray-600/10">
+    class="overflow-hidden overflow-y-auto h-dvh lg:w-[calc(100vw-(--spacing(70)))] bg-white dark:bg-gray-900/30">
     <header class="w-full flex h-15 sticky top-0 z-40 lg:pt-1 border-b border-border-strong/50 bg-bg">
         <div class="flex items-center justify-between w-full h-full px-4">
             <div class="flex items-center gap-3">

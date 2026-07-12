@@ -12,7 +12,7 @@
                         <a
                             href="{{ $item['path'] }}"
                             aria-label="Link to {{ $item['title'] }}"
-                            class="ease-linear text-sm fx-current:text-fg-title fx-current:bg-bg-subtle text-fg-muted font-light hover:text-fg-title px-3 py-1.5 rounded-lg hover:bg-bg-muted w-full"
+                            class="ease-linear text-sm fx-current:text-fg-title fx-current:bg-bg-subtle text-fg-muted font-light hover:text-fg-title px-3 py-1.5 rounded-lg hover:bg-bg-muted w-full flex items-center gap-2"
                             wire:navigate.hover
                         >
                             {{ $item['title'] }}
@@ -34,8 +34,8 @@
                                         </span>
                                         @break
                                     @case('wip')
-                                        <span aria-hidden="true" class="px-1 py-px text-sm rounded-lg ui-subtle ui-subtle-accent">
-                                            Wip
+                                        <span aria-hidden="true" class="ml-auto rounded-ui py-px px-1 text-[10px] ui-subtle ui-subtle-primary">
+                                            Soon
                                         </span>
                                         @break
                                 @endswitch

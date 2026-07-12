@@ -1,3 +1,3 @@
-<div class="min-h-screen font-sans overflow-hidden overflow-y-auto lg:overflow-y-auto">
+<div class="bg-bg min-h-svh antialiased w-full h-screen overflow-hidden">
     {{ $slot }}
 </div>

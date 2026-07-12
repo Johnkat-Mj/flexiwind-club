@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Support;
 
 use Spatie\ShikiPhp\Shiki;
@@ -12,6 +13,7 @@ class ShikiService
         if (self::$instance === null) {
             self::$instance = new Shiki($theme);
         }
+
         return self::$instance;
     }
 }

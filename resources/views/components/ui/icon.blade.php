@@ -2,6 +2,7 @@
 
 @php
     $sizeClasses = [
+        'none'=>'',
         'xs' => 'size-3.5',
         'sm' => 'size-4',
         'md' => 'size-5',

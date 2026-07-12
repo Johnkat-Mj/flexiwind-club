@@ -26,19 +26,19 @@
     ];
 @endphp
 
-<article x-data x-ui-block class="relative w-full">
+<article x-data x-ui-block class="relative w-full px-2">
 
-    <x-ui.tabs class="relative lg:max-w-336 xl:max-w-352 lg:mx-auto px-2 sm:px-4 xl:px-8 w-full">
+    <x-ui.tabs class="relative w-full">
         <x-ui.tabs.list-wrapper class="w-full flex justify-between items-center gap-2 h-12 px-3.5 relative">
             <x-ui.tabs.list unStyled class="flex items-center gap-0.5 text-sm text-fg-muted">
                 <x-ui.tabs.trigger unStyled wrapper-class="flex"
-                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-(--radius-ui) fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
                     id="preview">
                     <span class="iconify size-3 ph--eye opacity-80"></span>
                     <span class="hidden sm:flex">Preview</span>
                 </x-ui.tabs.trigger>
                 <x-ui.tabs.trigger unStyled wrapper-class="flex"
-                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-(--radius-ui) fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
                     id="code">
                     <span class="iconify size-3 ph--code opacity-80"></span>
                     <span class="hidden sm:flex">Code</span>

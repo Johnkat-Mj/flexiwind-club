@@ -1,16 +1,10 @@
 @props(['title', 'description'])
 
-<section class="pt-8 w-full mx-auto lg:max-w-336 xl:max-w-352 px-2 sm:px-4 xl:px-8">
-    <div class="border-x border-border-input/50 border-dashed w-full ">
-        <x-ui.breadcrumbs class="gap-2.5 whitespace-nowrap text-fg capitalize text-sm md:text-base">
-            <x-ui.breadcrumbs.item separator="ph--caret-right" href="/blocks" text="Blocks" />
-            <x-ui.breadcrumbs.item active :text="$title" />
-        </x-ui.breadcrumbs>
-        <h2 class="text-fg-title mt-3 font-medium text-lg md:text-xl max-w-xl">
-            {{ $title }}
-        </h2>
-        <p class="max-w-lg text-sm md:text-base text-fg-muted font-300 mt-1">
-            {{ $description }}
-        </p>
-    </div>
-</section>
+<div class="w-full pt-10 border-b pb-4 border-border px-2 border-dashed">
+    <h2 class="text-fg-title font-medium text-lg md:text-xl max-w-xl">
+        {{ $title }}
+    </h2>
+    <p class="max-w-lg text-sm md:text-base text-fg-muted font-300 mt-1">
+        {{ $description }}
+    </p>
+</div>

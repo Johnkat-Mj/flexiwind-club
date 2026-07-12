@@ -3,10 +3,10 @@
     'isFullScreen' => false,
 ])
 
-<div data-preview-box style="--frame-height:200px;" class="w-full bg-bg duration-300 ease-linear 
+<div data-preview-box style="--frame-height:200px;" class="w-full bg-bg 
     grid relative 
       overflow-hidden
-       {{ $isFullScreen ? 'h-[max(calc(100vh-6rem),var(--frame-height))] xl:h-[max(42.5rem,var(--frame-height))]' :'h-(--frame-height)'}}
+       {{ $isFullScreen ? 'h-[max(calc(100vh-6rem),var(--frame-height))] xl:h-[max(44rem,var(--frame-height))] ' :'h-(--frame-height)'}}
       "
     x-data="{ frameIsLoading: true }"
     

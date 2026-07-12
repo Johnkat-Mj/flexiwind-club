@@ -11,6 +11,9 @@
 @custom-variant selected (&[aria-selected="true"]);
 
 @custom-variant fx-current (&[data-current]);
+@custom-variant fx-table-grid (&[data-table-grid]);
+@custom-variant fx-hoverable (&[data-table-hoverable]);
+@custom-variant fx-striped (&[data-table-striped]);
 
 
 @custom-variant slot-icon (&[slot="icon"]);

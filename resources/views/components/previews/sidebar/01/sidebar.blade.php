@@ -59,7 +59,7 @@
         ">
     <div class="flex flex-col gap-4 py-4 w-full flex-1 overflow-hidden">
         <div class="px-6 h-max flex">
-            <span class="size-8 d-flex-place-center bg-linear-to-tr from-primary to-secondary/50 rounded-sm">
+            <span class="size-8 d-flex-place-center bg-primary rounded-sm">
                 <svg class="size-5 text-white" width="553" height="553" viewBox="0 0 553 553" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -145,9 +145,8 @@
             <x-ui.dropdown.trigger variant="ghost" size="md" dropdownId="userProfile"
                 class="group px-4 w-full gap-2.5 pl-2" type="button" id="radix-:r0R2h:" aria-haspopup="menu"
                 aria-expanded="false">
-                <span class="block relative text-sm before:bg-success-600 dark:before:bg-success-400 size-6">
-                    <span
-                        class="absolute inset-0 m-auto flex items-center justify-center rounded-sm font-medium text-white bg-primary">JK</span>
+                <span class="relative text-sm size-6 d-flex-place-center rounded-sm font-medium text-white bg-primary">
+                    <span>JK</span>
                 </span>
                 <span class="text-sm">Johnkat MJ</span>
                 <span aria-hidden="true" class="iconify size-3.5 ml-auto ph--caret-up-bold"></span>
@@ -155,9 +154,8 @@
             </x-ui.dropdown.trigger>
             <x-ui.dropdown placement="top-start" class="w-60" id="userProfile">
                 <x-ui.dropdown.header class="flex items-center gap-x-3 px-2 pt-2 pb-1">
-                    <span class="block relative text-sm before:bg-success-600 dark:before:bg-success-400 size-8">
-                        <span
-                            class="absolute inset-0 m-auto flex items-center justify-center rounded-sm font-medium text-white bg-primary">JK</span>
+                    <span class="relative text-sm size-8 rounded-sm font-medium text-white bg-primary d-flex-place-center">
+                        <span>JK</span>
                     </span>
 
                     <div class="flex items-start flex-col">

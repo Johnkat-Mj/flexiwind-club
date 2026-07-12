@@ -65,10 +65,10 @@
 @endphp
 
 
-<footer class="mt-auto px-2 sm:px-4 xl:px-8">
-    <div class="mx-auto w-full lg:max-w-336 xl:max-w-352 relative pt-20 border-dashed border-x border-border-strong/70">
+<footer class="mt-auto">
+    <div class="mx-auto w-full lg:max-w-336 xl:max-w-352 px-4 sm:px-6 xl:px-8 relative pt-20">
         <div
-            class="pb-10 px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 lg:gap-x-10 gap-y-8">
+            class="pb-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 lg:gap-x-10 gap-y-8">
             <div class="col-span-2 md:col-span-1 lg:col-span-2">
                 <div class="flex">
                     <a href="/" aria-label="Link to home page" class="flex">
@@ -102,7 +102,7 @@
                 <x-blocks.block-footer :title="$footerGroup['title']" :items="$footerGroup['items']" />
             @endforeach
         </div>
-        <div class="col-span-full text-fg-muted text-sm px-4 sm:px-6 lg:px-8 pb-3">
+        <div class="col-span-full text-fg-muted text-sm pb-3">
             <div class="text-sm border border-border bg-bg-surface/50 px-4 py-2 rounded-ui text-center">
                 © unoForge {{ Date('Y') }}.
                 Designed by <x-ui.link href="https://x.com/johnkat_Mj" aria-label="Link to https://x.com/johnkat_Mj"

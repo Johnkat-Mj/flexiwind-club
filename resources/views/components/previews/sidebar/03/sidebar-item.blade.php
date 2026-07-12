@@ -1,14 +1,9 @@
-@props(['href' => '#', 'icon' => 'home', 'text' => 'Home', 'isActive' => null])
+<li>
+    <a href="{{ $href }}" data-state="{{ $isActive ? 'active' : 'inactive' }}"
+        class="group flex items-center rounded-ui hover:brightness-[0.98] active:brightness-100 text-fg-muted fx-active:text-fg-title fx-current:text-fg-title fx-current:bg-bg-muted/60 fx-active:bg-bg-muted/60 ring ring-transparent fx-active:ring-border-input/50 hover:bg-bg-surface h-9 gap-3.5 pl-3 pr-4">
 
-<li class="flex w-full">
-    <a href="{{ $href }}" aria-label="Link to {{ $text }}" data-state="{{ $isActive ? 'active' : 'inactive' }}"
-        class="w-full flex items-center gap-x-2.5 px-3 h-9 rounded-ui fx-current:text-white fx-active:text-white
-        relative hover:before:bg-bg-muted/60 before:absolute before:rounded-ui before:inset-0 active:before:scale-y-[.95] active:before:scale-x-[.98] before:transition-transform before:transform before:ease-linear fx-active:before:bg-primary fx-current:before:bg-primary
-        ">
-        <span class="min-w-max inline-flex relative">
-            <x-ui.icon name="{{ $icon }}" class="opacity-80"/>
-        </span>
-        <span class="line-clamp-1 flex-1 relative">
+        <x-ui.icon name="{{ $icon }}" />
+        <span class="text-sm">
             {{ $text }}
         </span>
     </a>

@@ -3,7 +3,7 @@
 </div>
 <header class="h-15 flex items-center w-full z-45 relative bg-bg border-b border-border-strong/70 border-dashed">
     <nav
-        class="sm:mx-auto w-full flex justify-between lg:max-w-336 xl:max-w-352 px-2 sm:px-4 xl:px-8">
+        class="sm:mx-auto w-full flex justify-between lg:max-w-336 xl:max-w-352 px-4 sm:px-6 xl:px-8">
         <div class="flex items-center gap-2 pr-3">
             <div class="flex lg:hidden pr-2 border-r border-border-strong/70">
                 <button data-nav-trigger data-toggle-nav="mainNavbar"

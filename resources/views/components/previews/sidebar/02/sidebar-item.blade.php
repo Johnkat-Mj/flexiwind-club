@@ -1,16 +1,9 @@
+@props(['isActive'=>false, 'icon','text','href'])
 <li>
-    <a href="{{ $href }}"
-    data-state="{{ $isActive ? 'active':'inactive' }}"
-        class="group flex items-center rounded-ui
-                hover:brightness-[0.98] active:brightness-100
-                text-fg-muted fx-active:text-fg-title fx-current:text-fg-title
-                fx-active:bg-white dark:fx-active:bg-gray-800/40
-                ring ring-transparent fx-active:ring-border-input/50
-                hover:bg-bg-surface h-9 gap-3.5 pl-3 pr-4
-      ">
-
-        <x-ui.icon name="{{ $icon }}"/>
-        <span class="text-sm">
+    <a href="{{ $href }}" data-state="{{ $isActive ? 'active' : 'inactive' }}"
+        class="flex items-center gap-3 px-3 py-2 hover:bg-bg-surface fx-active:bg-bg fx-current:bg-bg border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-active:shadow-bg-muted/50 fx-current:shadow-bg-muted/50 fx-current:shadow-sm fx-active:text-primary group rounded-ui">
+        <x-ui.icon size="md" name="{{ $icon }}" />
+        <span class="font-medium text-sm group-fx-current:text-fg-title group-fx-active:text-fg-title">
             {{ $text }}
         </span>
     </a>

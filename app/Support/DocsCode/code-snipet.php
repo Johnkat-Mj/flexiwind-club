@@ -422,9 +422,6 @@ JS,
         ],
     ],
 
-
-
-
     'add-otp-in-app' => [
         'lang' => 'js',
         'name' => 'flexilla.js',
@@ -452,9 +449,6 @@ JS,
             3 => 'added',
         ],
     ],
-
-
-
 
     'add-offcanvas-in-app' => [
         'lang' => 'js',

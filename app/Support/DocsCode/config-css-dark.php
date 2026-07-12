@@ -1,11 +1,10 @@
 <?php
 
-
 return [
-  'css-variables-color-dark' => [
-    'lang' => 'css',
-    'name' => 'dark',
-    'code' => <<<'CSS'
+    'css-variables-color-dark' => [
+        'lang' => 'css',
+        'name' => 'dark',
+        'code' => <<<'CSS'
 :root {
 
     --primary: var(--color-primary-500);
@@ -68,6 +67,6 @@ return [
     --dropdown-item-danger-outline: var(--danger);
 }
 CSS
-  ]
+    ],
 
 ];

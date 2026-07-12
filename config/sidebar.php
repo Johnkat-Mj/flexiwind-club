@@ -24,7 +24,7 @@ return [
                 'description' => 'Enhanced select component with search, grouping, and custom rendering support.',
                 'keywords' => 'select, dropdown, search, form, advanced select',
                 'seoDescription' => 'Build advanced select dropdowns with search and grouping using Flexiwind Club.',
-                'hideInSidebar' => true
+                'hideInSidebar' => true,
             ],
         ],
     ],
@@ -37,6 +37,7 @@ return [
                 'description' => 'Powerful charting plugin with multiple chart types and data visualization options.',
                 'keywords' => 'chart, graphs, data visualization, analytics, dashboard',
                 'seoDescription' => 'Create beautiful charts and data visualizations with Flexiwind Club Chart plugin.',
+                'state' => 'wip',
             ],
             [
                 'title' => 'Wysiwyg',
@@ -44,6 +45,7 @@ return [
                 'description' => 'Rich text editor plugin with formatting tools and media embed support.',
                 'keywords' => 'wysiwyg, rich text, editor, html editor, content',
                 'seoDescription' => 'Add rich text editing capabilities with Flexiwind Club Wysiwyg plugin.',
+                'state' => 'wip',
             ],
         ],
     ],
@@ -73,7 +75,7 @@ return [
             ],
             [
                 'title' => 'Dissmissible',
-                'path' => '/components/extended/dissmissible',
+                'path' => '/components/advanced/dissmissible',
                 'description' => 'A custom dismissible component for alerts and notifications.',
                 'keywords' => 'dismissible, alert, notification, close, dismiss',
                 'seoDescription' => 'Create dismissible alerts and notifications using Flexiwind Club.',
@@ -89,6 +91,7 @@ return [
                 'description' => 'A custom bar chart component for data visualization.',
                 'keywords' => 'chart, bar, data visualization, analytics',
                 'seoDescription' => 'Create beautiful bar charts using Flexiwind Club.',
+                'state' => 'wip',
             ],
             [
                 'title' => 'Line Chart',
@@ -96,6 +99,7 @@ return [
                 'description' => 'A custom line chart component for data visualization.',
                 'keywords' => 'chart, line, data visualization, analytics',
                 'seoDescription' => 'Create beautiful line charts using Flexiwind Club.',
+                'state' => 'wip',
             ],
             [
                 'title' => 'Pie Chart',
@@ -103,6 +107,7 @@ return [
                 'description' => 'A custom pie chart component for data visualization.',
                 'keywords' => 'chart, pie, data visualization, analytics',
                 'seoDescription' => 'Create beautiful pie charts using Flexiwind Club.',
+                'state' => 'wip',
             ],
         ],
     ],

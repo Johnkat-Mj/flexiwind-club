@@ -39,11 +39,14 @@
     </div>
 @else
     <x-docs.docs-tab :values="[
-        ['text' => 'Preview', 'icon' => 'ph--eye', 'value' => 'Preview'],
+        ['text' => 'Preview', 'icon' => 'ph--eye s', 'value' => 'Preview'],
         ['text' => 'Code', 'icon' => 'ph--code', 'value' => 'Code'],
     ]"
-        triggersClass="px-2.5 py-1 border-b-2 border-transparent fx-active:border-fg-title fx-active:text-fg-title"
-        tabListContainer="" tabList="mb-2 pt-2 border-b border-border-strong/60 relative text-fg-muted">
+        triggersClass="relative flex gap-1 items-center disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+        tabListContainer="w-full flex justify-between items-center gap-2 h-max pb-0.5 pt-px px-3.5 relative" tabList="flex items-center gap-0.5 text-sm text-fg-muted"
+        docPanelClass="pt-2.5"
+        iconClass="opacity-80 size-3"
+        >
         <x-docs.tab-panel value="Preview"
             class="bg-bg border border-border-input rounded-ui items-center justify-center min-h-60 lg:min-h-80"
             active>
@@ -59,7 +62,8 @@
             </div>
         </x-docs.tab-panel>
         <x-docs.tab-panel value="Code" show-with-grid
-            class="overflow-hidden bg-(--astro-code-color-background) rounded-ui">
+            class="overflow-hidden border border-gray-200 dark:border-gray-800/60 bg-gray-800 dark:bg-gray-900/50 grid text-gray-300 rounded-ui">
+            
             <x-base.view-component-code :file-path="$filePath" />
         </x-docs.tab-panel>
     </x-docs.docs-tab>

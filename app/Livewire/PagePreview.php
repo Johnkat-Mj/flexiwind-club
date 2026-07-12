@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\View;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-
 #[Layout('layouts.block')]
 class PagePreview extends Component
 {
-        public string $view = 'livewire.preview-pages';
+    public string $view = 'livewire.preview-pages';
+
     public string $path = '';
 
     public function mount(?string $group = null, ?string $preview = null)
@@ -26,13 +26,15 @@ class PagePreview extends Component
         if ($segments[0] === 'livewire') {
             array_shift($segments);
         }
-        $this->path = '/' . implode('/', $segments);
+        $this->path = '/'.implode('/', $segments);
     }
+
     public function render()
     {
-         if (!View::exists($this->view)) {
+        if (! View::exists($this->view)) {
             abort(404);
         }
+
         return view($this->view);
     }
 }

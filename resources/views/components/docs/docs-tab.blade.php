@@ -5,9 +5,10 @@
     'triggersClass' => '',
     'tabList' => '',
     'tabListContainer' => '',
+    'iconClass'=>'text-sm mr-2'
 ])
 
-<div x-tabs data-tab-fx-site data-fx-tabs
+<div x-f-tabs data-tab-fx-site data-fx-tabs
     {{ $attributes->merge(['class' => 'mt-5 first:mt-0 grid ' . ($class ?? '')]) }}>
     <div data-gen-ignore data-tab-list-wrapper class="w-full {{ $tabListContainer !== '' ? $tabListContainer : '' }}">
         <ul role="tablist" data-tab-list
@@ -28,7 +29,7 @@
                             aria-controls="{{ $value['value'] ?? '' }}" aria-label="{{ $value['value'] ?? '' }}"
                             class="relative flex items-center disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary {{ $triggersClass !== '' ? $triggersClass : 'px-4 pt-1.5 pb-2.5' }}">
                             @if (isset($value['icon']) && $value['icon'] !== '')
-                                <span aria-hidden="true" class="iconify text-sm mr-2 {{ $value['icon'] ?? '' }}"></span>
+                                <span aria-hidden="true" class="iconify {{ $iconClass }} {{ $value['icon'] ?? '' }}"></span>
                             @endif
                             <span>{{ $value['text'] ?? '' }}</span>
                         </a>

@@ -56,7 +56,6 @@
         </div>
     </div>
     {{ $slot }}
-    <x-organisms.blocks-cta />
     <x-organisms.footer />
     <x-blocks.modal-search />
 </x-layouts.base>

@@ -1,6 +1,5 @@
 <?php
 
-
 return [
     'btn-flexi-light' => [
         'lang' => 'css',
@@ -375,7 +374,7 @@ CSS,
     'btn-flexi-dark' => [
         'lang' => 'css',
         'name' => 'dark',
-        'code' =><<<'CSS'
+        'code' => <<<'CSS'
 @utility btn-flexi-primary {
     --btn-flexi-bg: var(--color-primary-500);
     --btn-flexi-hover-bg: var(--color-primary-600);

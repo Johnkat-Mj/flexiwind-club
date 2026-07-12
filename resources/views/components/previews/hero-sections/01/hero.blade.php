@@ -1,40 +1,62 @@
-<x-previews.hero-sections.01.navbar/>
+<x-previews.hero-sections.01.navbar />
 
-<section>
+
+<section class="pt-10 relative">
+    <div
+        class="absolute bottom-0 left-0 right-0 top-0 ui-grid [--unify-ui-grid-width:24px] [--unify-ui-grid-height:24px] ui-striped-overlay-mask text-fg-muted/10">
+    </div>
     <div class="w-full flex items-center relative">
-        <div
-            class="min-h-max relative mx-auto pt-32 lg:pt-40 px-5 sm:px-10 md:px-12 lg:px-5 lg:max-w-7xl w-full text-center space-y-10">
+        <div class="min-h-max px-5 sm:px-10 md:px-12 lg:px-5 relative mx-auto pt-32 lg:max-w-7xl w-full text-center">
             <a href="#"
-                class="flex items-center gap-x-2 mx-auto w-max px-2 pr-1 py-1 rounded-full bg-bg-surface border border-border-strong/40 text-sm text-fg">
-                mySto v2.1 is out
-                <span class="pr-1">
-                    <span class="iconify ph--caret-right text-sm flex"></span>
+                class="flex items-center gap-x-2 mx-auto w-max px-2 pr-1 py-1 rounded-xl text-sm ui-subtle ui-subtle-gray">
+                <span class="iconify size-3 ph--sparkle "></span>
+                AI Mode avaible
+                <span class="px-1.5 py-1 rounded-lg bg-bg-muted">
+                    <x-ui.icon name="ph--arrow-right" size="xs"/>
                 </span>
             </a>
-            <h1 class="mx-auto max-w-5xl font-semibold text-fg-title text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight">
-                The Tool that lets you have full control on your stock & sales
+            <h1
+                class="mt-5 text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg/50 text-4xl/tight sm:text-5xl/tight md:text-6xl/tight mx-auto max-w-3xl font-bold">
+                Manage your leads, easier than ever before
             </h1>
-            <p class="mx-auto max-w-2xl text-fg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt saepe atque enim quasi a ipsum
-                asperiores necessitatibus deleniti, sint quo vel corporis dignissimos
-            </p>
-            <div class="flex flex-col items-center gap-5 w-full mx-auto max-w-md">
-                <x-ui.input.group radius-none size="none" class="pl-6 w-full pr-0.5 py-0.5 gap-3 items-center rounded-full">
-                    <x-ui.input variant="unstyled" type="email" name="email" id="email" placeholder="johndoe@gmail.com"
-                        class="w-full flex-1"/>
-                    <x-ui.button radius-none aria-label="sign up" 
-                        class="min-w-max rounded-full relative overflow-hidden duration-300 ease-linear">
-                        <span>
-                            Try for free
+            <x-ui.text class="mx-auto max-w-md mt-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt saepe atque enim quasi
+            </x-ui.text>
+            <x-ui.input.group size="none"
+                class="flex gap-3 items-center ease-linear pr-1 w-full mx-auto max-w-xs mt-6.5">
+                <x-ui.input variant="unstyled" type="email" name="" id=""
+                    placeholder="johndoe@gmail.com" class="w-full bg-transparent outline-none py-2 px-4"
+                    autocomplete="off" />
+                <x-ui.button aria-label="sign up" size="sm" :radius="false" class="min-w-max rounded-md">
+                    <span class="hidden sm:flex relative z5">
+                        Subscribe
+                    </span>
+                    <span class="flex sm:hidden relative z5">
+                        <span class="iconify ph--paper-plane-tilt size-5"></span>
+                    </span>
+                </x-ui.button>
+            </x-ui.input.group>
+
+            <div class="flex items-center gap-1 gap-x-2 justify-center mx-auto mt-5">
+                <div class="flex items-center -space-x-1  *:ring-2 *:ring-border">
+                    <x-ui.avatar src="/avatar1.webp" width="2250" alt="listener avatar" class="bg-bg-muted" />
+                    <x-ui.avatar src="/avatar2.webp" width="2250" alt="listener avatar" class="bg-bg-muted" />
+                    <x-ui.avatar src="/avatar1.webp" width="2250" alt="listener avatar" class="bg-bg-muted" />
+                </div>
+                <div class="flex flex-col justify-start items-start -space-y-1">
+                    <div class="">
+                        <span class="text-xs text-orange-600">
+                            &starf; &starf; &starf; &starf; &starf;
                         </span>
-                    </x-ui.button>
-                </x-ui.input.group>
-                <span class="text-center text-sm text-fg-muted inline-flex items-center">
-                    Powerfull, AI Integreted <span class="iconify ph--sparkle inline-flex"></span>
-                </span>
+                    </div>
+                    <x-ui.text as="span" class="text-sm">
+                        +400 Lovely users
+                    </x-ui.text>
+                </div>
             </div>
+
             <div
-                class="mx-auto max-w-6xl aspect-[5/2.3] overflow-hidden bg-fg-title  ui-card [--card-radius:20px] [--card-padding:--spacing(3)] rounded-b-none pb-0">
+                class="mx-auto max-w-4xl ui-card [--card-radius:var(--radius-xl)] [--card-padding:--spacing(1)] aspect-auto overflow-hidden bg-linear-to-t from-bg-subtle to-bg-muted mt-14">
                 <img src="/images/dash-light.webp" width="1440" height="1024" alt="product image"
                     class="inner-radius w-full h-auto dark:hidden">
                 <img src="/images/dash-dark.webp" width="1440" height="1024" alt="product image"

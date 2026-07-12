@@ -1,20 +1,21 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/site-font.css',
-                'resources/css/app.css', 
-                'resources/js/app.js',
-                'resources/css/docs.css',
-                'resources/js/flexilla.js',
-                'resources/js/docs.js',
-                'resources/js/block.js',
-                'resources/js/sidebar-plugin.js',
-                'resources/css/code-theme.css'
+                "resources/css/site-font.css",
+                "resources/css/app.css",
+                "resources/js/app.js",
+                "resources/css/docs.css",
+                "resources/js/flexilla.js",
+                "resources/js/club.js",
+                "resources/js/docs.js",
+                "resources/js/block.js",
+                "resources/js/sidebar-plugin.js",
+                "resources/css/code-theme.css",
             ],
             refresh: true,
         }),
@@ -22,7 +23,7 @@ export default defineConfig({
     ],
     server: {
         watch: {
-            ignored: ['**/storage/framework/views/**'],
+            ignored: ["**/storage/framework/views/**"],
         },
     },
 });

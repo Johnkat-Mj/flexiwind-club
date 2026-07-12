@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "$schema": "https://github.com/unoforge/cli/tree/main/packages/core/schema-item.json",
     "version": "1.0.0",
     "name": "select-pro",
     "type": "registry:component",
@@ -16,7 +16,7 @@
             "path": "resources/views/components/club/select.blade.php",
             "type": "registry:club",
             "target": "resources/views/components/club/select.blade.php",
-            "content": ""
+            "content": "@props(['id', 'multiple' => false, 'defaultValue' => null])\n\n<x-club.select-ui-base x-data x-f-select wire:ignore.self data-select-id=\"{{ $id }}\" :data-default-value=\"$defaultValue\"\n    :multiple=\"$multiple\" data-placement=\"bottom-start\">\n    {{ $slot }}\n</x-club.select-ui-base>\n"
         }
     ]
 }

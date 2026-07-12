@@ -7,34 +7,34 @@ return [
             'title' => 'Login',
             'description' => 'User login form components with various layouts and styles',
             'illustrations' => [
-                'light' => "/illustrations/login-light.webp",
-                'dark' => '/illustrations/login-dark.webp'
+                'light' => '/illustrations/login-light.webp',
+                'dark' => '/illustrations/login-dark.webp',
             ],
             'blocks' => [
                 'login01' => [
                     'name' => 'login01',
                     'preview' => '/preview-ui/auth/login01',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'login02' => [
                     'name' => 'login02',
                     'preview' => '/preview-ui/auth/login02',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'login03' => [
                     'name' => 'login03',
                     'preview' => '/preview-ui/auth/login03',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'login04' => [
                     'name' => 'login04',
                     'preview' => '/preview-ui/auth/login04',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'login05' => [
                     'name' => 'login05',
                     'preview' => '/preview-ui/auth/login05',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
             ],
         ],
@@ -43,30 +43,30 @@ return [
             'title' => 'Sidebar',
             'description' => 'Navigation sidebar components with different layouts and styles',
             'illustrations' => [
-                'light' => "/illustrations/sidebar-light.webp",
-                'dark' => '/illustrations/sidebar-dark.webp'
+                'light' => '/illustrations/sidebar-light.webp',
+                'dark' => '/illustrations/sidebar-dark.webp',
             ],
             'blocks' => [
                 'sidebar01' => [
                     'name' => 'sidebar01',
                     'preview' => '/preview-ui/sidebar/01',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'sidebar02' => [
                     'name' => 'sidebar02',
                     'preview' => '/preview-ui/sidebar/02',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'sidebar03' => [
                     'name' => 'sidebar03',
                     'preview' => '/preview-ui/sidebar/03',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'sidebar04' => [
                     'name' => 'sidebar04',
                     'preview' => '/preview-ui/sidebar/04',
-                    'is-full-screen'=>true
-                ]
+                    'is-full-screen' => true,
+                ],
             ],
         ],
         'app-shell' => [
@@ -74,15 +74,20 @@ return [
             'title' => 'Application shell',
             'description' => 'Application shells...',
             'illustrations' => [
-                'light' => "/illustrations/shell-light.webp",
-                'dark' => '/illustrations/shell-dark.webp'
+                'light' => '/illustrations/shell-light.webp',
+                'dark' => '/illustrations/shell-dark.webp',
             ],
             'blocks' => [
                 'app-shell01' => [
                     'name' => 'app-shell01',
                     'preview' => '/preview-ui/app-shell/01',
-                    'is-full-screen'=>true
-                ]
+                    'is-full-screen' => true,
+                ],
+                'stacked-shell01' => [
+                    'name' => 'stacked-shell01',
+                    'preview' => '/preview-ui/app-shell/stacked-shell01',
+                    'is-full-screen' => true,
+                ],
             ],
         ],
         'app-table' => [
@@ -90,14 +95,26 @@ return [
             'title' => 'Table',
             'description' => 'Application Table...',
             'illustrations' => [
-                'light' => "/illustrations/table-light.webp",
-                'dark' => '/illustrations/table-dark.webp'
+                'light' => '/illustrations/table-light.webp',
+                'dark' => '/illustrations/table-dark.webp',
             ],
             'blocks' => [
                 'table01' => [
                     'name' => 'table01',
                     'preview' => '/preview-ui/table/01',
-                ]
+                ],
+                'table02' => [
+                    'name' => 'table02',
+                    'preview' => '/preview-ui/table/02',
+                ],
+                'table03' => [
+                    'name' => 'table03',
+                    'preview' => '/preview-ui/table/03',
+                ],
+                'table04' => [
+                    'name' => 'table04',
+                    'preview' => '/preview-ui/table/04',
+                ],
             ],
         ],
         'header' => [
@@ -105,25 +122,25 @@ return [
             'title' => 'Header nav',
             'description' => 'Navigation header',
             'illustrations' => [
-                'light' => "/illustrations/header-light.webp",
-                'dark' => '/illustrations/header-dark.webp'
+                'light' => '/illustrations/header-light.webp',
+                'dark' => '/illustrations/header-dark.webp',
             ],
             'blocks' => [
                 'header01' => [
                     'name' => 'header01',
                     'preview' => '/preview-ui/header/01',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'header02' => [
                     'name' => 'header02',
                     'preview' => '/preview-ui/header/02',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'header03' => [
                     'name' => 'header03',
                     'preview' => '/preview-ui/header/03',
-                    'is-full-screen'=>true
-                ]
+                    'is-full-screen' => true,
+                ],
             ],
         ],
         'dash-card-kpi' => [
@@ -131,8 +148,8 @@ return [
             'title' => 'Dash KPI',
             'description' => 'KPI cards',
             'illustrations' => [
-                'light' => "/illustrations/kpi-light.webp",
-                'dark' => '/illustrations/kpi-dark.webp'
+                'light' => '/illustrations/kpi-light.webp',
+                'dark' => '/illustrations/kpi-dark.webp',
             ],
             'blocks' => [
                 'kpi-01' => [
@@ -147,6 +164,45 @@ return [
                     'name' => 'kpi-03',
                     'preview' => '/preview-ui/dash-card/kpi03',
                 ],
+                'kpi-04' => [
+                    'name' => 'kpi-04',
+                    'preview' => '/preview-ui/dash-card/kpi04',
+                ],
+                'kpi-05' => [
+                    'name' => 'kpi-05',
+                    'preview' => '/preview-ui/dash-card/kpi05',
+                ],
+            ],
+        ],
+        'settings' => [
+            'key' => 'settings',
+            'title' => 'Settings',
+            'description' => 'Settings blocks',
+            'illustrations' => [
+                'light' => '/illustrations/kpi-light.webp',
+                'dark' => '/illustrations/kpi-dark.webp',
+            ],
+            'blocks' => [
+                'setting01' => [
+                    'name' => 'setting01',
+                    'preview' => '/preview-ui/settings/01',
+                ],
+                'setting02' => [
+                    'name' => 'setting02',
+                    'preview' => '/preview-ui/settings/02',
+                ],
+                'setting03' => [
+                    'name' => 'setting03',
+                    'preview' => '/preview-ui/settings/03',
+                ],
+                'setting04' => [
+                    'name' => 'setting04',
+                    'preview' => '/preview-ui/settings/04',
+                ],
+                'setting05' => [
+                    'name' => 'setting05',
+                    'preview' => '/preview-ui/settings/05',
+                ],
             ],
         ],
         'empty-states' => [
@@ -154,14 +210,14 @@ return [
             'title' => 'Empty States',
             'description' => 'Empty stated...',
             'illustrations' => [
-                'light' => "/illustrations/empty-state-light.webp",
-                'dark' => '/illustrations/empty-state-dark.webp'
+                'light' => '/illustrations/empty-state-light.webp',
+                'dark' => '/illustrations/empty-state-dark.webp',
             ],
             'blocks' => [
                 'kpi01' => [
                     'name' => 'empty-state01',
                     'preview' => '/preview-ui/empty-state/01',
-                ]
+                ],
             ],
         ],
         'signup-form' => [
@@ -169,39 +225,39 @@ return [
             'title' => 'Signup',
             'description' => 'User registration and signup form components',
             'illustrations' => [
-                'light' => "/illustrations/signup-light.webp",
-                'dark' => '/illustrations/signup-dark.webp'
+                'light' => '/illustrations/signup-light.webp',
+                'dark' => '/illustrations/signup-dark.webp',
             ],
             'blocks' => [
                 'signup01' => [
                     'name' => 'signup01',
                     'preview' => '/preview-ui/auth/signup01',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'signup02' => [
                     'name' => 'signup02',
                     'preview' => '/preview-ui/auth/signup02',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'signup03' => [
                     'name' => 'signup03',
                     'preview' => '/preview-ui/auth/signup03',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
                 'signup04' => [
                     'name' => 'signup04',
                     'preview' => '/preview-ui/auth/signup04',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
             ],
         ],
-        'dash-activities' => [
-            'key' => 'dash-activities',
-            'title' => 'Activities',
-            'description' => 'Activities card...',
+        'widgets' => [
+            'key' => 'widgets',
+            'title' => 'Widgets',
+            'description' => 'Widgets card...',
             'illustrations' => [
-                'light' => "/illustrations/activities-light.webp",
-                'dark' => '/illustrations/activities-dark.webp'
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
             ],
             'blocks' => [
                 'activity01' => [
@@ -224,20 +280,20 @@ return [
             'title' => 'Auth',
             'description' => 'Authentication components including password reset, confirmation, and OTP forms',
             'illustrations' => [
-                'light' => "/illustrations/otp-light.webp",
-                'dark' => '/illustrations/otp-dark.webp'
+                'light' => '/illustrations/otp-light.webp',
+                'dark' => '/illustrations/otp-dark.webp',
             ],
             'blocks' => [
                 'otp01' => [
                     'name' => 'otp01',
                     'preview' => '/preview-ui/auth/otp01',
-                    'is-full-screen'=>true
+                    'is-full-screen' => true,
                 ],
-                 'otp02' => [
+                'otp02' => [
                     'name' => 'otp02',
                     'preview' => '/preview-ui/auth/otp02',
-                    'is-full-screen'=>true
-                ]
+                    'is-full-screen' => true,
+                ],
             ],
         ],
         'forms' => [
@@ -246,17 +302,29 @@ return [
             'title' => 'Forms',
             'description' => 'Navigation sidebar components with different layouts and styles',
             'illustrations' => [
-                'light' => "/illustrations/activities-light.webp",
-                'dark' => '/illustrations/activities-dark.webp'
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
             ],
             'blocks' => [
                 'contact-form01' => [
                     'name' => 'contact-form01',
                     'preview' => '/preview-ui/forms/contact-form01',
-                ],
-                'profile-form01' => [
-                    'name' => 'profile-form01',
-                    'preview' => '/preview-ui/forms/profile-form01',
+                ]
+            ],
+        ],
+        'profile' => [
+            'key' => 'fprofile',
+            'category' => 'application',
+            'title' => 'Profile',
+            'description' => 'Navigation sidebar components with different layouts and styles',
+            'illustrations' => [
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
+            ],
+            'blocks' => [
+                'profile01' => [
+                    'name' => 'profile01',
+                    'preview' => '/preview-ui/profile/01',
                 ],
             ],
         ],
@@ -267,14 +335,18 @@ return [
             'title' => 'Hero Sections',
             'description' => 'Hero sections...',
             'illustrations' => [
-                'light' => "/illustrations/activities-light.webp",
-                'dark' => '/illustrations/activities-dark.webp'
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
             ],
             'blocks' => [
                 'hero01' => [
                     'name' => 'hero01',
                     'preview' => '/preview-ui/hero-sections/01',
-                ]
+                ],
+                'hero02' => [
+                    'name' => 'hero01',
+                    'preview' => '/preview-ui/hero-sections/02',
+                ],
             ],
         ],
         'features' => [
@@ -282,15 +354,53 @@ return [
             'title' => 'Features',
             'description' => 'Features sections...',
             'illustrations' => [
-                'light' => "/illustrations/activities-light.webp",
-                'dark' => '/illustrations/activities-dark.webp'
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
             ],
             'blocks' => [
                 'features01' => [
                     'name' => 'features01',
-                    'preview' => '/preview-ui/features/01'
-                ]
+                    'preview' => '/preview-ui/features/01',
+                ],
+                'features02' => [
+                    'name' => 'features02',
+                    'preview' => '/preview-ui/features/02',
+                ],
             ],
         ],
-    ]
+        'navbar' => [
+            'key' => 'navbar',
+            'title' => 'Navbar',
+            'description' => 'Features sections...',
+            'illustrations' => [
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
+            ],
+            'blocks' => [
+                'navbar01' => [
+                    'name' => 'navbar01',
+                    'preview' => '/preview-ui/navbar/01',
+                ],
+                'navbar02' => [
+                    'name' => 'navbar01',
+                    'preview' => '/preview-ui/navbar/02',
+                ],
+            ],
+        ],
+        'cta' => [
+            'key' => 'cta',
+            'title' => 'CTA',
+            'description' => 'Call to actions...',
+            'illustrations' => [
+                'light' => '/illustrations/activities-light.webp',
+                'dark' => '/illustrations/activities-dark.webp',
+            ],
+            'blocks' => [
+                'navbar01' => [
+                    'name' => 'cta01',
+                    'preview' => '/preview-ui/cta/01',
+                ],
+            ],
+        ],
+    ],
 ];

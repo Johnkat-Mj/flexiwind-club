@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/unoforge/flexi-core/main/registry-item.json",
+    "$schema": "https://github.com/unoforge/cli/tree/main/packages/core/schema-item.json",
     "version": "1.0.0",
     "name": "sidebar-wrapper",
     "type": "registry:component",
@@ -16,7 +16,7 @@
             "path": "resources/views/components/ui/sidebar-wrapper.blade.php",
             "type": "registry:component",
             "target": "resources/views/components/ui/sidebar-wrapper.blade.php",
-            "content": "@props(['overlayBlured'=>true])\n\n<div data-sidebar-overlay\n    class=\"fixed inset-0 z-40 bg-gray-800/40 {{ $overlayBlured ? 'backdrop-blur-sm' : '' }} hidden fx-open:flex lg:fx-open:hidden\"></div>\n<aside x-data x-sidebar {{ $attributes }}>\n    {{ $slot }}\n</aside>\n"
+            "content": "@props(['overlayBlured' => true, 'withoutOverlay' => false])\n\n@if (!$withoutOverlay)\n    <x-ui.sidebar-overlay :blured=\"$overlayBlured\" />\n@endif\n\n<aside x-data x-sidebar {{ $attributes }}>\n    {{ $slot }}\n</aside>\n"
         },
         {
             "path": "resources/js/sidebar-plugin.js",

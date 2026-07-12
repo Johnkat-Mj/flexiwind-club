@@ -15,4 +15,6 @@
     {{ $slot }}
     <x-organisms.footer />
     <x-blocks.modal-search />
+    <span class="fixed inset-y-0 left-0 w-2 border-r border-border pointer-events-none"></span>
+    <span class="fixed inset-y-0 right-0 w-2 border-l border-border pointer-events-none"></span>
 </x-layouts.base>

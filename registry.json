@@ -375,11 +375,6 @@
           "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
         },
         {
-          "path": "resources/views/components/previews/sidebar/03/header.blade.php",
-          "type": "registry:block",
-          "target": "resources/views/components/layouts/app-header.blade.php"
-        },
-        {
           "path": "resources/views/components/previews/sidebar/03/sidebar-item.blade.php",
           "type": "registry:block",
           "target": "resources/views/components/atoms/sidebar-item.blade.php"
@@ -387,15 +382,7 @@
         {
           "path": "resources/views/components/previews/sidebar/03/wrapper.blade.php",
           "type": "registry:block",
-          "target": "resources/views/components/atoms/app-page-content.blade.php",
-          "replace": {
-            "x-previews.sidebar.03.header": "x-layouts.app-header"
-          }
-        },
-        {
-          "path": "resources/views/components/previews/sidebar/03/content.blade.php",
-          "type": "registry:block",
-          "target": "resources/views/components/atoms/app-container.blade.php"
+          "target": "resources/views/components/atoms/app-page-content.blade.php"
         },
         {
           "path": "resources/views/pages-preview/sidebar/03.blade.php",
@@ -406,8 +393,7 @@
             "</x-layouts.prev-ui>": "",
             "x-previews.sidebar.03.sidebar": "x-layouts.sidebar",
             "x-previews.sidebar.03.body-wrapper": "x-layouts.app-body-wrapper",
-            "x-previews.sidebar.03.wrapper": "x-atoms.app-page-content",
-            "x-previews.sidebar.03.content": "x-atoms.app-container"
+            "x-previews.sidebar.03.wrapper": "x-atoms.app-page-content"
           }
         }
       ],
@@ -421,14 +407,13 @@
       "version": "1.0.0",
       "name": "sidebar04",
       "title": "Sidebar 04",
-      "description": "A full sidebar layout with simple items.",
+      "description": "A full sidebar layout with nav groups.",
       "files": [
         {
           "path": "resources/views/components/previews/sidebar/04/sidebar.blade.php",
           "type": "registry:block",
           "target": "resources/views/components/layouts/sidebar.blade.php",
           "replace": {
-            "x-previews.sidebar.04.sidebar-items-group": "x-atoms.sidebar-items-group",
             "x-previews.sidebar.04.sidebar-item": "x-atoms.sidebar-item"
           }
         },
@@ -438,9 +423,9 @@
           "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
         },
         {
-          "path": "resources/views/components/previews/sidebar/04/sidebar-items-group.blade.php",
+          "path": "resources/views/components/previews/sidebar/04/header.blade.php",
           "type": "registry:block",
-          "target": "resources/views/components/atoms/sidebar-items-group.blade.php"
+          "target": "resources/views/components/layouts/app-header.blade.php"
         },
         {
           "path": "resources/views/components/previews/sidebar/04/sidebar-item.blade.php",
@@ -450,7 +435,15 @@
         {
           "path": "resources/views/components/previews/sidebar/04/wrapper.blade.php",
           "type": "registry:block",
-          "target": "resources/views/components/atoms/app-page-content.blade.php"
+          "target": "resources/views/components/atoms/app-page-content.blade.php",
+          "replace": {
+            "x-previews.sidebar.04.header": "x-layouts.app-header"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/04/content.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/app-container.blade.php"
         },
         {
           "path": "resources/views/pages-preview/sidebar/04.blade.php",
@@ -461,15 +454,14 @@
             "</x-layouts.prev-ui>": "",
             "x-previews.sidebar.04.sidebar": "x-layouts.sidebar",
             "x-previews.sidebar.04.body-wrapper": "x-layouts.app-body-wrapper",
-            "x-previews.sidebar.04.wrapper": "x-atoms.app-page-content"
+            "x-previews.sidebar.04.wrapper": "x-atoms.app-page-content",
+            "x-previews.sidebar.04.content": "x-atoms.app-container"
           }
         }
       ],
       "registryDependencies": [
         "button",
         "sidebar-wrapper",
-        "kbd",
-        "input",
         "dropdown"
       ]
     },
@@ -585,6 +577,23 @@
     },
     {
       "version": "1.0.0",
+      "name": "kpi-05",
+      "title": "KPI 05",
+      "description": "Grid layout KPI dashboard cards.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/dash-card/kpi-05.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/dash-card/kpi-05.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "icon",
+        "card"
+      ]
+    },
+    {
+      "version": "1.0.0",
       "name": "activity01",
       "title": "Activity 01",
       "description": "Activity feed with timeline.",
@@ -656,11 +665,60 @@
         {
           "path": "resources/views/components/previews/app-shell/shell-01.blade.php",
           "type": "registry:page",
-          "target": "resources/views/components/layouts/app-shell.blade.php"
+          "target": "resources/views/components/layouts/app-shell.blade.php",
+          "replace": {
+            "x-previews.sidebar.02.body-wrapper": "x-layouts.app-body-wrapper",
+            "x-previews.app-shell.wrapper": "x-layouts.app-wrapper",
+            "x-previews.sidebar.02.sidebar": "x-layouts.sidebar02"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/app-shell/wrapper.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/layouts/app-wrapper.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/02/sidebar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/sidebar02.blade.php",
+          "replace": {
+            "x-previews.sidebar.02.sidebar-item": "x-atoms.sidebar-item"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/02/body-wrapper.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/layouts/app-body-wrapper.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/sidebar/02/sidebar-item.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/atoms/sidebar-item.blade.php"
         }
       ],
       "registryDependencies": [
-        "sidebar-wrapper"
+        "sidebar-wrapper",
+        "breadcrumbs",
+        "dropdown"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "stacked-shell01",
+      "title": "Stacked Shell 01",
+      "description": "Full application shell layout with sidebar and header.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/app-shell/stacked-01.blade.php",
+          "type": "registry:page",
+          "target": "resources/views/components/layouts/stacked-shell.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "avatar",
+        "breadcrumbs",
+        "dropdown"
       ]
     },
     {
@@ -684,31 +742,22 @@
     },
     {
       "version": "1.0.0",
-      "name": "profile-form01",
-      "title": "Profile Form 01",
-      "description": "User profile edit form.",
-      "files": [
-        {
-          "path": "resources/views/components/previews/forms/profile-form01.blade.php",
-          "type": "registry:block",
-          "target": "resources/views/components/forms/profile-form.blade.php"
-        }
-      ],
-      "registryDependencies": [
-        "button",
-        "label",
-        "input",
-        "card"
-      ]
-    },
-    {
-      "version": "1.0.0",
       "name": "table01",
       "title": "Table 01",
       "description": "Data table with headers and pagination.",
       "files": [
         {
           "path": "resources/views/components/previews/table/01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/table.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/table/02.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/table.blade.php"
+        },
+        {
+          "path": "resources/views/components/previews/table/03.blade.php",
           "type": "registry:block",
           "target": "resources/views/components/table.blade.php"
         }
@@ -750,6 +799,117 @@
     },
     {
       "version": "1.0.0",
+      "name": "setting01",
+      "title": "Setting 01",
+      "description": "Setting page",
+      "files": [
+        {
+          "path": "resources/views/components/previews/config/config01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/setting01.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "select",
+        "switch"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "setting02",
+      "title": "Setting 02",
+      "description": "Setting page",
+      "files": [
+        {
+          "path": "resources/views/components/previews/config/config02.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/setting02.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "badge",
+        "input",
+        "select",
+        "switch"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "setting03",
+      "title": "Setting 03",
+      "description": "Setting page",
+      "files": [
+        {
+          "path": "resources/views/components/previews/config/config03.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/setting03.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "select",
+        "switch"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "setting04",
+      "title": "Setting 04",
+      "description": "Setting page",
+      "files": [
+        {
+          "path": "resources/views/components/previews/config/config04.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/setting04.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "select"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "setting05",
+      "title": "Setting 05",
+      "description": "Setting page",
+      "files": [
+        {
+          "path": "resources/views/components/previews/config/config05.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/setting05.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "profile01",
+      "title": "Profile 01",
+      "description": "Profile page",
+      "files": [
+        {
+          "path": "resources/views/components/previews/profile/profile01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/profile01.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "select"
+      ]
+    },
+    {
+      "version": "1.0.0",
       "name": "features01",
       "title": "Features 01",
       "description": "Feature sections.",
@@ -764,6 +924,27 @@
         },
         {
           "path": "resources/views/components/previews/features/01/feature-card.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/feature-card.blade.php"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "features02",
+      "title": "Features 02",
+      "description": "Feature sections.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/features/02/features.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/features.blade.php",
+          "replace": {
+            "x-previews.features.02.feature-card": "x-blocks.feature-card"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/features/02/feature-card.blade.php",
           "type": "registry:block",
           "target": "resources/views/components/blocks/feature-card.blade.php"
         }
@@ -787,6 +968,78 @@
           "path": "resources/views/components/previews/hero-sections/01/navbar.blade.php",
           "type": "registry:block",
           "target": "resources/views/components/blocks/navbar.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "hero02",
+      "title": "HeroSection 02",
+      "description": "Hero section.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/hero-sections/02/hero.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/hero.blade.php",
+          "replace": {
+            "x-previews.hero-sections.02.navbar": "x-blocks.navbar"
+          }
+        },
+        {
+          "path": "resources/views/components/previews/hero-sections/02/navbar.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/navbar.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "navbar01",
+      "title": "Navbar 01",
+      "description": "Hero section.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/navbar/01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/navbar.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "navbar02",
+      "title": "Navbar 02",
+      "description": "Hero section.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/navbar/02.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/navbar.blade.php"
+        }
+      ],
+      "registryDependencies": [
+        "button"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "name": "cta01",
+      "title": "Cta 01",
+      "description": "CTA Section.",
+      "files": [
+        {
+          "path": "resources/views/components/previews/cta/01.blade.php",
+          "type": "registry:block",
+          "target": "resources/views/components/blocks/cta.blade.php"
         }
       ],
       "registryDependencies": [

@@ -3,8 +3,7 @@
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 
-new #[Layout('layouts.view-block')] 
-class extends Component {
+new #[Layout('layouts.view-block')] class extends Component {
     public $category;
     public $blockName;
 
@@ -17,15 +16,12 @@ class extends Component {
         $this->blockName = $blockName;
         $this->category = $blockCategory;
 
-        // Get all blocks from config
         $blocks = config('blocks');
         $this->allBlocks = $blocks[$blockCategory];
 
-        // Check if the block exists
         if (!isset($blocks[$blockCategory][$blockName])) {
             $this->blockGroup = [];
         } else {
-            // Get the specific block data
             $this->blockGroup = $blocks[$blockCategory][$blockName];
         }
     }
@@ -33,33 +29,36 @@ class extends Component {
 ?>
 
 <main class="w-full ">
-    <x-blocks.blocks-nav :category="$category" :all-blocks="$allBlocks" />
-    @if (isset($blockGroup) && isset($blockGroup['blocks']) && count($blockGroup['blocks']) > 0)
-        <x-blocks.block-page-header :title="$blockGroup['title'] ?? 'Block Group'" :description="$blockGroup['description'] ?? 'Block Group Description'" />
-        <section class="mt-10 space-y-12 pb-16 w-full overflow-hidden">
-            @foreach ($blockGroup['blocks'] as $codeKey => $block)
-                <x-v-ui.single-block
-                    :key-ui="$blockName . '-' . $codeKey . '-' . $loop->index" :title="$block['name'] ?? ucfirst($codeKey)"
-                    :is-full-screen="$block['is-full-screen'] ?? false"
-                    :preview="$block['preview'] ?? '#'" :code="$block" />
-            @endforeach
-        </section>
-    @else
-        <div class="lg:max-w-336 xl:max-w-352 mx-auto px-2 sm:px-4 xl:px-8 w-full">
-            <div
-                class="mt-10 w-full bg-bg-surface border border-border-card/60 p-5 sm:p-10 lg:py-16 rounded-ui flex flex-col text-center items-center">
-                <h2 class="text-fg-title font-semibold text-3xl">
-                    No Block found for <span class="text-primary">{{ $blockGroup['title'] ?? $blockName }}</span>
-                </h2>
-                <p class="mx-auto max-w-lg text-fg mt-4">
-                    We're working on this, we'll release it soon
-                </p>
-                <div class="mt-8">
-                    <x-ui.button href="/club-support/request-block" class="w-max">
-                        Request it now
-                    </x-ui.button>
+    <x-blocks.blocks-nav :category="$category" :all-blocks="$allBlocks" title="{{ $blockGroup['title'] ?? 'Block Group' }}" />
+    <div 
+        class="group grid lg:max-w-336 xl:max-w-352 lg:mx-auto sm:px-2 xl:px-6.25 w-full">
+        <div class="flex flex-col">
+            @if (isset($blockGroup) && isset($blockGroup['blocks']) && count($blockGroup['blocks']) > 0)
+                <x-blocks.block-page-header :title="$blockGroup['title'] ?? 'Block Group'" :description="$blockGroup['description'] ?? 'Block Group Description'" />
+                <section class="mt-10 space-y-12 pb-16 w-full overflow-hidden">
+                    @foreach ($blockGroup['blocks'] as $codeKey => $block)
+                        <x-v-ui.single-block :key-ui="$blockName . '-' . $codeKey . '-' . $loop->index" :title="$block['name'] ?? ucfirst($codeKey)" :is-full-screen="$block['is-full-screen'] ?? false" :preview="$block['preview'] ?? '#'"
+                            :code="$block" />
+                    @endforeach
+                </section>
+            @else
+                <div class="lg:max-w-336 xl:max-w-352 mx-auto px-2 sm:px-4 xl:px-8 w-full">
+                    <div
+                        class="mt-10 w-full bg-bg-surface border border-border-card/60 p-5 sm:p-10 lg:py-16 rounded-ui flex flex-col text-center items-center">
+                        <h2 class="text-fg-title font-semibold text-3xl">
+                            No Block found for <span class="text-primary">{{ $blockGroup['title'] ?? $blockName }}</span>
+                        </h2>
+                        <p class="mx-auto max-w-lg text-fg mt-4">
+                            We're working on this, we'll release it soon
+                        </p>
+                        <div class="mt-8">
+                            <x-ui.button href="/club-support/request-block" class="w-max">
+                                Request it now
+                            </x-ui.button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
-    @endif
+    </div>
 </main>

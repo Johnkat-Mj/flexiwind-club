@@ -204,14 +204,14 @@
     padding-right: 10px;
     border: 1px solid var(--card-ui-find-page-bdr);
     border-radius: 10px;
-    background: --alpha(var(--color-bg-muted) / 14%);
+    background: --alpha(var(--color-muted) / 14%);
     margin-top: 20px;
     bottom: 6;
     color: var(--color-fg);
 }
 
 .dark .pagefind-ui__drawer .pagefind-ui__button {
-    background: hsl(var(--bg-muted)/50%);
+    background: hsl(var(--muted)/50%);
 }
 
 .pagefind-ui__drawer .pagefind-ui__button:hover {

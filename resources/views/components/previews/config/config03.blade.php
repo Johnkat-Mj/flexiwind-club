@@ -1,10 +1,10 @@
 <div class="max-w-2xl w-full p-4 mx-auto">
-    <div class="bg-bg-surface border border-border-strong/40 ring-2 ring-border rounded-lg">
+    <div class="bg-surface border border-border-strong/40 ring-2 ring-border rounded-lg">
         <div class="p-6 border-b border-border-strong">
-            <h4 class="text-lg font-semibold text-fg-title">
+            <h4 class="text-lg font-semibold text-title-foreground ">
                 Account Settings
             </h4>
-            <p class="text-sm text-fg">
+            <p class="text-sm text-foreground">
                 Manage your account information and preferences
             </p>
         </div>

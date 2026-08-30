@@ -13,10 +13,10 @@
         <div class="flex-1 mx-auto justify-center items-center max-w-sm w-full flex flex-col">
             <div
                 class="w-full flex flex-col items-center gap-1 text-center mb-8 pb-4 border-b border-dashed border-border-strong">
-                <h1 class="text-2xl font-semibold text-fg-title">
+                <h1 class="text-2xl font-semibold text-title-foreground ">
                     Login to your account
                 </h1>
-                <p class="text-fg-muted text-sm text-balance">
+                <p class="text-muted-foreground text-sm text-balance">
                     Enter your email below to login to your account
                 </p>
             </div>
@@ -36,8 +36,8 @@
                         Login
                     </x-ui.button>
                 </div>
-                <x-ui.divider label="Or continue with" class="before:bg-bg-muted" label-placement="middle"
-                    label-class="px-3 bg-bg text-fg-muted text-sm relative" />
+                <x-ui.divider label="Or continue with" class="before:bg-muted" label-placement="middle"
+                    label-class="px-3 bg-background text-muted-foreground text-sm relative" />
 
                 <div class="flex flex-col space-y-3 mt-1">
                     <x-ui.button variant="outline" intent="gray" class="justify-center text-center">
@@ -58,18 +58,18 @@
                     </svg>
                        Continue with Google
                     </x-ui.button>
-                    <p class="text-center text-fg-muted text-sm">
+                    <p class="text-center text-muted-foreground text-sm">
                         Don't have an account?
                         <x-ui.link href="#" underlined class="text-primary">Sign up</x-ui.link>
                     </p>
                 </div>
             </form>
         </div>
-        <div class="flex justify-center text-center text-fg-muted">
+        <div class="flex justify-center text-center text-muted-foreground">
             <span class="text-sm">Uno Forge &copy; {{ date('Y') }} </span>
         </div>
     </div>
-    <div class="bg-bg-muted rounded-l-3xl relative hidden lg:block lg:max-h-dvh lg:sticky lg:top-0">
+    <div class="bg-muted rounded-l-3xl relative hidden lg:block lg:max-h-dvh lg:sticky lg:top-0">
         <img src="{{ asset('img_2.webp') }}" alt="Auth cover image"
             class="absolute inset-0 h-full w-full object-cover object-top rounded-l-3xl dark:brightness-[0.2] dark:grayscale">
     </div>

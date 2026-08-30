@@ -9,8 +9,8 @@ $features = [
 @endphp
 
 <x-ui.card class="md:[--card-padding:--spacing(8)] max-w-sm">
-    <span class="text-fg-title font-bold text-xl">Enterprise Plan</span>
-    <p class="text-fg my-6">
+    <span class="text-title-foreground  font-bold text-xl">Enterprise Plan</span>
+    <p class="text-foreground my-6">
         Perfect for growing businesses that need powerful features and dedicated support.
     </p>
     <div class="flex items-end gap-4 py-4 border-y border-border-strong/50">

@@ -12,7 +12,7 @@
         </x-ui.slideover.trigger>
     </div>
     <div class="flex items-center flex-1 relative border-r border-border">
-        <x-ui.breadcrumbs class="gap-2.5 whitespace-nowrap text-fg capitalize text-sm md:text-base">
+        <x-ui.breadcrumbs class="gap-2.5 whitespace-nowrap text-foreground capitalize text-sm md:text-base">
             <x-ui.breadcrumbs.item separator="ph--circle-fill size-1!" href="/blocks" text="Blocks" />
             <x-ui.breadcrumbs.item active :text="$title" />
         </x-ui.breadcrumbs>

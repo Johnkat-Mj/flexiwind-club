@@ -1,6 +1,6 @@
       <div class="max-w-xl w-full px-4 mx-auto py-5">
-          <div class="bg-bg rounded-lg shadow border border-border-strong/70 p-6">
-              <h3 class="text-lg font-semibold text-fg-title mb-6" data-testid="profile-form-title">
+          <div class="bg-background rounded-lg shadow border border-border-strong/70 p-6">
+              <h3 class="text-lg font-semibold text-title-foreground  mb-6" data-testid="profile-form-title">
                   User Profile Form
               </h3>
               <form class="grid grid-cols-2 gap-y-6 gap-x-4" id="profile-form">

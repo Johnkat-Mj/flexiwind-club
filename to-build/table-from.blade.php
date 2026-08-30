@@ -4,8 +4,8 @@
     </div>
     <x-ui.table wrapper=" rounded-ui border border-border" class="text-left">
         <x-ui.table.columns
-            wrapper="bg-bg-surface border-b border-border-input [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider w-8">
+            wrapper="bg-surface border-b border-border-input [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
+            <x-ui.table.column class="text-xs font-medium text-muted-foreground uppercase tracking-wider w-8">
                 <span aria-hidden="true" class="size-3.5 iconify ph--chart-bar mr-1"></span>
             </x-ui.table.column>
             <x-ui.table.column class="text-xs">
@@ -46,11 +46,11 @@
                 <x-ui.table.cell>
                     <div class="flex items-center gap-3">
                         <x-ui.checkbox />
-                        <span class="text-sm font-medium text-fg-title truncate">Redesign Login Page</span>
+                        <span class="text-sm font-medium text-title-foreground  truncate">Redesign Login Page</span>
                     </div>
                 </x-ui.table.cell>
                 <x-ui.table.cell>
-                    <span class="text-sm text-fg-muted">Implement kanban-style...</span>
+                    <span class="text-sm text-muted-foreground">Implement kanban-style...</span>
                 </x-ui.table.cell>
                 <x-ui.table.cell>
                     <div class="flex -space-x-2">
@@ -59,7 +59,7 @@
                         <x-ui.avatar src="https://i.pravatar.cc/150?u=b" size="xs" alt="user avatar" width="20"
                             height="20" />
                         <div
-                            class="size-6.5 rounded-full bg-bg-surface border border-border text-xs d-flex-place-center text-fg-muted">
+                            class="size-6.5 rounded-full bg-surface border border-border text-xs d-flex-place-center text-muted-foreground">
                             +3
                         </div>
                     </div>
@@ -71,12 +71,12 @@
                     </x-ui.badge>
                 </x-ui.table.cell>
                 <x-ui.table.cell>
-                    <span class="text-sm text-fg-muted">Apr 17 - May 15 '25</span>
+                    <span class="text-sm text-muted-foreground">Apr 17 - May 15 '25</span>
                 </x-ui.table.cell>
                 <x-ui.table.cell>
                     <div class="flex items-center gap-1.5">
                         <span aria-hidden="true" class="size-3.5 iconify ph--flag-banner text-danger"></span>
-                        <span class="text-sm font-medium text-fg-title">High</span>
+                        <span class="text-sm font-medium text-title-foreground ">High</span>
                     </div>
                 </x-ui.table.cell>
                 <x-ui.table.cell class="text-right">

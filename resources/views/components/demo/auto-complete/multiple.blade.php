@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-1.5 max-w-xs w-full">
     <x-club.autocomplete.trigger auto-complete-id="autocomplete-demo-multiple" />
-    <x-club.select.box-selected-value select-id="autocomplete-demo-multiple" class="text-fg text-sm">
+    <x-club.select.box-selected-value select-id="autocomplete-demo-multiple" class="text-foreground text-sm">
         <x-club.select.placeholder class="text-sm">No owner selected</x-club.select.placeholder>
     </x-club.select.box-selected-value>
 </div>
@@ -24,7 +24,7 @@
         </x-club.select.item>
     </x-club.select.list-box>
     <x-club.select.template-empty>
-        <div class="px-3 py-2 text-sm text-fg-muted">
+        <div class="px-3 py-2 text-sm text-muted-foreground">
             No data found for "<x-club.select.empty-string />"
         </div>
     </x-club.select.template-empty>

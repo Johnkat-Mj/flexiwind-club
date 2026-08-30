@@ -12,7 +12,7 @@
         </x-club.select.item>
     </x-club.select.list-box>
     <x-club.select.template-empty>
-        <div class="px-3 py-2 text-sm text-fg-muted">
+        <div class="px-3 py-2 text-sm text-muted-foreground">
             No data found for "<x-club.select.empty-string />"
         </div>
     </x-club.select.template-empty>

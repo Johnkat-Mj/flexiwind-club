@@ -3,10 +3,10 @@
         <div class="size-12 ui-subtle ui-subtle-gray d-flex-place-center rounded-ui">
             <span aria-hidden="true" class="size-5 iconify ph--user"></span>
         </div>
-        <h2 class="text-fg-title text-lg font-semibold md:text-xl mt-4">
+        <h2 class="text-title-foreground  text-lg font-semibold md:text-xl mt-4">
             No User found
         </h2>
-        <p class="text-fg-muted text-sm mt-3">
+        <p class="text-muted-foreground text-sm mt-3">
             You haven't created any data right now
         </p>
         <div class="flex justify-center mt-7">

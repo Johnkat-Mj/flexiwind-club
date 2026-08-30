@@ -32,7 +32,7 @@ document.addEventListener("alpine:init", () => {
                 onCopy: () => {
                     el.innerHTML = `
                     <span aria-hidden="true" class="flex iconify ph--circle-notch animate-spin"></span>
-                        <span class="text-fg-muted ml-1">Copying</span>`;
+                        <span class="text-muted-foreground ml-1">Copying</span>`;
                 },
                 onCopyCompleted: () => {
                     el.innerHTML =
@@ -40,7 +40,7 @@ document.addEventListener("alpine:init", () => {
                     setTimeout(
                         () =>
                             (el.innerHTML = `<span aria-hidden="true" class="flex iconify ph--terminal"></span>
-                        <span class="text-fg-muted ml-1">${command}</span>`),
+                        <span class="text-muted-foreground ml-1">${command}</span>`),
                         1800,
                     );
                 },

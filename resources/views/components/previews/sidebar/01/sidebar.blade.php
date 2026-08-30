@@ -55,7 +55,7 @@
 <x-ui.sidebar-wrapper
     class="invisible scale-[0.98] opacity-0 fx-open:scale-100 fx-open:visible fx-open:opacity-100
         fixed lg:static z-40 lg:z-auto max-lg:inset-y-0 lg:h-full left-0 flex h-screen max-w-72 w-11/12 sm:max-w-none sm:w-72 origin-left overflow-hidden transition-all duration-300 lg:visible lg:scale-100 lg:opacity-100
-        bg-bg lg:bg-transparent
+        bg-background lg:bg-transparent
         ">
     <div class="flex flex-col gap-4 py-4 w-full flex-1 overflow-hidden">
         <div class="px-6 h-max flex">
@@ -78,7 +78,7 @@
             <x-ui.input.group>
                 <x-ui.input variant="unstyled" placeholder="Search" class="ps-9 pe-10" />
                 <x-ui.input.leading absolute>
-                    <span aria-hidden="true" class="iconify ph--magnifying-glass text-fg-muted opacity-80"></span>
+                    <span aria-hidden="true" class="iconify ph--magnifying-glass text-muted-foreground opacity-80"></span>
                 </x-ui.input.leading>
                 <x-ui.input.trailing absolute class="[--right-space:4px]">
                     <x-ui.kbd class="text-xs">
@@ -100,22 +100,22 @@
                 @endforeach
             </ul>
             <div class="mt-5">
-                <p class="text-fg-muted text-sm font-normal mx-2">
+                <p class="text-muted-foreground text-sm font-normal mx-2">
                     Workspaces
                 </p>
                 <div class="mt-4 space-y-1">
                     <a href="#"
-                        class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-fg-muted hover:bg-bg-muted/70 hover:text-fg-title">
+                        class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-muted-foreground hover:bg-muted/70 hover:text-title-foreground ">
                         <span class="block size-2 mr-1 rounded-full bg-sky-600 dark:bg-sky-400"></span>
                         <span class="text-sm truncate">Flexiwind Club</span>
                     </a>
                     <a href="#"
-                        class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-fg-muted hover:bg-bg-muted/70 hover:text-fg-title">
+                        class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-muted-foreground hover:bg-muted/70 hover:text-title-foreground ">
                         <span class="block size-2 mr-1 rounded-full bg-purple-600 dark:bg-purple-400"></span>
                         <span class="text-sm truncate">RK Kit</span>
                     </a>
                     <a href="#"
-                        class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-fg-muted hover:bg-bg-muted/70 hover:text-fg-title">
+                        class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-muted-foreground hover:bg-muted/70 hover:text-title-foreground ">
                         <span class="block size-2 mr-1 rounded-full bg-indigo-600 dark:bg-indigo-400"></span>
                         <span class="text-sm truncate">RK UI</span>
                     </a>
@@ -128,10 +128,10 @@
                     class="btn btn-icon-xs btn-ghost btn-ghost-gray absolute right-3 top-3 rounded-ui">
                     <span aria-hidden="true" class="iconify ph--x size-3"></span>
                 </button>
-                <div class="block text-fg-title font-semibold text-sm">
+                <div class="block text-title-foreground  font-semibold text-sm">
                     Your credits are out of usage
                 </div>
-                <p class="text-fg-muted text-sm mt-0.5">
+                <p class="text-muted-foreground text-sm mt-0.5">
                     Upgrade your plan to get more credits
                 </p>
 
@@ -159,8 +159,8 @@
                     </span>
 
                     <div class="flex items-start flex-col">
-                        <h4 class="font-semibold text-fg-title text-sm">Johnkat MJ</h4>
-                        <span class="text-xs text-fg-muted">johnkatmj@gmail.com</span>
+                        <h4 class="font-semibold text-title-foreground  text-sm">Johnkat MJ</h4>
+                        <span class="text-xs text-muted-foreground">johnkatmj@gmail.com</span>
                     </div>
                 </x-ui.dropdown.header>
                 <x-ui.dropdown.separator class="border-border" />

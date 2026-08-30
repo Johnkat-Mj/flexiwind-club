@@ -111,7 +111,7 @@ BLADE,
         'code' => <<<'BLADE'
 <!-- Basic switch with custom colors -->
 <x-ui.switch name="switch_basic" id="switch_basic" 
-    class="bg-bg-muted text-primary-600 [--knob-bg:var(--color-white)]" />
+    class="bg-muted text-primary-600 [--knob-bg:var(--color-white)]" />
 BLADE,
     ],
 
@@ -121,7 +121,7 @@ BLADE,
         'code' => <<<'BLADE'
 <!-- Outlined switch -->
 <x-ui.switch outlined name="switch_outline" id="switch_outline" 
-    class="bg-bg text-transparent [--knob-bg:var(--color-gray-500)]" />
+    class="bg-background text-transparent [--knob-bg:var(--color-gray-500)]" />
 BLADE,
     ],
 
@@ -216,13 +216,13 @@ BLADE,
         'name' => 'sidebar-with-toggle.blade.php',
         'code' => <<<'BLADE'
 <!-- Toggle button -->
-<button data-toggle-sidebar class="lg:hidden p-2 rounded-md hover:bg-bg-muted">
+<button data-toggle-sidebar class="lg:hidden p-2 rounded-md hover:bg-muted">
     <span class="iconify ph--list text-xl"></span>
 </button>
 
 <!-- Sidebar with toggle functionality -->
 <x-ui.sidebar-wrapper 
-    class="fixed h-dvh w-72 bg-bg-surface border-r border-bg-muted transition-all -translate-x-full fx-open:translate-x-0 z-80">
+    class="fixed h-dvh w-72 bg-surface border-r border-muted transition-all -translate-x-full fx-open:translate-x-0 z-80">
     
     <!-- Sidebar content -->
     <div class="p-4">
@@ -238,11 +238,11 @@ BLADE,
         'name' => 'sidebar-basic-implementation.blade.php',
         'code' => <<<'BLADE'
 <!-- Basic sidebar implementation -->
-<x-ui.sidebar-wrapper class="fixed h-dvh w-72 bg-bg-surface border-r border-bg-muted transition-all -translate-x-full fx-open:translate-x-0 lg:translate-x-0 z-80">
+<x-ui.sidebar-wrapper class="fixed h-dvh w-72 bg-surface border-r border-muted transition-all -translate-x-full fx-open:translate-x-0 lg:translate-x-0 z-80">
     <nav class="flex-1 p-4">
         <ul class="space-y-2">
             <li>
-                <a href="#" class="flex items-center gap-x-2.5 px-3 py-2 rounded-md hover:bg-bg-muted">
+                <a href="#" class="flex items-center gap-x-2.5 px-3 py-2 rounded-md hover:bg-muted">
                     <span class="iconify ph--house"></span>
                     <span>Dashboard</span>
                 </a>
@@ -259,11 +259,11 @@ BLADE,
         'code' => <<<'BLADE'
 <!-- Sidebar with resize functionality -->
 <x-ui.sidebar-wrapper 
-    class="fixed h-dvh bg-bg-surface border-r border-bg-muted transition-all group
+    class="fixed h-dvh bg-surface border-r border-muted transition-all group
            w-72 lg:fx-resized:w-16 -translate-x-full fx-open:translate-x-0 lg:translate-x-0 z-80">
     
     <!-- Resize toggle button -->
-    <button data-toggle-sidebar-size class="hidden lg:block p-2 rounded-md hover:bg-bg-muted">
+    <button data-toggle-sidebar-size class="hidden lg:block p-2 rounded-md hover:bg-muted">
         <span class="iconify ph--caret-left text-xl group-aria-expanded:rotate-180 transition-transform"></span>
     </button> 
     
@@ -271,7 +271,7 @@ BLADE,
     <nav class="flex-1 p-4">
         <ul class="space-y-2">
             <li>
-                <a href="#" class="flex items-center gap-x-2.5 px-3 py-2 rounded-md hover:bg-bg-muted">
+                <a href="#" class="flex items-center gap-x-2.5 px-3 py-2 rounded-md hover:bg-muted">
                     <span class="iconify ph--house"></span>
                     <span class="in-fx-resized:hidden">Dashboard</span>
                 </a>

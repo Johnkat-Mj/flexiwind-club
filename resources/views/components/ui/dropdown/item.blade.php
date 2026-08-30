@@ -33,7 +33,7 @@
         'dropdown-item-selected-avatar',
         'ease-linear duration-200',
         'cursor-default' => !$href,
-        'text-fg-muted' => $intent !== 'danger' && $intent !== 'warning',
+        'text-muted-foreground' => $intent !== 'danger' && $intent !== 'warning',
         $itemDanger,
         $itemWarning,
         'cursor-not-allowed' => $disabled,

@@ -1,6 +1,6 @@
 <li>
     <a href="{{ $href }}" data-state="{{ $isActive ? 'active' : 'inactive' }}"
-        class="group flex items-center rounded-ui hover:brightness-[0.98] active:brightness-100 text-fg-muted fx-active:text-fg-title fx-current:text-fg-title fx-current:bg-bg-muted/60 fx-active:bg-bg-muted/60 ring ring-transparent fx-active:ring-border-input/50 hover:bg-bg-surface h-9 gap-3.5 pl-3 pr-4">
+        class="group flex items-center rounded-ui hover:brightness-[0.98] active:brightness-100 text-muted-foreground fx-active:text-title-foreground  fx-current:text-title-foreground  fx-current:bg-muted/60 fx-active:bg-muted/60 ring ring-transparent fx-active:ring-border-input/50 hover:bg-surface h-9 gap-3.5 pl-3 pr-4">
 
         <x-ui.icon name="{{ $icon }}" />
         <span class="text-sm">

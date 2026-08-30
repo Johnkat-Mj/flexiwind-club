@@ -33,7 +33,7 @@
     {{ $head ?? '' }}
 </head>
 
-<body x-data class="min-h-screen font-sans">
+<body x-data class="min-h-screen font-sans bg-background">
     {{ $slot }}
     @livewireScripts
     @vite(['resources/js/app.js', 'resources/js/flexilla.js'])

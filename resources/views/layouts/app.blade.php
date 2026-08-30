@@ -10,7 +10,7 @@
     ];
 @endphp
 
-<x-layouts.base body-class="bg-bg flex flex-col" :seo="$seo">
+<x-layouts.base body-class="bg-background flex flex-col" :seo="$seo">
     <x-organisms.navbar />
     {{ $slot }}
     <x-organisms.footer />

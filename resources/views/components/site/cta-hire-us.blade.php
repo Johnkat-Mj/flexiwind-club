@@ -8,7 +8,7 @@
             <h2 class="font-bold text-3xl md:text-4xl/tight max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-fg">
                 Hire us to design and build your next product interface.
             </h2>
-            <p class="text-fg-muted max-w-md text-sm mt-6.5">
+            <p class="text-muted-foreground max-w-md text-sm mt-6.5">
                 Need a partner for design systems, frontend architecture, or full implementation? UnoForge can join your
                 team and ship with you.
             </p>

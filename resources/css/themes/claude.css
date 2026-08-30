@@ -1,0 +1,70 @@
+[data-palette="claude"] {
+  --background: hsl(0 0% 100%);
+  --foreground: oklch(37.4% 0.01 67.558);
+  --card: hsl(0 0% 100%);
+  --card-foreground: oklch(21.6% 0.006 56.043);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: oklch(37.4% 0.01 67.558);
+  --primary: hsl(22, 100%, 40%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(38, 85%, 42%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --accent: hsl(12, 78%, 42%);
+  --accent-foreground: hsl(0 0% 100%);
+  --muted: oklch(97% 0.001 106.424);
+  --muted-foreground: oklch(44.4% 0.011 73.639);
+  --destructive: oklch(57.7% 0.245 27.325);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: oklch(59.6% 0.145 163.225);
+  --warning: oklch(64.6% 0.222 41.116);
+  --info: oklch(58.8% 0.158 241.966);
+  --border: oklch(92.3% 0.003 48.717);
+  --input: oklch(92.3% 0.003 48.717);
+  --ring: var(--primary);
+  --fg-title: oklch(21.6% 0.006 56.043);
+  --fg-subtitle: oklch(26.8% 0.007 34.298);
+  --bg: var(--background);
+  --bg-subtle: var(--muted);
+  --bg-surface: oklch(98.5% 0.001 106.423);
+  --muted: oklch(92.3% 0.003 48.717);
+  --overlay: var(--popover);
+  --border-strong: oklch(86.9% 0.005 56.366);
+  --border-card: var(--border);
+  --border-input: var(--input);
+  --chart-1: var(--primary);
+  --chart-2: var(--secondary);
+  --chart-3: var(--accent);
+  --chart-4: color-mix(in oklab, var(--primary) 70%, white);
+  --chart-5: color-mix(in oklab, var(--secondary) 70%, white);
+
+  --gray-50: hsl(40, 15%, 98%);
+  --gray-100: hsl(35, 12%, 95%);
+  --gray-200: hsl(30, 10%, 89%);
+  --gray-300: hsl(30, 8%, 82%);
+  --gray-400: hsl(30, 6%, 63%);
+  --gray-500: hsl(30, 5%, 44%);
+  --gray-600: hsl(30, 6%, 32%);
+  --gray-700: hsl(30, 8%, 25%);
+  --gray-800: hsl(30, 10%, 15%);
+  --gray-900: hsl(30, 12%, 10%);
+  --gray-950: hsl(30, 15%, 4%);
+}
+
+[data-palette="claude"].dark {
+  --background: oklch(14.7% 0.004 49.25);
+  --foreground: oklch(86.9% 0.005 56.366);
+  --card: oklch(14.7% 0.004 49.25);
+  --card-foreground: hsl(0 0% 100%);
+  --popover: oklch(14.7% 0.004 49.25);
+  --popover-foreground: oklch(86.9% 0.005 56.366);
+  --muted: oklch(21.6% 0.006 56.043);
+  --muted-foreground: oklch(70.9% 0.01 56.259);
+  --border: oklch(21.6% 0.006 56.043);
+  --input: oklch(26.8% 0.007 34.298);
+  --fg-title: hsl(0 0% 100%);
+  --fg-subtitle: oklch(97% 0.001 106.424);
+  --bg-surface: color-mix(in oklab, var(--muted) 70%, transparent);
+  --muted: oklch(26.8% 0.007 34.298);
+  --border-strong: oklch(37.4% 0.01 67.558);
+  --border-card: oklch(26.8% 0.007 34.298);
+}

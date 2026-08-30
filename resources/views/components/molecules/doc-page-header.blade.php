@@ -8,7 +8,7 @@
 <header class="pt-8 xl:pt-10 pb-5 border-b border-border space-y-2.5">
     <div class="flex flex-col md:flex-row md:justify-between gap-4">
         <div class="flex-1 flex flex-col">
-            <ol class="pb-3 flex items-center gap-2.5 whitespace-nowrap text-fg text-sm capitalize">
+            <ol class="pb-3 flex items-center gap-2.5 whitespace-nowrap text-foreground text-sm capitalize">
                 <li>
                     <a aria-label="Go to Docs Index page" href="{{ $breadcrumbsMain['href'] }}"
                         class="flex items-center gap-1">
@@ -19,7 +19,7 @@
 
                 @foreach ($breadcrumbsWords as $index => $word)
                     <li @class([
-                        'truncate text-fg-muted' => $index === count($breadcrumbsWords) - 1,
+                        'truncate text-muted-foreground' => $index === count($breadcrumbsWords) - 1,
                         'flex items-center gap-1' => $index < count($breadcrumbsWords) - 1,
                     ])>
                         <span class="flex">{{ $word }}</span>
@@ -30,7 +30,7 @@
                 @endforeach
             </ol>
 
-            <h1 class="text-2xl font-semibold text-fg-title">
+            <h1 class="text-2xl font-semibold text-title-foreground ">
                 {{ $title }}
             </h1>
         </div>
@@ -40,7 +40,7 @@
     </div>
 
     @if ($subTitle)
-        <p class="text-fg">
+        <p class="text-foreground">
             {{ $subTitle }}
         </p>
     @endif

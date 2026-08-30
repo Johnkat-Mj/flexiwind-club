@@ -3,15 +3,20 @@
 use Livewire\Component;
 
 new class extends Component {
-    public $allBlocks;
+    public array $allBlocks = [];
 
-    public function mount()
+    public function mount(): void
     {
-        $blocks = config('blocks');
-        $this->allBlocks = $blocks;
+        $this->allBlocks = config('blocks', []);
     }
-    //
 }; ?>
-<main class="">
-    
+
+<main class="overflow-hidden">
+    <x-home.hero-section />
+    <x-home.workflow-section />
+    <x-home.included-section />
+    <x-home.showcase-section />
+    <x-home.offer-section />
+    <x-home.faq-section />
+    <x-home.final-cta />
 </main>

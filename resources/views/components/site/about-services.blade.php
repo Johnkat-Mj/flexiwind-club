@@ -32,10 +32,10 @@
                         <span class="h-7 px-5 flex items-center rounded-ui bg-primary text-white w-max">
                             <span aria-hidden class="iconify {{ $service['icon'] }} size-4"></span>
                         </span>
-                        <h3 class="font-semibold text-fg-title text-lg mt-4">
+                        <h3 class="font-semibold text-title-foreground  text-lg mt-4">
                             {{ $service['title'] }}
                         </h3>
-                        <p class="text-sm text-fg-muted mt-2">
+                        <p class="text-sm text-muted-foreground mt-2">
                             {{ $service['description'] }}
                         </p>
                     </article>

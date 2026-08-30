@@ -5,7 +5,7 @@
             Features
         </span>
         <h1
-            class="mt-5 text-3xl md:text-4xl xl:text-5xl mx-auto text-center md:max-w-2xl text-fg-title font-semibold leading-tight">
+            class="mt-5 text-3xl md:text-4xl xl:text-5xl mx-auto text-center md:max-w-2xl text-title-foreground  font-semibold leading-tight">
             Keep your business on growing
         </h1>
         <x-ui.text class="max-w-lg mt-6 text-center mx-auto">

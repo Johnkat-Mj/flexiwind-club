@@ -6,30 +6,30 @@
     <title>Sidebar 02</title>
   </head>
 
-  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+  <body class="bg-background overflow-hidden lg:overflow-y-auto overflow-y-auto">
     <aside
       data-app-sidebar
-      class="peer fixed h-dvh overflow-hidden w-11/12 max-w-84 md:w-84 origin-left scale-[.96] fx-open:scale-100 lg:scale-100 opacity-0 fx-open:opacity-100 invisible fx-open:visible lg:visible lg:opacity-100 transition-all duration-300 bg-bg border-r border-border-strong/70 flex lg:transition-none ease-linear z-80"
+      class="peer fixed h-dvh overflow-hidden w-11/12 max-w-84 md:w-84 origin-left scale-[.96] fx-open:scale-100 lg:scale-100 opacity-0 fx-open:opacity-100 invisible fx-open:visible lg:visible lg:opacity-100 transition-all duration-300 bg-background border-r border-border-strong/70 flex lg:transition-none ease-linear z-80"
     >
       <nav
-        class="w-16 p-3 border-r border-border bg-bg-subtle flex flex-col justify-between gap-5 items-center"
+        class="w-16 p-3 border-r border-border bg-subtle flex flex-col justify-between gap-5 items-center"
       >
         <div
           class="flex w-full pb-2 border-b border-b-gray-100 dark:border-b-gray-900"
         >
           <a
             href="#"
-            class="bg-fg-title w-full aspect-square rounded-md flex items-center justify-center text-bg"
+            class="bg-title-foreground w-full aspect-square rounded-md flex items-center justify-center text-bg"
           >
             <span class="iconify ph--shopping-bag text-xl"></span>
           </a>
         </div>
-        <ul class="flex flex-col w-full gap-4 flex-1 text-fg-muted">
+        <ul class="flex flex-col w-full gap-4 flex-1 text-muted-foreground">
           <li class="flex w-full">
             <a
               href="#"
               data-state="active"
-              class="fx-active:bg-bg-muted fx-active:text-fg-title w-full flex items-center justify-center aspect-square rounded-md"
+              class="fx-active:bg-muted fx-active:text-title-foreground  w-full flex items-center justify-center aspect-square rounded-md"
             >
               <span aria-hidden="true" class="iconify ph--stack text-lg"></span>
             </a>
@@ -38,7 +38,7 @@
             <a
               href="#"
               data-state="inactive"
-              class="fx-active:bg-bg-muted fx-active:text-fg-title w-full flex items-center justify-center aspect-square rounded-md"
+              class="fx-active:bg-muted fx-active:text-title-foreground  w-full flex items-center justify-center aspect-square rounded-md"
             >
               <span
                 aria-hidden="true"
@@ -50,7 +50,7 @@
             <a
               href="#"
               data-state="inactive"
-              class="fx-active:bg-bg-muted fx-active:text-fg-title w-full flex items-center justify-center aspect-square rounded-md"
+              class="fx-active:bg-muted fx-active:text-title-foreground  w-full flex items-center justify-center aspect-square rounded-md"
             >
               <span
                 aria-hidden="true"
@@ -62,7 +62,7 @@
             <a
               href="#"
               data-state="inactive"
-              class="fx-active:bg-bg-muted fx-active:text-fg-title w-full flex items-center justify-center aspect-square rounded-md"
+              class="fx-active:bg-muted fx-active:text-title-foreground  w-full flex items-center justify-center aspect-square rounded-md"
             >
               <span
                 aria-hidden="true"
@@ -74,7 +74,7 @@
             <a
               href="#"
               data-state="inactive"
-              class="fx-active:bg-bg-muted fx-active:text-fg-title w-full flex items-center justify-center aspect-square rounded-md"
+              class="fx-active:bg-muted fx-active:text-title-foreground  w-full flex items-center justify-center aspect-square rounded-md"
             >
               <span aria-hidden="true" class="iconify ph--bell text-lg"></span>
             </a>
@@ -99,14 +99,14 @@
           <div class="">
             <button class="flex items-center justify-between w-full gap-3">
               <div class="flex-1 flex flex-col items-start text-left">
-                <span class="text-sm font-medium text-fg-title line-clamp-1"
+                <span class="text-sm font-medium text-title-foreground  line-clamp-1"
                   >Sky Studio</span
                 >
-                <span class="text-xs text-fg-muted line-clamp-1"
+                <span class="text-xs text-muted-foreground line-clamp-1"
                   >Studio likasi</span
                 >
               </div>
-              <span class="iconify ph--caret-down text-fg-muted"></span>
+              <span class="iconify ph--caret-down text-muted-foreground"></span>
             </button>
           </div>
           <div class="pb-3 border-b border-border">
@@ -114,10 +114,10 @@
               <input
                 type="search"
                 placeholder="Type something"
-                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md ps-9 text-sm text-fg"
+                class="w-full ui-form-base ui-form-input ui-form-input-md shadow border border-border-input rounded-md ps-9 text-sm text-foreground"
               />
               <span
-                class="iconify ph--magnifying-glass absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-xs text-fg-muted"
+                class="iconify ph--magnifying-glass absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-xs text-muted-foreground"
               ></span>
               <div
                 class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-0.5 text-xs font-light"
@@ -138,7 +138,7 @@
               <a
                 href="#"
                 data-state="active"
-                class="flex items-center gap-x-3 px-2.5 py-1.5 rounded-md text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70"
+                class="flex items-center gap-x-3 px-2.5 py-1.5 rounded-md text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70"
               >
                 <span class="flex iconify ph--chart-pie-slice"></span>
                 Overview
@@ -147,7 +147,7 @@
             <li>
               <a
                 href="#"
-                class="flex items-center gap-x-3 px-2.5 py-1.5 rounded-md text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70"
+                class="flex items-center gap-x-3 px-2.5 py-1.5 rounded-md text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70"
               >
                 <span class="flex iconify ph--storefront"></span>
                 Stores
@@ -156,7 +156,7 @@
             <li>
               <a
                 href="#"
-                class="flex items-center gap-x-3 px-2.5 py-1.5 rounded-md text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70"
+                class="flex items-center gap-x-3 px-2.5 py-1.5 rounded-md text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70"
               >
                 <span class="flex iconify ph--barcode"></span>
                 Products

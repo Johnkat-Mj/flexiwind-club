@@ -3,7 +3,7 @@
     'isFullScreen' => false,
 ])
 
-<div data-preview-box style="--frame-height:200px;" class="w-full bg-bg 
+<div data-preview-box style="--frame-height:200px;" class="w-full bg-background 
     grid relative 
       overflow-hidden
        {{ $isFullScreen ? 'h-[max(calc(100vh-6rem),var(--frame-height))] xl:h-[max(44rem,var(--frame-height))] ' :'h-(--frame-height)'}}

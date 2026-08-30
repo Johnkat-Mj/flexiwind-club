@@ -1,13 +1,13 @@
 <main class="flex min-h-screen justify-center items-center px-4 sm:px-10 lg:px-0 py-4">
     <div
-        class="max-w-lg w-full bg-bg-surface border border-border ui-card [--card-radius:var(--radius-lg)] [--card-padding:--spacing(1)]">
-        <div class="bg-bg shadow p-6 sm:p-8 flex flex-col inner-radius">
+        class="max-w-lg w-full bg-surface border border-border ui-card [--card-radius:var(--radius-lg)] [--card-padding:--spacing(1)]">
+        <div class="bg-background shadow p-6 sm:p-8 flex flex-col inner-radius">
             <div class="size-12 bg-primary text-white text-xl rounded-xl flex items-center justify-center mx-auto mb-4">
                 <span class="iconify ph--speedometer"></span>
             </div>
             <div class="text-center">
-                <h1 class="text-fg-title mb-1 text-xl font-semibold">Create your account</h1>
-                <p class="text-sm text-fg-muted">
+                <h1 class="text-title-foreground  mb-1 text-xl font-semibold">Create your account</h1>
+                <p class="text-sm text-muted-foreground">
                     Fill in your details to get started
                 </p>
             </div>
@@ -20,7 +20,7 @@
                 <x-ui.input type="email" placeholder="johndoe@example.com" label="Email" />
                 <x-ui.input type="password" placeholder="••••••••" label="Create Password" />
                 <x-ui.input type="password" placeholder="••••••••" label="Confirm Password" />
-                <div class="text-xs text-fg-muted -mt-2">
+                <div class="text-xs text-muted-foreground -mt-2">
                     Use 8 or more characters with a mix of letters, numbers & symbols
                 </div>
                 <x-ui.button class="justify-center w-full mt-2">
@@ -29,7 +29,7 @@
             </div>
 
             <div class="text-center mt-6">
-                <p class="text-sm text-fg-muted">
+                <p class="text-sm text-muted-foreground">
                     Already have an account?
                     <x-ui.link href="#" class="font-medium text-primary ml-1">Login</x-ui.link>
                 </p>

@@ -6,7 +6,7 @@
             <nav class="w-full flex justify-between gap-6 relative">
                 <div class="min-w-max inline-flex relative">
                     <a href="/" class="relative flex items-center gap-3">
-                       <svg class="size-6.5 text-fg-title" width="553" height="553" viewBox="0 0 553 553" fill="none"
+                       <svg class="size-6.5 text-title-foreground " width="553" height="553" viewBox="0 0 553 553" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M481.749 50.0439C505.676 39.5719 533 57.2231 533 85.3984V138.658C533 159.197 516.518 178.892 492.788 185.605C462.86 194.072 425.008 209.43 397.361 237.488C357.828 277.611 333.78 330.507 309.238 374.237C283.916 419.359 257.031 457.516 211.177 479.877C166.76 501.537 107.535 515.512 61.9404 523.736C40.2339 527.652 20 510.74 20 486.759V449.633C20.0001 428.679 36.1714 411.275 57.0693 409.74L79.0049 408.129C84.3302 407.738 89.5933 406.739 94.6914 405.151L137.944 391.681C143.756 389.871 149.306 387.31 154.455 384.064L159.405 380.943C176.822 369.966 191.117 354.696 200.921 336.605L201.384 335.742L207.755 323.755L208.043 323.212L208.298 322.652L208.301 322.645C208.304 322.637 208.31 322.625 208.317 322.608C208.333 322.574 208.358 322.521 208.392 322.448C208.458 322.303 208.559 322.081 208.694 321.787C208.965 321.199 209.369 320.322 209.896 319.187C210.952 316.915 212.498 313.613 214.445 309.526C218.343 301.347 223.831 290.06 230.188 277.632C243.118 252.359 258.917 223.821 272.004 206.589C315.733 149.009 351.421 120.819 421.717 79.6416C438.406 69.8655 460.129 59.5063 481.749 50.0439Z"
@@ -18,43 +18,43 @@
                         d="M553 523C553 539.569 539.569 553 523 553H366.5C353.521 553 343 542.479 343 529.5C343 516.521 353.521 506 366.5 506H487C495.284 506 502 499.284 502 491V368.5C502 354.417 513.417 343 527.5 343C541.583 343 553 354.417 553 368.5V523Z"
                         fill="currentColor" />
                 </svg>
-                        <div class="inline-flex text-lg font-semibold text-fg-title">
+                        <div class="inline-flex text-lg font-semibold text-title-foreground ">
                             Unlead
                         </div>
                     </a>
                 </div>
 
                 <div id="app-nav" data-app-navbar x-data x-navbar
-                    class="invisible opacity-0 translate-y-10 lg:visible lg:opacity-100 fx-open:translate-y-0 fx-open:visible fx-open:opacity-100 lg:translate-y-0 duration-300 ease-linear overflow-hidden  flex flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:w-max lg:justify-between lg:items-center absolute lg:relative top-14 lg:top-0 bg-bg  border border-border ui-card [--card-radius:var(--radius-xl)] [--card-padding:--spacing(1)] z-50 lg:shadow-sm">
+                    class="invisible opacity-0 translate-y-10 lg:visible lg:opacity-100 fx-open:translate-y-0 fx-open:visible fx-open:opacity-100 lg:translate-y-0 duration-300 ease-linear overflow-hidden  flex flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:w-max lg:justify-between lg:items-center absolute lg:relative top-14 lg:top-0 bg-background  border border-border ui-card [--card-radius:var(--radius-xl)] [--card-padding:--spacing(1)] z-50 lg:shadow-sm">
                     <ul
-                        class="py-1 lg:py-0 gap-1.5  flex flex-col lg:flex-row text-fg w-full lg:justify-center lg:items-center text-sm">
+                        class="py-1 lg:py-0 gap-1.5  flex flex-col lg:flex-row text-foreground w-full lg:justify-center lg:items-center text-sm">
                         <li class="flex">
                             <a href="#"
-                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-fg-muted p-2 hover:bg-bg-surface inner-radius">
+                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-muted-foreground p-2 hover:bg-surface inner-radius">
                                 Features
                             </a>
                         </li>
                         <li class="flex">
                             <a href="#"
-                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-fg-muted p-2 hover:bg-bg-surface inner-radius">
+                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-muted-foreground p-2 hover:bg-surface inner-radius">
                                 Resources
                             </a>
                         </li>
                         <li class="flex">
                             <a href="#"
-                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-fg-muted p-2 hover:bg-bg-surface inner-radius">
+                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-muted-foreground p-2 hover:bg-surface inner-radius">
                                 Teams
                             </a>
                         </li>
                         <li class="flex">
                             <a href="#"
-                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-fg-muted py-2 px-4 hover:bg-bg-surface inner-radius">
+                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-muted-foreground py-2 px-4 hover:bg-surface inner-radius">
                                 Guide
                             </a>
                         </li>
                         <li class="flex">
                             <a href="#"
-                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-fg-muted py-2 px-4 hover:bg-bg-surface inner-radius">
+                                class="flex w-full duration-300 font-medium ease-linear hover:text-primary text-muted-foreground py-2 px-4 hover:bg-surface inner-radius">
                                 Faq
                             </a>
                         </li>
@@ -69,11 +69,11 @@
                     <button data-nav-trigger data-toggle-nav="app-nav" aria-label="Toggle navbar"
                         class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative group cursor-pointer">
                         <span id="line-1"
-                            class="w-6 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-aria-expanded:translate-y-1.5 in-aria-expanded:rotate-40"></span>
+                            class="w-6 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear in-aria-expanded:translate-y-1.5 in-aria-expanded:rotate-40"></span>
                         <span id="line-2"
-                            class="w-6 origin-center  mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-aria-expanded:opacity-0 in-aria-expanded:scale-x-0"></span>
+                            class="w-6 origin-center  mt-1 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear in-aria-expanded:opacity-0 in-aria-expanded:scale-x-0"></span>
                         <span id="line-3"
-                            class="w-6 mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-aria-expanded:-translate-y-1.5 in-aria-expanded:-rotate-40"></span>
+                            class="w-6 mt-1 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear in-aria-expanded:-translate-y-1.5 in-aria-expanded:-rotate-40"></span>
                     </button>
                 </div>
             </nav>

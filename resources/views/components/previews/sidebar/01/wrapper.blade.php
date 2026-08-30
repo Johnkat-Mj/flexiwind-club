@@ -1,5 +1,5 @@
 <main
-    class="border-x bg-bg transition-transform overflow-hidden overflow-y-auto
+    class="border-x bg-background transition-transform overflow-hidden overflow-y-auto
         duration-300 mt-1 mx-1 
          h-[calc(100vh-4px)] 
         rounded-t-ui border-t border-border-input lg:shadow-md lg:shadow-gray-600/10">
@@ -11,7 +11,7 @@
                     <span aria-hidden="true" class="iconify ph--door-open"></span>
                 </x-ui.button>
             </div>
-            <h1 class="block text-fg-title font-medium">
+            <h1 class="block text-title-foreground  font-medium">
                 Dashboard
             </h1>
         </div>

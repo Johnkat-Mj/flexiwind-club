@@ -97,13 +97,13 @@
     <div class="grid overflow-hidden w-full p-5 rounded-lg border border-border-strong/60">
         <div class="flex pb-4 flex-col sm:flex-row sm:items-center sm:justify-between">
             <div class="flex flex-col">
-                <h3 class="font-semibold text-fg-title">Leads</h3>
-                <p class="text-fg-muted text-sm">Summary of leads</p>
+                <h3 class="font-semibold text-title-foreground ">Leads</h3>
+                <p class="text-muted-foreground text-sm">Summary of leads</p>
             </div>
             <div class="flex items-center gap-2">
                 <x-ui.input.group class="flex-1">
                     <x-ui.input.leading absolute>
-                        <span aria-hidden="true" class="iconify ph--magnifying-glass text-fg-muted opacity-80"></span>
+                        <span aria-hidden="true" class="iconify ph--magnifying-glass text-muted-foreground opacity-80"></span>
                     </x-ui.input.leading>
                     <x-ui.input variant="unstyled" placeholder="Search..." class="ps-9" />
                 </x-ui.input.group>
@@ -114,7 +114,7 @@
         </div>
 
         <x-ui.table :divider="false">
-            <x-ui.table.columns class="*:bg-bg-muted/70 *:first:rounded-l-md *:last:rounded-r-md">
+            <x-ui.table.columns class="*:bg-muted/70 *:first:rounded-l-md *:last:rounded-r-md">
                 <x-ui.table.column class="w-5" whiteSpace="normal">
                     <x-ui.checkbox name="select_all" id="select_all_03" />
                 </x-ui.table.column>
@@ -132,14 +132,14 @@
                             <x-ui.checkbox :name="$lead['id']" :id="$lead['id']" />
                         </x-ui.table.cell>
                         <x-ui.table.cell>
-                            <span class="text-fg-title">
+                            <span class="text-title-foreground ">
                                 {{ $lead['name'] }}
                             </span>
                         </x-ui.table.cell>
                         <x-ui.table.cell whiteSpace="normal">
                             <div class="flex flex-col">
-                                <span class="text-sm text-fg-title">{{ $lead['phone'] }}</span>
-                                <span class="text-sm text-fg-muted">{{ $lead['email'] }}</span>
+                                <span class="text-sm text-title-foreground ">{{ $lead['phone'] }}</span>
+                                <span class="text-sm text-muted-foreground">{{ $lead['email'] }}</span>
                             </div>
                         </x-ui.table.cell>
                         <x-ui.table.cell>
@@ -148,7 +148,7 @@
                             </x-ui.badge>
                         </x-ui.table.cell>
                         <x-ui.table.cell>
-                            <span class="flex items-center text-sm gap-2 text-fg">
+                            <span class="flex items-center text-sm gap-2 text-foreground">
                                 <x-ui.icon name="{{ $lead['source']['icon'] }}" />
                                 {{ $lead['source']['label'] }}
                             </span>
@@ -171,7 +171,7 @@
         </x-ui.table>
 
         <div class="pt-4 border-t border-border-strong/60 flex items-center justify-between">
-            <span class="text-fg-muted text-xs sm:text-sm truncate text-nowrap">
+            <span class="text-muted-foreground text-xs sm:text-sm truncate text-nowrap">
                 Showing 1 to {{ count($leads) }} entries
             </span>
             <x-ui.pagination justify="end" class="flex-1">

@@ -30,15 +30,15 @@
 
     <x-ui.tabs class="relative w-full">
         <x-ui.tabs.list-wrapper class="w-full flex justify-between items-center gap-2 h-12 px-3.5 relative">
-            <x-ui.tabs.list unStyled class="flex items-center gap-0.5 text-sm text-fg-muted">
+            <x-ui.tabs.list unStyled class="flex items-center gap-0.5 text-sm text-muted-foreground">
                 <x-ui.tabs.trigger unStyled wrapper-class="flex"
-                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-title-foreground  outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
                     id="preview">
                     <span class="iconify size-3 ph--eye opacity-80"></span>
                     <span class="hidden sm:flex">Preview</span>
                 </x-ui.tabs.trigger>
                 <x-ui.tabs.trigger unStyled wrapper-class="flex"
-                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+                    class="relative flex items-center gap-1 disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-title-foreground  outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
                     id="code">
                     <span class="iconify size-3 ph--code opacity-80"></span>
                     <span class="hidden sm:flex">Code</span>
@@ -55,22 +55,22 @@
                     <span aria-hidden="true" class="flex iconify ph--arrows-clockwise text-sm"></span>
                 </button>
             </div>
-            <div class="flex items-center min-w-max text-fg">
+            <div class="flex items-center min-w-max text-foreground">
                 <div class="hidden sm:flex">
                     @php
                         $command = "php artisan flexi:add {$title}";
                         $commandInstall = "php artisan flexi:add @club/{$title}";
                     @endphp
                     <x-ui.button x-copy-command size="none" variant="none" data-command="{{ $commandInstall }}"
-                        class="bg-bg shadow h-8 pl-2 pr-3 text-xs border border-border/50 rounded-md flex justify-center items-center cursor-pointer hover:bg-bg-surface">
+                        class="bg-background shadow h-8 pl-2 pr-3 text-xs border border-border/50 rounded-md flex justify-center items-center cursor-pointer hover:bg-surface">
                         <span aria-hidden="true" class="flex iconify ph--terminal"></span>
-                        <span class="text-fg-muted ml-1">{{ $command }}</span>
+                        <span class="text-muted-foreground ml-1">{{ $command }}</span>
                     </x-ui.button>
                 </div>
             </div>
         </x-ui.tabs.list-wrapper>
         <x-ui.tabs.panel-wrapper data-ui-previewbox
-            class="bg-bg h-max overflow-hidden flex items-center justify-center ring ring-border-card rounded-ui w-full relative group flex-1">
+            class="bg-background h-max overflow-hidden flex items-center justify-center ring ring-border-card rounded-ui w-full relative group flex-1">
             <x-ui.tabs.panel id="preview" show-as-grid active class="w-full h-auto">
                 <x-v-ui.preview-block :is-full-screen="$isFullScreen" :url="$preview" />
             </x-ui.tabs.panel>

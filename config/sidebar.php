@@ -137,4 +137,38 @@ return [
             ],
         ],
     ],
+    [
+        'label' => 'Cookbook',
+        'items' => [
+            [
+                'title' => 'Overview',
+                'path' => '/components/cookbook',
+                'description' => 'Practical Flexiwind Club tips, snippets, and UI recipes for Laravel Blade and Livewire projects.',
+                'keywords' => 'cookbook, tips, snippets, Laravel UI, Blade, Livewire, Flexiwind Club',
+                'seoDescription' => 'Browse practical Flexiwind Club cookbook recipes for building polished Laravel UI faster.',
+                'state' => 'new',
+            ],
+            [
+                'title' => 'Modal Forms',
+                'path' => '/components/cookbook/modal-forms',
+                'description' => 'Build modal forms that validate cleanly, submit safely, and keep actions obvious.',
+                'keywords' => 'modal form, Laravel form, Livewire modal, Blade modal, UI recipe',
+                'seoDescription' => 'Learn a practical pattern for modal forms in Flexiwind Club using Blade and Livewire-friendly markup.',
+            ],
+            [
+                'title' => 'Confirmation Dialogs',
+                'path' => '/components/cookbook/confirmation-dialogs',
+                'description' => 'Use confirmation dialogs for destructive actions without making the UI heavy.',
+                'keywords' => 'confirmation dialog, alert dialog, modal confirmation, destructive action',
+                'seoDescription' => 'Use confirmation dialogs for dangerous actions with Flexiwind Club modal components.',
+            ],
+            [
+                'title' => 'Form Snippets',
+                'path' => '/components/cookbook/form-snippets',
+                'description' => 'Small form snippets and conventions you can reuse across app screens.',
+                'keywords' => 'form snippets, Blade forms, Laravel forms, UI best practices',
+                'seoDescription' => 'Reusable form snippets and UI conventions for Laravel Blade applications.',
+            ],
+        ],
+    ],
 ];

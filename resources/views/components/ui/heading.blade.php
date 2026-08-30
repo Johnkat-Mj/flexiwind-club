@@ -26,9 +26,9 @@
 
 <{{ $tag }} {{ $attributes->class([
     $sizeClasses,
-    'text-fg-title' => $intent == 'title',
-    'text-fg' => $intent == 'body',
-    'text-fg-muted' => $intent == 'muted',
+    'text-title-foreground ' => $intent == 'title',
+    'text-foreground' => $intent == 'body',
+    'text-muted-foreground' => $intent == 'muted',
     'text-primary' => $intent == 'primary',
     'text-secondary' => $intent == 'secondary',
     'text-danger' => $intent == 'danger',

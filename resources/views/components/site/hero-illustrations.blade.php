@@ -1,6 +1,6 @@
 <div class="relative lg:mx-auto w-full lg:max-w-310 -mt-16 sm:-mt-30 md:-mt-66 overflow-hidden">
     <div
-        class="relative z-11 flex items-center gap-2 h-20 px-5 bg-bg ml-auto w-max max-md:hidden border-t border-x border-border-strong/70 border-dashed">
+        class="relative z-11 flex items-center gap-2 h-20 px-5 bg-background ml-auto w-max max-md:hidden border-t border-x border-border-strong/70 border-dashed">
         <x-ui.button size="sm" intent="neutral">
             <span aria-hidden="true" class="iconify ph--plus mr-2 size-3.5"></span>
             Create User
@@ -10,27 +10,27 @@
         </x-ui.button>
     </div>
     <div
-        class="z-11 relative flex items-center justify-end gap-2 h-20 px-5 bg-bg w-full sm:ml-auto sm:w-max max-sm:hidden border-t border-x border-border-strong/70 border-dashed">
+        class="z-11 relative flex items-center justify-end gap-2 h-20 px-5 bg-background w-full sm:ml-auto sm:w-max max-sm:hidden border-t border-x border-border-strong/70 border-dashed">
         <div
-            class="grid grid-cols-3 bg-bg border border-border ui-card [--card-radius:var(--radius-ui)] [--card-padding:0.125rem] text-sm text-fg *:first:inner-radius *:first:rounded-r-none *:last:rounded-l-none *:last:inner-radius overflow-hidden">
+            class="grid grid-cols-3 bg-background border border-border ui-card [--card-radius:var(--radius-ui)] [--card-padding:0.125rem] text-sm text-foreground *:first:inner-radius *:first:rounded-r-none *:last:rounded-l-none *:last:inner-radius overflow-hidden">
             <div class="flex overflow-hidden">
                 <input type="radio" name="check-option" id="option1" class="appearance-none peer">
                 <label for="option1"
-                    class="px-3.5 h-7 truncate peer-checked:bg-fg-title peer-checked:text-bg  w-full flex items-center justify-center">
+                    class="px-3.5 h-7 truncate peer-checked:bg-title-foreground peer-checked:text-bg  w-full flex items-center justify-center">
                     Option 1
                 </label>
             </div>
             <div class="flex overflow-hidden">
                 <input type="radio" checked="" name="check-option" id="option2" class="appearance-none peer">
                 <label for="option2"
-                    class="px-3.5 h-7 truncate peer-checked:bg-fg-title peer-checked:text-bg  w-full flex items-center justify-center">
+                    class="px-3.5 h-7 truncate peer-checked:bg-title-foreground peer-checked:text-bg  w-full flex items-center justify-center">
                     Option 2
                 </label>
             </div>
             <div class="flex overflow-hidden">
                 <input type="radio" name="check-option" id="option3" class="appearance-none peer">
                 <label for="option3"
-                    class="px-3.5 h-7 truncate peer-checked:bg-fg-title peer-checked:text-bg  w-full flex items-center justify-center">
+                    class="px-3.5 h-7 truncate peer-checked:bg-title-foreground peer-checked:text-bg  w-full flex items-center justify-center">
                     Option 3
                 </label>
             </div>
@@ -38,15 +38,15 @@
     </div>
 
     <div
-        class="flex divide-x divide-border-strong divide-dashed items-center gap-2 bg-bg ml-auto w-max max-sm:border-b-0 border border-border-strong/70 border-dashed relative z-11">
+        class="flex divide-x divide-border-strong divide-dashed items-center gap-2 bg-background ml-auto w-max max-sm:border-b-0 border border-border-strong/70 border-dashed relative z-11">
         <div class="flex items-center gap-4 h-12 sm:h-20 px-5">
             <x-ui.checkbox checked />
             <x-ui.checkbox disabled />
             <x-ui.radio checked />
         </div>
         <div class="px-5 flex-1 flex items-center md:w-xs h-12 sm:h-20">
-            <x-ui.range name="range_slide" min="0" max="100" class="text-fg-title"
-                custom-indicator="bg-fg-title" />
+            <x-ui.range name="range_slide" min="0" max="100" class="text-title-foreground "
+                custom-indicator="bg-title-foreground" />
         </div>
     </div>
     <div class="w-full max-lg:overflow-hidden px-px pb-px border-t border-border-strong border-dashed sm:border-t-0">
@@ -55,9 +55,9 @@
             <div class="grid gap-4">
                 <div class="relative z-11 pt-3 md:h-12 flex items-end gap-2 bg-linear-to-t from-bg from-80%">
                     <x-ui.switch size="sm" checked name="switch_1" id="switch_1"
-                        class="bg-bg-muted text-primary-600 [--knob-bg:var(--color-white)]" />
+                        class="bg-muted text-primary-600 [--knob-bg:var(--color-white)]" />
                     <x-ui.switch size="sm" name="switch_2" id="switch_2"
-                        class="bg-bg-muted text-fg-title [--knob-bg:var(--color-bg)]" />
+                        class="bg-muted text-title-foreground  [--knob-bg:var(--color-bg)]" />
                 </div>
 
                 <x-ui.card class="shadow-sm [--ui-padding:1.125rem]">
@@ -67,11 +67,11 @@
                                 decoding="async" fetchpriority="auto" width="150" height="150" />
                         </div>
                         <div class="space-y-0.5 flex flex-col">
-                            <span class="font-semibold text-sm text-fg-title">Tresor Kasenda</span>
-                            <p class="text-sm text-fg-muted">tresorkasenda@unoui.app</p>
+                            <span class="font-semibold text-sm text-title-foreground ">Tresor Kasenda</span>
+                            <p class="text-sm text-muted-foreground">tresorkasenda@unoui.app</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-2 text-sm text-fg-muted mt-2">
+                    <div class="flex items-center gap-2 text-sm text-muted-foreground mt-2">
                         <span class="flex iconify ph--buildings"></span>
                         <span>Unoforge</span>
                     </div>
@@ -85,34 +85,34 @@
                     </div>
                 </x-ui.card>
 
-                <x-ui.card fill="none" class="h-max bg-bg-surface [--ui-padding:0.125rem]">
-                    <div class="bg-bg inner-radius p-3.5 flex flex-col">
-                        <span class="font-semibold text-fg-title">
+                <x-ui.card fill="none" class="h-max bg-surface [--ui-padding:0.125rem]">
+                    <div class="bg-background inner-radius p-3.5 flex flex-col">
+                        <span class="font-semibold text-title-foreground ">
                             Plan ui components V1
                         </span>
                         <div class=""></div>
-                        <p class="my-1.5 text-fg-muted text-sm line-clamp-1">
+                        <p class="my-1.5 text-muted-foreground text-sm line-clamp-1">
                             Plan the components for the next version of the UI
                         </p>
                         <div class="flex flex-col pt1">
-                            <x-ui.progress max="10" value="3" class="text-fg-title" />
-                            <div class="pt-0.5 flex w-full text-xs justify-between text-fg-muted">
+                            <x-ui.progress max="10" value="3" class="text-title-foreground " />
+                            <div class="pt-0.5 flex w-full text-xs justify-between text-muted-foreground">
                                 <span>On going</span>
-                                <div class="font-medium text-fg">3/10</div>
+                                <div class="font-medium text-foreground">3/10</div>
                             </div>
                         </div>
                         <div class="flex justify-between mt-1.5">
                             <div class="flex -space-x-2">
                                 <x-ui.avatar src="/avatar1.webp" alt="Avatar 1" loading="lazy" size="xs"
-                                    fetchpriority="auto" width="100" height="100" class="border border-bg-muted" />
+                                    fetchpriority="auto" width="100" height="100" class="border border-muted" />
                                 <x-ui.avatar src="/avatar2.webp" alt="Avatar 1" loading="lazy" size="xs"
                                     fetchpriority="auto" width="100" height="100"
-                                    class="border border-bg-muted" />
+                                    class="border border-muted" />
                                 <x-ui.avatar src="/avatar2.webp" alt="Avatar 1" loading="lazy" size="xs"
                                     fetchpriority="auto" width="100" height="100"
-                                    class="border border-bg-muted" />
+                                    class="border border-muted" />
                             </div>
-                            <div class="flex gap-2 items-center text-sm text-fg-muted">
+                            <div class="flex gap-2 items-center text-sm text-muted-foreground">
                                 <span class="flex items-center text-xs">
                                     <span class="iconify ph--file-plus text-sm mr-0.5"></span> 4
                                 </span>
@@ -125,12 +125,12 @@
                 </x-ui.card>
             </div>
             <div
-                class="grid grid-rows-[auto_1fr_auto] border border-border-strong/40 dark:border-border bg-bg dark:bg-bg-surface/40 rounded-ui">
+                class="grid grid-rows-[auto_1fr_auto] border border-border-strong/40 dark:border-border bg-background dark:bg-surface/40 rounded-ui">
                 <div class="relative z-11 p-4 flex items-center justify-between">
                     <div class="flex">
                         <x-ui.input.group size="sm">
                             <x-ui.input variant="unstyled" placeholder="Start typing" class="ps-7 px-3" />
-                            <x-ui.input.leading absolute class="text-fg text-sm [--left-space:8px]">
+                            <x-ui.input.leading absolute class="text-foreground text-sm [--left-space:8px]">
                                 <span class="flex iconify ph--magnifying-glass size-3.5"></span>
                             </x-ui.input.leading>
                         </x-ui.input.group>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <x-ui.table no-divider wrapper="flex-1">
-                    <x-ui.table.columns wrapper="bg-bg-muted/50">
+                    <x-ui.table.columns wrapper="bg-muted/50">
                         <x-ui.table.column class="pl-2.5 [--gutter-x:3px] w-8">
                             <x-ui.checkbox id="check_all" />
                         </x-ui.table.column>
@@ -249,14 +249,14 @@
                                 <x-ui.table.cell class="pl-2">
                                     <div class="flex items-center gap-2">
                                         @if ($user['info']['avatar'] !== '')
-                                            <x-ui.avatar  radius="none" class="rounded-ui bg-bg-muted/60" size="sm" :src="$user['info']['avatar']" />
+                                            <x-ui.avatar  radius="none" class="rounded-ui bg-muted/60" size="sm" :src="$user['info']['avatar']" />
                                         @else
                                             <x-ui.avatar-placeholder radius-none class="rounded-ui" size="sm"  :text="$user['info']['initial']" />
                                         @endif
                                         <div>
-                                            <div class="font-medium text-fg-title text-sm">
+                                            <div class="font-medium text-title-foreground  text-sm">
                                                 {{ $user['info']['full_name'] }}</div>
-                                            <div class="text-xs text-fg-muted">{{ $user['info']['email'] }}</div>
+                                            <div class="text-xs text-muted-foreground">{{ $user['info']['email'] }}</div>
                                         </div>
                                     </div>
                                 </x-ui.table.cell>
@@ -275,7 +275,7 @@
                                     <div class="flex items-center gap-2 ">
                                         <x-ui.progress :max="$user['tokens']['total']" :value="$user['tokens']['used']" class="{{ $status_color }}"
                                             size="sm" />
-                                        <span class="text-xs text-fg-muted">
+                                        <span class="text-xs text-muted-foreground">
                                             {{ $token_percentage }}%</span>
                                     </div>
                                 </x-ui.table.cell>
@@ -307,8 +307,8 @@
                         <span class="iconify ph--github-logo"></span>
                     </div>
                     <div class="flex-1 flex flex-col">
-                        <span class="text-fg-title font-semibold">Github</span>
-                        <p class="mt=2 text-sm text-fg-muted">
+                        <span class="text-title-foreground  font-semibold">Github</span>
+                        <p class="mt=2 text-sm text-muted-foreground">
                             Link pull requests, commits and automate workflows
                         </p>
                         <x-ui.button size="sm" variant="outline" class="mt-3 w-max">
@@ -316,11 +316,11 @@
                         </x-ui.button>
                     </div>
                 </x-ui.card>
-                <div class="bg-bg rounded-ui ring ring-border-card w-full px-3.5 py-6 flex flex-col items-center text-center">
+                <div class="bg-background rounded-ui ring ring-border-card w-full px-3.5 py-6 flex flex-col items-center text-center">
                     <div class="size-10 rounded-full ui-subtle ui-subtle-gray flex items-center justify-center">
                         <span class="iconify ph--calendar-plus text-xl"></span> 
                     </div>
-                    <p class="mt-2 text-fg-muted text-sm">No Schedules</p> 
+                    <p class="mt-2 text-muted-foreground text-sm">No Schedules</p> 
                     <x-ui.button size="sm" variant="outline"
                         class="btn mt-3">
                         Create new schedule

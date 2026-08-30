@@ -101,14 +101,14 @@
                     <span aria-hidden="true" class="iconify ph--users"></span>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="font-semibold text-fg-title">Leads</h3>
-                    <p class="text-fg-muted text-sm">Summary of leads</p>
+                    <h3 class="font-semibold text-title-foreground ">Leads</h3>
+                    <p class="text-muted-foreground text-sm">Summary of leads</p>
                 </div>
             </div>
             <div class="">
                 <x-ui.input.group class="divide-x divide-border-input">
                     <span aria-hidden="true"
-                        class="px-2 flex items-center text-fg pointer-events-none">
+                        class="px-2 flex items-center text-foreground pointer-events-none">
                         <span class="flex text-sm iconify ph--magnifying-glass"></span>
                     </span>
                     <x-ui.input variant="unstyled" class="px-2"/>
@@ -120,7 +120,7 @@
             </div>
         </div>
         <x-ui.table class="border-t border-border-strong/60">
-            <x-ui.table.columns class="bg-bg-surface border-b border-border-input/60">
+            <x-ui.table.columns class="bg-surface border-b border-border-input/60">
                 <x-ui.table.column class="w-5" whiteSpace="normal">
                     <x-ui.checkbox name="select_all" id="select_all" />
                 </x-ui.table.column>
@@ -138,14 +138,14 @@
                             <x-ui.checkbox :name="$lead['id']" :id="$lead['id']" />
                         </x-ui.table.cell>
                         <x-ui.table.cell>
-                            <span class="text-fg-title">
+                            <span class="text-title-foreground ">
                                 {{ $lead['name'] }}
                             </span>
                         </x-ui.table.cell>
                         <x-ui.table.cell whiteSpace="normal">
                             <div class="flex flex-col">
-                                <span class="text-sm text-fg-title font-medium">{{ $lead['phone'] }}</span>
-                                <span class="text-sm text-fg-muted">{{ $lead['email'] }}</span>
+                                <span class="text-sm text-title-foreground  font-medium">{{ $lead['phone'] }}</span>
+                                <span class="text-sm text-muted-foreground">{{ $lead['email'] }}</span>
                             </div>
                         </x-ui.table.cell>
                         <x-ui.table.cell>
@@ -154,7 +154,7 @@
                             </x-ui.badge>
                         </x-ui.table.cell>
                         <x-ui.table.cell>
-                            <span class="flex items-center text-sm gap-2 text-fg">
+                            <span class="flex items-center text-sm gap-2 text-foreground">
                                 <x-ui.icon name="{{ $lead['source']['icon'] }}" />
                                 {{ $lead['source']['label'] }}
                             </span>
@@ -176,7 +176,7 @@
             </x-ui.table.rows>
         </x-ui.table>
         <div class="p-4 border-t border-border-strong/60 flex items-center justify-between">
-            <span class="text-fg-muted text-xs sm:text-sm truncate text-nowrap">
+            <span class="text-muted-foreground text-xs sm:text-sm truncate text-nowrap">
                 Showing 1 to {{ count($leads) }} entries
             </span>
             <x-ui.pagination justify="end" class="flex-1">

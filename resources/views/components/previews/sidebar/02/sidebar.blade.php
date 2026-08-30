@@ -22,12 +22,12 @@
     ];
 @endphp
 <x-ui.sidebar-wrapper
-    class="fixed lg:static h-dvh overflow-hidden w-11/12 max-w-66 md:w-66 transition-all -translate-x-full fx-open:translate-x-0 lg:translate-x-0 bg-bg flex flex-col justify-between lg:transition-none ease-linear z-50 lg:z-auto border-r border-border-input/40">
+    class="fixed lg:static h-dvh overflow-hidden w-11/12 max-w-66 md:w-66 transition-all -translate-x-full fx-open:translate-x-0 lg:translate-x-0 bg-background flex flex-col justify-between lg:transition-none ease-linear z-50 lg:z-auto border-r border-border-input/40">
     <nav class="size-full flex flex-col">
         <div class="pl-5 pr-3 h-16 flex items-center py-2">
             <div class="h-16 w-full py-2 flex items-center border-b border-transparent">
                 <div
-                    class="flex items-center gap-3 w-full p-1.5 rounded-ui text-fg hover:bg-bg-surface cursor-pointer transition-colors duration-200">
+                    class="flex items-center gap-3 w-full p-1.5 rounded-ui text-foreground hover:bg-surface cursor-pointer transition-colors duration-200">
                     <div
                         class="size-8 bg-primary rounded-ui flex items-center justify-center text-white shadow-sm shadow-primary-200 dark:shadow-primary-900">
                         <svg class="size-5" width="553" height="553" viewBox="0 0 553 553" fill="currentColor"
@@ -44,7 +44,7 @@
                                 fill="currentColor" />
                         </svg>
                     </div>
-                    <span class="font-medium text-fg-title text-sm tracking-tight flex-1 truncate text-left">
+                    <span class="font-medium text-title-foreground  text-sm tracking-tight flex-1 truncate text-left">
                         UnoSky
                     </span>
                     <x-ui.icon name="ph--caret-up-down" size="none" class="size-5" />
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="px-3 flex flex-col space-y-6 flex-1 overflow-hidden overflow-y-auto py-4 font-normal">
-            <ul class="flex flex-col gap-0.5 font-light text-fg-muted">
+            <ul class="flex flex-col gap-0.5 font-light text-muted-foreground">
                 @foreach ($sidebarItems as $item)
                     <x-previews.sidebar.02.sidebar-item :is-active="$item['isActive'] ?? false" :href="$item['href']" :icon="$item['icon']"
                         :text="$item['text']" />
@@ -61,29 +61,29 @@
 
             <!-- Insights -->
             <div class="space-y-0.5">
-                <div class="px-3 mb-2 flex items-center justify-between text-fg-muted">
+                <div class="px-3 mb-2 flex items-center justify-between text-muted-foreground">
                     <span class="text-xs font-medium uppercase tracking-wider">Insights</span>
                     <x-ui.icon name="ph--plus-circle" size="xs"
                         class="cursor-pointer"/>
                 </div>
-                <ul class="flex flex-col text-fg-muted">
-                    <x-previews.sidebar.02.sidebar-item text="Reporting" href="#" icon="" />
-                    <x-previews.sidebar.02.sidebar-item text="Portfolios" href="#" icon="" />
-                    <x-previews.sidebar.02.sidebar-item text="Goals" href="#" icon="" />
+                <ul class="flex flex-col text-muted-foreground">
+                    <x-previews.sidebar.02.sidebar-item text="Reporting" href="#" size="xs" icon="ph--radio-button-fill" />
+                    <x-previews.sidebar.02.sidebar-item text="Portfolios" href="#" size="xs" icon="ph--radio-button-fill" />
+                    <x-previews.sidebar.02.sidebar-item text="Goals" href="#" size="xs" icon="ph--radio-button-fill" />
                 </ul>
             </div>
 
             <!-- Projects -->
             <div class="space-y-0.5">
-                <div class="px-3 mb-2 flex items-center justify-between text-fg-muted">
+                <div class="px-3 mb-2 flex items-center justify-between text-muted-foreground">
                     <span class="text-xs font-medium uppercase tracking-wider">Projects</span>
                     <x-ui.icon name="ph--plus-circle" size="xs"
                         class="cursor-pointer"/>
                 </div>
-                <ul class="flex flex-col gap-0.5 text-fg-muted">
+                <ul class="flex flex-col gap-0.5 text-muted-foreground">
                     <li>
                         <a href="#"
-                            class="flex items-center gap-3 px-3 py-2 hover:bg-bg-surface fx-active:bg-bg fx-current:bg-bg border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
+                            class="flex items-center gap-3 px-3 py-2 hover:bg-surface fx-active:bg-background fx-current:bg-background border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
                             <div class="size-5 rounded bg-success grid place-content-center text-white">
                                 <x-ui.icon name="ph--sparkle" />
                             </div>
@@ -92,7 +92,7 @@
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center gap-3 px-3 py-2 hover:bg-bg-surface fx-active:bg-bg fx-current:bg-bg border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
+                            class="flex items-center gap-3 px-3 py-2 hover:bg-surface fx-active:bg-background fx-current:bg-background border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
                             <div class="size-5 rounded bg-warning grid place-content-center text-white">
                                 {{-- <x-ui.icon name="ph--hashtag" /> --}}
                                 
@@ -102,7 +102,7 @@
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center gap-3 px-3 py-2 hover:bg-bg-surface fx-active:bg-bg fx-current:bg-bg border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
+                            class="flex items-center gap-3 px-3 py-2 hover:bg-surface fx-active:bg-background fx-current:bg-background border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
                             <div class="size-5 rounded bg-warning grid place-content-center text-white">
                                 <x-ui.icon name="ph--figma-logo" />
                             </div>
@@ -114,14 +114,14 @@
 
             <!-- Team -->
             <div class="space-y-0.5">
-                <div class="px-3 mb-2 flex items-center justify-between text-fg-muted">
+                <div class="px-3 mb-2 flex items-center justify-between text-muted-foreground">
                     <span class="text-xs font-medium uppercase tracking-wider">Team</span>
                     <x-ui.icon name="ph--plus-circle" size="sm" />
                 </div>
-                <ul class="flex flex-col gap-1.5 text-fg-muted">
+                <ul class="flex flex-col gap-1.5 text-muted-foreground">
                     <li>
                         <a href="#"
-                            class="flex items-center gap-3 px-3 py-2 hover:bg-bg-surface fx-active:bg-bg fx-current:bg-bg border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
+                            class="flex items-center gap-3 px-3 py-2 hover:bg-surface fx-active:bg-background fx-current:bg-background border border-transparent fx-active:border-border-input fx-current:border-border-input fx-active:shadow-sm fx-current:shadow-sm fx-active:text-primary group rounded-ui">
                             <x-ui.icon name="ph--users" size="md" />
                             <span class="font-medium text-sm flex-1">My workspace</span>
                             <x-ui.icon name="ph--caret-right" size="xs" />
@@ -140,10 +140,10 @@
                     </div>
                     <div class="flex flex-1 justify-between items-center overflow-hidden">
                         <div class="flex flex-col -space-y-0.5 text-left flex-1">
-                            <span class="font-medium text-sm text-fg-title line-clamp-1">
+                            <span class="font-medium text-sm text-title-foreground  line-clamp-1">
                                 Johnkat MJ
                             </span>
-                            <span class="text-xs text-fg-muted line-clamp-1">
+                            <span class="text-xs text-muted-foreground line-clamp-1">
                                 johnkatmj@gmail.com
                             </span>
                         </div>
@@ -157,8 +157,8 @@
                         <img class="size-8 rounded-md object-cover" src="/avatar1.webp" width="200"
                             height="200" alt="Avatar User" />
                         <div class="flex items-start flex-col flex-1">
-                            <h4 class="font-semibold text-fg-title text-sm">Johnkat MJ</h4>
-                            <span class="text-xs text-fg-muted">johnkatmj@gmail.com</span>
+                            <h4 class="font-semibold text-title-foreground  text-sm">Johnkat MJ</h4>
+                            <span class="text-xs text-muted-foreground">johnkatmj@gmail.com</span>
                         </div>
                     </x-ui.dropdown.header>
                     <x-ui.dropdown.separator class="border-border" />

@@ -31,7 +31,7 @@
 
 @endphp
 
-<x-layouts.base body-class="bg-bg " :seo="$seo">
+<x-layouts.base body-class="bg-background " :seo="$seo">
     <x-slot name="head">
         @vite(['resources/js/block.js'])
     </x-slot>
@@ -44,13 +44,13 @@
                 <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
                 <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
                 <span
-                    class="absolute top-8.5 -left-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
+                    class="absolute top-8.5 -left-[3.5px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
                 <span
-                    class="absolute top-12.5 left-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
+                    class="absolute top-12.5 left-[11px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
                 <span
-                    class="absolute top-8.5 -right-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
+                    class="absolute top-8.5 -right-[3.5px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
                 <span
-                    class="absolute top-12.5 right-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
+                    class="absolute top-12.5 right-[11px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
 
             </div>
         </div>

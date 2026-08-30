@@ -14,7 +14,7 @@
 
     $base = "relative w-full {$sizes[$size ?? 'default']} ";
 
-    $variantClass = $variant == 'default' ? ' bg-bg-subtle text-fg' : UiHelper::getClasses($variant, $intent);
+    $variantClass = $variant == 'default' ? ' bg-subtle text-foreground' : UiHelper::getClasses($variant, $intent);
 
     $className = "{$base} {$variantClass} {$class} rounded-ui";
 @endphp

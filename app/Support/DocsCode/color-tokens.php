@@ -31,7 +31,7 @@ return [
     --color-bg: var(--bg);
     --color-bg-subtle: var(--bg-subtle);
     --color-bg-surface: var(--bg-surface);
-    --color-bg-muted: var(--bg-muted);
+    --color-muted: var(--muted);
     --color-bg-surface-elevated: var(--bg-surface-elevated);
     --color-card: var(--card);
     --color-card-gray: var(--card-gray);

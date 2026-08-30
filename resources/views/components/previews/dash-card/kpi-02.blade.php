@@ -1,14 +1,14 @@
 <div class="max-w-7xl px-4 mx-auto">
     <x-ui.card class="block w-full">
-        <h2 class="block text-fg-title text-lg font-medium">Overview</h2>
-        <p class="text-fg-muted mt-1 text-sm">Visualize your main activities data</p>
+        <h2 class="block text-title-foreground  text-lg font-medium">Overview</h2>
+        <p class="text-muted-foreground mt-1 text-sm">Visualize your main activities data</p>
         <div class="mt-6 grid gap-6 divide-y sm:grid-cols-2 divide-border-card sm:divide-x lg:divide-y-0 lg:grid-cols-4">
             <div class="sm:pr-6">
-                <span class="text-fg-muted text-sm">
+                <span class="text-muted-foreground text-sm">
                     New Orders
                 </span>
                 <div class="mt-2 flex items-center justify-between gap-3">
-                    <span class="block text-fg-title text-xl font-semibold">639400</span>
+                    <span class="block text-title-foreground  text-xl font-semibold">639400</span>
                     <div class="flex items-center text-success">
                         <span class="size-4 iconify ph--trend-up mr-1.5"></span>
                         <p class="text-sm">32%</p>
@@ -20,7 +20,7 @@
                     New Customers
                 </span>
                 <div class="mt-2 flex items-center justify-between gap-3">
-                    <span class="block text-fg-title text-xl font-semibold">478000</span>
+                    <span class="block text-title-foreground  text-xl font-semibold">478000</span>
                     <div class="flex items-center text-danger">
                         <span class="size-4 iconify ph--trend-down mr-1.5"></span>
                         <p class="text-sm">15%</p>
@@ -32,7 +32,7 @@
                     New Customers
                 </span>
                 <div class="mt-2 flex items-center justify-between gap-3">
-                    <span class="block text-fg-title text-xl font-semibold">478000</span>
+                    <span class="block text-title-foreground  text-xl font-semibold">478000</span>
                     <div class="flex items-center text-danger">
                         <span class="size-4 iconify ph--trend-down mr-1.5"></span>
                         <p class="text-sm">15%</p>
@@ -44,7 +44,7 @@
                     New Customers
                 </span>
                 <div class="mt-2 flex items-center justify-between gap-3">
-                    <span class="block text-fg-title text-xl font-semibold">478000</span>
+                    <span class="block text-title-foreground  text-xl font-semibold">478000</span>
                     <div class="flex items-center text-danger">
                         <span class="size-4 iconify ph--trend-down mr-1.5"></span>
                         <p class="text-sm">15%</p>

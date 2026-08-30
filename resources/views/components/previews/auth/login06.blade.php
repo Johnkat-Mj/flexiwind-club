@@ -8,7 +8,7 @@
             <h1 class="text-xl font-bold">
                 Welcome to Acme Inc.
             </h1>
-            <p class="text-sm text-fg-muted">
+            <p class="text-sm text-muted-foreground">
                 Don't have an account?
                 <x-ui.link href="#" underlined class="text-primary">
                     Sign up
@@ -20,8 +20,8 @@
             <x-ui.button class="w-full justify-center">
                 Login
             </x-ui.button>
-            <x-ui.divider label="Or continue" class="before:bg-bg-muted" label-placement="middle"
-                label-class="px-3 bg-bg text-fg-muted text-sm relative" />
+            <x-ui.divider label="Or continue" class="before:bg-muted" label-placement="middle"
+                label-class="px-3 bg-background text-muted-foreground text-sm relative" />
             <div class="grid gap-4 sm:grid-cols-2">
                 <x-ui.button variant="outline" intent="gray" class="justify-center gap-1.5">
                     <span aria-hidden="true" class="iconify ph--apple-logo"></span>
@@ -33,7 +33,7 @@
                 </x-ui.button>
             </div>
         </form>
-        <p class="px-6 text-center text-fg-muted mx-auto max-w-md text-sm mt-3">
+        <p class="px-6 text-center text-muted-foreground mx-auto max-w-md text-sm mt-3">
             By clicking continue, you agree to our 
             <x-ui.link href="#" underlined class="text-primary">Terms of Service</x-ui.link>
             and <x-ui.link href="#" underlined class="text-primary">Privacy Policy</x-ui.link>.

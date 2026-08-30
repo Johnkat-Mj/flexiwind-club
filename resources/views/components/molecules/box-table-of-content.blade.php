@@ -10,7 +10,7 @@
     <x-atoms.scrollable-y class="w-full p-4">
         <div class="gap-y-8 flex flex-col min-h-full w-full">
             <div class="flex flex-col space-y-3">
-                <span class="text-fg-muted flex items-center">
+                <span class="text-muted-foreground flex items-center">
                     <span class="iconify ph--book-open text-xs mr-2"></span>
                     On this page
                 </span>

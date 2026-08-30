@@ -15,8 +15,8 @@
 
     $intentClasses = [
         'current'=>'text-current',
-        'fg' => 'text-fg',
-        'muted' => 'text-fg-muted',
+        'fg' => 'text-foreground',
+        'muted' => 'text-muted-foreground',
         'primary' => 'text-primary',
         'secondary' => 'text-secondary',
         'success' => 'text-success',

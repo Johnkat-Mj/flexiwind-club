@@ -10,8 +10,8 @@
         </x-ui.avatar-placeholder>
 
         <div class="flex items-start flex-col">
-            <h4 class="font-semibold text-fg-title text-sm">Tresor Kasenda</h4>
-            <span class="text-xs text-fg-muted">Web Developer</span>
+            <h4 class="font-semibold text-title-foreground  text-sm">Tresor Kasenda</h4>
+            <span class="text-xs text-muted-foreground">Web Developer</span>
         </div>
     </x-ui.dropdown.header>
     <x-ui.dropdown.separator class="border-border"/>

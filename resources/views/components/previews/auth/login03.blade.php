@@ -1,12 +1,12 @@
 <main class="flex min-h-screen justify-center items-center px-4 sm:px-10 lg:px-0 py-6">
-    <div class="bg-bg border border-border shadow rounded-ui p-6 sm:p-8 flex flex-col w-full max-w-md">
+    <div class="bg-background border border-border shadow rounded-ui p-6 sm:p-8 flex flex-col w-full max-w-md">
         <!-- Logo -->
         <div class="text-center mb-8">
             <div class="size-12 bg-primary text-white text-xl rounded-ui flex items-center justify-center mx-auto mb-4">
                 <span class="iconify ph--speedometer"></span>
             </div>
-            <h2 class="text-2xl font-semibold text-fg-title">Welcome back</h2>
-            <p class="text-fg-muted mt-1">Sign in to your account</p>
+            <h2 class="text-2xl font-semibold text-title-foreground ">Welcome back</h2>
+            <p class="text-muted-foreground mt-1">Sign in to your account</p>
         </div>
 
 
@@ -17,9 +17,9 @@
                 <x-ui.input.group>
                     <x-ui.input id="login-password" variant="unstyled" type="email" placeholder="Your email here"
                         class="pe-11 px-3" />
-                    <x-ui.input.trailing absolute class="text-fg" clickable>
+                    <x-ui.input.trailing absolute class="text-foreground" clickable>
                         <button type="button" class="flex items-center cursor-pointer">
-                            <span class="iconify ph--eye text-fg-muted/80"></span>
+                            <span class="iconify ph--eye text-muted-foreground/80"></span>
                         </button>
                     </x-ui.input.trailing>
                 </x-ui.input.group>
@@ -35,8 +35,8 @@
             </x-ui.button>
         </form>
 
-        <x-ui.divider label-placement="middle" label="Or continue with" class="before:bg-bg-muted my-6"
-            label-class="px-3 bg-bg text-fg relative text-sm" />
+        <x-ui.divider label-placement="middle" label="Or continue with" class="before:bg-muted my-6"
+            label-class="px-3 bg-background text-foreground relative text-sm" />
 
         <!-- Social Login -->
         <div class="grid grid-cols-2 gap-3">
@@ -72,7 +72,7 @@
 
         <!-- Sign Up Link -->
         <div class="text-center mt-6">
-            <p class="text-sm text-fg-muted">
+            <p class="text-sm text-muted-foreground">
                 Don't have an account?
                 <x-ui.link href="#" class="font-medium text-primary ml-1">Sign up</x-ui.link>
             </p>

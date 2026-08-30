@@ -29,7 +29,7 @@ return [
     --bg: var(--color-gray-950);
     --bg-subtle: var(--color-gray-900);
     --bg-surface: --alpha(var(--color-gray-900)/70%);
-    --bg-muted: var(--color-gray-800);
+    --muted: var(--color-gray-800);
     --bg-surface-elevated: var(--color-gray-700);
 
     
@@ -40,8 +40,8 @@ return [
     --checkbox-checked-color: var(--color-primary);
 
 
-    --progressbar: var(--bg-muted);
-    --bg-range:var(--bg-muted);
+    --progressbar: var(--muted);
+    --bg-range:var(--muted);
 
     --card: var(--bg);
     --card-gray: var(--bg-subtle);

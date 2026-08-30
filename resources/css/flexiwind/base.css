@@ -34,4 +34,3 @@
 
 @custom-variant orientation-horizontal (&[data-orientation=horizontal]);
 @custom-variant orientation-vertical (&[data-orientation=vertical]);
-

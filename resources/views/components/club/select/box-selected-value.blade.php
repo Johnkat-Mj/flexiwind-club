@@ -6,7 +6,7 @@
     {{ $attributes->class(['flex-1 text-start sm:text-sm/6']) }}>
     {{ $slot }}
     @if ($placeholder)
-        <span data-placeholder class="text-fg-muted">
+        <span data-placeholder class="text-muted-foreground">
             {{ $placeholder }}
         </span>
     @endif

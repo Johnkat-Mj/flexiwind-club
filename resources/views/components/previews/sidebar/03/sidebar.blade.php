@@ -34,13 +34,13 @@
     ];
 @endphp
 <x-ui.sidebar-wrapper
-    class="fixed lg:static h-dvh overflow-hidden w-11/12 max-w-70 md:w-70 transition-all -translate-x-full fx-open:translate-x-0 lg:translate-x-0 bg-bg lg:bg-transparent border-r border-bg-muted/70 lg:border-transparent flex flex-col justify-between lg:transition-none ease-linear z-50 lg:z-auto">
+    class="fixed lg:static h-dvh overflow-hidden w-11/12 max-w-70 md:w-70 transition-all -translate-x-full fx-open:translate-x-0 lg:translate-x-0 bg-background lg:bg-transparent border-r border-muted/70 lg:border-transparent flex flex-col justify-between lg:transition-none ease-linear z-50 lg:z-auto">
     <nav class="size-full flex flex-col">
         <div class="px-5 h-16 flex items-center py-2">
             <div class="h-16 w-full py-2 flex items-center border-b border-border-input">
                 <a href="./" class="flex w-full items-center gap-3">
                     <div
-                        class="rounded-sm size-8 d-flex-place-center bg-linear-to-tr from-fg-title to-fg text-bg">
+                        class="rounded-sm size-8 d-flex-place-center bg-linear-to-tr from-title-foreground to-foreground text-background">
                         <svg class="size-5" width="553" height="553" viewBox="0 0 553 553"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -56,29 +56,29 @@
                         </svg>
                     </div>
                     <div class="flex flex-col -space-y-0.5">
-                        <span class="font-semibold text-sm text-fg-title">UnoLead</span>
-                        <span class="text-xs text-fg-muted">v0.4</span>
+                        <span class="font-semibold text-sm text-title-foreground ">UnoLead</span>
+                        <span class="text-xs text-muted-foreground">v0.4</span>
                     </div>
                 </a>
             </div>
         </div>
         <div class="px-5 flex flex-col flex-1 overflow-hidden overflow-y-auto py-2 font-normal">
-            <span class="flex mt-2 mb-2 text-sm text-fg-muted">
+            <span class="flex mt-2 mb-2 text-sm text-muted-foreground">
                 Main Menu
             </span>
-            <ul class="flex flex-col gap-0.5 font-light text-sm md:text-base text-fg-muted">
+            <ul class="flex flex-col gap-0.5 font-light text-sm md:text-base text-muted-foreground">
                 @foreach ($sidebarItems as $item)
                     <x-previews.sidebar.03.sidebar-item :is-active="$item['isActive']??false" :href="$item['href']" :icon="$item['icon']" :text="$item['text']"/>
                 @endforeach
             </ul>
 
-            <span class="flex mt-8 mb-4 text-sm text-fg-muted">
+            <span class="flex mt-8 mb-4 text-sm text-muted-foreground">
                 Topics
             </span>
-            <ul class="flex flex-col gap-2 font-light text-sm md:text-base text-fg-muted">
+            <ul class="flex flex-col gap-2 font-light text-sm md:text-base text-muted-foreground">
                 <li>
                     <a href="#"
-                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70">
+                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70">
                         <span class="size-4.5 text-xs d-flex-place-center rounded-md text-white bg-primary">
                             #
                         </span>
@@ -87,7 +87,7 @@
                 </li>
                 <li>
                     <a href="#"
-                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70">
+                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70">
                         <span
                             class="size-4.5 text-xs d-flex-place-center rounded-md bg-orange-600 dark:bg-orange-500 text-white">
                             #
@@ -97,8 +97,8 @@
                 </li>
                 <li>
                     <a href="#"
-                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70">
-                        <span class="size-4.5 text-xs d-flex-place-center rounded-md text-bg bg-fg-title">
+                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70">
+                        <span class="size-4.5 text-xs d-flex-place-center rounded-md text-bg bg-title-foreground">
                             #
                         </span>
                         Sky Show
@@ -106,7 +106,7 @@
                 </li>
                 <li>
                     <a href="#"
-                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-fg-muted fx-active:text-fg-title fx-active:bg-bg-muted/70">
+                        class="h-6 px-2.5 flex items-center gap-x-2.5 text-sm text-muted-foreground fx-active:text-title-foreground  fx-active:bg-muted/70">
                         <span class="size-4.5 text-xs d-flex-place-center rounded-md text-white bg-success">
                             #
                         </span>
@@ -125,10 +125,10 @@
                     </div>
                     <div class="flex flex-1 justify-between items-center overflow-hidden">
                         <div class="flex flex-col -space-y-0.5 text-left flex-1">
-                            <span class="font-medium text-sm text-fg-title line-clamp-1">
+                            <span class="font-medium text-sm text-title-foreground  line-clamp-1">
                                 Johnkat MJ
                             </span>
-                            <span class="text-xs text-fg-muted line-clamp-1">
+                            <span class="text-xs text-muted-foreground line-clamp-1">
                                 johnkatmj@gmail.com
                             </span>
                         </div>
@@ -142,8 +142,8 @@
                         <img class="size-8 rounded-md object-cover" src="/avatar1.webp" width="200" height="200"
                             alt="Avatar User" />
                         <div class="flex items-start flex-col flex-1">
-                            <h4 class="font-semibold text-fg-title text-sm">Johnkat MJ</h4>
-                            <span class="text-xs text-fg-muted">johnkatmj@gmail.com</span>
+                            <h4 class="font-semibold text-title-foreground  text-sm">Johnkat MJ</h4>
+                            <span class="text-xs text-muted-foreground">johnkatmj@gmail.com</span>
                         </div>
                     </x-ui.dropdown.header>
                     <x-ui.dropdown.separator class="border-border" />

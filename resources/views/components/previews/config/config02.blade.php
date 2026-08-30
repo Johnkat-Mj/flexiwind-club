@@ -1,6 +1,6 @@
 <div class="max-w-xl w-full p-4 mx-auto">
-    <div class="bg-bg rounded-lg shadow border border-border-strong/70 p-6">
-        <h3 class="text-lg font-semibold text-fg-title mb-6">
+    <div class="bg-background rounded-lg shadow border border-border-strong/70 p-6">
+        <h3 class="text-lg font-semibold text-title-foreground  mb-6">
             Project Settings
         </h3>
         <form class="space-y-6">
@@ -30,7 +30,7 @@
 
             <!-- Priority -->
             <div>
-                <x-ui.label class="block text-sm font-medium text-fg mb-3">Priority Level</x-ui.label>
+                <x-ui.label class="block text-sm font-medium text-foreground mb-3">Priority Level</x-ui.label>
                 <div class="grid grid-cols-3 gap-3">
 
                     <label
@@ -57,24 +57,24 @@
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <div>
-                        <x-ui.label for="is_public" class="text-sm font-medium text-fg">Public Project</x-ui.label>
+                        <x-ui.label for="is_public" class="text-sm font-medium text-foreground">Public Project</x-ui.label>
                         <p class="text-sm text-gray-500">
                             Allow others to view this project
                         </p>
                     </div>
-                    <x-ui.switch name="is_public" id="is_public" class="text-primary [--knob-bg:var(--color-white)] bg-bg-muted/80" />
+                    <x-ui.switch name="is_public" id="is_public" class="text-primary [--knob-bg:var(--color-white)] bg-muted/80" />
                 </div>
 
                 <div class="flex items-center justify-between">
                     <div>
-                        <x-ui.label for="email_notif" class="text-sm font-medium text-fg">Email
+                        <x-ui.label for="email_notif" class="text-sm font-medium text-foreground">Email
                             Notifications</x-ui.label>
                         <p class="text-sm text-gray-500">
                             Receive updates about this project
                         </p>
                     </div>
                     <x-ui.switch name="email_notif" id="email_notif"
-                        class="text-primary [--knob-bg:var(--color-white)] bg-bg-muted/80" />
+                        class="text-primary [--knob-bg:var(--color-white)] bg-muted/80" />
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 <div>
     <div class="grid grid-cols-[auto_minmax(0,1fr)] gap-4 overflow-hidden">
-        <div class="grid text-sm text-fg-muted mt-14 pl-3 sm:pl-0">
+        <div class="grid text-sm text-muted-foreground mt-14 pl-3 sm:pl-0">
             <div>Primary</div>
             <div>Secondry</div>
             <div>Accent</div>
@@ -14,7 +14,7 @@
         </div>
         <div class="grid overflow-hidden">
             <div data-invisible-scrollbar class="grid overflow-x-auto">
-                <div class="grid grid-cols-4 gap-4 px-4 text-sm text-fg-muted pb-3">
+                <div class="grid grid-cols-4 gap-4 px-4 text-sm text-muted-foreground pb-3">
                     <div>Solid</div>
                     <div>Outline</div>
                     <div>Soft</div>
@@ -76,7 +76,7 @@
                         <x-ui.button size="sm" variant="ghost" intent="neutral">Click Me</x-ui.button>
                     </div>
                     <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="white" class="border border-border text-fg-title">Click
+                        <x-ui.button size="sm" intent="white" class="border border-border text-title-foreground ">Click
                             Me</x-ui.button>
 
                     </div>

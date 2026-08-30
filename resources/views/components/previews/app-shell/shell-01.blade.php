@@ -5,10 +5,10 @@
         <div class="flex-1 overflow-y-auto p-8">
             <div class="lg:max-w-346 mx-auto animate-fade-in" id="main-content-area">
                 <div class="mb-8">
-                    <h1 class="text-xl font-semibold tracking-tight text-fg-title">
+                    <h1 class="text-xl font-semibold tracking-tight text-title-foreground ">
                         Dashboard
                     </h1>
-                    <p class="text-sm text-fg-muted mt-1">
+                    <p class="text-sm text-muted-foreground mt-1">
                         Real-time overview of system performance.
                     </p>
                 </div>

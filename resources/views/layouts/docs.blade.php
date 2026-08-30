@@ -5,7 +5,7 @@
     $seo = $docsLayoutData['seo'] ?? \App\Support\DocsLayoutData::build(SidebarPaginator::getCurrent($path));
 @endphp
 
-<x-layouts.base body-class="bg-bg lg:bg-gray-50/50 dark:lg:bg-bg " :seo="$seo">
+<x-layouts.base body-class="bg-background lg:bg-gray-50/50 dark:lg:bg-background " :seo="$seo">
     <x-slot name="head">
         @vite(['resources/css/code-theme.css', 'resources/css/docs.css', 'resources/js/docs.js','resources/js/club.js'])
     </x-slot>

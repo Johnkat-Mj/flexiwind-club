@@ -6,7 +6,7 @@
     <title>Sidebar 02</title>
   </head>
 
-  <body class="bg-bg overflow-hidden lg:overflow-y-auto overflow-y-auto">
+  <body class="bg-background overflow-hidden lg:overflow-y-auto overflow-y-auto">
     <div
       data-sidebar-overlay
       aria-hidden="true"
@@ -14,7 +14,7 @@
     ></div>
     <aside
       data-app-sidebar
-      class="fixed h-dvh overflow-hidden w-11/12 max-w-72 lg:w-72 transition-[transform,opacity,visibility] -translate-x-full fx-open:translate-x-0 opacity-0 fx-open:opacity-100 lg:opacity-100 lg:-translate-x-0 invisible fx-open:visible lg:visible scale-[.96] fx-open:scale-100 origin-left lg:scale-100 rounded-r-2xl bg-bg shadow-lg shadow-gray-200/40 dark:shadow-transparent flex flex-col justify-between px-4 lg:transition-[width] ease-linear border-r border-border-strong/70 z-80 lg:fx-resized:w-20"
+      class="fixed h-dvh overflow-hidden w-11/12 max-w-72 lg:w-72 transition-[transform,opacity,visibility] -translate-x-full fx-open:translate-x-0 opacity-0 fx-open:opacity-100 lg:opacity-100 lg:-translate-x-0 invisible fx-open:visible lg:visible scale-[.96] fx-open:scale-100 origin-left lg:scale-100 rounded-r-2xl bg-background shadow-lg shadow-gray-200/40 dark:shadow-transparent flex flex-col justify-between px-4 lg:transition-[width] ease-linear border-r border-border-strong/70 z-80 lg:fx-resized:w-20"
     >
       <div class="min-h-max py-4 border-b border-border-strong/70">
         <a
@@ -29,12 +29,12 @@
         </a>
       </div>
       <nav class="h-full pt-10">
-        <ul class="space-y-1.5 text-fg-muted">
+        <ul class="space-y-1.5 text-muted-foreground">
           <li>
             <a
               href="#"
               data-state="active"
-              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-bg-surface fx-active:bg-bg-muted/70 fx-active:text-fg-title rounded-md"
+              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-surface fx-active:bg-muted/70 fx-active:text-title-foreground  rounded-md"
             >
               <div class="min-w-max flex">
                 <span class="flex iconify ph--stack"></span>
@@ -50,7 +50,7 @@
             <a
               href="#"
               data-state="inactive"
-              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-bg-surface fx-active:bg-bg-muted/70 fx-active:text-fg-title rounded-md"
+              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-surface fx-active:bg-muted/70 fx-active:text-title-foreground  rounded-md"
             >
               <div class="min-w-max flex">
                 <span class="flex iconify ph--sticker"></span>
@@ -66,7 +66,7 @@
             <a
               href="#"
               data-state="inactive"
-              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-bg-surface fx-active:bg-bg-muted/70 fx-active:text-fg-title rounded-md"
+              class="flex items-center gap-x-4 px-3 py-2.5 hover:bg-surface fx-active:bg-muted/70 fx-active:text-title-foreground  rounded-md"
             >
               <div class="min-w-max flex">
                 <span class="flex iconify ph--calendar-dots"></span>
@@ -91,7 +91,7 @@
     </aside>
 
     <main class="lg:pl-72">
-      <header class="w-full flex h-16 bg-bg sticky top-0 z-40">
+      <header class="w-full flex h-16 bg-background sticky top-0 z-40">
         <div
           class="flex items-center justify-between w-full h-full px-4 sm:px-8"
         >
@@ -104,13 +104,13 @@
                 class="outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
               >
                 <span
-                  class="w-6 h-0.5 rounded-full bg-fg-muted transition-transform duration-300 ease-linear in-[[aria-expanded=true]]:translate-y-1.5 in-[[aria-expanded=true]]:rotate-40"
+                  class="w-6 h-0.5 rounded-full bg-muted-foreground transition-transform duration-300 ease-linear in-[[aria-expanded=true]]:translate-y-1.5 in-[[aria-expanded=true]]:rotate-40"
                 ></span>
                 <span
-                  class="w-6 origin-center mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-[[aria-expanded=true]]:opacity-0 in-[[aria-expanded=true]]:scale-x-0"
+                  class="w-6 origin-center mt-1 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear in-[[aria-expanded=true]]:opacity-0 in-[[aria-expanded=true]]:scale-x-0"
                 ></span>
                 <span
-                  class="w-6 mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear in-[[aria-expanded=true]]:-translate-y-1.5 in-[[aria-expanded=true]]:-rotate-40"
+                  class="w-6 mt-1 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear in-[[aria-expanded=true]]:-translate-y-1.5 in-[[aria-expanded=true]]:-rotate-40"
                 ></span>
               </button>
             </div>

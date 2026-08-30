@@ -21,8 +21,8 @@
         'ui-form-input-md' => $size === 'md',
         'ui-form-input-lg' => $size === 'lg',
         'rounded-ui' => $radius,
-        'border border-border-input hover:border-fg-muted/30' => $border,
+        'border border-border-input hover:border-muted-foreground/30' => $border,
     ]) }}>
     {{ $slot }}
-    <span data-slot="chevron" class="min-w-4 flex -mr-1 size-4 text-fg-muted  iconify ph--caret-up-down"></span>
+    <span data-slot="chevron" class="min-w-4 flex -mr-1 size-4 text-muted-foreground  iconify ph--caret-up-down"></span>
 </button>

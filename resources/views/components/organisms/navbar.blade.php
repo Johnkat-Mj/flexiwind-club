@@ -1,7 +1,7 @@
 <div data-nav-overlay data-navbar-id="mainNavbar"
     class="fixed bg-gray-800/40 inset-0 z-30 hidden fx-open:flex lg:hidden lg:fx-open:invisible lg:pointer-events-none">
 </div>
-<header class="h-15 flex items-center w-full z-45 relative bg-bg border-b border-border-strong/70 border-dashed">
+<header class="h-15 flex items-center w-full z-45 relative bg-background border-b border-border-strong/70 border-dashed">
     <nav
         class="sm:mx-auto w-full flex justify-between lg:max-w-336 xl:max-w-352 px-4 sm:px-6 xl:px-8">
         <div class="flex items-center gap-2 pr-3">
@@ -9,11 +9,11 @@
                 <button data-nav-trigger data-toggle-nav="mainNavbar"
                     class="flex py-2 flex-col relative justify-center items-center group" aria-label="Toggle navbar">
                     <span id="line-1"
-                        class="w-6 h-0.5 rounded-full bg-fg-muted transition-transform duration-300 ease-linear group-aria-expanded:translate-y-1.5 group-aria-expanded:rotate-40"></span>
+                        class="w-6 h-0.5 rounded-full bg-muted-foreground transition-transform duration-300 ease-linear group-aria-expanded:translate-y-1.5 group-aria-expanded:rotate-40"></span>
                     <span id="line-2"
-                        class="w-6 origin-center  mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear group-aria-expanded:scale-x-0 group-aria-expanded:opacity-0"></span>
+                        class="w-6 origin-center  mt-1 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear group-aria-expanded:scale-x-0 group-aria-expanded:opacity-0"></span>
                     <span id="line-3"
-                        class="w-6 mt-1 h-0.5 rounded-full bg-fg-muted transition-all duration-300 ease-linear group-aria-expanded:-translate-y-1.5 group-aria-expanded:-rotate-40"></span>
+                        class="w-6 mt-1 h-0.5 rounded-full bg-muted-foreground transition-all duration-300 ease-linear group-aria-expanded:-translate-y-1.5 group-aria-expanded:-rotate-40"></span>
                 </button>
             </div>
             <a href="/" class="hidden min-[20rem]:flex gap-2 items-center relative">
@@ -28,16 +28,16 @@
             <x-molecules.nav-items />
         </div>
 
-        <div class="flex items-center gap-1.5 w-max">
-            <x-ui.modal.trigger modal-id="search-modal" size="sm" iconOnly variant="flexi" intent="white">
+        <div class="flex items-center gap-1.5 w-max pl-2">
+            <x-ui.modal.trigger modal-id="search-modal" size="sm" iconOnly variant="ghost" intent="gray" class="border border-input" >
                 <span class="iconify ph--magnifying-glass text-sm"></span>
             </x-ui.modal.trigger>
-            <x-ui.button href="https://github.com/unoforge/flexiwind" variant="flexi" intent="white" size="sm"
+            <x-ui.button href="https://github.com/unoforge/flexiwind" variant="ghost" intent="gray" class="border border-input" size="sm"
                 iconOnly>
                 <span class="iconify ph--github-logo"></span>
             </x-ui.button>
-            <x-ui.button variant="flexi" intent="white" size="sm" iconOnly radius="none"
-                x-on:click="$store.theme.toggle()" aria-label="toggle theme" class="relative">
+            <x-ui.button variant="ghost" size="sm" iconOnly radius="none"
+                x-on:click="$store.theme.toggle()" aria-label="toggle theme" class="relative border border-input">
                 <span
                     class="absolute top-1/2 -translate-1/2 left-1/2 ease-linear duration-200 iconify ph--sun invisible dark:visible"></span>
                 <span

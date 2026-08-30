@@ -3,7 +3,7 @@
     <span class="size-9 d-flex-place-center rounded-ui flex ui-soft ui-soft-gray">
         <x-ui.icon name="{{ $icon }}"  />
     </span>
-    <h3 class="flex font-semibold text-lg text-fg-title capitalize mt-4">
+    <h3 class="flex font-semibold text-lg text-title-foreground  capitalize mt-4">
         {{ $title }}
     </h3>
     <x-ui.text intent="body" class="mt-2 text-sm">

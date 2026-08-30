@@ -2,7 +2,7 @@
     <x-club.select.trigger select-id="select-demo-multiple">
         <x-club.select.placeholder class="text-sm text-start">Select a user</x-club.select.placeholder>
     </x-club.select.trigger>
-    <x-club.select.box-selected-value select-id="select-demo-multiple" class="text-fg text-sm" />
+    <x-club.select.box-selected-value select-id="select-demo-multiple" class="text-foreground text-sm" />
 </div>
 
 <x-club.select id="select-demo-multiple" multiple>
@@ -24,7 +24,7 @@
         </x-club.select.item>
     </x-club.select.list-box>
     <x-club.select.template-empty>
-        <div class="px-3 py-2 text-sm text-fg-muted">
+        <div class="px-3 py-2 text-sm text-muted-foreground">
             No data found for "<x-club.select.empty-string />"
         </div>
     </x-club.select.template-empty>

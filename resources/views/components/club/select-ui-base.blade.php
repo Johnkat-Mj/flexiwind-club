@@ -4,7 +4,7 @@
         'ui-popper  group/popover ',
         '[--dropdown-padding:--spacing(1)] [--dropdown-radius:var(--radius-ui)]',
         'p-(--dropdown-padding) rounded-(--dropdown-radius)',
-        'border border-fg/10 bg-bg text-fg-muted shadow-xs',
+        'border border-foreground/10 bg-background text-muted-foreground shadow-xs',
         'outline-hidden transition-all transform ',
         'sm:text-sm',
         'z-70',

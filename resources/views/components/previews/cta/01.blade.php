@@ -1,11 +1,11 @@
 <section class="py-32 relative">
-    <div style="--unify-radial-bg:var(--color-bg);"
+    <div style="--unify-radial-bg:var(--color-background);"
         class="absolute inset-0 h-full w-full text-primary
         ui-radial-gradient">
     </div>
     <div class="relative px-5 sm:px-10 md:px-12 lg:px-5 lg:max-w-7xl mx-auto w-full flex flex-col space-y-16">
         <div class="text-center">
-            <h2 class="font-semibold text-fg-title text-4xl lg-text-5xl mx-auto max-w-3xl">
+            <h2 class="font-semibold text-title-foreground  text-4xl lg-text-5xl mx-auto max-w-3xl">
                 Ready to Elevate Your Brand?
             </h2>
             <x-ui.text intent="body" class="mt-5 mx-auto max-w-md">

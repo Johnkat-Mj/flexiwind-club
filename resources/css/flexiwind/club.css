@@ -1,6 +1,6 @@
 @utility ui-input-select-trigger-base {
-  /* focus:enabled:hover:border-primary/80 enabled:hover:border-fg-muted/30 */
-  @apply relative focus:hover:border-primary/80 hover:border-fg-muted/30 flex w-full min-w-0 items-center;
+  /* focus:enabled:hover:border-primary/80 enabled:hover:border-muted-foreground/30 */
+  @apply relative focus:hover:border-primary/80 hover:border-muted-foreground/30 flex w-full min-w-0 items-center;
 }
 
 @utility ui-form-select-trigger {
@@ -20,7 +20,7 @@
 }
 
 @utility ui-form-select-trigger-access {
-  @apply in-disabled:bg-bg-muted in-disabled:opacity-50 forced-colors:in-disabled:border-[GrayText] forced-colors:in-disabled:text-[GrayText];
+  @apply in-disabled:bg-muted in-disabled:opacity-50 forced-colors:in-disabled:border-[GrayText] forced-colors:in-disabled:text-[GrayText];
 }
 
 @utility ui-form-select-trigger-ring {

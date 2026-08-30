@@ -1,8 +1,8 @@
 <div class="max-w-2xl px-4 mx-auto">
     <x-ui.card size="none" class="p-6 sm:p-8 rounded-ui">
         <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-fg-title">Get in Touch</h2>
-            <p class="text-fg-muted mt-2">
+            <h2 class="text-2xl font-semibold text-title-foreground ">Get in Touch</h2>
+            <p class="text-muted-foreground mt-2">
                 We'd love to hear from you. Send us a message and we'll respond as
                 soon as possible.
             </p>
@@ -25,7 +25,7 @@
 
             <div class="flex items-center col-span-full">
                 <x-ui.checkbox id="agree" class="mr-3" required />
-                <x-ui.label for="agree" class="text-sm text-fg">I agree to the
+                <x-ui.label for="agree" class="text-sm text-foreground">I agree to the
                     <x-ui.link href="#" class="text-primary hover:underline">Terms of Service</x-ui.link>
                     and
                     <x-ui.link href="#" class="text-primary hover:underline">Privacy

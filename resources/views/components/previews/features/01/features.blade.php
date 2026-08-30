@@ -4,7 +4,7 @@
             Features
         </x-ui.badge>
         <h1
-            class="mt-5 text-3xl md:text-4xl xl:text-5xl mx-auto text-center md:max-w-2xl text-fg-title font-semibold leading-tight">
+            class="mt-5 text-3xl md:text-4xl xl:text-5xl mx-auto text-center md:max-w-2xl text-title-foreground  font-semibold leading-tight">
             Keep your business on growing
         </h1>
         <x-ui.text class="max-w-lg mt-6 text-center mx-auto">
@@ -21,7 +21,7 @@
             <div
                 class="flex order-3 md:col-span-2 lg:order-2">
                 <div
-                    class="flex-1 flex relative bg-linear-to-tr from-bg-muted to-bg-surface rounded-ui aspect-[4/2.4] overflow-hidden ring ring-border">
+                    class="flex-1 flex relative bg-linear-to-tr from-muted to-bg-surface rounded-ui aspect-[4/2.4] overflow-hidden ring ring-border">
                     <img src="/images/dash-dark.webp" alt="illustration dark" width="1800" class="absolute w-auto  h-full left-5 top-4 hidden dark:block rounded-tl-ui">
                     <img src="/images/dash-light.webp" alt="illustration light" width="1800" class="absolute w-auto h-full left-5 top-4 dark:hidden rounded-ui">
                 </div>

@@ -14,13 +14,13 @@
          <div class="flex items-center max-w-sm max-md:flex-1">
              <x-ui.input.group>
                  <x-ui.input variant="unstyled" type="email" placeholder="Start typing to search..." class="ps-9 px-3" />
-                 <x-ui.input.leading absolute class="text-fg text-sm">
-                     <span class="flex size-4 iconify ph--magnifying-glass text-fg-muted/70"></span>
+                 <x-ui.input.leading absolute class="text-foreground text-sm">
+                     <span class="flex size-4 iconify ph--magnifying-glass text-muted-foreground/70"></span>
                  </x-ui.input.leading>
              </x-ui.input.group>
          </div>
          <div class="flex items-center">
-             <x-ui.dropdown.trigger class="rounded-ui size-max bg-bg-muted" dropdownId="userProfile">
+             <x-ui.dropdown.trigger class="rounded-ui size-max bg-muted" dropdownId="userProfile">
                  <x-ui.avatar size="sm" radius="ui" src="/avatar1.webp" height="200" width="200" alt="User avatar" />
              </x-ui.dropdown.trigger>
              <x-ui.dropdown placement="bottom-end" class="w-54" id="userProfile">
@@ -30,8 +30,8 @@
                      </x-ui.avatar-placeholder>
 
                      <div class="flex items-start flex-col">
-                         <h4 class="font-semibold text-fg-title text-sm">Tresor Kasenda</h4>
-                         <span class="text-xs text-fg-muted">Web Developer</span>
+                         <h4 class="font-semibold text-title-foreground  text-sm">Tresor Kasenda</h4>
+                         <span class="text-xs text-muted-foreground">Web Developer</span>
                      </div>
                  </x-ui.dropdown.header>
                  <x-ui.dropdown.separator class="border-border" />

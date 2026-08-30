@@ -102,7 +102,7 @@ new class extends Component {
 
     <x-ui.slideover.body>
         <div class="mb-4">
-            <span class="text-fg-title font-medium text-sm mb-3 block">
+            <span class="text-title-foreground  font-medium text-sm mb-3 block">
                 Groups
             </span>
             <div class="flex flex-wrap gap-2">
@@ -111,8 +111,8 @@ new class extends Component {
                         wire:key="group-{{ $group['id'] }}-{{ $selectedGroup }}-{{ $search }}"
                         data-state="{{ $selectedGroup === $group['id'] ? 'active' : 'inactive' }}"
                         class="h-7 text-sm px-2 flex items-center rounded-ui transition-colors duration-200 ring ring-border-strong/60
-                    fx-active:bg-bg-muted/50 fx-active:border-border-strong/70 fx-active:text-fg-title fx-active:shadow-md fx-active:shadow-black/5
-                    text-fg-muted hover:bg-bg-muted/70 hover:text-fg-subtitle
+                    fx-active:bg-muted/50 fx-active:border-border-strong/70 fx-active:text-title-foreground  fx-active:shadow-md fx-active:shadow-black/5
+                    text-muted-foreground hover:bg-muted/70 hover:text-subtitle
                     ">
                         <span class="iconify size-3 {{ $group['icon'] }} mr-1.5"></span>
                         <span class="text-sm font-medium">{{ $group['text'] }}</span>
@@ -137,11 +137,11 @@ new class extends Component {
                     $totalBlocks = collect($configGroup)->sum(fn($cat) => count($cat['blocks'] ?? []));
                 @endphp
                 <div class="flex flex-col">
-                    <x-ui.collapse.trigger :target="$groupKey" class="flex items-center gap-2 justify-between text-fg-title">
+                    <x-ui.collapse.trigger :target="$groupKey" class="flex items-center gap-2 justify-between text-title-foreground ">
                         <span class="font-medium text-sm flex-1 text-left">
                             {{ $groupNames[$groupKey] ?? ucfirst($groupKey) }}
                         </span>
-                        <span class="text-xs text-fg bg-bg-surface ring ring-border px-2.5 py-px rounded">
+                        <span class="text-xs text-foreground bg-surface ring ring-border px-2.5 py-px rounded">
                             {{ $totalBlocks }}
                         </span>
                     </x-ui.collapse.trigger>
@@ -149,9 +149,9 @@ new class extends Component {
                         @foreach ($categoriesList as $category)
                             <a href="{{ route('blocks.show', [$category['group'], $category['id']]) }}" wire:navigate
                                 aria-label="Link to blocks : {{ $category['name'] }}"
-                                class="hover:bg-bg-surface p-px rounded-ui group ease-linear duration-200">
+                                class="hover:bg-surface p-px rounded-ui group ease-linear duration-200">
                                 <div
-                                    class="aspect-standard-tv bg-bg-muted/30 rounded-ui pointer-events-none relative overflow-hidden">
+                                    class="aspect-standard-tv bg-muted/30 rounded-ui pointer-events-none relative overflow-hidden">
                                     @if (isset($category['illustrations']['light']))
                                         <img src="{{ $category['illustrations']['light'] }}"
                                             alt="Illustration light {{ $category['name'] }}" width="1455"
@@ -163,12 +163,12 @@ new class extends Component {
                                             height="1091" class="size-full object-cover not-dark:hidden">
                                     @endif
                                     <span
-                                        class="text-xs absolute top-2 right-1.5 px-2 py-0.5 rounded bg-bg-muted/50 text-fg backdrop-blur-sm ring ring-border">
+                                        class="text-xs absolute top-2 right-1.5 px-2 py-0.5 rounded bg-muted/50 text-foreground backdrop-blur-sm ring ring-border">
                                         {{ $category['count'] }} blocks
                                     </span>
                                 </div>
                                 <div class="mt-0.5 pb-2 px-1">
-                                    <h3 class="font-medium text-fg-title text-sm">
+                                    <h3 class="font-medium text-title-foreground  text-sm">
                                         {{ $category['name'] }}
                                     </h3>
                                 </div>
@@ -177,7 +177,7 @@ new class extends Component {
                     </x-ui.collapse>
                 </div>
             @empty
-                <p class="text-fg-muted text-sm px-3">No categories available.</p>
+                <p class="text-muted-foreground text-sm px-3">No categories available.</p>
             @endforelse
         </div>
     </x-ui.slideover.body>

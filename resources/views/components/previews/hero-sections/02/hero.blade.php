@@ -6,14 +6,14 @@
             <div
                 class="min-h-max relative mx-auto pt-32 lg:pt-40 px-5 sm:px-10 md:px-12 lg:px-5 lg:max-w-7xl w-full text-center space-y-10">
                 <a href="#"
-                    class="flex items-center gap-x-2 mx-auto w-max px-2 pr-1 py-1 rounded-ui bg-bg-surface border border-border-strong/40 text-sm text-fg">
+                    class="flex items-center gap-x-2 mx-auto w-max px-2 pr-1 py-1 rounded-ui bg-surface border border-border-strong/40 text-sm text-foreground">
                     Business Operations Made Simple
                     <span class="pr-1">
                         <span class="iconify ph--arrow-right size-3 flex"></span>
                     </span>
                 </a>
                 <h1
-                    class="mx-auto max-w-3xl font-semibold text-fg-title text-3xl/tight sm:text-4xl md:text-5xl/tight text-balance">
+                    class="mx-auto max-w-3xl font-semibold text-title-foreground  text-3xl/tight sm:text-4xl md:text-5xl/tight text-balance">
                     All your business operations in one intuitive dashboard
                 </h1>
                 <x-ui.text class="mx-auto max-w-xl">

@@ -24,7 +24,7 @@
 
 @if ($noInTabs)
     <div
-        class="grid w-full gap-1 p-4 md:p-10 bg-bg border border-border-input rounded-ui my-5 first:mt-0">
+        class="grid w-full gap-1 p-4 md:p-10 bg-background border border-border-input rounded-ui my-5 first:mt-0">
         <div data-gen-ignore
             class="flex justify-center min-h-max">
             @if ($isLivewire)
@@ -42,13 +42,13 @@
         ['text' => 'Preview', 'icon' => 'ph--eye s', 'value' => 'Preview'],
         ['text' => 'Code', 'icon' => 'ph--code', 'value' => 'Code'],
     ]"
-        triggersClass="relative flex gap-1 items-center disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
-        tabListContainer="w-full flex justify-between items-center gap-2 h-max pb-0.5 pt-px px-3.5 relative" tabList="flex items-center gap-0.5 text-sm text-fg-muted"
+        triggersClass="relative flex gap-1 items-center disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-title-foreground  outline-none focus:outline-0 focus:outline-transparent focus-visible:outline focus-visible:outline-primary px-2.5 py-1 rounded-ui fx-active:bg-white fx-active:dark:bg-gray-800 ring-1 ring-transparent fx-active:ring-gray-200 fx-active:dark:ring-gray-700/60 fx-active:shadow"
+        tabListContainer="w-full flex justify-between items-center gap-2 h-max pb-0.5 pt-px px-3.5 relative" tabList="flex items-center gap-0.5 text-sm text-muted-foreground"
         docPanelClass="pt-2.5"
         iconClass="opacity-80 size-3"
         >
         <x-docs.tab-panel value="Preview"
-            class="bg-bg border border-border-input rounded-ui items-center justify-center min-h-60 lg:min-h-80"
+            class="bg-background border border-border-input rounded-ui items-center justify-center min-h-60 lg:min-h-80"
             active>
             <div data-gen-ignore
                 class="size-full flex items-center justify-center p-4 md:p-10">

@@ -7,7 +7,7 @@
         class="relative mx-auto lg:max-w-7xl w-full flex gap-x-5 px-5 sm:px-10 md:px-12 lg:px-5 justify-between items-center">
         <div class="flex items-center min-w-max relative">
             <a href="#" class="font-semibold flex items-center gap-x-2">
-                <svg class="size-6.5 text-fg-title" width="553" height="553" viewBox="0 0 553 553" fill="none"
+                <svg class="size-6.5 text-title-foreground " width="553" height="553" viewBox="0 0 553 553" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M481.749 50.0439C505.676 39.5719 533 57.2231 533 85.3984V138.658C533 159.197 516.518 178.892 492.788 185.605C462.86 194.072 425.008 209.43 397.361 237.488C357.828 277.611 333.78 330.507 309.238 374.237C283.916 419.359 257.031 457.516 211.177 479.877C166.76 501.537 107.535 515.512 61.9404 523.736C40.2339 527.652 20 510.74 20 486.759V449.633C20.0001 428.679 36.1714 411.275 57.0693 409.74L79.0049 408.129C84.3302 407.738 89.5933 406.739 94.6914 405.151L137.944 391.681C143.756 389.871 149.306 387.31 154.455 384.064L159.405 380.943C176.822 369.966 191.117 354.696 200.921 336.605L201.384 335.742L207.755 323.755L208.043 323.212L208.298 322.652L208.301 322.645C208.304 322.637 208.31 322.625 208.317 322.608C208.333 322.574 208.358 322.521 208.392 322.448C208.458 322.303 208.559 322.081 208.694 321.787C208.965 321.199 209.369 320.322 209.896 319.187C210.952 316.915 212.498 313.613 214.445 309.526C218.343 301.347 223.831 290.06 230.188 277.632C243.118 252.359 258.917 223.821 272.004 206.589C315.733 149.009 351.421 120.819 421.717 79.6416C438.406 69.8655 460.129 59.5063 481.749 50.0439Z"
@@ -23,8 +23,8 @@
         </div>
 
         <div id="app-nav" x-data x-navbar
-            class="fixed inset-x-0 h-dvh lg:h-max bg-bg lg:bg-transparent top-0 -translate-y-10 opacity-0 invisible lg:visible  lg:translate-y-0 lg:opacity-100 fx-open:opacity-100 fx-open:visible fx-open:translate-y-0 left-0 w-full lg:top-0 lg:relative  lg:flex lg:justify-between duration-300 ease-linear py-32 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0">
-            <ul class="flex text-fg flex-col lg:flex-row gap-6 lg:items-center lg:w-full lg:pl-10">
+            class="fixed inset-x-0 h-dvh lg:h-max bg-background lg:bg-transparent top-0 -translate-y-10 opacity-0 invisible lg:visible  lg:translate-y-0 lg:opacity-100 fx-open:opacity-100 fx-open:visible fx-open:translate-y-0 left-0 w-full lg:top-0 lg:relative  lg:flex lg:justify-between duration-300 ease-linear py-32 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0">
+            <ul class="flex text-foreground flex-col lg:flex-row gap-6 lg:items-center lg:w-full lg:pl-10">
                 <li class="">
                     <a href="#"
                         class="relative py-2.5 duration-300 ease-linear hover:text-primary">Features</a>
@@ -64,10 +64,10 @@
                 class="focus:outline-none pl-3 relative py-3 bg-transparent border-l border-border-strong group">
                 <span class="sr-only">Toggle navbar</span>
                 <div id="line-1" aria-hidden="true"
-                    class="h-0.5 w-6 rounded transition duration-300 bg-fg in-aria-expanded:rotate-45 in-aria-expanded:translate-y-1.5">
+                    class="h-0.5 w-6 rounded transition duration-300 bg-foreground in-aria-expanded:rotate-45 in-aria-expanded:translate-y-1.5">
                 </div>
                 <div id="line-2" aria-hidden="true"
-                    class="mt-2 h-0.5 w-6 rounded transition duration-300 bg-fg in-aria-expanded:-rotate-45 in-aria-expanded:-translate-y-1">
+                    class="mt-2 h-0.5 w-6 rounded transition duration-300 bg-foreground in-aria-expanded:-rotate-45 in-aria-expanded:-translate-y-1">
                 </div>
             </button>
         </div>

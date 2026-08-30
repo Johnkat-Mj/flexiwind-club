@@ -1,12 +1,12 @@
 <main class="d-flex-place-center w-full h-max min-h-screen px-6 py-12">
     <div
-        class="max-w-lg w-full block bg-bg ring ring-border-card ui-card [--card-radius:var(--radius-ui)] [--card-padding:--spacing(1)] relative h-fit shadow-xl shadow-gray-950/10">
+        class="max-w-lg w-full block bg-background ring ring-border-card ui-card [--card-radius:var(--radius-ui)] [--card-padding:--spacing(1)] relative h-fit shadow-xl shadow-gray-950/10">
         <div class="p-10">
             <div>
-                <h1 class="block text-fg-title text-xl font-semibold mb-1">
+                <h1 class="block text-title-foreground  text-xl font-semibold mb-1">
                     Signin to Flexify
                 </h1>
-                <p class="text-fg-muted text-sm font-normal my-0">
+                <p class="text-muted-foreground text-sm font-normal my-0">
                     Welcome back! Sign in to continue
                 </p>
             </div>
@@ -40,8 +40,8 @@
                     <span>Microsoft</span>
                 </x-ui.button>
             </div>
-            <x-ui.divider label-placement="middle" label="Or register with" class="before:bg-bg-muted mt-6"
-                label-class="px-3 bg-bg text-fg-muted text-sm relative" />
+            <x-ui.divider label-placement="middle" label="Or register with" class="before:bg-muted mt-6"
+                label-class="px-3 bg-background text-muted-foreground text-sm relative" />
             <form class="mx-auto mt-8 space-y-6">
                <div class="grid grid-cols-2 gap-4">
                     <x-ui.input type="text" placeholder="John" label="First Name" />
@@ -50,7 +50,7 @@
                 <x-ui.input type="email" placeholder="johndoe@example.com" label="Email" />
                 <x-ui.input type="password" placeholder="••••••••" label="Create Password" />
                 <x-ui.input type="password" placeholder="••••••••" label="Confirm Password" />
-                <div class="text-xs text-fg-muted -mt-2">
+                <div class="text-xs text-muted-foreground -mt-2">
                     Use 8 or more characters with a mix of letters, numbers & symbols
                 </div>
                 <x-ui.button size="sm" class="w-full justify-center md:h-9">
@@ -58,8 +58,8 @@
                 </x-ui.button>
             </form>
         </div>
-        <div class="block p-4 bg-bg-muted/40 inner-radius">
-            <p class="text-fg-muted text-sm font-normal text-center">
+        <div class="block p-4 bg-muted/40 inner-radius">
+            <p class="text-muted-foreground text-sm font-normal text-center">
                 Already have an account ?
                 <x-ui.link href="#"
                     class="inline text-primary hover:text-primary-700 dark:hover:text-primary-400 font-medium">

@@ -1,12 +1,12 @@
 <main class="d-flex-place-center w-full h-max min-h-screen px-6 py-12 ">
     <div
-        class="max-w-md w-full block bg-bg ring ring-border-card ui-card [--card-radius:var(--radius-ui)] [--card-padding:--spacing(1)] relative h-fit shadow-xl shadow-gray-950/10">
+        class="max-w-md w-full block bg-background ring ring-border-card ui-card [--card-radius:var(--radius-ui)] [--card-padding:--spacing(1)] relative h-fit shadow-xl shadow-gray-950/10">
         <div class="p-10">
             <div>
-                <h1 class="block text-fg-title text-xl font-semibold mb-1">
+                <h1 class="block text-title-foreground  text-xl font-semibold mb-1">
                     Signin to Flexify
                 </h1>
-                <p class="text-fg-muted text-sm font-normal my-0">
+                <p class="text-muted-foreground text-sm font-normal my-0">
                     Welcome back! Sign in to continue
                 </p>
             </div>
@@ -40,14 +40,14 @@
                     <span>Microsoft</span>
                 </x-ui.button>
             </div>
-            <x-ui.divider label-placement="middle" label="Or continue with" class="before:bg-bg-muted mt-6"
-                label-class="px-3 bg-bg text-fg-muted text-sm relative" />
+            <x-ui.divider label-placement="middle" label="Or continue with" class="before:bg-muted mt-6"
+                label-class="px-3 bg-background text-muted-foreground text-sm relative" />
             <form class="mx-auto mt-8 space-y-6">
                 <x-ui.input label="Your email" name="email" type="email" id="user_email"
                     placeholder="johndoe@gmail.com" required />
                 <div class="space-y-2.5">
                     <div class="flex items-center justify-between">
-                        <x-ui.label for="user_password" class="text-nowrap text-fg-title text-sm">
+                        <x-ui.label for="user_password" class="text-nowrap text-title-foreground  text-sm">
                             Password
                         </x-ui.label>
                         <x-ui.link underlined class="text-sm text-primary " href="#">
@@ -61,8 +61,8 @@
                 </x-ui.button>
             </form>
         </div>
-        <div class="block p-4 bg-bg-muted/40 inner-radius">
-            <p class="text-fg-muted text-sm font-normal text-center">
+        <div class="block p-4 bg-muted/40 inner-radius">
+            <p class="text-muted-foreground text-sm font-normal text-center">
                 Don't have an account ?
                 <x-ui.link href="#"
                     class="inline text-primary hover:text-primary-700 dark:hover:text-primary-400 font-medium">

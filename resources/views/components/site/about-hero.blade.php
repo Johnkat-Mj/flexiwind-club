@@ -4,10 +4,10 @@
             <div aria-hidden="true" class="absolute inset-x-0 bottom-8 top-14 flex noise-subtle opacity-60 dark:opacity-50"></div>
             <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
             <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
-            <span class="absolute top-8.5 -left-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            <span class="absolute top-12.5 left-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            <span class="absolute top-8.5 -right-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            <span class="absolute top-12.5 right-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
+            <span class="absolute top-8.5 -left-[3.5px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
+            <span class="absolute top-12.5 left-[11px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
+            <span class="absolute top-8.5 -right-[3.5px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
+            <span class="absolute top-12.5 right-[11px] size-2 bg-background border border-border-strong/60 shadow-sm rounded-ui"></span>
         </div>
     </div>
 
@@ -18,7 +18,7 @@
                 class="mt-6.5 font-bold text-3xl sm:text-4xl/tight md:text-5xl/[1.2] max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-fg">
                 Who we are: UnoForge
             </h1>
-            <p class="max-w-xl text-fg-muted text-sm md:text-base mt-6.5">
+            <p class="max-w-xl text-muted-foreground text-sm md:text-base mt-6.5">
                 UnoForge is a product and engineering studio focused on practical Laravel tooling. We build systems that
                 stay maintainable, ship fast, and scale with real product needs.
             </p>

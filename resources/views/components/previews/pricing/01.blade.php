@@ -4,117 +4,117 @@
             <div class="text-center md:text-left md:max-w-lg space-y-5">
                 <span
                     class="ui-subtle ui-subtle-gray text-xs px2.5 py1 font-semibold tracking-wide rounded-xl">Plans</span>
-                <h2 class="font-semibold leading-tight text-fg-title text-3xl md:text-4xl xl:text-5xl">
+                <h2 class="font-semibold leading-tight text-title-foreground  text-3xl md:text-4xl xl:text-5xl">
                     Choose the right plan for your team
                 </h2>
-                <p class="text-fg pt-2">
+                <p class="text-foreground pt-2">
                     Flexible pricing for developers, startups, and enterprises. Scale as you grow.
                 </p>
             </div>
             <div class="min-w-max flex justify-center md:justify-end">
                 <div
-                    class="rounded-xl bg-bg shadow-lg shadow-gray-200/40 dark:shadow-none flex items-center relative p-1">
+                    class="rounded-xl bg-background shadow-lg shadow-gray-200/40 dark:shadow-none flex items-center relative p-1">
                     <button data-state="active"
-                        class="btn btn-md w-max rounded-lg text-fg bg-transparent fx-active:text-white fx-active:bg-primary">
+                        class="btn btn-md w-max rounded-lg text-foreground bg-transparent fx-active:text-white fx-active:bg-primary">
                         Monthly
                     </button>
                     <button data-state="inactive"
-                        class="btn btn-md w-max rounded-lg text-fg bg-transparent fx-active:text-white fx-active:bg-primary">
+                        class="btn btn-md w-max rounded-lg text-foreground bg-transparent fx-active:text-white fx-active:bg-primary">
                         Yearly
                     </button>
                 </div>
             </div>
         </div>
         <div
-            class="grid divide-y divide-border lg:divide-y-0 gap-6 mx-auto lg:items-stretch lg:grid-cols-3 md:gap-8 lg:gap-12 bg-bg border border-border rounded-xl px-4 md:px-6 lg:px-8 pb-10">
+            class="grid divide-y divide-border lg:divide-y-0 gap-6 mx-auto lg:items-stretch lg:grid-cols-3 md:gap-8 lg:gap-12 bg-background border border-border rounded-xl px-4 md:px-6 lg:px-8 pb-10">
             <!-- Free Plan -->
-            <div class="bg-bg pt-6 px-4 h-auto flex flex-col">
+            <div class="bg-background pt-6 px-4 h-auto flex flex-col">
                 <div class="min-h-max mb-5">
                     <div class="relative flex items-end">
                         <div class="flex">
-                            <span class="text-4xl font-bold text-fg-title">$0</span>
+                            <span class="text-4xl font-bold text-title-foreground ">$0</span>
                         </div>
-                        <span class="text-fg">/month</span>
+                        <span class="text-foreground">/month</span>
                     </div>
-                    <h2 class="text-xl font-semibold text-fg-subtitle pt-5">
+                    <h2 class="text-xl font-semibold text-subtitle pt-5">
                         Free
                     </h2>
-                    <p class="text-fg pt-2">
+                    <p class="text-foreground pt-2">
                         Perfect for individuals and hobby projects. Get started with core features.
                     </p>
                 </div>
-                <ul role="list" class="flex flex-col gap-2 text-fg">
+                <ul role="list" class="flex flex-col gap-2 text-foreground">
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Unlimited public repositories
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Community support
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Basic CI/CD pipelines
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         1 concurrent build
                     </li>
                 </ul>
                 <div class="mt-5 flex flex-1 items-end min-h-max">
                     <a href="#"
                         class="relative w-full btn btn-lg justify-center before:absolute before:inset-0 before:rounded-lg before:btn-outline before:btn-outline-gray before:transition before:duration-300 active-before:scale-95 rounded-md">
-                        <span class="relative text-sm font-medium text-fg-muted">Continue for free</span>
+                        <span class="relative text-sm font-medium text-muted-foreground">Continue for free</span>
                     </a>
                 </div>
             </div>
 
             <!-- Team Plan -->
-            <div class="bg-bg pt-6 px-4 h-auto flex flex-col">
+            <div class="bg-background pt-6 px-4 h-auto flex flex-col">
                 <div class="min-h-max mb-5">
                     <div class="relative flex items-end">
                         <div class="flex">
-                            <span class="text-4xl font-bold text-fg-title">$20</span>
+                            <span class="text-4xl font-bold text-title-foreground ">$20</span>
                         </div>
-                        <span class="text-fg">/month</span>
+                        <span class="text-foreground">/month</span>
                     </div>
-                    <h2 class="text-xl font-semibold text-fg-subtitle pt-5">
+                    <h2 class="text-xl font-semibold text-subtitle pt-5">
                         Team
                     </h2>
-                    <p class="text-fg pt-2">
+                    <p class="text-foreground pt-2">
                         For small teams and startups. Collaborate and ship faster with advanced features.
                     </p>
                 </div>
-                <ul role="list" class="flex flex-col gap-2 text-fg">
+                <ul role="list" class="flex flex-col gap-2 text-foreground">
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Unlimited private repositories
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Priority email support
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Advanced CI/CD pipelines
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         5 concurrent builds
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Team management & permissions
                     </li>
                     <li class="flex gap-4 items-center">
-                        <span class="bg-bg-surface text-sm text-fg px-2 py-1 rounded-full">&check;</span>
+                        <span class="bg-surface text-sm text-foreground px-2 py-1 rounded-full">&check;</span>
                         Integrations (Slack, GitHub, etc.)
                     </li>
                 </ul>
                 <div class="mt-5 flex flex-1 items-end min-h-max">
                     <a href="#"
                         class="relative w-full btn btn-lg justify-center before:absolute before:inset-0 before:rounded-lg before:btn-outline before:btn-outline-gray before:transition before:duration-300 active-before:scale-95 rounded-md">
-                        <span class="relative text-sm font-medium text-fg-muted">Get started</span>
+                        <span class="relative text-sm font-medium text-muted-foreground">Get started</span>
                     </a>
                 </div>
             </div>

@@ -3,9 +3,9 @@
     <x-ui.collapse.trigger target="sidebar-{{ $id }}" indicator-class="size-3.5"
         class="group flex gap-3.5 items-center rounded-ui
                 hover:brightness-[0.98] active:brightness-100
-                text-fg-muted fx-active:text-fg-title fx-current:text-fg-title
+                text-muted-foreground fx-active:text-title-foreground  fx-current:text-title-foreground 
                 fx-active:bg-white dark:fx-active:bg-gray-800/40
-                hover:bg-bg-surface h-9 pl-3 pr-3 text-sm">
+                hover:bg-surface h-9 pl-3 pr-3 text-sm">
         <div class="flex items-center gap-3.5 flex-1">
             <span aria-hidden="true" class="iconify {{ $icon }} size-4"></span>
             <span class="truncate">{{ $text }}</span>
@@ -18,9 +18,9 @@
                     <a href="{{ $item['href'] }}"
                         class="rounded-ui flex items-center
                 hover:brightness-[0.98] active:brightness-100
-                text-fg-muted fx-active:text-fg-title fx-current:text-fg-title
+                text-muted-foreground fx-active:text-title-foreground  fx-current:text-title-foreground 
                 fx-active:bg-white dark:fx-active:bg-gray-800/40
-                hover:bg-bg-surface h-9 px-3 text-sm">
+                hover:bg-surface h-9 px-3 text-sm">
                         <span>
                             {{ $item['text'] }}
                         </span>

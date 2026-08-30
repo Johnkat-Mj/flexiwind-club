@@ -1,5 +1,5 @@
 <x-club.select.trigger select-id="demo-select-basic" placeholder="Choose a framework" class="w-full max-w-xs">
-    <x-club.select.box-selected-value class="text-fg text-sm" placeholder="Select a framework"/>
+    <x-club.select.box-selected-value class="text-foreground text-sm" placeholder="Select a framework"/>
 </x-club.select.trigger>
 
 <x-club.select.input-value select-id="demo-select-basic" name="framework" />

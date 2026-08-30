@@ -35,9 +35,9 @@
 @endphp
 
 <x-ui.sidebar-wrapper
-    class="fixed h-dvh py-3 z-40 overflow-hidden w-11/12 max-w-64 md:w-64 md:max-w-none transition-all -translate-x-full fx-open:translate-x-0 md:translate-x-0 bg-bg shadow-lg shadow-gray-200/40 dark:shadow-gray-800/60 flex flex-col px-4 md:transition-none ease-linear">
+    class="fixed h-dvh py-3 z-40 overflow-hidden w-11/12 max-w-64 md:w-64 md:max-w-none transition-all -translate-x-full fx-open:translate-x-0 md:translate-x-0 bg-background shadow-lg shadow-gray-200/40 dark:shadow-gray-800/60 flex flex-col px-4 md:transition-none ease-linear">
     <div class="min-h-max py-4">
-        <a href="#" class="flex items-center gap-x-1.5 font-semibold text-fg-subtitle">
+        <a href="#" class="flex items-center gap-x-1.5 font-semibold text-subtitle">
             <span class="bg-linear-to-tr from-primary to-primary/60 text-white size-8 d-flex-place-center rounded-ui">
                 <span class="iconify ph--briefcase size-5"></span>
             </span>
@@ -45,16 +45,16 @@
         </a>
     </div>
     <nav class="flex flex-1 pt-7 pb-3 w-full">
-        <ul class="text-fg-muted space-y-1 w-full flex flex-col text-sm">
+        <ul class="text-muted-foreground space-y-1 w-full flex flex-col text-sm">
             @foreach ($items as $item)
                 <x-previews.sidebar.04.sidebar-item :is-active="$item['isActive']??false" :href="$item['href']" :icon="$item['icon']" :text="$item['text']" />
             @endforeach
         </ul>
     </nav>
 
-    <div class="mt-6 p-2 rounded-ui bg-bg border border-border-strong/40 ">
+    <div class="mt-6 p-2 rounded-ui bg-background border border-border-strong/40 ">
         <div class="p-2 mb-2">
-            <h2 class="font-medium text-fg-muted text-sm">
+            <h2 class="font-medium text-muted-foreground text-sm">
                 Upgrade to Pro to get better experience
             </h2>
         </div>

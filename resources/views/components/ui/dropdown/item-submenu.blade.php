@@ -25,7 +25,7 @@
         'dropdown-item-selected-avatar-icon',
         'dropdown-item-selected-avatar',
         'ease-linear duration-200',
-        'text-fg-muted',
+        'text-muted-foreground',
         'cursor-not-allowed' => $disabled,
     ]);
 

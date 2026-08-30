@@ -10,7 +10,7 @@
             Current Page
         </x-ui.breadcrumbs.item>
     </x-ui.breadcrumbs>
-    <x-ui.breadcrumbs wrapper="border-y py-2 px-4 border-border-strong" class="text-fg-muted">
+    <x-ui.breadcrumbs wrapper="border-y py-2 px-4 border-border-strong" class="text-muted-foreground">
         <x-ui.breadcrumbs.item href="#">
             <span aria-hidden="true" class="flex iconify ph--house size-4 mr-1"></span>
             Home

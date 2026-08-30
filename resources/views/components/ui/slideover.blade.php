@@ -58,7 +58,7 @@
 
     @if ($closable)
         <x-ui.slideover.close size="sm" iconOnly variant="none" intent="none"
-            class="absolute top-4 right-4 hover:bg-bg-muted rounded-full text-fg">
+            class="absolute top-4 right-4 hover:bg-muted rounded-full text-foreground">
             <span aria-hidden="true" class="flex iconify ph--x"></span>
         </x-ui.slideover.close>
     @endif

@@ -11,7 +11,7 @@
                 data-trigger-tab-content
                 aria-expanded="false"
                 aria-label="show table of content"
-                class="text-fg border border-border rounded-lg py-1.5 px-2 flex items-center gap-x-1 text-sm hover:bg-bg-subtle ease-linear group"
+                class="text-foreground border border-border rounded-lg py-1.5 px-2 flex items-center gap-x-1 text-sm hover:bg-subtle ease-linear group"
             >
                 On this page
                 <span

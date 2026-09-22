@@ -1,67 +1,106 @@
-<section class="relative">
-    <span aria-hidden="true" class="absolute bottom-4 h-4 inset-x-0 flex pointer-events-none">
-        <div class="xl:max-w-380 flex flex-col justify-between h-4 w-full mx-auto">
-            <span class="h-px bg-linear-to-l from-border-strong to-border/70"></span>
-        </div>
-    </span>
-    <div aria-hidden="true" class="absolute inset-0 -top-20 pointer-events-none">
-        <div class="flex justify-between size-full max-w-300 mx-auto relative">
-            <div aria-hidden="true" class="absolute inset-x-0 bottom-8 top-14 flex noise-subtle opacity-60 dark:opacity-50"></div>
-            <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
-            <div class="relative h-full w-4 border-x border-pattern-fg/70 linear-gradient-pattern"></div>
-            <span
-                class="absolute top-8.5 -left-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            <span
-                class="absolute top-12.5 left-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            <span
-                class="absolute top-8.5 -right-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-            <span
-                class="absolute top-12.5 right-[11px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
+<x-atoms.container nopadding as="section" class="pt-20 pb-16 lg:pb-18 relative">
+    <div aria-hidden="true" class="absolute linear-bg right-3 sm:right-5 xl:right-12 inset-y-0 w-0.5"></div>
+    <div aria-hidden="true" class="absolute linear-bg left-3 sm:left-5 xl:left-12 inset-y-0 w-0.5"></div>
 
-            <span
-                class="absolute bottom-7 -left-[3.5px] size-2 bg-bg border border-border-strong/60 shadow-sm rounded-ui"></span>
-
-            <svg width="401" height="401" viewBox="0 0 401 401" fill="none"
-                class="absolute right-4 size-40 md:size-56 lg:size-64 top-13.5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M0 0H401V401H291.912C257.067 401 232.196 365.878 238.503 331.609C246.986 285.517 249.519 227.824 220 195.989C187.027 160.428 121.321 164.958 70.2625 175.681C35.8141 182.915 0 157.979 0 122.78V0Z"
-                    fill="#F5F0F0" class="fill-bg-muted/40"/>
-            </svg>
-
-
-        </div>
-    </div>
-    <div class="relative z-5 flex flex-col px-3.5 sm:px-4 pt-16 md:pt-20 pb-20 md:pb-28">
-        <div class="sm:max-w-4xl sm:mx-auto w-full">
+    <x-atoms.span-pattern class="right-[-.16rem] -bottom-1 z-5" />
+    <x-atoms.span-pattern class="left-[-.16rem] -bottom-1 z-5" />
+    <div
+        class="px-4 sm:px-8 md:px-16 lg:px-8 xl:px-0 z-3 relative mx-auto w-full max-w-3xl lg:max-w-4xl flex flex-col lg:flex-row gap-8 lg:gap-12 ">
+        <div class="lg:w-1/2 max-w-3xl">
             <a href="#"
-                class="rounded-ui text-fg bg-bg border border-border-strong/60 backdrop-saturate-50 text-sm pl-2 pr-1 py-1 flex w-max">
+                class="rounded-ui text-foreground bg-background  border border-border-strong/60 backdrop-saturate-50 text-sm pl-2 pr-1 py-1 flex w-max">
                 Introducing Flexiwind v1
                 <span
-                    class="ml-2 w-max py-0.5 px-1 text-xs overflow-hidden rounded-[calc(var(--radius-ui)-3px)] bg-bg-muted/80 flex items-center">
-                    <span aria-hidden="true" class="iconify ph--arrow-right"></span>
+                    class="ml-2 w-max py-0.5 px-1 text-xs overflow-hidden rounded-[calc(var(--radius-ui)-3px)] bg-muted/80 flex items-center">
+                    <x-ui.icon name="ph--arrow-right" />
                 </span>
             </a>
             <h1
-                class="mt-6.5 font-bold text-3xl sm:text-4xl/tight md:text-5xl/[1.2] max-w-xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-fg">
-                Craft and scale modern apps with composable TALL UI blocks
+                class="mt-7 font-semibold capitalize text-4xl md:text-5xl lg:text-6xl text-title-foreground text-balance">
+                Build Louder Ship Sooner
             </h1>
-            <p class="max-w-md text-fg-muted text-sm md:text-base mt-6.5">
-                Production-ready UI blocks and components designed for Laravel Artisans. Built on the TALL Stack to help
-                you move faster, stay consistent, and ship with confidence.
+        </div>
+        <div class="flex-1 lg:w-1/2 flex flex-col justify-end gap-6">
+            <p class="text-foreground">
+                One artisan command drops clean Blade and Livewire into your repo, plus a written guide your AI agent
+                reads
+                before it touches a single class.
             </p>
-            <div class="flex flex-wrap gap-3 mt-9">
-                <x-ui.button href="/blocks" size="sm" class="sm:btn-md">
-                    <span aria-hidden="true" class="iconify ph--cube-duotone opacity-80 mr-2 size-3.5"></span>
-                    Start Building
+            <div class="flex items-center flex-wrap gap-2.5">
+                <x-ui.button href="/blocks" size="sm" class="sm:btn-md" intent="neutral">
+                    Buy now
+                    <span class="iconify ph--magic-wand text-sm ml-2"></span>
                 </x-ui.button>
 
-                <x-ui.button href="/components/" variant="outline" size="sm" class="sm:btn-md">
-                    <span aria-hidden="true" class="iconify ph--diamonds-four-duotone mr-2 size-3.5"></span>
-                    Components
+                <x-ui.button href="/blocks" variant="outline" size="sm" class="sm:btn-md">
+                    Explore blocks
                 </x-ui.button>
+
             </div>
         </div>
     </div>
+</x-atoms.container>
+<div aria-hidden="true" class="w-full linear-bg-horizontal h-0.5"></div>
+<section>
+    <div class="relative">
+        <x-atoms.container class="relative">
+            <ul class="mx-auto w-full grid md:grid-cols-3 relative max-md:divide-y md:divide-x divide-border-card divide-dashed text-left">
+                <li>
+                    <button class="flex flex-row gap-2.5 items-center py-6 px-4 md:px-6 xl:px-12 cursor-pointer">
+                        <span class="bg-background rounded-full ring ring-border-card size-8.5 d-flex-place-center">
+                            <x-ui.icon name="" />
+                        </span>
+                        <div class="flex-1 flex flex-col">
+                            <span class="flex flex-1 text-sm font-semibold text-title-foreground">
+                                Modern Templates
+                            </span>
+                            <span class="text-sm text-muted-foreground">
+                                Build lorem ipsum ergo leo
+                            </span>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex flex-row gap-2.5 items-center py-6 px-4 md:px-6 xl:px-12 cursor-pointer">
+                        <span class="bg-background rounded-full ring ring-border-card size-8.5 d-flex-place-center">
+                            <x-ui.icon name="" />
+                        </span>
+                        <div class="flex-1 flex flex-col">
+                            <span class="flex flex-1 text-sm font-semibold text-title-foreground">
+                                Modern Templates
+                            </span>
+                            <span class="text-sm text-muted-foreground">
+                                Build lorem ipsum ergo leo
+                            </span>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex flex-row gap-2.5 items-center py-6 px-4 md:px-6 xl:px-12 cursor-pointer">
+                        <span class="bg-background rounded-full ring ring-border-card size-8.5 d-flex-place-center">
+                            <x-ui.icon name="" />
+                        </span>
+                        <div class="flex-1 flex flex-col">
+                            <span class="flex flex-1 text-sm font-semibold text-title-foreground">
+                                Modern Templates
+                            </span>
+                            <span class="text-sm text-muted-foreground">
+                                Build lorem ipsum ergo leo
+                            </span>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+            <span class="inset-y-0 w-3 sm:w-5 xl:w-12 bg-muted absolute left-0"></span>
+            <span class="inset-y-0 w-3 sm:w-5 xl:w-12 bg-muted absolute right-0"></span>
+        </x-atoms.container>
+        <x-atoms.container class="relative">
+            <div aria-hidden="true" class="absolute bottom-0 inset-x-0 linear-bg-horizontal h-0.5"></div>
+                <x-atoms.span-pattern class="right-[-.16rem] bottom-[-.16rem] z-5" />
+    <x-atoms.span-pattern class="left-[-.16rem] bottom-[-.16rem] z-5" />
+        </x-atoms.container>
+    </div>
+    <div class="max-w-7xl p-4 mx-auto w-full">
+        <div class="aspect-video w-full bg-muted rounded-ui"></div>
+    </div>
 </section>
-
-<x-site.hero-illustrations />

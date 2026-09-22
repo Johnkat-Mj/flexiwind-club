@@ -2,10 +2,10 @@
     'size' => 'md',
     'class' => '',
     'closable' => true,
-    'noGutter' => false,
+    'gutter' => true,
     'enterAnimation' => 'modal-animation-in .4s linear',
     'exitAnimation' => 'modal-animation-out .1s linear',
-    'noAnimation' => false,
+    'animation' => true,
 ])
 
 @php
@@ -26,11 +26,11 @@
 @endphp
 
 <div data-modal-content wire:ignore.self
-    @if (!$noAnimation) data-enter-animation="{{ $enterAnimation }}" data-exit-animation="{{ $exitAnimation }}" @endif
+    @if ($animation) data-enter-animation="{{ $enterAnimation }}" data-exit-animation="{{ $exitAnimation }}" @endif
     {{ $attributes->class([
-        'w-full flex flex-col relative bg-bg border border-border shadow-sm rounded-ui overflow-hidden',
-        '[--gutter:--spacing(6)] sm:[--gutter:--spacing(8)]' => !$noGutter,
-        'animated-modal-content ease-linear transition-all' => !$noAnimation,
+        'w-full flex flex-col relative bg-background border border-border shadow-sm rounded-ui overflow-hidden',
+        '[--gutter:--spacing(6)] sm:[--gutter:--spacing(8)]' => $gutter,
+        'animated-modal-content ease-linear transition-all' => $animation,
         $size_,
         $class,
     ]) }}>
@@ -38,7 +38,7 @@
 
     @if ($closable)
         <x-ui.modal.close size="sm" iconOnly variant="none" intent="none"
-            class="absolute top-4 right-4 hover:bg-bg-muted rounded-full text-fg z-90">
+            class="absolute top-4 right-4 hover:bg-muted rounded-full text-foreground z-90">
             <span aria-hidden="true" class="flex iconify ph--x"></span>
         </x-ui.modal.close>
     @endif

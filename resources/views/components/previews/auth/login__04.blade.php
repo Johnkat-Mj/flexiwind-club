@@ -1,0 +1,196 @@
+<main
+    class="h-screen px-6 py-12  lg:grid lg:w-screen lg:max-w-full lg:grid-cols-2 lg:gap-32 lg:px-0"
+>
+    <div>
+        <div class="mx-auto max-w-md lg:ml-auto lg:mr-0 lg:pr-12">
+            <div>
+                <div>
+                    <svg
+                        class="size-7 text-gray-950 dark:text-white"
+                        width="56"
+                        height="56"
+                        viewBox="0 0 84 84"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M53.6523 31.5142C53.6523 28.5967 51.2872 26.2316 48.3697 26.2316C45.4522 26.2316 43.0871 28.5967 43.0871 31.5142C43.0871 34.4317 45.4522 36.7968 48.3697 36.7968C51.2872 36.7968 53.6523 34.4317 53.6523 31.5142Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            d="M42.6502 36.769C42.5195 36.7593 42.3875 36.7543 42.2543 36.7543C39.3572 36.7543 37.0087 39.1029 37.0087 42C37.0087 44.8971 39.3572 47.2457 42.2543 47.2457C45.1514 47.2457 47.5 44.8971 47.5 42C47.5 40.92 47.1736 39.9162 46.6141 39.0819C45.0637 38.7237 43.691 37.9013 42.6502 36.769Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            d="M34.8047 39.7898C34.5971 40.4904 34.4857 41.2322 34.4857 42C34.4857 42.7679 34.5971 43.5097 34.8047 44.2102C33.969 46.0163 32.1408 47.2693 30.02 47.2693C27.1098 47.2693 24.7507 44.9102 24.7507 42C24.7507 39.0899 27.1098 36.7308 30.02 36.7308C32.1408 36.7308 33.969 37.9837 34.8047 39.7898Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            d="M48.3708 47.2122C51.2834 47.2122 53.6445 49.5733 53.6445 52.4859C53.6445 55.3984 51.2834 57.7595 48.3708 57.7595C45.4583 57.7595 43.0971 55.3984 43.0971 52.4859C43.0971 51.4104 43.4191 50.4101 43.9718 49.5761C45.5507 49.2193 46.9472 48.3816 47.9994 47.225C48.1221 47.2165 48.246 47.2122 48.3708 47.2122Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            d="M59.7461 42C59.7461 39.0938 57.3901 36.7378 54.4838 36.7378C54.3567 36.7378 54.2306 36.7423 54.1057 36.7512C53.0573 37.8988 51.6691 38.7307 50.1003 39.0877C49.9504 39.3129 49.8173 39.5503 49.703 39.7982C49.909 40.4962 50.0195 41.2352 50.0195 42C50.0195 42.7648 49.909 43.5038 49.703 44.2019C49.8173 44.4497 49.9504 44.6872 50.1003 44.9124C51.6691 45.2694 53.0573 46.1013 54.1057 47.2489C54.2306 47.2578 54.3567 47.2623 54.4838 47.2623C57.3901 47.2623 59.7461 44.9063 59.7461 42Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            d="M40.6028 52.4859C40.6028 51.718 40.7143 50.9761 40.9219 50.2755C40.809 50.0315 40.678 49.7976 40.5306 49.5755C38.9544 49.2187 37.56 48.3825 36.5088 47.2283C36.3856 47.2197 36.2612 47.2153 36.1358 47.2153C36.0102 47.2153 35.8855 47.2197 35.7621 47.2284C34.7111 48.3823 33.317 49.2184 31.7411 49.5753C31.1877 50.4093 30.8653 51.4099 30.8653 52.4859C30.8653 55.3967 33.225 57.7564 36.1358 57.7564C38.2573 57.7564 40.0861 56.503 40.9219 54.6962C40.7143 53.9957 40.6028 53.2538 40.6028 52.4859Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            d="M40.5094 34.4263C40.6608 34.1992 40.795 33.9595 40.9102 33.7094C40.705 33.0126 40.595 32.2752 40.595 31.512C40.595 30.7489 40.705 30.0115 40.9102 29.3147C40.0777 27.5058 38.2492 26.25 36.1274 26.25C33.2213 26.25 30.8654 28.6059 30.8654 31.512C30.8654 32.5894 31.1892 33.5912 31.7448 34.4253C33.3117 34.7828 34.6983 35.6141 35.7457 36.7605C35.8718 36.7695 35.9991 36.7741 36.1274 36.7741C36.2572 36.7741 36.3858 36.7694 36.5132 36.7602C37.5596 35.615 38.9445 34.7843 40.5094 34.4263Z"
+                            fill="currentColor"
+                        ></path>
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M42 84C65.196 84 84 65.196 84 42C84 18.804 65.196 0 42 0C18.804 0 0 18.804 0 42C0 65.196 18.804 84 42 84ZM42 74.518C24.0408 74.518 9.48201 59.9592 9.48201 42C9.48201 24.0408 24.0408 9.48201 42 9.48201C59.9592 9.48201 74.518 24.0408 74.518 42C74.518 59.9592 59.9592 74.518 42 74.518Z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+                    <h1
+                        class="block text-[--title-text-color] text-xl font-semibold mb-1 mt-12"
+                    >
+                        Sign In to Tailus UI
+                    </h1>
+                    <p
+                        class="text-[--body-text-color] text-sm font-normal my-0"
+                    >
+                        Welcome back! Sign in to continue
+                    </p>
+                </div>
+                <div class="mt-8 grid grid-cols-2 gap-3">
+                    <button
+                        class="group flex justify-center gap-1.5 items-center rounded-[--btn-radius] outline-2 outline-offset-2 focus-visible:outline outline-primary-600 disabled:bg-gray-200 disabled:text-gray-400 disabled:shadow-none disabled:hover:brightness-100 dark:disabled:bg-gray-500/10 dark:disabled:[background-image:none] dark:disabled:text-gray-700 dark:disabled:shadow-none dark:disabled:border-none [--outline-radial-opacity:0.6] dark:[background-image:none] [--inner-border-color:1] dark:[--inner-border-color:0] dark:[--outline-radial-opacity:0.2] [background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,var(--outline-radial-opacity))_0%,transparent_100%)] [box-shadow:rgba(255,255,255,var(--inner-border-color))_0px_1px_0px_0px_inset,var(--btn-border-color)_0px_0px_0px_1px,0px_1px_2px_rgba(0,0,0,0.1)] hover:brightness-[0.98] active:brightness-100 transtion-[filter] ease-in-out duration-150 [--btn-border-color:theme(colors.gray.200)] dark:[--btn-border-color:theme(colors.gray.500/0.3)] text-gray-800 bg-gray-50 dark:text-gray-300 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/5 text-sm h-8 px-3.5 w-full"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="0.98em"
+                            height="1em"
+                            viewBox="0 0 256 262"
+                            class="-ml-1 size-3.5"
+                        >
+                            <path
+                                fill="#4285f4"
+                                d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+                            ></path>
+                            <path
+                                fill="#34a853"
+                                d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+                            ></path>
+                            <path
+                                fill="#fbbc05"
+                                d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z"
+                            ></path>
+                            <path
+                                fill="#eb4335"
+                                d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+                            ></path></svg
+                        ><span>Google</span></button
+                    ><button
+                        class="group flex justify-center gap-1.5 items-center rounded-[--btn-radius] outline-2 outline-offset-2 focus-visible:outline outline-primary-600 disabled:bg-gray-200 disabled:text-gray-400 disabled:shadow-none disabled:hover:brightness-100 dark:disabled:bg-gray-500/10 dark:disabled:[background-image:none] dark:disabled:text-gray-700 dark:disabled:shadow-none dark:disabled:border-none [--outline-radial-opacity:0.6] dark:[background-image:none] [--inner-border-color:1] dark:[--inner-border-color:0] dark:[--outline-radial-opacity:0.2] [background-image:radial-gradient(76%_151%_at_52%_-52%,rgba(255,255,255,var(--outline-radial-opacity))_0%,transparent_100%)] [box-shadow:rgba(255,255,255,var(--inner-border-color))_0px_1px_0px_0px_inset,var(--btn-border-color)_0px_0px_0px_1px,0px_1px_2px_rgba(0,0,0,0.1)] hover:brightness-[0.98] active:brightness-100 transtion-[filter] ease-in-out duration-150 [--btn-border-color:theme(colors.gray.200)] dark:[--btn-border-color:theme(colors.gray.500/0.3)] text-gray-800 bg-gray-50 dark:text-gray-300 dark:bg-gray-500/5 dark:hover:bg-gray-500/10 dark:active:bg-gray-500/5 text-sm h-8 px-3.5 w-full"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 256 256"
+                            class="-ml-1 size-3.5"
+                        >
+                            <path
+                                fill="#f1511b"
+                                d="M121.666 121.666H0V0h121.666z"
+                            ></path>
+                            <path
+                                fill="#80cc28"
+                                d="M256 121.666H134.335V0H256z"
+                            ></path>
+                            <path
+                                fill="#00adef"
+                                d="M121.663 256.002H0V134.336h121.663z"
+                            ></path>
+                            <path
+                                fill="#fbbc09"
+                                d="M256 256.002H134.335V134.336H256z"
+                            ></path></svg
+                        ><span>Microsoft</span>
+                    </button>
+                </div>
+                <form class="mx-auto mt-8 space-y-6">
+                    <div class="space-y-6">
+                        <div
+                            class="relative grid items-center gap-3 [grid-template-columns:1fr_auto_1fr]"
+                        >
+                            <div
+                                data-orientation="horizontal"
+                                role="separator"
+                                class="bg-[--ui-border-color] w-full h-px border-b"
+                            ></div>
+                            <span
+                                class="text-[--caption-text-color] text-sm font-normal block"
+                                >Or continue with</span
+                            >
+                            <div
+                                data-orientation="horizontal"
+                                role="separator"
+                                class="bg-[--ui-border-color] w-full h-px border-b"
+                            ></div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="space-y-2.5">
+                                <label
+                                    class="text-nowrap text-[--title-text-color] text-sm"
+                                    for="email"
+                                    >Your email</label
+                                ><input
+                                    class="w-full px-[--input-px] peer transition-[outline] placeholder-[--placeholder-text-color] text-[--title-text-color] rounded-[--btn-radius] disabled:opacity-50 shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border bg-[--ui-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500 text-sm h-9 [--input-px:theme(spacing[3])]"
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required=""
+                                />
+                            </div>
+                            <div class="space-y-2.5">
+                                <div class="flex items-center justify-between">
+                                    <label
+                                        class="text-nowrap text-[--title-text-color] text-sm"
+                                        for="password"
+                                        >Password</label
+                                    ><a
+                                        class="transition text-sm text-info-600 hover:text-info-700 dark:text-info-400 dark:hover:text-info-500 hover:underline font-normal"
+                                        href="#"
+                                        >Forgot your Password ?</a
+                                    >
+                                </div>
+                                <input
+                                    class="w-full px-[--input-px] peer transition-[outline] placeholder-[--placeholder-text-color] text-[--title-text-color] rounded-[--btn-radius] disabled:opacity-50 shadow-sm shadow-gray-950/5 outline-2 focus:outline-primary-600 focus:outline -outline-offset-1 border bg-[--ui-bg] dark:shadow-gray-950/35 data-[invalid]:border-danger-600 focus:data-[invalid]:outline-danger-600 dark:data-[invalid]:border-danger-500 dark:focus:data-[invalid]:outline-danger-500 data-[valid]:border-success-600 focus:data-[valid]:outline-success-600 dark:data-[valid]:border-success-500 dark:focus:data-[valid]:outline-success-500 text-sm h-9 [--input-px:theme(spacing[3])]"
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    required=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="group flex justify-center gap-1.5 items-center rounded-[--btn-radius] outline-2 outline-offset-2 focus-visible:outline outline-primary-600 disabled:bg-gray-200 disabled:text-gray-400 disabled:shadow-none disabled:hover:brightness-100 dark:disabled:bg-gray-500/10 dark:disabled:[background-image:none] dark:disabled:text-gray-700 dark:disabled:shadow-none dark:disabled:border-none bg-gradient-to-b [box-shadow:rgba(255,255,255,0.25)_0px_1px_0px_0px_inset,var(--btn-border-color)_0px_0px_0px_1px] text-white hover:brightness-[1.1] transition-[filter] duration-150 ease-in-out active:brightness-95 dark:shadow-inner dark:to-0% dark:border-t dark:shadow-white/10 disabled:from-gray-100 disabled:to-gray-100 from-primary-500 to-primary-600 [--btn-border-color:theme(colors.primary.700)] dark:border-primary-400/75 text-base h-9 px-4 w-full"
+                    >
+                        <span>Sign In</span>
+                    </button>
+                </form>
+            </div>
+            <div class="mt-12">
+                <p
+                    class="text-[--caption-text-color] text-sm font-normal text-center my-0"
+                >
+                    Don't have an account ?<!-- -->
+                    <a
+                        class="transition text-sm text-gray-950 hover:text-gray-800 dark:text-white dark:hover:text-gray-200 underline font-normal decoration-gray-950/25 dark:decoration-white/25"
+                        href="/web/20240820051737/https://ui.tailus.io/examples/forms/register3"
+                        >Create account</a
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
+</main>

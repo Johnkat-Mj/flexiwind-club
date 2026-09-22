@@ -1,158 +1,120 @@
-@php
-    $organizations = [
-        [
-            'id' => 1,
-            'name' => 'TechCorp Solutions',
-            'industry' => 'Technology',
-            'contact' => 'John Smith',
-            'email' => 'john@techcorp.com',
-            'phone' => '+1 (555) 123-4567',
-            'status' => 'active',
-            'revenue' => '$2.5M',
-            'employees' => 150,
-        ],
-        [
-            'id' => 2,
-            'name' => 'Global Marketing Inc',
-            'industry' => 'Marketing',
-            'contact' => 'Sarah Johnson',
-            'email' => 'sarah@globalmarketing.com',
-            'phone' => '+1 (555) 234-5678',
-            'status' => 'prospect',
-            'revenue' => '$1.2M',
-            'employees' => 45,
-        ],
-        [
-            'id' => 3,
-            'name' => 'FinanceHub LLC',
-            'industry' => 'Finance',
-            'contact' => 'Michael Chen',
-            'email' => 'michael@financehub.com',
-            'phone' => '+1 (555) 345-6789',
-            'status' => 'active',
-            'revenue' => '$5.8M',
-            'employees' => 200,
-        ],
-        [
-            'id' => 4,
-            'name' => 'Healthcare Plus',
-            'industry' => 'Healthcare',
-            'contact' => 'Emily Davis',
-            'email' => 'emily@healthcareplus.com',
-            'phone' => '+1 (555) 456-7890',
-            'status' => 'churned',
-            'revenue' => '$800K',
-            'employees' => 25,
-        ],
-        [
-            'id' => 5,
-            'name' => 'Retail Dynamics',
-            'industry' => 'Retail',
-            'contact' => 'Robert Wilson',
-            'email' => 'robert@retaildynamics.com',
-            'phone' => '+1 (555) 567-8901',
-            'status' => 'active',
-            'revenue' => '$3.2M',
-            'employees' => 85,
-        ],
-    ];
-@endphp
+<div class="max-w-7xl px-4 mx-auto">
+    <div class="flex flex-col sm:flex-row sm:justify-between items-center pb-4 gap-4">
+        <div class="flex-1 flex items-center gap-1.5">
+            <x-ui.input.group class="flex-1 max-w-xs">
+                <x-ui.input variant="unstyled" placeholder="Start typing..." class="px-3 ps-8" />
+                <x-ui.input.leading absolute>
+                    <x-ui.icon name="ph--magnifying-glass" />
+                </x-ui.input.leading>
+            </x-ui.input.group>
+            <x-ui.popover.trigger popover-id="filter" variant="ghost"
+                class="size-9 d-flex-place-center border border-border-input">
+                <x-ui.icon name="ph--funnel" />
+            </x-ui.popover.trigger>
+            <x-ui.popover id="filter" class="w-64">
 
-<div class="rounded-ui border border-border">
-    <div class="p-4 border-b border-border-input/60">
-        <h2 class="text-xl font-semibold text-fg-title mb-1">Organizations</h2>
-        <p class="text-fg-muted text-sm">Manage your customer relationships and track organization details.</p>
+            </x-ui.popover>
+        </div>
+        <div class="w-full sm:w-max">
+            <x-ui.button size="sm" class="w-full justify-center sm:h-9">
+                <x-ui.icon name="ph--plus" class="mr-2"/>
+                Add Task
+            </x-ui.button>
+        </div>
     </div>
-    
-    <x-ui.table class="text-left">
+    <x-ui.table hoverable wrapper=" rounded-ui border border-border" class="text-left">
         <x-ui.table.columns
-            wrapper="bg-bg-surface border-y border-border-input/60 [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider w-8">
-                <x-ui.checkbox />
+            wrapper="bg-surface border-b border-border-input [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
+            <x-ui.table.column class="text-xs font-medium text-muted-foreground uppercase tracking-wider w-8">
+                <span aria-hidden="true" class="size-3.5 iconify ph--chart-bar mr-1"></span>
             </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Organization
+            <x-ui.table.column class="text-xs">
+                Task Name
             </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Industry
+            <x-ui.table.column class="text-xs">
+                <span class="flex items-center text-nowrap">
+                    <span aria-hidden="true" class="size-3.5 iconify ph--file-dashed mr-1"></span> Descriptions
+                </span>
             </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Contact Person
+            <x-ui.table.column class="text-xs">
+                <span class="flex items-center text-nowrap">
+                    <span aria-hidden="true" class="size-3.5 iconify ph--users mr-1"></span> People
+                </span>
             </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Status
+            <x-ui.table.column class="text-xs">
+                <span class="flex items-center text-nowrap">
+                    <span aria-hidden="true" class="size-3.5 iconify ph--align-bottom-light mr-1"></span> Type
+                </span>
             </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Revenue
+            <x-ui.table.column class="text-xs">
+                <span class="flex items-center text-nowrap">
+                    <span aria-hidden="true" class="size-3.5 iconify ph--calendar mr-1"></span> Timeline Date
+                </span>
             </x-ui.table.column>
-            <x-ui.table.column class="text-xs font-medium text-fg-muted uppercase tracking-wider">
-                Employees
+            <x-ui.table.column class="text-xs">
+                <span class="flex items-center text-nowrap">
+                    <span aria-hidden="true" class="size-3.5 iconify ph--flag mr-1"></span> Priority
+                </span>
             </x-ui.table.column>
             <x-ui.table.column class="w-10"></x-ui.table.column>
         </x-ui.table.columns>
-        <x-ui.table.rows class="divide-y divide-border [--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
-            @foreach ($organizations as $organization)
-                <x-ui.table.row hoverable class="group">
-                    <x-ui.table.cell>
+        <x-ui.table.rows class="[--gutter-x:--spacing(4)] [--gutter-y:--spacing(3)]">
+            <x-ui.table.row hoverable class="group">
+                <x-ui.table.cell>
+                    <span
+                        class="text-muted-foreground cursor-move size-4 iconify ph--dots-six-vertical opacity-40 group-hover:opacity-80"></span>
+                </x-ui.table.cell>
+                <x-ui.table.cell>
+                    <div class="flex items-center gap-3">
                         <x-ui.checkbox />
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <div>
-                            <div class="text-sm font-medium text-fg-title">{{ $organization['name'] }}</div>
-                            <div class="text-xs text-fg-muted">{{ $organization['email'] }}</div>
+                        <span class="text-sm font-medium text-title-foreground  truncate">Redesign Login Page</span>
+                    </div>
+                </x-ui.table.cell>
+                <x-ui.table.cell>
+                    <span class="text-sm text-muted-foreground">Implement kanban-style...</span>
+                </x-ui.table.cell>
+                <x-ui.table.cell>
+                    <div class="flex -space-x-2">
+                        <x-ui.avatar src="/avatar1.webp" size="xs" alt="user avatar" width="20" height="20"
+                            class="ring-2 ring-border" />
+                        <x-ui.avatar src="/avatar2.webp" size="xs" alt="user avatar" width="20" height="20"
+                            class="ring-2 ring-border" />
+                        <div
+                            class="size-6.5 rounded-full bg-surface ring-2 ring-border text-xs d-flex-place-center text-muted-foreground">
+                            +3
                         </div>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <span class="text-sm text-fg">{{ $organization['industry'] }}</span>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <div>
-                            <div class="text-sm text-fg-title">{{ $organization['contact'] }}</div>
-                            <div class="text-xs text-fg-muted">{{ $organization['phone'] }}</div>
-                        </div>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        @php
-                            $statusColors = [
-                                'active' => 'success',
-                                'prospect' => 'warning',
-                                'churned' => 'danger'
-                            ];
-                            $statusIntent = $statusColors[$organization['status']] ?? 'neutral';
-                        @endphp
-                        <x-ui.badge variant="soft" intent="{{ $statusIntent }}" size="sm">
-                            {{ ucfirst($organization['status']) }}
-                        </x-ui.badge>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <span class="text-sm font-medium text-fg-title">{{ $organization['revenue'] }}</span>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell>
-                        <span class="text-sm text-fg">{{ $organization['employees'] }}</span>
-                    </x-ui.table.cell>
-                    <x-ui.table.cell class="text-right">
-                        <x-ui.button size="sm" icon-only variant="ghost">
-                            <span aria-hidden="true" class="iconify ph--dots-three"></span>
-                        </x-ui.button>
-                    </x-ui.table.cell>
-                </x-ui.table.row>
-            @endforeach
+                    </div>
+                </x-ui.table.cell>
+                <x-ui.table.cell>
+                    <x-ui.badge variant="subtle" intent="danger" size="sm"
+                        class="d-flex-items-center gap-x-1 w-max">
+                        <span aria-hidden="true" class="flex iconify ph--pencil-ruler"></span>
+                        Design
+                    </x-ui.badge>
+                </x-ui.table.cell>
+                <x-ui.table.cell>
+                    <span class="text-sm text-muted-foreground">Apr 17 - May 15 '25</span>
+                </x-ui.table.cell>
+                <x-ui.table.cell>
+                    <div class="flex items-center gap-1.5">
+                        <span aria-hidden="true" class="size-3.5 iconify ph--flag-banner-fill text-danger"></span>
+                        <span class="text-sm font-medium text-title-foreground ">High</span>
+                    </div>
+                </x-ui.table.cell>
+                <x-ui.table.cell class="text-right">
+                    <x-ui.button size="sm" icon-only variant="ghost">
+                        <span aria-hidden="true" class="iconify ph--dots-three"></span>
+                    </x-ui.button>
+                </x-ui.table.cell>
+            </x-ui.table.row>
         </x-ui.table.rows>
     </x-ui.table>
-    
-    <div class="p-4 flex items-center justify-between border-t border-border">
-        <div class="text-sm text-fg-muted">
-            Showing <span class="font-medium text-fg-title">{{ count($organizations) }}</span> organizations
+    <div class="pt-3 flex items-center justify-between">
+        <div class="">
+            Showing <span>1</span> of <span>4</span> Pages
         </div>
-        <div class="flex items-center gap-2">
-            <x-ui.button size="sm" variant="ghost" class="border border-border pl-2" disabled>
-                <span aria-hidden="true" class="iconify size-3.5 mr-1 ph--caret-left"></span>
-                Previous
-            </x-ui.button>
-            <x-ui.button size="sm" variant="ghost" class="border border-border pr-2">
-                Next
-                <span aria-hidden="true" class="iconify size-3.5 ml-1 ph--caret-right"></span>
-            </x-ui.button>
+        <div class="">
+
         </div>
     </div>
 </div>

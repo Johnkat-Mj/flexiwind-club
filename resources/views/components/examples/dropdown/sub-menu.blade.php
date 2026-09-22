@@ -20,7 +20,7 @@
              Transaction
          </x-ui.dropdown.label>
      </x-ui.dropdown.item-submenu>
-     <x-ui.dropdown.item danger>
+     <x-ui.dropdown.item intent="danger">
          <x-ui.dropdown.icon>
              <span class="iconify ph--trash text-sm"></span>
          </x-ui.dropdown.icon>

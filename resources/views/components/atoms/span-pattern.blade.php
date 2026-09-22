@@ -1,0 +1,1 @@
+<span {{ $attributes->class(['absolute size-1.5 rotate-45 ring ring-border-input bg-foreground shadow']) }}></span>

@@ -1,23 +1,18 @@
 @php
     use App\Support\SidebarPaginator;
 
-    $path = '/' . ltrim(request()->path() ?: '', '/');
-    $current = SidebarPaginator::getCurrent($path);
-
-    $seo = [
-        'ogImage' => [
-            'src' => $current['ogImage']['src'] ?? config('base.default_og_image'),
-            'alt' => $current['ogImage']['alt'] ?? config('base.default_og_alt'),
-        ],
-        'keywords' => trim(config('base.keywords_def') . ($current['keywords'] ? ', ' . $current['keywords'] : '')),
-        'title' => 'Flexiwind | ' . $current['title'],
-        'description' => $current['seoDescription'] ?? 'Easily add interactive Components to your App.',
-    ];
+    $path ??= '/' . ltrim(request()->path() ?: '', '/');
+    $current ??= SidebarPaginator::getCurrent($path);
+    $seo ??= SidebarPaginator::getSeo($current);
 @endphp
 
-<x-layouts.base body-class="bg-bg lg:bg-gray-50/50 dark:lg:bg-bg " :seo="$seo">
+<x-layouts.base
+    body-class="bg-background  lg:bg-gray-50/50 dark:lg:bg-background  "
+    :seo="$seo"
+    :script-entries="['resources/js/app.js', 'resources/js/flexilla.js', 'resources/js/search.js', 'resources/js/docs.js']"
+>
     <x-slot name="head">
-        @vite(['resources/css/code-theme.css', 'resources/css/docs.css', 'resources/js/docs.js'])
+        @vite(['resources/css/code-theme.css', 'resources/css/docs.css'])
     </x-slot>
     <x-organisms.doc-navbar />
     <div

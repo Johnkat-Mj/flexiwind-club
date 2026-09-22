@@ -1,3 +1,5 @@
+import '@fontsource/geist-sans';
+import '@fontsource/ibm-plex-mono';
 import copyToClipboardComponent from "./copyToClipboard";
 
 import { docSearch } from "../data/search-db";

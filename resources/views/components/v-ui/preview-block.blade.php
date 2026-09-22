@@ -1,0 +1,24 @@
+@props([
+    'url' => '',
+    'isFullScreen' => false,
+])
+
+<div data-preview-box style="--frame-height:200px;" class="w-full bg-background 
+    grid relative 
+      overflow-hidden
+       {{ $isFullScreen ? 'h-[max(calc(100vh-6rem),var(--frame-height))] xl:h-[max(44rem,var(--frame-height))] ' :'h-(--frame-height)'}}
+      "
+    x-data="{ frameIsLoading: true }"
+    
+    >
+    <div x-show="frameIsLoading" class="absolute inset-0 flex items-center justify-center">
+        <x-ui.skeleton radius-none class="size-full rounded-ui" />
+    </div>
+
+    <iframe loading="lazy" src="{{ $url }}" x-bind:data-frame-loading="frameIsLoading"
+        x-on:load="frameIsLoading = false" x-preview-frame
+        
+        class="
+            w-full data-[frame-loading=true]:invisible data-[frame-loading=true]:opacity-0 overflow-hidden h-full
+        "></iframe>
+</div>

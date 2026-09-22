@@ -6,14 +6,14 @@
     'disabled' => false,
     'type' => 'button',
     'href' => null,
-    'radiusNone' => false,
+    'radius' => true,
 ])
-
 @php
     use App\Flexiwind\ButtonHelper;
     $btn_variants = ButtonHelper::getVariants();
 
     $sizes = [
+        'none' => '',
         'xs' => 'btn-xs',
         'sm' => 'btn-sm',
         'md' => 'btn-md',
@@ -21,6 +21,7 @@
         'xl' => 'btn-xl',
     ];
     $iconSizes = [
+        'none' => '',
         'xs' => 'btn-icon-xs text-xs',
         'sm' => 'btn-icon-sm text-xs',
         'md' => 'btn-icon-md text-sm',
@@ -65,7 +66,7 @@
         $baseClasses,
         $variantClasses,
         $sizeClasses,
-        'rounded-ui' => !$radiusNone,
+        'rounded-ui' => $radius,
         'cursor-not-allowed' => $disabled,
     ]);
 
@@ -88,7 +89,13 @@
 
 @endphp
 
-<{{ $tag }} {{ $attributes }}
-    @if (!$isInternal) target="_blank"  rel="noopener noreferrer" @endif>
-    {{ $slot }}
-    </{{ $tag }}>
+
+@if ($tag === 'button')
+    <button {{ $attributes }}>
+        {{ $slot }}
+    </button>
+@else
+    <a {{ $attributes }} @if (!$isInternal) target="_blank"  rel="noopener noreferrer" @endif>
+        {{ $slot }}
+    </a>
+@endif

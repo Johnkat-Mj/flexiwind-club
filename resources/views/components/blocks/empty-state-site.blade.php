@@ -7,7 +7,7 @@
             class="font-bold text-3xl md:text-4xl/tight max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-fg">
             {{ $title }}
         </h2>
-        <p class="text-fg-muted max-w-md text-sm mt-3.5">
+        <p class="text-muted-foreground max-w-md text-sm mt-3.5">
             {{ $description }}
         </p>
         {{ $slot }}

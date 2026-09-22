@@ -1,17 +1,5 @@
-<?php
-
-use Livewire\Component;
-
-new class extends Component {
-    public $allBlocks;
-
-    public function mount()
-    {
-        $blocks = config('blocks');
-        $this->allBlocks = $blocks;
-    }
-    //
-}; ?>
-<main class="">
-    
-</main>
+<x-layouts::site>
+    <main>
+        <x-site.home-hero />
+    </main>
+</x-layouts::site>

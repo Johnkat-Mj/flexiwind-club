@@ -5,18 +5,24 @@ namespace App\Support;
 use DOMDocument;
 use DOMElement;
 use DOMXPath;
-use Illuminate\Support\Str;
 use Exception;
+use Illuminate\Support\Str;
 
 class HeadingExtractor
 {
     /**
+     * @var array<string, array<int, array<string, mixed>>>
+     */
+    private static array $cache = [];
+
+    /**
      * Extract headings from HTML to create a table of contents.
      *
-     * @param string $html The input HTML string
-     * @param string[] $headingLevels Array of heading tags to extract (e.g., ['h2', 'h3'])
-     * @param string|null $containerQuery Optional XPath query for container
+     * @param  string  $html  The input HTML string
+     * @param  string[]  $headingLevels  Array of heading tags to extract (e.g., ['h2', 'h3'])
+     * @param  string|null  $containerQuery  Optional XPath query for container
      * @return array Array of grouped headings
+     *
      * @throws Exception If HTML parsing fails
      */
     public static function extractFromHtml(
@@ -24,10 +30,16 @@ class HeadingExtractor
         array $headingLevels = ['h2', 'h3'],
         ?string $containerQuery = null
     ): array {
+        $cacheKey = md5($html.serialize($headingLevels).$containerQuery);
+
+        if (isset(self::$cache[$cacheKey])) {
+            return self::$cache[$cacheKey];
+        }
+
         // Initialize DOMDocument
-        $dom = new DOMDocument();
+        $dom = new DOMDocument;
         libxml_use_internal_errors(true); // Suppress warnings, capture errors
-        if (!$dom->loadHTML('<?xml encoding="utf-8" ?>' . $html)) {
+        if (! $dom->loadHTML('<?xml encoding="utf-8" ?>'.$html)) {
             libxml_clear_errors();
             throw new Exception('Failed to parse HTML');
         }
@@ -38,7 +50,7 @@ class HeadingExtractor
         // Build XPath query for specified heading levels
         $query = $containerQuery
             ? sprintf('%s//%s', $containerQuery, implode(' | ', $headingLevels))
-            : '//' . implode(' | //', $headingLevels);
+            : '//'.implode(' | //', $headingLevels);
 
         $headings = $xpath->query($query);
         $groupedHeadings = [];
@@ -48,7 +60,7 @@ class HeadingExtractor
         foreach ($headings as $heading) {
             /** @var DOMElement $heading */
             $text = trim($heading->textContent);
-            if (!$text || !$heading->getAttribute('id') && !$text) {
+            if (! $text || ! $heading->getAttribute('id') && ! $text) {
                 continue; // Skip empty headings or those without id/text
             }
 
@@ -57,7 +69,7 @@ class HeadingExtractor
             $baseSlug = $slug;
             $suffix = 1;
             while (isset($usedSlugs[$slug])) {
-                $slug = $baseSlug . '-' . $suffix++;
+                $slug = $baseSlug.'-'.$suffix++;
             }
             $usedSlugs[$slug] = true;
 
@@ -71,7 +83,7 @@ class HeadingExtractor
                 // Start new group for top-level heading
                 $currentGroup = [
                     'heading' => $headingObj,
-                    'subheadings' => []
+                    'subheadings' => [],
                 ];
                 $groupedHeadings[] = $currentGroup;
             } elseif ($currentGroup !== null) {
@@ -81,6 +93,8 @@ class HeadingExtractor
             }
         }
 
-        return $groupedHeadings;
+        self::$cache[$cacheKey] = $groupedHeadings;
+
+        return self::$cache[$cacheKey];
     }
 }

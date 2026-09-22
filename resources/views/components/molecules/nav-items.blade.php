@@ -30,11 +30,11 @@
 @endphp
 
 <ul
-    class="w-full flex flex-col gap-3 lg:flex-row lg:items-center  text-fg-muted bg-bg lg:bg-transparent rounded-ui p-2 lg:p-0 border border-border dark:border-border-strong lg:border-none">
+    class="w-full flex flex-col gap-3 lg:flex-row lg:items-center  text-muted-foreground bg-background lg:bg-transparent rounded-ui p-2 lg:p-0 border border-border dark:border-border-strong lg:border-none">
     @foreach ($items as $item)
         <li class="relative group {{ isset($item['onlyMobile']) && $item['onlyMobile'] ? 'md:hidden' : '' }}">
             <x-atoms.ui-link href="{{ $item['href'] }}"
-                class="flex items-center text-sm hover:text-fg-title ease-linear duration-200 rounded-ui">
+                class="flex items-center text-sm hover:text-title-foreground  ease-linear duration-200 rounded-ui">
                 {{ $item['text'] }}
             </x-atoms.ui-link>
         </li>

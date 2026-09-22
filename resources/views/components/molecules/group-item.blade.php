@@ -1,9 +1,9 @@
 <li class="{{ $isHidden ? 'lg:hidden' : '' }}">
     @if ($noWire)
         <a href="{{ $path }}" aria-label="Link to {{ $title }}"
-            class="flex items-center gap-x-2.5 fx-current:font-600 fx-current:text-fg-title text-fg hover:text-fg-title group">
+            class="flex items-center gap-x-2.5 fx-current:font-600 fx-current:text-title-foreground  text-foreground hover:text-title-foreground  group">
             <span aria-hidden="true"
-                class="flex in-fx-current:text-fg-title">
+                class="flex in-fx-current:text-title-foreground ">
                 <span class="flex iconify {{ $icon }} text-sm"></span>
             </span>
             <span>
@@ -12,9 +12,9 @@
         </a>
     @else
         <a wire:navigate.hover href="{{ $path }}" aria-label="Link to {{ $title }}"
-            class="flex items-center gap-x-2.5 fx-current:font-600 fx-current:text-fg-title text-fg hover:text-fg-title group">
+            class="flex items-center gap-x-2.5 fx-current:font-600 fx-current:text-title-foreground  text-foreground hover:text-title-foreground  group">
             <span aria-hidden="true"
-                class="flex in-fx-current:text-fg-title">
+                class="flex in-fx-current:text-title-foreground ">
                 <span class="flex iconify {{ $icon }} text-sm"></span>
             </span>
             <span>

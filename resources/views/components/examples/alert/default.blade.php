@@ -4,13 +4,13 @@
     </x-ui.alert>
     <x-ui.alert class="flex items-center gap-4">
         <span class="min-w-max iconify ph--info"> </span>
-        <div class="flex-1 text-fg">
+        <div class="flex-1 text-foreground">
             You can add components to your app using our CLI.
         </div>
     </x-ui.alert>
     <x-ui.alert variant="outline" class="flex items-center gap-4">
         <span class="min-w-max iconify ph--info"> </span>
-        <div class="flex-1 text-fg">
+        <div class="flex-1 text-foreground">
             You can add components to your app using our CLI.
         </div>
     </x-ui.alert>

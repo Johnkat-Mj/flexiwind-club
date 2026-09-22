@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\View;
 
 class PreviewUiController extends Controller
@@ -21,9 +22,9 @@ class PreviewUiController extends Controller
         if ($segments[0] === 'pages') {
             array_shift($segments);
         }
-        $path = '/' . implode('/', $segments);
+        $path = '/'.implode('/', $segments);
 
-        if (!View::exists($view)) {
+        if (! View::exists($view)) {
             abort(404);
         }
 

@@ -2,6 +2,22 @@ import { $ } from "@flexilla/utilities";
 import { copyToClipboard } from "./utils";
 
 document.addEventListener("alpine:init", () => {
+    Alpine.directive("ui-lg-filter", (el, {}, { cleanup }) => {
+        const trigger = document.querySelector("[data-trigger-lg-filter]");
+        const filterZone = el;
+        const toggle = () => {
+            const isOpened = filterZone.getAttribute("data-state") === "open";
+            filterZone.setAttribute("data-state", isOpened ? "closed" : "open");
+            trigger.setAttribute("aria-expanded", isOpened ? null : true);
+        };
+        if (trigger && filterZone) {
+            trigger.addEventListener("click", toggle);
+        }
+        cleanup(() => {
+            if (trigger && filterZone)
+                trigger.removeEventListener("click", toggle);
+        });
+    });
     Alpine.directive("ui-block", (el, {}, { cleanup }) => {
         const previewBox = $("[data-ui-previewbox]", el);
 
@@ -16,7 +32,7 @@ document.addEventListener("alpine:init", () => {
                 onCopy: () => {
                     el.innerHTML = `
                     <span aria-hidden="true" class="flex iconify ph--circle-notch animate-spin"></span>
-                        <span class="text-fg-muted ml-1">Copying</span>`;
+                        <span class="text-muted-foreground ml-1">Copying</span>`;
                 },
                 onCopyCompleted: () => {
                     el.innerHTML =
@@ -24,7 +40,7 @@ document.addEventListener("alpine:init", () => {
                     setTimeout(
                         () =>
                             (el.innerHTML = `<span aria-hidden="true" class="flex iconify ph--terminal"></span>
-                        <span class="text-fg-muted ml-1">${command}</span>`),
+                        <span class="text-muted-foreground ml-1">${command}</span>`),
                         1800,
                     );
                 },
@@ -69,7 +85,9 @@ document.addEventListener("alpine:init", () => {
                 if (iframeDoc && iframeDoc.documentElement) {
                     const contentHeight =
                         iframeDoc.documentElement.scrollHeight;
-                    el.style.setProperty(
+                    const previewBox =
+                        el.closest("[data-preview-box]") ?? el.parentElement;
+                    (previewBox ?? el).style.setProperty(
                         "--frame-height",
                         `${contentHeight}px`,
                     );

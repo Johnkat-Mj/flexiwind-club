@@ -1,11 +1,10 @@
 <?php
 
-
 return [
-  'css-variables-color-light' => [
-    'lang' => 'css',
-    'name' => 'light',
-    'code' => <<<'CSS'
+    'css-variables-color-light' => [
+        'lang' => 'css',
+        'name' => 'light',
+        'code' => <<<'CSS'
 :root {
     --primary: var(--color-primary-600);
     --secondary: var(--color-secondary-600);
@@ -23,15 +22,15 @@ return [
     --bg: var(--color-white);
     --bg-subtle: var(--color-gray-100);
     --bg-surface: var(--color-gray-50);
-    --bg-muted: var(--color-gray-200);
+    --muted: var(--color-gray-200);
     --bg-surface-elevated: var(--color-gray-300);
     --card: var(--color-bg);
     --card-gray: var(--color-bg-subtle);
     --overlay: var(--color-bg);
     --overlay-gray: var(--color-bg-subtle);
 
-    --progressbar: var(--color-bg-muted);
-    --bg-range:var(--color-bg-muted);
+    --progressbar: var(--color-muted);
+    --bg-range:var(--color-muted);
 
     --border-strong: var(--color-gray-300);
     --border-amphasis: var(--color-gray-400);
@@ -66,6 +65,6 @@ return [
     --dropdown-item-danger-fg: var(--color-danger-600);
 }
 CSS
-  ]
+    ],
 
 ];

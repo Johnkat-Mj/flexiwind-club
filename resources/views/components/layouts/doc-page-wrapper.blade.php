@@ -20,7 +20,7 @@
 @endphp
 
 <main class="grid xl:grid-cols-[1fr_15rem]">
-    <article data-pagefind-body class="px-4 sm:px-8 grid text-fg h-max relative">
+    <article data-pagefind-body class="px-4 sm:px-8 grid text-foreground h-max relative">
         <div class="w-full xl:max-w-2xl mx-auto relative mb-13">
             <x-molecules.doc-page-header :title="$current['title']" :sub-title="$current['description']" :links="$links" :breadcrumbs-main="$breadcrumbsMain"
                 :breadcrumbs-words="$words">

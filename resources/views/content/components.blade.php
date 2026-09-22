@@ -9,7 +9,7 @@
             description="A custom auto-complete component with search and multi-select support." />
         <x-md.reference href="/components/advanced/multi-select" title="Multi Select"
             description="A custom multi-select component with search and multi-select support." />
-        <x-md.reference href="/components/extended/dissmissible" title="Dissmissible"
+        <x-md.reference href="/components/advanced/dissmissible" title="Dissmissible"
             description="A custom dismissible component." />
     </x-md.references-grid>
 

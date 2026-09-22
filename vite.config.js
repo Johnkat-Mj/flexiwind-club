@@ -1,28 +1,43 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
+import laravel from "laravel-vite-plugin";
+import { bunny } from "laravel-vite-plugin/fonts";
+import { defineConfig, lazyPlugins } from "vite-plus";
 
 export default defineConfig({
-    plugins: [
+    plugins: lazyPlugins(() => [
         laravel({
             input: [
-                'resources/css/site-font.css',
-                'resources/css/app.css', 
-                'resources/js/app.js',
-                'resources/css/docs.css',
-                'resources/js/flexilla.js',
-                'resources/js/docs.js',
-                'resources/js/block.js',
-                'resources/js/sidebar-plugin.js',
-                'resources/css/code-theme.css'
+                "resources/css/site-font.css",
+                "resources/css/app.css",
+                "resources/js/app.js",
+                "resources/css/docs.css",
+                "resources/js/flexilla.js",
+                "resources/js/club.js",
+                "resources/js/docs.js",
+                "resources/js/block.js",
+                "resources/js/sidebar-plugin.js",
+                "resources/css/code-theme.css",
             ],
             refresh: true,
+            // fonts: [
+            //     bunny("Instrument Sans", {
+            //         weights: [400, 500, 600],
+            //     }),
+            // ],
         }),
         tailwindcss(),
-    ],
+    ]),
     server: {
+        cors: true,
         watch: {
-            ignored: ['**/storage/framework/views/**'],
+            ignored: [
+                "**/.agents/**",
+                "**/.claude/**",
+                "**/.cursor/**",
+                "**/.junie/**",
+                "**/storage/framework/views/**",
+                "**/vendor/**",
+            ],
         },
     },
 });

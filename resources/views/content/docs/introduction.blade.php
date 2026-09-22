@@ -1,7 +1,4 @@
 <x-layouts.doc-page-wrapper :current="$current" :prev-slug="$prevSlug" :next-slug="$nextSlug" :links="[]">
-
-    <x-md.image-block src="/cover-image.webp" alt="Flexiwind Club Cover Image" />
-
     <x-md.h2>Overview</x-md.h2>
     <x-md.paragraph>
         <strong>

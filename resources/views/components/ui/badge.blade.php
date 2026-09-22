@@ -9,7 +9,7 @@
         'lg' => 'badge-lg',
     ];
 
-    $variantClass = $variant == 'default' ? ' bg-bg-subtle text-fg' : UiHelper::getClasses($variant, $intent);
+    $variantClass = $variant == 'default' ? ' bg-subtle text-foreground' : UiHelper::getClasses($variant, $intent);
 
     $className = "{$sizes[$size ?? 'default']} rounded-ui {$variantClass} {$class}";
 @endphp

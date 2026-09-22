@@ -1,0 +1,124 @@
+{
+    "installed": [
+        {
+            "name": "flexiwind-base",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "button-helper",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "button",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "label",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "input-group",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "input",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "link",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "select",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "kbd",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "divider",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "dropdown",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "popover",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "modal",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "slideover",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "radio",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "checkbox",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "accordion",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "range",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "tabs",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "otp",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "sidebar-wrapper",
+            "namespace": "flexiwind",
+            "version": "1.0.0",
+            "guides": [
+                "Wrap your sidebar markup with <x-ui.sidebar-wrapper> to get open/close toggle behaviour.",
+                "Import resources/js/sidebar-plugin.js in your Vite entry point (e.g. app.js) to activate the sidebar plugin.",
+                "Add data-toggle-sidebar to any button that should open/close the sidebar on mobile."
+            ]
+        },
+        {
+            "name": "tooltip",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        },
+        {
+            "name": "collapse",
+            "namespace": "flexiwind",
+            "version": "1.0.0"
+        }
+    ]
+}

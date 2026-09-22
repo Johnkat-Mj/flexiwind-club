@@ -1,6 +1,6 @@
 <div class="max-w-xl w-full px-4 mx-auto">
     <x-ui.card size="none" class="p-6 rounded-ui">
-        <h3 class="text-lg font-semibold text-fg-title mb-6">
+        <h3 class="text-lg font-semibold text-title-foreground  mb-6">
             User Profile Form
         </h3>
         <form class="grid grid-cols-2 gap-y-6 gap-x-4" id="profile-form">

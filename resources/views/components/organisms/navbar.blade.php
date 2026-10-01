@@ -43,7 +43,7 @@
                 <span
                     class="absolute top-1/2 -translate-1/2 left-1/2 ease-linear duration-200 iconify ph--moon-stars visible dark:invisible"></span>
             </x-ui.button>
-            <x-atoms.ui-link href="/the-club" aria-label="Link to club page"
+            <x-atoms.ui-link href="/pricing" aria-label="Link to club page"
                 class="ml-1.5 btn h-8 text-sm px-3 btn-solid btn-solid-neutral rounded-ui text-bg max-[350px]:hidden"
                 wire:navigate>
                 <span class="iconify ph--cube text-xs mr-1 hidden min-[560px]:flex"></span>

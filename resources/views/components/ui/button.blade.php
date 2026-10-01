@@ -40,6 +40,9 @@
         'ghost' => 'gray',
     ];
 
+    // `danger` est un alias de `destructive`, comme pour les composants ui-*.
+    $intent = ButtonHelper::normalizeIntent($intent);
+
     if ($intent === null && $variant !== 'none') {
         $intent = $defaultIntents[$variant] ?? 'primary';
     }

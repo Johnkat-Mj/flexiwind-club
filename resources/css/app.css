@@ -1,4 +1,17 @@
 @import "tailwindcss";
+
+/* Fontes servies par ce site : la sans pour l'interface, la mono pour le code
+   surligné. Le docs-kit demande 'Geist Mono', c'est ici qu'elle est déclarée. */
+
+/* Le docs-kit vit dans le dépôt public : une seule source de style pour la
+   documentation, partagée par le site free et le site du Club. */
+@import "../../../flexiwind/resources/css/docs-kit.css";
+
+/* Tailwind ne scanne que la racine du projet : il faut lui indiquer les vues
+   qui vivent à l'extérieur, sinon leurs classes sont absentes du build. */
+@source "../../../flexiwind/resources/views";
+@source "../../../flexiwind/registry/views";
+@source "../../storage/framework/flexiwind-docs";
 @reference "./flexiwind/base.css";
 @reference "./flexiwind/form.css";
 @reference "./flexiwind/button.css";
@@ -8,124 +21,126 @@
 
 
 @plugin "@iconify/tailwind4" {
-    prefixes: ph;
+    prefixes: ph, simple-icons;
     scale: 1.2;
 }
 
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: hsl(0 0% 100%);
-  --foreground: oklch(37% 0.013 285.805);
-  --title-foreground: oklch(21% 0.006 285.885);
-  --card: hsl(0 0% 100%);
-  --card-foreground: oklch(21% 0.006 285.885);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: oklch(37% 0.013 285.805);
-  --primary: hsl(243 75% 59%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(187 92% 36%);
-  --secondary-foreground: hsl(0 0% 100%);
-  --accent: hsl(209 92% 36%);
-  --accent-foreground: hsl(0 0% 100%);
-  --muted: oklch(96.7% 0.001 286.375);
-  --muted-foreground: oklch(44.2% 0.017 285.786);
-  --destructive: oklch(57.7% 0.245 27.325);
-  --destructive-foreground: hsl(0 0% 100%);
-  --success: oklch(59.6% 0.145 163.225);
-  --warning: oklch(64.6% 0.222 41.116);
-  --info: oklch(58.8% 0.158 241.966);
-  --border: oklch(92% 0.004 286.32);
-  --input: oklch(92% 0.004 286.32);
-  --ring: var(--primary);
-  --surface-background: oklch(98.5% 0 none);
-  --border-strong: oklch(87.1% 0.006 286.286);
-  --border-card: var(--border);
-  --border-input: var(--input);
-  --chart-1: var(--primary);
-  --chart-2: var(--secondary);
-  --chart-3: var(--accent);
-  --chart-4: color-mix(in oklab, var(--primary) 70%, white);
-  --chart-5: color-mix(in oklab, var(--secondary) 70%, white);
-  --gray-50: oklch(98.5% 0 0);
-  --gray-100: oklch(96.7% 0.001 286.375);
-  --gray-200: oklch(92% 0.004 286.32);
-  --gray-300: oklch(87.1% 0.006 286.286);
-  --gray-400: oklch(70.5% 0.015 286.067);
-  --gray-500: oklch(55.2% 0.016 285.938);
-  --gray-600: oklch(44.2% 0.017 285.786);
-  --gray-700: oklch(37% 0.013 285.805);
-  --gray-800: oklch(27.4% 0.006 286.033);
-  --gray-900: oklch(21% 0.006 285.885);
-  --gray-950: oklch(14.1% 0.005 285.823);
-  --ui-input-focus-outline: var(--primary);
-  --ui-input-place-holder: var(--muted-foreground);
-  --ui-input-fg: var(--foreground);
-  --ui-input-invalid-outline: var(--destructive);
-  --ring-background: var(--primary);
-  --ring-offset-color: var(--background);
-  --focus-ring: color-mix(in oklab, var(--primary) 24%, transparent);
-  --ui-radius: 0.5rem;
-  --card-radius: 0.5rem;
-  --card-padding: 0.25rem;
-  --checkbox-radius: 0.25rem;
-  --checkbox-bg: var(--background);
-  --checkbox-checked-color: var(--primary);
-  --dropdown-item-outline: var(--color-primary);
-  --dropdown-item-danger-outline: var(--color-destructive);
-  --dropdown-item-hover-and-select: var(--color-muted);
-  --dropdown-item-hover-and-select-fg: var(--color-foreground);
-  --dropdown-item-selected-fg: var(--color-foreground);
-  --dropdown-item-danger-fg: var(--color-destructive);
-  --dropdown-item-warning-fg: var(--color-warning);
-  --dropdown-item-danger-hover-and-select: color-mix(in oklab, var(--color-destructive) 10%, transparent);
-  --dropdown-item-danger-hover-and-select-fg: var(--color-destructive);
-  --dropdown-item-warning-hover-and-select: color-mix(in oklab, var(--color-warning) 10%, transparent);
-  --dropdown-item-warning-hover-and-select-fg: var(--color-warning);
+:root,
+.light {
+    --background: hsl(0 0% 100%);
+    --foreground: oklch(37% 0.013 285.805);
+    --title-foreground: oklch(21% 0.006 285.885);
+    --card: hsl(0 0% 100%);
+    --card-foreground: oklch(21% 0.006 285.885);
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: oklch(37% 0.013 285.805);
+    --primary: hsl(243 75% 59%);
+    --primary-foreground: hsl(0 0% 100%);
+    --secondary: hsl(187 92% 36%);
+    --secondary-foreground: hsl(0 0% 100%);
+    --accent: hsl(209 92% 36%);
+    --accent-foreground: hsl(0 0% 100%);
+    --muted: oklch(96.7% 0.001 286.375);
+    --muted-foreground: oklch(44.2% 0.017 285.786);
+    --destructive: oklch(57.7% 0.245 27.325);
+    --destructive-foreground: hsl(0 0% 100%);
+    --success: oklch(59.6% 0.145 163.225);
+    --warning: oklch(64.6% 0.222 41.116);
+    --info: oklch(58.8% 0.158 241.966);
+    --border: oklch(92% 0.004 286.32);
+    --input: oklch(92% 0.004 286.32);
+    --ring: var(--primary);
+    --surface-background: oklch(98.5% 0 none);
+    --border-strong: oklch(87.1% 0.006 286.286);
+    --border-card: var(--border);
+    --border-input: var(--input);
+    --chart-1: var(--primary);
+    --chart-2: #eb6834;
+    --chart-3: #1baf7a;
+    --chart-4: #eda100;
+    --chart-5: #e87ba4;
+    --gray-50: oklch(98.5% 0 0);
+    --gray-100: oklch(96.7% 0.001 286.375);
+    --gray-200: oklch(92% 0.004 286.32);
+    --gray-300: oklch(87.1% 0.006 286.286);
+    --gray-400: oklch(70.5% 0.015 286.067);
+    --gray-500: oklch(55.2% 0.016 285.938);
+    --gray-600: oklch(44.2% 0.017 285.786);
+    --gray-700: oklch(37% 0.013 285.805);
+    --gray-800: oklch(27.4% 0.006 286.033);
+    --gray-900: oklch(21% 0.006 285.885);
+    --gray-950: oklch(14.1% 0.005 285.823);
+    --ui-input-focus-outline: var(--primary);
+    --ui-input-place-holder: var(--muted-foreground);
+    --ui-input-fg: var(--foreground);
+    --ui-input-invalid-outline: var(--destructive);
+    --ring-background: var(--primary);
+    --ring-offset-color: var(--background);
+    --focus-ring: color-mix(in oklab, var(--primary) 24%, transparent);
+    --ui-radius: 0.5rem;
+    --card-radius: 0.5rem;
+    --card-padding: 0.25rem;
+    --checkbox-radius: 0.25rem;
+    --checkbox-bg: var(--background);
+    --checkbox-checked-color: var(--primary);
+    --dropdown-item-outline: var(--color-primary);
+    --dropdown-item-danger-outline: var(--color-destructive);
+    --dropdown-item-hover-and-select: var(--color-muted);
+    --dropdown-item-hover-and-select-fg: var(--color-foreground);
+    --dropdown-item-selected-fg: var(--color-foreground);
+    --dropdown-item-danger-fg: var(--color-destructive);
+    --dropdown-item-warning-fg: var(--color-warning);
+    --dropdown-item-danger-hover-and-select: color-mix(in oklab, var(--color-destructive) 10%, transparent);
+    --dropdown-item-danger-hover-and-select-fg: var(--color-destructive);
+    --dropdown-item-warning-hover-and-select: color-mix(in oklab, var(--color-warning) 10%, transparent);
+    --dropdown-item-warning-hover-and-select-fg: var(--color-warning);
 }
 
 .dark {
-  --background: oklch(14.1% 0.005 285.823);
-  --foreground: oklch(87.1% 0.006 286.286);
-  --title-foreground: hsl(0 0% 100%);
-  --card: oklch(14.1% 0.005 285.823);
-  --card-foreground: hsl(0 0% 100%);
-  --popover: oklch(14.1% 0.005 285.823);
-  --popover-foreground: oklch(87.1% 0.006 286.286);
-  --primary: hsl(243 75% 59%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(187 92% 36%);
-  --secondary-foreground: hsl(0 0% 100%);
-  --accent: hsl(209 92% 36%);
-  --accent-foreground: hsl(0 0% 100%);
-  --muted: oklch(21% 0.006 285.885);
-  --muted-foreground: oklch(70.5% 0.015 286.067);
-  --destructive: oklch(57.7% 0.245 27.325);
-  --destructive-foreground: hsl(0 0% 100%);
-  --success: oklch(59.6% 0.145 163.225);
-  --warning: oklch(64.6% 0.222 41.116);
-  --info: oklch(58.8% 0.158 241.966);
-  --border: oklch(21% 0.006 285.885);
-  --input: oklch(27.4% 0.006 286.033);
-  --ring: var(--primary);
-  --surface-background: color-mix(in oklab, var(--muted) 70%, transparent);
-  --border-strong: oklch(37% 0.013 285.805);
-  --border-card: oklch(27.4% 0.006 286.033);
-  --border-input: var(--input);
-  --chart-1: var(--primary);
-  --chart-2: var(--secondary);
-  --chart-3: var(--accent);
-  --chart-4: color-mix(in oklab, var(--primary) 70%, white);
-  --chart-5: color-mix(in oklab, var(--secondary) 70%, white);
-  --dropdown-item-danger-hover-and-select: color-mix(in oklab, var(--color-destructive) 18%, transparent);
-  --dropdown-item-danger-hover-and-select-fg: var(--color-destructive);
-  --dropdown-item-warning-hover-and-select: color-mix(in oklab, var(--color-warning) 18%, transparent);
-  --dropdown-item-warning-hover-and-select-fg: var(--color-warning);
+    --background: oklch(14.1% 0.005 285.823);
+    --foreground: oklch(87.1% 0.006 286.286);
+    --title-foreground: hsl(0 0% 100%);
+    --card: oklch(14.1% 0.005 285.823);
+    --card-foreground: hsl(0 0% 100%);
+    --popover: oklch(14.1% 0.005 285.823);
+    --popover-foreground: oklch(87.1% 0.006 286.286);
+    --primary: hsl(243 75% 59%);
+    --primary-foreground: hsl(0 0% 100%);
+    --secondary: hsl(187 92% 36%);
+    --secondary-foreground: hsl(0 0% 100%);
+    --accent: hsl(209 92% 36%);
+    --accent-foreground: hsl(0 0% 100%);
+    --muted: oklch(21% 0.006 285.885);
+    --muted-foreground: oklch(70.5% 0.015 286.067);
+    --destructive: oklch(57.7% 0.245 27.325);
+    --destructive-foreground: hsl(0 0% 100%);
+    --success: oklch(59.6% 0.145 163.225);
+    --warning: oklch(64.6% 0.222 41.116);
+    --info: oklch(58.8% 0.158 241.966);
+    --border: oklch(21% 0.006 285.885);
+    --input: oklch(27.4% 0.006 286.033);
+    --ring: var(--primary);
+    --surface-background: color-mix(in oklab, var(--muted) 70%, transparent);
+    --border-strong: oklch(37% 0.013 285.805);
+    --border-card: oklch(27.4% 0.006 286.033);
+    --border-input: var(--input);
+    --chart-1: var(--primary);
+    --chart-2: #d95926;
+    --chart-3: #199e70;
+    --chart-4: #c98500;
+    --chart-5: #d55181;
+    --dropdown-item-danger-hover-and-select: color-mix(in oklab, var(--color-destructive) 18%, transparent);
+    --dropdown-item-danger-hover-and-select-fg: var(--color-destructive);
+    --dropdown-item-warning-hover-and-select: color-mix(in oklab, var(--color-warning) 18%, transparent);
+    --dropdown-item-warning-hover-and-select-fg: var(--color-warning);
 }
 
 @theme inline {
     --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: "Geist Mono";
     --radius-ui: var(--ui-radius);
     --radius-card: var(--card-radius);
     --radius-card-inner: calc(var(--card-radius) - var(--card-padding));
@@ -133,7 +148,7 @@
 
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --color-title-foreground: var(--fg-title);
+    --color-title-foreground: var(--title-foreground);
 
     --color-card: var(--card);
     --color-card-foreground: var(--card-foreground);
@@ -227,15 +242,19 @@
 }
 
 @utility linear-bg-horizontal {
-    background: repeating-linear-gradient(
-        90deg,
-        var(--border),
-        var(--border) 7px,
-        transparent 7px,
-        transparent 12px,
-        var(--border) 12px
-    ) no-repeat 0 100% / 100% 1.5px;
+    background: repeating-linear-gradient(90deg,
+            var(--border),
+            var(--border) 7px,
+            transparent 7px,
+            transparent 12px,
+            var(--border) 12px) no-repeat 0 100% / 100% 1.5px;
 }
+
+@utility linear-gradient-pattern {
+    background-image: repeating-linear-gradient(-315deg, var(--border) 0, var(--border) 1px, transparent 0, transparent 50%);
+    background-attachment: fixed;
+}
+
 
 /* For modal animation  */
 @keyframes modal-animation-in {
@@ -244,9 +263,11 @@
         transform: translateY(-1.5rem);
     }
 
+    /* none, pas translateY(0) : un transform resté en place ferait du contenu du
+       modal le repère des éléments fixes (listbox, dropdown), qui s'afficheraient décalés. */
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: none;
     }
 }
 
@@ -260,4 +281,145 @@
         opacity: 0;
         transform: translateY(-0.75rem);
     }
+}
+
+/* ------------------------------------------------------------------
+   Site : tokens et motifs du design (rails, grille, points, code).
+   Les utilitaires bg-surface / bg-subtle / text-subtitle existaient
+   déjà dans @theme mais pointaient vers des variables jamais définies.
+   ------------------------------------------------------------------ */
+:root,
+.light {
+    --bg-surface: oklch(98.5% 0 0);
+    --bg-subtle: oklch(96.7% 0.001 286.375);
+    --fg-subtitle: oklch(62% 0.014 286);
+    --grid-line: rgb(9 9 11 / 0.06);
+    --code-background: #18181b;
+    --code-foreground: #e4e4e7;
+    --code-muted: #8b8b96;
+}
+
+.dark {
+    --bg-surface: #0f0f12;
+    --bg-subtle: #1b1b1f;
+    --fg-subtitle: oklch(55.2% 0.016 285.938);
+    --grid-line: rgb(255 255 255 / 0.05);
+    --code-background: #141417;
+}
+
+@theme inline {
+    --font-display: "Geist Sans", "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    --color-code: var(--code-background);
+    --color-code-foreground: var(--code-foreground);
+    --color-code-muted: var(--code-muted);
+    --animate-marquee: site-marquee 48s linear infinite;
+    --animate-pop: site-pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    --animate-blink: site-blink 1s steps(2, start) infinite;
+    --animate-slide-in: site-slide-in 0.25s ease both;
+}
+
+@utility bg-grid {
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 70% 80% at 50% 0%, #000 30%, transparent 100%);
+}
+
+@utility bg-dots {
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+@keyframes site-marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes site-pop {
+    from {
+        opacity: 0;
+        transform: translateY(6px) scale(0.98);
+    }
+}
+
+@keyframes site-blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes site-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+@keyframes site-progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Code des panneaux : le fond vient du panneau, les numéros de ligne du CSS. */
+.code-lines pre {
+    background: transparent !important;
+    width: max-content;
+    min-width: 100%;
+}
+
+.code-lines code {
+    counter-reset: line;
+}
+
+.code-lines .line::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 1.75rem;
+    margin-right: 1rem;
+    text-align: right;
+    color: #52525b;
+    user-select: none;
+}
+
+/* ------------------------------------------------------------------
+   Toasts : @flexilla/toast lit ces variables à travers son Shadow DOM.
+   Elles pointent vers les jetons du thème, clair et sombre compris.
+   ------------------------------------------------------------------ */
+:root {
+    --fx-toast-bg: var(--background);
+    --fx-toast-fg: var(--title-foreground);
+    --fx-toast-muted-fg: var(--muted-foreground);
+    --fx-toast-border: color-mix(in oklab, var(--foreground) 12%, transparent);
+    --fx-toast-radius: calc(var(--ui-radius) * 1.5);
+    --fx-toast-font: var(--font-sans);
+    --fx-toast-shadow: 0 10px 30px -12px rgb(0 0 0 / 0.25), 0 2px 6px -2px rgb(0 0 0 / 0.06);
+    --fx-toast-action-bg: var(--title-foreground);
+    --fx-toast-action-fg: var(--background);
+    --fx-toast-ring: var(--primary);
+    --fx-toast-success-icon: var(--success);
+    --fx-toast-info-icon: var(--info);
+    --fx-toast-warning-icon: var(--warning);
+    --fx-toast-error-icon: var(--destructive);
+    --fx-toast-success-bg: color-mix(in oklab, var(--success) 10%, var(--background));
+    --fx-toast-success-border: color-mix(in oklab, var(--success) 28%, var(--background));
+    --fx-toast-success-fg: color-mix(in oklab, var(--success) 72%, var(--title-foreground));
+    --fx-toast-info-bg: color-mix(in oklab, var(--info) 9%, var(--background));
+    --fx-toast-info-border: color-mix(in oklab, var(--info) 26%, var(--background));
+    --fx-toast-info-fg: color-mix(in oklab, var(--info) 72%, var(--title-foreground));
+    --fx-toast-warning-bg: color-mix(in oklab, var(--warning) 11%, var(--background));
+    --fx-toast-warning-border: color-mix(in oklab, var(--warning) 28%, var(--background));
+    --fx-toast-warning-fg: color-mix(in oklab, var(--warning) 72%, var(--title-foreground));
+    --fx-toast-error-bg: color-mix(in oklab, var(--destructive) 9%, var(--background));
+    --fx-toast-error-border: color-mix(in oklab, var(--destructive) 26%, var(--background));
+    --fx-toast-error-fg: color-mix(in oklab, var(--destructive) 72%, var(--title-foreground));
 }

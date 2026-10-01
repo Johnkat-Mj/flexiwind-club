@@ -33,7 +33,7 @@
                 Your current UI workflow is slower than your backend.
             </h2>
             <p class="mt-4 max-w-md text-sm leading-6 text-muted-foreground">
-                Flexiwind Club gives Laravel developers the missing pro UI system: a premium library that feels designed, but still behaves like code you own.
+                Flexiwind Pro gives Laravel developers the missing pro UI system: a premium library that feels designed, but still behaves like code you own.
             </p>
         </div>
 

@@ -5,7 +5,7 @@
     <x-ui.avatar-placeholder size="sm" variant="subtle" intent="gray">
         <span class="iconify ph--user"></span>
     </x-ui.avatar-placeholder>
-    <x-ui.avatar-placeholder size="md" variant="subtle" intent="neutral">
+    <x-ui.avatar-placeholder size="md" variant="subtle" intent="success">
         <span class="iconify ph--user"></span>
     </x-ui.avatar-placeholder>
 </div>

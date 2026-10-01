@@ -107,7 +107,7 @@
                     <a href="#"
                         class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-muted-foreground hover:bg-muted/70 hover:text-title-foreground ">
                         <span class="block size-2 mr-1 rounded-full bg-sky-600 dark:bg-sky-400"></span>
-                        <span class="text-sm truncate">Flexiwind Club</span>
+                        <span class="text-sm truncate">Flexiwind Pro</span>
                     </a>
                     <a href="#"
                         class="group flex items-center rounded-ui h-9 justify-start gap-3.5 px-4 text-muted-foreground hover:bg-muted/70 hover:text-title-foreground ">

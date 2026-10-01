@@ -37,7 +37,7 @@
                 <span
                     class="absolute top-1/2 -translate-1/2 left-1/2 ease-linear duration-200 iconify ph--moon-stars visible dark:invisible"></span>
             </button>
-            <x-ui.button intent="neutral" size="none" href="/the-club" class="ml-2 h-8 text-sm px-3">
+            <x-ui.button intent="neutral" size="none" href="/pricing" class="ml-2 h-8 text-sm px-3">
                 <span class="iconify ph--cube text-xs mr-1 hidden min-[560px]:flex"></span>
                 Join the club
             </x-ui.button>

@@ -1,85 +1,63 @@
+@php
+    use App\Flexiwind\ButtonHelper;
+
+    // La matrice est lue depuis le helper : cette table ne peut plus mentir
+    // sur ce qui existe, même si la matrice évolue.
+    $matrix = ButtonHelper::getVariants();
+
+    $variants = ['solid', 'outline', 'soft', 'ghost'];
+
+    $intents = [
+        'primary' => 'Primary',
+        'secondary' => 'Secondary',
+        'accent' => 'Accent',
+        'success' => 'Success',
+        'info' => 'Info',
+        'warning' => 'Warning',
+        'danger' => 'Danger',
+        'gray' => 'Gray',
+        'neutral' => 'Neutral',
+        'white' => 'White',
+    ];
+
+    $supports = fn (string $variant, string $intent): bool => isset(
+        $matrix[$variant]['intents'][ButtonHelper::normalizeIntent($intent)]
+    );
+@endphp
+
 <div>
     <div class="grid grid-cols-[auto_minmax(0,1fr)] gap-4 overflow-hidden">
         <div class="grid text-sm text-muted-foreground mt-14 pl-3 sm:pl-0">
-            <div>Primary</div>
-            <div>Secondry</div>
-            <div>Accent</div>
-            <div>Success</div>
-            <div>Info</div>
-            <div>Warning</div>
-            <div>Danger</div>
-            <div>Gray</div>
-            <div>Neutral</div>
-            <div>White</div>
+            @foreach ($intents as $label)
+                <div class="flex items-center h-12">{{ $label }}</div>
+            @endforeach
         </div>
         <div class="grid overflow-hidden">
             <div data-invisible-scrollbar class="grid overflow-x-auto">
                 <div class="grid grid-cols-4 gap-4 px-4 text-sm text-muted-foreground pb-3">
-                    <div>Solid</div>
-                    <div>Outline</div>
-                    <div>Soft</div>
-                    <div>Ghost</div>
+                    @foreach ($variants as $variant)
+                        <div>{{ ucfirst($variant) }}</div>
+                    @endforeach
                 </div>
                 <div class="p-4 rounded-md border border-border-strong/60 gap-4 grid min-w-max">
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="primary">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="primary">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="primary">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="secondary">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="secondary">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="secondary">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="secondary">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="accent">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="accent">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="accent">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="accent">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="success">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="success">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="success">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="success">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="info">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="info">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="info">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="info">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="warning">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="warning">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="warning">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="warning">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="danger">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="danger">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="danger">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="danger">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="gray">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="neutral">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="outline" intent="neutral">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="soft" intent="neutral">Click Me</x-ui.button>
-                        <x-ui.button size="sm" variant="ghost" intent="neutral">Click Me</x-ui.button>
-                    </div>
-                    <div class="flex items-center gap-x-4">
-                        <x-ui.button size="sm" intent="white" class="border border-border text-title-foreground ">Click
-                            Me</x-ui.button>
-
-                    </div>
+                    @foreach ($intents as $intent => $label)
+                        <div class="grid grid-cols-4 gap-4 items-center h-12">
+                            @foreach ($variants as $variant)
+                                <div class="flex items-center">
+                                    @if ($supports($variant, $intent))
+                                        <x-ui.button size="sm" :variant="$variant" :intent="$intent">
+                                            Click Me
+                                        </x-ui.button>
+                                    @else
+                                        <span
+                                            class="text-muted-foreground/60"
+                                            title="{{ $variant }} + {{ $intent }} : aucune utility définie"
+                                        >-</span>
+                                    @endif
+                                </div>
+                            @endforeach
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

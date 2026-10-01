@@ -41,6 +41,7 @@ new class extends Component {
                             'illustrations' => $categoryData['illustrations'],
                             'count' => $blockCount,
                             'group' => $groupKey,
+                            'hasPro' => $categoryData['has-pro'] ?? false,
                         ];
                     }
                 }
@@ -55,6 +56,7 @@ new class extends Component {
                         'illustrations' => $categoryData['illustrations'],
                         'count' => $blockCount,
                         'group' => $this->selectedGroup,
+                        'hasPro' => $categoryData['has-pro'] ?? false,
                     ];
                 }
             }
@@ -90,7 +92,8 @@ new class extends Component {
         <ul class="pb-10 mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3.5 gap-y-6">
             @forelse ($this->categories as $category)
                 <li class="flex h-full">
-                    <x-blocks.block-card :group="$category['group']" :count="$category['count']" :key="$category['id']" :title="$category['name']" :illustrations="$category['illustrations']" />
+                    <x-blocks.block-card :group="$category['group']" :count="$category['count']" :key="$category['id']" :title="$category['name']" :illustrations="$category['illustrations']"
+                        :has-pro="$category['hasPro'] ?? false" />
                 </li>
             @empty
                 <div class="col-span-full relative -mt-7">

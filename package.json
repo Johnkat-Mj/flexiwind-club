@@ -12,7 +12,7 @@
         "@flexilla/accordion": "^2.2.8",
         "@flexilla/alpine-navbar": "^0.2.0",
         "@flexilla/auto-resize-area": "^2.1.2",
-        "@flexilla/autocomplete": "^0.1.2",
+        "@flexilla/autocomplete": "^0.1.3",
         "@flexilla/collapse": "^2.1.8",
         "@flexilla/custom-range": "^2.1.2",
         "@flexilla/dropdown": "^2.2.9",
@@ -20,15 +20,18 @@
         "@flexilla/offcanvas": "^2.2.3",
         "@flexilla/pin-input": "^0.0.4",
         "@flexilla/popover": "^1.0.6",
-        "@flexilla/select": "^0.1.2",
+        "@flexilla/select": "^0.1.3",
         "@flexilla/tabs": "^2.2.6",
+        "@flexilla/toast": "^0.1.1",
         "@flexilla/tooltip": "^2.4.6",
         "@flexilla/utilities": "^2.5.5",
         "@fontsource/geist-sans": "^5.3.0",
         "@fontsource/ibm-plex-mono": "^5.3.0",
         "@tailwindcss/vite": "^4.1.11",
         "concurrently": "^10.0.3",
+        "echarts": "^6.1.0",
         "laravel-vite-plugin": "^3.1",
+        "shiki": "^4.4.3",
         "tailwindcss": "^4.0.7",
         "vite": "^8.0.0",
         "vite-plus": "0.3.0"
@@ -41,6 +44,7 @@
     },
     "devDependencies": {
         "@iconify-json/ph": "^1.2.2",
+        "@iconify-json/simple-icons": "^1.2.97",
         "@iconify/tailwind4": "^1.2.3"
     }
 }

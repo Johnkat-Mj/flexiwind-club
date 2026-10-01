@@ -14,7 +14,7 @@
 
 <div class="mb-2 pt-3 border-t border-border-strong border-dashed">
     <h2 class="text-sm font-semibold hidden lg:flex text-subtitle">
-        Club Resources
+        Pro Resources
     </h2>
 
     <nav aria-label="Contribute Links" class="mt-3 flex flex-col">

@@ -1,0 +1,29 @@
+{
+    "version": "1.0.0",
+    "name": "select",
+    "title": "Select",
+    "tier": "pro",
+    "description": "Select enrichi — recherche, sélection multiple, groupes et rendu personnalisé.",
+    "docs": "content/docs/components/advanced/select.md",
+    "$comment": "Le contenu de la doc est dans le repo PUBLIC. Seuls les fichiers ci-dessous sont privés et servis derrière licence.",
+    "files": [
+        {
+            "path": "registry-pro/views/components/pro/select.blade.php",
+            "type": "registry:ui",
+            "target": "resources/views/components/pro/select.blade.php"
+        },
+        {
+            "path": "registry-pro/views/components/pro/select/trigger.blade.php",
+            "type": "registry:ui",
+            "target": "resources/views/components/pro/select/trigger.blade.php"
+        }
+    ],
+    "registryDependencies": [
+        "@flexiwind/button",
+        "@flexiwind/input"
+    ],
+    "dependencies": {
+        "composer": [],
+        "node": ["@flexilla/select"]
+    }
+}

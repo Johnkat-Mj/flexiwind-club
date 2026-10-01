@@ -1,7 +1,7 @@
 @php
     $faqs = [
-        ['question' => 'Is Flexiwind Club only for Livewire?', 'answer' => 'No. The blocks are built for Laravel Blade first, and the interactive pieces are friendly to Livewire and Alpine.'],
-        ['question' => 'Do I need a design system already?', 'answer' => 'No. Flexiwind Club gives you polished blocks, modern templates and component patterns you can adapt to your brand.'],
+        ['question' => 'Is Flexiwind Pro only for Livewire?', 'answer' => 'No. The blocks are built for Laravel Blade first, and the interactive pieces are friendly to Livewire and Alpine.'],
+        ['question' => 'Do I need a design system already?', 'answer' => 'No. Flexiwind Pro gives you polished blocks, modern templates and component patterns you can adapt to your brand.'],
         ['question' => 'Can I use it for client work?', 'answer' => 'Yes. It is designed for production projects, prototypes and client dashboards where you need to move fast.'],
         ['question' => 'What makes it different from free Flexiwind?', 'answer' => 'The club focuses on deeper app patterns, premium sections, complete screens, richer states and more guidance.'],
     ];

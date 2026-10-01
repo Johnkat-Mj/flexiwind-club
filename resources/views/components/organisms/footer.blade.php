@@ -49,7 +49,7 @@
                 ],
                 [
                     'text' => 'The club',
-                    'href' => '/the-club',
+                    'href' => '/pricing',
                 ],
                 [
                     'text' => 'Flexilla',

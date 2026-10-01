@@ -52,7 +52,7 @@
             <x-ui.card size="none" class="flex flex-col space-y-1 p-3 rounded-ui">
                 <div class="flex items-center justify-between space-x-3">
                     <span class="font-medium text-foreground flex-1">Data Export</span>
-                    <x-ui.badge size="sm" variant="soft" intent="warning">
+                    <x-ui.badge size="sm" variant="soft" intent="destructive">
                         Warning
                     </x-ui.badge>
                 </div>

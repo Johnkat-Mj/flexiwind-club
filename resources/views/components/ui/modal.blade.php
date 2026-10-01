@@ -11,6 +11,9 @@
     $bluredClass = $overlayBlured ? 'backdrop-blur-xs' : '';
     $overlay_class = "fixed inset-0 bg-gray-800/60 {$bluredClass} {$backdropClass}";
 @endphp
+{{-- data-fx-teleport-root : le dialog reste dans la page. showModal() le passe déjà au premier plan,
+     et déplacé dans <body> il sortirait du composant Livewire, qui le recréerait à chaque réponse. --}}
+<div data-fx-teleport-root class="contents">
 <dialog x-f-modal data-modal-id="{{ $id }}" wire:ignore.self
     @if ($staticBackdrop) data-modal-prevent @endif
     @if ($scrollableBody) data-allow-body-scroll @endif
@@ -20,3 +23,4 @@
     <span data-modal-overlay wire:ignore class="{{ $overlay_class }}"></span>
     {{ $slot }}
 </dialog>
+</div>

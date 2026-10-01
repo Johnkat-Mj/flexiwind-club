@@ -6,30 +6,29 @@ use Illuminate\Support\Facades\View;
 
 class PreviewUiController extends Controller
 {
-    public function __invoke(?string $group = null, ?string $preview = null)
+    /**
+     * Rend la page isolée d'un block, affichée dans l'iframe de /blocks.
+     *
+     * Le chemin est libre : /preview-ui/auth/login01 sert la version pro du
+     * dépôt pro, /preview-ui/free/auth/login01 la version OSS du dépôt
+     * public. Les deux jeux portent les mêmes noms sans être les mêmes blocks.
+     */
+    public function __invoke(?string $path = null)
     {
-        $view = 'pages-preview';
-        $path = '';
+        $segments = array_filter(explode('/', trim((string) $path, '/')));
 
-        if ($group) {
-            $view .= ".{$group}";
-        }
-        if ($preview) {
-            $view .= ".{$preview}";
+        if ($segments === []) {
+            abort(404);
         }
 
-        $segments = explode('.', $view);
-        if ($segments[0] === 'pages') {
-            array_shift($segments);
-        }
-        $path = '/'.implode('/', $segments);
+        $view = 'pages-preview.'.implode('.', $segments);
 
         if (! View::exists($view)) {
             abort(404);
         }
 
         return view($view, [
-            'path' => $path,
+            'path' => '/'.implode('/', $segments),
         ]);
     }
 }

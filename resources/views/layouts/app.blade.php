@@ -11,11 +11,11 @@
 @endphp
 
 <x-layouts.base
-    body-class="bg-background  flex flex-col"
+    body-class="bg-background flex flex-col"
     :seo="$seo"
-    :script-entries="['resources/js/app.js', 'resources/js/site-ui.js', 'resources/js/search.js']"
+    :script-entries="['resources/js/app.js', 'resources/js/flexilla.js', 'resources/js/block.js']"
 >
-        <x-atoms.global-lines />
+    <x-site.rails />
     <x-layouts::site-header />
     {{ $slot }}
     <x-layouts::site-footer />

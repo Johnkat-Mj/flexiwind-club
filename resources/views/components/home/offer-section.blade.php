@@ -36,7 +36,7 @@
             <div class="rounded-ui border border-white/10 bg-gray-950 p-6">
                 <div class="flex items-start justify-between gap-4">
                     <div>
-                        <p class="text-sm text-gray-400">Flexiwind Club</p>
+                        <p class="text-sm text-gray-400">Flexiwind Pro</p>
                         <h3 class="mt-1 text-2xl font-semibold text-white">Pro access</h3>
                     </div>
                     <span class="rounded-ui bg-primary px-2 py-1 text-xs font-medium text-white">Best for builders</span>
@@ -49,14 +49,14 @@
                     Built for developers who want to ship high UI Laravel applications without hiring a designer for every screen.
                 </p>
                 <div class="mt-7 flex flex-col gap-3 text-sm text-gray-300">
-                    @foreach (['Professional Blade and Livewire-ready blocks', 'Modern templates for real Laravel products', 'AI-friendly markup with clear structure', 'Complete dashboard and app screen patterns', 'Future Club drops included during early access'] as $feature)
+                    @foreach (['Professional Blade and Livewire-ready blocks', 'Modern templates for real Laravel products', 'AI-friendly markup with clear structure', 'Complete dashboard and app screen patterns', 'Future Pro drops included during early access'] as $feature)
                         <span class="flex items-center gap-2">
                             <span class="iconify ph--check text-primary-300"></span>
                             {{ $feature }}
                         </span>
                     @endforeach
                 </div>
-                <x-ui.button href="/the-club" size="lg" class="mt-8 w-full justify-center" wire:navigate>
+                <x-ui.button href="/pricing" size="lg" class="mt-8 w-full justify-center" wire:navigate>
                     Get early access
                 </x-ui.button>
             </div>

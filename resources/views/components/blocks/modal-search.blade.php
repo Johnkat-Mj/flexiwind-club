@@ -116,7 +116,7 @@
                     <span class="text-xs text-muted-foreground mt-2">
                         No result found for <span x-text="query" class="font-medium text-foreground"></span>
                     </span>
-                    <x-ui.button x-on:click="clearSearch()" variant="outline" intent="white" size="sm" class="mt-4 w-max">
+                    <x-ui.button x-on:click="clearSearch()" variant="outline" intent="gray" size="sm" class="mt-4 w-max">
                         Clear search
                     </x-ui.button>
                 </div>

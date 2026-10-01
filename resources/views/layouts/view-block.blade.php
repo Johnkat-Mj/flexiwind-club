@@ -36,7 +36,7 @@
 <x-layouts.base
     body-class="bg-background  "
     :seo="$seo"
-    :script-entries="['resources/js/app.js', 'resources/js/flexilla.js', 'resources/js/search.js', 'resources/js/block.js']"
+    :script-entries="['resources/js/app.js', 'resources/js/flexilla.js', 'resources/js/block.js']"
 >
     <x-organisms.navbar />
     <div class="relative w-full -mt-20 h-20">

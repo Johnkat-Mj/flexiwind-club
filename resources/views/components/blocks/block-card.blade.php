@@ -11,8 +11,11 @@
         </span>
     </div>
     <div class="mt-2 pb-2 flex justify-between items-center px-2">
-        <h3 class="font-medium text-title-foreground ">
+        <h3 class="font-medium text-title-foreground flex items-center gap-2">
             {{ $title }}
+            @if ($hasPro ?? false)
+                <x-fw-docs::pro-badge />
+            @endif
         </h3>
         <span aria-hidden="true"
             class="iconify ph--arrow-right size-3.5 text-muted-foreground origin-left ease-linear duration-200 opacity-0 scale-x-60 group-hover:opacity-100 group-hover:scale-x-100"></span>

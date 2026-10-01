@@ -1,3 +1,5 @@
+@props(['items' => null])
+
 
 
 @php
@@ -27,7 +29,7 @@
         [
             'name' => 'cookbook',
             'title' => 'Cookbook',
-            'path' => '/components/cookbook',
+            'path' => '/cookbook',
             'icon' => 'ph--book-open-text',
             'noWire'=>false
         ],
@@ -46,7 +48,9 @@
             'noWire'=>true
         ]
     ];
-    $sidebarItems = config('sidebar');
+    // Par défaut la navigation commune de /docs et /components ; une section
+    // autonome (le cookbook) passe la sienne.
+    $sidebarItems = $items ?? config('sidebar');
 @endphp
 
 

@@ -4,6 +4,7 @@
     'preview' => '',
     'code' => [],
     'isFullScreen' => false,
+    'tier' => 'free',
 ])
 
 @php
@@ -55,11 +56,15 @@
                     <span aria-hidden="true" class="flex iconify ph--arrows-clockwise text-sm"></span>
                 </button>
             </div>
-            <div class="flex items-center min-w-max text-foreground">
+            <div class="flex items-center gap-2 min-w-max text-foreground">
+                @if ($tier === 'pro')
+                    <x-fw-docs::pro-badge />
+                @endif
                 <div class="hidden sm:flex">
                     @php
-                        $command = "php artisan flexi:add {$title}";
-                        $commandInstall = "php artisan flexi:add @club/{$title}";
+                        $prefix = $tier === 'pro' ? '@fx/' : '';
+                        $command = "php artisan flexi:add {$prefix}{$title}";
+                        $commandInstall = $command;
                     @endphp
                     <x-ui.button x-copy-command size="none" variant="none" data-command="{{ $commandInstall }}"
                         class="bg-background shadow h-8 pl-2 pr-3 text-xs border border-border/50 rounded-md flex justify-center items-center cursor-pointer hover:bg-surface">
@@ -75,7 +80,12 @@
                 <x-v-ui.preview-block :is-full-screen="$isFullScreen" :url="$preview" />
             </x-ui.tabs.panel>
             <x-ui.tabs.panel id="code" show-as-grid class="size-full max-h-280">
-                <x-base.load-code-b :name="$title" />
+                {{-- La preview reste visible ; seule la source est réservée. --}}
+                @if ($tier === 'pro' && ! Flexiwind\Docs\Tier::current()->grants(Flexiwind\Docs\Tier::Pro))
+                    <x-fw-docs::locked variant="panel" :example="$title" />
+                @else
+                    <x-code-panel.block :name="$title" :tier="$tier" class="h-160" />
+                @endif
             </x-ui.tabs.panel>
         </x-ui.tabs.panel-wrapper>
     </x-ui.tabs>

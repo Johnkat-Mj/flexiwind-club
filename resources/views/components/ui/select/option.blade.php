@@ -1,2 +1,5 @@
-@props(['value', 'label', 'selected' => false])
-<option value="{{ $value }}" {{ $selected ? 'selected' : '' }}"> {{ $label }}</option>
+@props(['value', 'label' => null, 'selected' => false])
+
+{{-- `label` est optionnel : <x-ui.select.option>Texte</x-ui.select.option> est
+     la forme naturelle, et c'est celle qu'utilisent les previews. --}}
+<option value="{{ $value }}" @if ($selected) selected @endif>{{ $label ?? $slot }}</option>

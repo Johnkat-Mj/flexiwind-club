@@ -4,10 +4,10 @@
     <div class="absolute inset-y-0 right-2 w-28 linear-gradient-pattern opacity-40 pointer-events-none"></div>
 
     <div class="relative mx-auto flex w-full flex-col items-center px-4 pb-20 pt-20 text-center sm:px-6 lg:max-w-336 lg:px-8 lg:pt-28 lg:pb-28 xl:max-w-352 xl:px-8">
-        <a href="/the-club" wire:navigate
+        <a href="/pricing" wire:navigate
             class="inline-flex min-h-8 items-center gap-2 rounded-ui border border-border bg-surface px-3 py-1 text-sm text-muted-foreground shadow-sm transition hover:border-border-strong hover:text-title-foreground">
             <span class="iconify ph--sparkle text-primary"></span>
-            Flexiwind Club is the pro UI layer for Laravel
+            Flexiwind Pro is the pro UI layer for Laravel
         </a>
 
         <h1 class="mt-8 max-w-4xl text-balance text-4xl font-bold tracking-tight text-title-foreground sm:text-5xl lg:text-7xl/[1.06]" style="letter-spacing: -0.03em;">
@@ -19,7 +19,7 @@
         </p>
 
         <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <x-ui.button href="/the-club" size="lg" wire:navigate>
+            <x-ui.button href="/pricing" size="lg" wire:navigate>
                 <span class="iconify ph--cube mr-2 text-sm"></span>
                 Join the club
             </x-ui.button>

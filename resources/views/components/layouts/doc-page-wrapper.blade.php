@@ -6,13 +6,14 @@
     $breadcrumbs = [
         'components' => ['href' => '/components', 'text' => 'Components'],
         'docs' => ['href' => '/docs', 'text' => 'Docs'],
+        'cookbook' => ['href' => '/cookbook', 'text' => 'Cookbook'],
     ];
 
     $repoContentLocation = config('base.editContentBaseUrl');
     $path = '/' . ltrim(request()->path() ?: '', '/');
     $filePath = ltrim(substr($path, strrpos($path, '/') + 1), '/') ?: trim($path, '/');
     $words = UrlHelper::splitSlug($filePath);
-    $breadcrumbsMain = str_contains($path, '/components') ? $breadcrumbs['components'] : $breadcrumbs['docs'];
+    $breadcrumbsMain = $breadcrumbs[strtok(trim($path, '/'), '/') ?: 'docs'] ?? $breadcrumbs['docs'];
     $contentLocation = trim($path, '/');
 
     $slotHtml = (string) $slot;
@@ -20,7 +21,7 @@
 @endphp
 
 <main class="grid xl:grid-cols-[1fr_15rem]">
-    <article data-pagefind-body class="px-4 sm:px-8 grid text-foreground h-max relative">
+    <article data-pagefind-body class="px-5 sm:px-10 grid text-foreground h-max relative">
         <div class="w-full xl:max-w-2xl mx-auto relative mb-13">
             <x-molecules.doc-page-header :title="$current['title']" :sub-title="$current['description']" :links="$links" :breadcrumbs-main="$breadcrumbsMain"
                 :breadcrumbs-words="$words">

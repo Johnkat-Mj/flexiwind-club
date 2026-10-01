@@ -4,11 +4,14 @@
 ])
 
 @php
+    // ui-subtle n'expose que primary, destructive, success et gray
+    // (intents.css, matrice réduite). `info`, `warning` et `danger` n'existent
+    // pas : les trois types concernés ne rendaient aucune couleur.
     $typeClasses = [
-        'update' => 'ui-subtle-info',
         'note' => 'ui-subtle-gray',
-        'warning' => 'ui-subtle-warning',
-        'important' => 'ui-subtle-danger',
+        'update' => 'ui-subtle-success',
+        'warning' => 'ui-subtle-destructive',
+        'important' => 'ui-subtle-primary',
     ];
 
     $icons = [

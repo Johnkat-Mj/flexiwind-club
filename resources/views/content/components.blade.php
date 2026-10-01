@@ -3,14 +3,12 @@
         Advanced components
     </x-md.h2>
     <x-md.references-grid>
-        <x-md.reference href="/components/advanced/select" title="Select"
-            description="A custom select component with search and multi-select support." />
-        <x-md.reference href="/components/advanced/auto-complete" title="Auto Complete"
-            description="A custom auto-complete component with search and multi-select support." />
-        <x-md.reference href="/components/advanced/multi-select" title="Multi Select"
-            description="A custom multi-select component with search and multi-select support." />
-        <x-md.reference href="/components/advanced/dissmissible" title="Dissmissible"
-            description="A custom dismissible component." />
+        <x-md.reference href="/components/listbox" title="Listbox"
+            description="A select you can style and compose: one or several values, search, icons, avatars and groups." />
+        <x-md.reference href="/components/autocomplete" title="Autocomplete"
+            description="Search first: a known list or a Livewire search, one or several values." />
+        <x-md.reference href="/components/toast" title="Toast"
+            description="Short messages from Livewire, a redirect or Alpine, themed with your tokens." />
     </x-md.references-grid>
 
     <x-md.h2>

@@ -1,7 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Flexiwind;
 
+/**
+ * Matrice variant × intent des composants d'interface (badge, alert, kbd,
+ * card, avatar-placeholder, accordion).
+ *
+ * Même règle que ButtonHelper : elle doit refléter exactement
+ * resources/css/flexiwind/intents.css. `solid` porte la palette complète,
+ * `soft`, `outline` et `subtle` portent le noyau.
+ */
 class UiHelper
 {
     protected static array $variants = [
@@ -11,59 +21,43 @@ class UiHelper
             'intent' => [
                 'primary' => 'ui-solid-primary',
                 'secondary' => 'ui-solid-secondary',
-                'success' => 'ui-solid-success',
+                'accent' => 'ui-solid-accent',
+                'neutral' => 'ui-solid-neutral',
                 'destructive' => 'ui-solid-destructive',
-                'warning' => 'ui-solid-warning',
-                'info' => 'ui-solid-info',
+                'success' => 'ui-solid-success',
                 'gray' => 'ui-solid-gray',
-                'neutral'=>'ui-solid-neutral'
             ],
         ],
         'soft' => [
             'base' => 'ui-soft',
             'intent' => [
                 'primary' => 'ui-soft-primary',
-                'secondary' => 'ui-soft-secondary',
-                'accent'=>'ui-soft-accent',
-                'success' => 'ui-soft-success',
                 'destructive' => 'ui-soft-destructive',
-                'warning' => 'ui-soft-warning',
-                'info' => 'ui-soft-info',
+                'success' => 'ui-soft-success',
                 'gray' => 'ui-soft-gray',
-                'neutral' => 'ui-soft-neutral'
             ],
         ],
         'subtle' => [
             'base' => 'ui-subtle',
             'intent' => [
                 'primary' => 'ui-subtle-primary',
-                'secondary' => 'ui-subtle-secondary',
-                'success' => 'ui-subtle-success',
                 'destructive' => 'ui-subtle-destructive',
-                'accent'=>'ui-subtle-accent',
-                'warning' => 'ui-subtle-warning',
-                'info' => 'ui-subtle-info',
+                'success' => 'ui-subtle-success',
                 'gray' => 'ui-subtle-gray',
-                'neutral' => 'ui-subtle-neutral'
             ],
         ],
         'outline' => [
             'base' => 'ui-outline',
             'intent' => [
                 'primary' => 'ui-outline-primary',
-                'secondary' => 'ui-outline-secondary',
-                'success' => 'ui-outline-success',
                 'destructive' => 'ui-outline-destructive',
-                'warning' => 'ui-outline-warning',
-                'info' => 'ui-outline-info',
+                'success' => 'ui-outline-success',
                 'gray' => 'ui-outline-gray',
-                'neutral' => 'ui-outline-neutral'
             ],
         ],
     ];
 
-
-    public static function getVariants()
+    public static function getVariants(): array
     {
         return self::$variants;
     }
@@ -74,6 +68,7 @@ class UiHelper
         $variantConfig = self::$variants[$variant] ?? [];
         $base = $variantConfig['base'] ?? '';
         $intentClass = $variantConfig['intent'][$intent] ?? '';
+
         return trim("$base $intentClass");
     }
 

@@ -1,8 +1,12 @@
 @props([
     'name',
+    'tier' => 'free',
 ])
 
 @php
+    use Flexiwind\Docs\BlockRegistry;
+    use Flexiwind\Docs\Tier;
+
     $langMap = [
         'blade.php' => 'blade',
         'php' => 'php',
@@ -16,7 +20,7 @@
 
     $resolveLang = static function (string $path) use ($langMap): string {
         foreach ($langMap as $extension => $language) {
-            if (str_ends_with($path, '.' . $extension)) {
+            if (str_ends_with($path, '.'.$extension)) {
                 return $language;
             }
         }
@@ -24,50 +28,31 @@
         return 'plaintext';
     };
 
-    $registry = config('registry');
-    $filePath = $registry[$name] ?? null;
-    $isSingle = true;
-    $data = ['code' => '', 'lang' => 'text', 'name' => 'any-.php'];
+    // Le palier passe devant : login01 free et login01 pro sont deux blocks
+    // différents qui portent le même nom de payload.
+    $payload = app(BlockRegistry::class)->find($name, Tier::tryFrom($tier) ?? Tier::Free);
 
-    if ($filePath !== null) {
-        $blockData = cache()->remember("block-data:{$name}", now()->addHours(72), function () use ($filePath): ?array {
-            $path = resource_path("pro-club/{$filePath}");
+    $files = $payload['files'] ?? [];
+    $isSingle = count($files) <= 1;
+    $data = ['name' => '', 'code' => '', 'lang' => 'text', 'lines' => []];
 
-            if (! file_exists($path)) {
-                return null;
-            }
+    $toBlock = static fn (array $file): array => [
+        'name' => basename($file['target'] ?? $file['path'] ?? ''),
+        'code' => $file['content'] ?? '',
+        'lang' => $resolveLang($file['target'] ?? $file['path'] ?? ''),
+        'lines' => [],
+    ];
 
-            return json_decode(file_get_contents($path), true);
-        });
-
-        if ($blockData !== null) {
-            $files = $blockData['files'] ?? [];
-            $isSingle = count($files) === 1;
-
-            if ($isSingle && isset($files[0])) {
-                $file = $files[0];
-                $target = $file['target'] ?? $file['path'];
-
-                $data = [
-                    'name' => basename($target),
-                    'code' => $file['content'],
-                    'lang' => $resolveLang($target),
-                ];
-            } elseif (! $isSingle) {
-                $data = array_map(
-                    static fn (array $file): array => [
-                        'name' => basename($file['target'] ?? $file['path']),
-                        'code' => $file['content'],
-                        'lang' => $resolveLang($file['target'] ?? $file['path']),
-                    ],
-                    $files,
-                );
-            }
-        }
+    if ($files !== []) {
+        $data = $isSingle ? $toBlock($files[0]) : array_map($toBlock, $files);
     }
 @endphp
 
-@if (! $isSingle)
+@if ($files === [])
+    <div class="flex items-center justify-center p-10 text-sm text-muted-foreground">
+        Source not published yet for <code class="inline-code inline ml-1">{{ $name }}</code>.
+    </div>
+@elseif (! $isSingle)
     <x-base.load-code-in-tab :data="$data" />
 @else
     <x-base.single-code-block no-title :data="$data" />

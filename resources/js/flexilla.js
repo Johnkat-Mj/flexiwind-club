@@ -11,6 +11,10 @@ import { PinInputPlugin } from "./plugins/pin-input";
 import { NavbarPlugin } from "./plugins/nav-bar";
 import "./sidebar-plugin";
 import { CollapsePlugin } from "./plugins/collapse";
+import { ChartPlugin } from "./plugins/chart";
+import { EChartsPlugin } from "./plugins/echarts";
+import { ListboxPlugin } from "./plugins/listbox";
+import { ToastPlugin } from "./plugins/toast";
 
 Alpine.plugin(AccordionPlugin);
 Alpine.plugin(CollapsePlugin)
@@ -24,3 +28,7 @@ Alpine.plugin(PopoverPlugin);
 Alpine.plugin(TooltipPlugin);
 Alpine.plugin(PinInputPlugin);
 Alpine.plugin(NavbarPlugin);
+Alpine.plugin(ChartPlugin);
+Alpine.plugin(EChartsPlugin);
+Alpine.plugin(ListboxPlugin);
+Alpine.plugin(ToastPlugin);

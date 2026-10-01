@@ -4,7 +4,7 @@
 
 <div class="grid">
     <div
-        class="flex w-full justify-between gap-4 bg-subtle/70 hover:bg-muted/60 rounded-lg p-1 ease-linear duration-300 overflow-hidden">
+        class="flex w-full justify-between gap-4 bg-muted/60 hover:bg-muted/90 rounded-lg p-1 ease-linear duration-300 overflow-hidden">
         @if ($prevSlug)
             @if ($nextSlug)
                 <x-atoms.ui-link href="{{ $prevSlug['slug'] }}"

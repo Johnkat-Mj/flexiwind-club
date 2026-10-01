@@ -10,11 +10,11 @@
         </h2>
 
         <p class="mt-4 max-w-sm text-base leading-7 text-gray-400">
-            Join developers building beautiful Laravel interfaces with Flexiwind Club.
+            Join developers building beautiful Laravel interfaces with Flexiwind Pro.
         </p>
 
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <x-ui.button href="/the-club" size="lg" variant="outline" class="border-white/20 bg-white text-gray-950 hover:bg-gray-100" wire:navigate>
+            <x-ui.button href="/pricing" size="lg" variant="outline" class="border-white/20 bg-white text-gray-950 hover:bg-gray-100" wire:navigate>
                 Start for free
                 <span class="iconify ph--arrow-right ml-2 text-sm"></span>
             </x-ui.button>

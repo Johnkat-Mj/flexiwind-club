@@ -1,6 +1,8 @@
 import '@fontsource/geist-sans';
 import '@fontsource/ibm-plex-mono';
 import copyToClipboardComponent from "./copyToClipboard";
+import { copyToClipboard } from "./utils";
+import "./site";
 
 import { docSearch } from "../data/search-db";
 import { disableTransitionsTemporarily } from "@flexilla/utilities/dom-utilities";
@@ -74,6 +76,21 @@ document.addEventListener("alpine:init", () => {
             );
         },
     });
+    // Copie un texte connu d'avance (commande CLI, prompt, thème) et
+    // expose `copied` pour basculer l'icône le temps d'un retour visuel.
+    Alpine.data("copyText", (text = "") => ({
+        copied: false,
+        copy(value = null) {
+            copyToClipboard({
+                snippet: value ?? text,
+                timeout: 0,
+                onCopyCompleted: () => {
+                    this.copied = true;
+                    setTimeout(() => (this.copied = false), 1600);
+                },
+            });
+        },
+    }));
     Alpine.data("searchDocs", () => ({
         query: "",
         results: [],

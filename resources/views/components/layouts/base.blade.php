@@ -1,4 +1,4 @@
-@props(['seo' => [], 'bodyClass' => ''])
+@props(['seo' => [], 'bodyClass' => '', 'scriptEntries' => null])
 
 <!doctype html>
 <html lang="en" class="bg-bg" data-palette="default">
@@ -36,8 +36,11 @@
 
 <body x-data class="min-h-screen overflow-hidden overflow-y-auto {{ $bodyClass }} font-sans">
     {{ $slot }}
+    <x-ui.toaster close-button />
     @livewireScripts
-    @vite(['resources/js/app.js', 'resources/js/flexilla.js'])
+    {{-- La prop était passée par view-block, docs et app sans jamais être lue :
+         block.js et docs.js n'ont donc jamais été chargés. --}}
+    @vite($scriptEntries ?? ['resources/js/app.js', 'resources/js/flexilla.js'])
 </body>
 
 </html>
